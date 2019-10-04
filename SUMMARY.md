@@ -11,3 +11,7 @@
 
 * [How to develop a cross-blockchain application by using AMB bridge](amb-bridge/how-to-develop-xchain-apps-by-amb.md)
 
+## Bridge fundamentals
+
+* [TokenBridge roles](bridge-fundamentals/tokenbridge-roles.md)
+
