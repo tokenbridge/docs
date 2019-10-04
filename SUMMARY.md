@@ -9,5 +9,5 @@
 
 ## AMB Bridge
 
-* [Howto](amb-bridge/howto.md)
+* [How to develop a cross-blockchain application by using AMB bridge](amb-bridge/howto.md)
 
