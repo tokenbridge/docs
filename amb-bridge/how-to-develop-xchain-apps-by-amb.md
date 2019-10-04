@@ -176,3 +176,7 @@ function fixFailedMessage(bytes32 _dataHash) external {
 }
 ```
 
+{% hint style="success" %}
+Instruction is migrated from the POA forum [https://forum.poa.network/t/how-to-develop-a-cross-blockchain-application-by-using-amb-bridge/2963](https://forum.poa.network/t/how-to-develop-a-cross-blockchain-application-by-using-amb-bridge/2963)
+{% endhint %}
+

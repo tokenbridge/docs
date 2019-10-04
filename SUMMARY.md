@@ -9,5 +9,5 @@
 
 ## AMB Bridge
 
-* [How to develop a cross-blockchain application by using AMB bridge](amb-bridge/howto.md)
+* [How to develop a cross-blockchain application by using AMB bridge](amb-bridge/how-to-develop-xchain-apps-by-amb.md)
 
