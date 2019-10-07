@@ -10,6 +10,7 @@
 ## AMB Bridge
 
 * [How to develop a cross-blockchain application by using AMB bridge](amb-bridge/how-to-develop-xchain-apps-by-amb.md)
+* [How to use Cryptokitties Bridge](amb-bridge/how-to-use-cryptokitties-bridge.md)
 
 ## Bridge fundamentals
 
