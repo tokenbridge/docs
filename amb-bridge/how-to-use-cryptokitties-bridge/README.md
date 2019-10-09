@@ -1,0 +1,32 @@
+---
+description: A demonstration of Arbitrary Message Bridging using CryptoKitties
+---
+
+# Demo: CryptoKitties Bridge
+
+The CryptoKitties bridge allows users to transfer a NFT representing a Kitty from one chain to another. It demonstrates the ability to perform operations with NFTs through the Arbitrary Message Bridge \(AMB\), which is part of [the TokenBridge project](https://github.com/poanetwork/tokenbridge).
+
+In the demos, we will transfer an NFT between 2 testnest, **Sokol** and **Kovan**. We assume that the CryptoKitties contract similar to the original [CryptoKitties](https://github.com/cryptocopycats/awesome-cryptokitties/) is deployed on the Kovan testnet. The Sokol testnet contains a modified version of [CryptoKitties](https://github.com/cryptocopycats/awesome-cryptokitties/) - it can mint a new Kitty with a specified metadata - only the mediator contract communicating with AMB is allowed to do so.
+
+Demos are available for [NiftyWallet](niftywallet-transfer.md) and [MyEtherWallet](myetherwallet-mew-transfer.md). 
+
+### Contracts in the Sokol testnet:
+
+* [Mediator](https://blockscout.com/poa/sokol/address/0x5EeC77239398FE328791E28700CAFddB2990ea97)
+* [SimpleBridgeKitty](https://blockscout.com/poa/sokol/address/0xc6a592ED792de33e6CBBF7ce04Dd9D3884B46B9A)
+
+### Contracts in the Kovan testnet:
+
+* [Mediator](https://blockscout.com/eth/kovan/address/0x7dB6493D9B6D99D9A240a6914AdAd5e0E8E8BE40)
+* [KittyCore](https://blockscout.com/eth/kovan/tokens/0x13AC5C6338796a31A39e74D70B0153C1bE5f53B4)
+
+### Contracts sources:
+
+* [https://github.com/poanetwork/cryptokitties-xdai-demo](https://github.com/poanetwork/cryptokitties-xdai-demo)
+
+### Deployed AMB bridges contracts:
+
+* [https://forum.poa.network/t/using-arbitrary-message-bridging/2710/8](https://forum.poa.network/t/using-arbitrary-message-bridging/2710/8)
+
+
+
