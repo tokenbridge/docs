@@ -26,7 +26,8 @@ Demos are available for [NiftyWallet](niftywallet-transfer.md) and [MyEtherWalle
 
 ### Deployed AMB bridges contracts:
 
-* [https://forum.poa.network/t/using-arbitrary-message-bridging/2710/8](https://forum.poa.network/t/using-arbitrary-message-bridging/2710/8)
+* on [Kovan](https://blockscout.com/eth/kovan/address/0xfe446bef1dbf7afe24e81e05bc8b271c1ba9a560/contracts) testnet
+* on [Sokol](https://blockscout.com/poa/sokol/address/0xfe446bef1dbf7afe24e81e05bc8b271c1ba9a560/contracts) testnet
 
 
 
