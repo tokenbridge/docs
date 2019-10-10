@@ -16,25 +16,31 @@ You will need a small amount of KETH to complete the transfer process.  You can 
 
 2\) Select the Kovan Test Network.
 
-![Select the Kovan Test Network in the Network Dropdown](../../.gitbook/assets/test-net-select.png)
+![Select Kovan Test Network](../../.gitbook/assets/kovan_1.png)
 
 ### 3\) Add **KittyCore** contract
 
 * Copy the contract address: `0x13AC5C6338796a31A39e74D70B0153C1bE5f53B4`
-* In Nifty Wallet, scroll to the bottom of the Accounts menu and  click on `Import Account`
+* In Nifty Wallet:
+  * 1\) Open accounts menu and scroll to the bottom
+  * 2\) Click on `Import Account`
 
-![Import Contract Account](../../.gitbook/assets/import_account.png)
+![Open Accounts menu and import new account](../../.gitbook/assets/imported%20%281%29.png)
 
-* **Select Type:** `Contract`  and paste in the contract address`0x13AC5C6338796a31A39e74D70B0153C1bE5f53B4`
+* **Select Type:** `Contract` 
+  * 1\) paste in the contract address`0x13AC5C6338796a31A39e74D70B0153C1bE5f53B4`
 
-   The ABI will be fetched automatically.
+     The ABI will be fetched automatically.
 
-![Select Contract Type and paste contract address, ABI is fetched automatically.](../../.gitbook/assets/import_1.png)
+  * 2\) Click **Import**
 
-* Click **Import**
-* It is useful to edit the name of the imported contract. For example rename to `KittyCore`. Hover  over the created name \(Account \#\) and edit text will appear. Click on **edit**, change the name, and click **Save**.
+![Select Contract Type and paste in contract address. ABI will populate automatically.](../../.gitbook/assets/import_2%20%281%29.png)
 
-![Edit Contract Name](../../.gitbook/assets/kittycore2%20%281%29.png)
+* It is useful to edit the name of the imported contract. 
+  * 1\) For example rename to `KittyCore`. Hover over the created name \(Account \#\) and edit text will appear. Click on **edit** and ****change the name
+  * 2\) click **Save**.
+
+![Rename the contract to KittyCore](../../.gitbook/assets/kittycore.png)
 
 ### 4\) Add Mediator \(Proxy\) contract
 
@@ -50,22 +56,20 @@ Now that we have the token and mediator contracts available, we will perform 2 t
 
 5\) Select KittyCore contract in Nifty Wallet.
 
-![KittyCore Contract](../../.gitbook/assets/kittycore2.png)
+![KittyCore Contract](../../.gitbook/assets/kovan_test.png)
 
 2\) Click on `Execute Methods` button
-
-3\) Select the `approve` method
-
-* in `_to` parameter, paste the mediator contract address `0x7dB6493D9B6D99D9A240a6914AdAd5e0E8E8BE40` 
-* in `_tokenId` parameter insert the Id of the token you want to transfer.
 
 {% hint style="info" %}
 You must own the token you are attempting to transfer. You cannot transfer a token owned by another address. Contact us [on our forum](https://forum.poa.network/c/tokenbridge/) to receive a test token.
 {% endhint %}
 
-![Use approve execute method](../../.gitbook/assets/kittycore3.png)
+* 1\) Select the `approve` method
+* 2\) in `_to` parameter, paste the mediator contract address `0x7dB6493D9B6D99D9A240a6914AdAd5e0E8E8BE40` 
+* 3\) in `_tokenId` parameter insert the Id of the token you want to transfer.
+* 4\)  Click **Next**
 
-4\) Click **Next.**
+![Select the approve method and enter in the mediator contract address and \_tokenId](../../.gitbook/assets/approve.png)
 
 5\) Select the wallet account that will send the transaction. **This must be sent with the account that owns the token.**
 
