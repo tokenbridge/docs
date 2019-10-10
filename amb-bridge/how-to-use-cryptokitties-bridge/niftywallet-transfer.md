@@ -48,17 +48,15 @@ You will need a small amount of KETH to complete the transfer process.  You can 
 * Enter `Import Account` section
 * **Select Type:** `Proxy` as type and paste the address of the contract
 * After ABI is loaded, click **Import**.
-* Rename contract if desired. We rename to `Mediator_K`.
+* Rename contract if desired. We rename to `Mediator_k`.
 
 Now that we have the token and mediator contracts available, we will perform 2 transactions to transfer the token from Kovan to Sokol.  First, call the `approve` method of the token contract,  then call the `transferToken` of mediator contract.
 
-### Approve Method of Token \(KittyCore\) Contract
+### 5\) Approve Method of Token \(KittyCore\) Contract
 
-5\) Select KittyCore contract in Nifty Wallet.
+* Select KittyCore contract in Nifty Wallet and click  `Execute methods` button
 
-![KittyCore Contract](../../.gitbook/assets/kovan_test.png)
-
-2\) Click on `Execute Methods` button
+![KittyCore Contract](../../.gitbook/assets/execute_methods.png)
 
 {% hint style="info" %}
 You must own the token you are attempting to transfer. You cannot transfer a token owned by another address. Contact us [on our forum](https://forum.poa.network/c/tokenbridge/) to receive a test token.
@@ -71,40 +69,40 @@ You must own the token you are attempting to transfer. You cannot transfer a tok
 
 ![Select the approve method and enter in the mediator contract address and \_tokenId](../../.gitbook/assets/approve.png)
 
-5\) Select the wallet account that will send the transaction. **This must be sent with the account that owns the token.**
+* Select the wallet account that will send the transaction. **This must be sent with the account that owns the token.**
 
-![Select any account that contains KETH to send the transaction](../../.gitbook/assets/transfer1.png)
+![Select account that owns the token to send the transaction](../../.gitbook/assets/select_account.png)
 
-6\) Submit the transaction and wait until it is mined.
+* Submit the transaction and wait until it is mined.
 
-### TransferToken Method of Mediator\_K Contract
+### 6\) TransferToken Method of Mediator\_k Contract
 
 Now let's call `transferToken` to make the transfer and bridge the token.
 
-1\) Select Mediator\_K contract on Nifty Wallet.
+* Select Mediator\_k contract on Nifty Wallet and click the `Execute methods` button.
 
-![Mediator Contract](../../.gitbook/assets/mediator_k.png)
+![](../../.gitbook/assets/execute_methods2.png)
 
-2\) Click the **Execute methods** button
-
-3\) Select `transferToken` method
-
-* in `_from` parameter paste the address of your account \(same as original ownership address\) that will receive the token on the other network
-* in `_tokenId` parameter insert the Id of the token you want to transfer
+* 1\) Select `transferToken` method
+* 2\) in `_from` parameter paste the address of your account \(same as original ownership address\) that will receive the token on the other network
+* 3\) in `_tokenId` parameter insert the Id of the token you want to transfer
 
 {% hint style="warning" %}
 You must transfer the token to the **same wallet address on the other network**. You cannot transfer between accounts, the account address must be the same, and the token id must match the id of your owned token.
 {% endhint %}
 
-* Click **Next.**
+* 4\) Click **Next**
+
+![Mediator contract parameters](../../.gitbook/assets/execution.png)
+
 * Select the account that will send the transaction. **This can be any account** that contains the required amount of KETH to complete the transaction.
 * Submit the transaction and wait until it is mined.
 
-Now the token is locked in the Mediator contract in Kovan. Allow a few seconds to process the transaction, then check the [token contract on Sokol](https://blockscout.com/poa/sokol/tokens/0xc6a592ED792de33e6CBBF7ce04Dd9D3884B46B9A/inventory) to see that the token is  minted with the same Id and Metadata
+Now the token is locked in the Mediator contract in Kovan. Allow a few seconds to process the transaction, then check the [token contract on Sokol](https://blockscout.com/poa/sokol/tokens/0xc6a592ED792de33e6CBBF7ce04Dd9D3884B46B9A/inventory) to see that the token is minted with the same ID and Metadata.
 
-![Token has been added to Sokol](../../.gitbook/assets/sokol_capture.png)
+![Token added to Sokol](../../.gitbook/assets/star.png)
 
-![In the Read Contract tab, you can select the getKitty method to show Metadata](../../.gitbook/assets/readcontract.png)
+![In the Read Contract tab, you can select the getKitty method to show Kitty MetaData](../../.gitbook/assets/readcontract%20%281%29.png)
 
 ## **Transfer Kitty: Sokol to Kovan**
 
@@ -133,13 +131,19 @@ Select Sokol Test Network on Nifty Wallet
 
 Again, two transactions are needed to bridge the token back to Kovan
 
-### Approve Method of Token Contract
+### Approve Method of Token \(SimpleBridgeKitty\) Contract
 
-Follow the explained steps to call `approve` method of the token contract. On `_to` parameter paste the mediator contract address `0x5EeC77239398FE328791E28700CAFddB2990ea97`, in `_tokenId` parameter insert the Id of the token you want to transfer. Send transaction with the account where you own the Kitty.
+Follow the explained steps to call `approve` method of the token contract. 
+
+* On `_to` parameter paste the mediator contract address `0x5EeC77239398FE328791E28700CAFddB2990ea97`
+* In `_tokenId` parameter insert the Id of the token you want to transfer. Send transaction with the account where you own the Kitty.
 
 ### TransferToken Method of Mediator Contract 
 
-Follow the explained steps to call `transferToken` of mediator contract. On `_from` parameter paste the address of your account \(same account where Kitty is owned on Sokol\) that will receive the token on the other network, in `_tokenId` parameter insert the Id of the token you want to transfer.
+Follow the explained steps to call `transferToken` of mediator contract. 
+
+* On `_from` parameter paste the address of your account \(same account where Kitty is owned on Sokol\) that will receive the token on the other network
+* In `_tokenId` parameter insert the Id of the token you want to transfer.
 
 ### Finish
 
