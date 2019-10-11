@@ -1,24 +1,26 @@
 ---
-description: >-
-  An example of the considerations needed to develop a cross-blockchain
-  application by interacting with the arbitrary message bridge
+description: Developing a cross-blockchain application with the arbitrary message bridge
 ---
 
-# How to develop a cross-blockchain application by using AMB bridge
+# How to develop a cross-blockchain application using the AMB bridge
 
-In this post an example of the considerations needed to develop a cross-blockchain application by interacting with the [arbitrary message bridge](https://github.com/poanetwork/poa-bridge-contracts/issues/73) is shown. The complete AMB bridge interface can be found [here](https://github.com/poanetwork/poa-bridge-contracts/blob/master/contracts/interfaces/IAMB.sol), let's see how can we use the exposed methods.
+{% hint style="info" %}
+The complete AMB bridge interface can be found [here](https://github.com/poanetwork/poa-bridge-contracts/blob/master/contracts/interfaces/IAMB.sol)
+{% endhint %}
 
-#### Call a method in another chain using the AMB bridge
+## Using AMB exposed methods
 
-AMB is about invocation of a contract's method in another chain. So a contract on one side must know a method of a contract on another side. The method name and parameters are encoded and passed to `requireToPassMessage` method of the bridge contract.
+### Call a method in another chain using the AMB bridge
+
+AMB is about the invocation of a contract's method in another chain. **A contract on one side must know a method of a contract on another side**. The method name and parameters are encoded and passed to the `requireToPassMessage` method of the bridge contract.
 
 ```javascript
 function requireToPassMessage(address _contract, bytes _data, uint256 _gas) external;
 ```
 
-* `address _contract` refers to the address of the contract on the other network.
-* `bytes _data` It's the encoded bytes of the method selector and the parameters that will be called in the contract on the other network. In the `Code examples` section there is an example of how to generate this parameter.
-* `uint256 _gas` The gas to be provided in execution of the method call in contract on the other network. To generate this parameter you need to measure the gas usage of the method to be executed. It can be done by manual invocation of the method in a dev environment or by using a tool like [eth-gas-reporter](https://github.com/cgewecke/eth-gas-reporter) to get the gas usage of the methods from the unit tests.
+* `address _contract`  address of the contract on the other network.
+* `bytes _data`encoded bytes of the method selector and the parameters that will be called in the contract on the other network. In the [Code Examples](how-to-develop-xchain-apps-by-amb.md#code-examples) section there is an example of how to generate this parameter.
+* `uint256 _gas` The gas to be provided in execution of the method call in the contract on the other network. To generate this parameter you need to measure the gas usage of the method to be executed. It can be done by manual invocation of the method in a dev environment or by using a tool like [eth-gas-reporter](https://github.com/cgewecke/eth-gas-reporter) to get the gas usage of the methods from the unit tests.
 
   The AMB bridge provides a maximum gas value to be provided in the execution of the method, so the provided gas value must not exceed this limit. To get this limit, you can call the method: 
 
@@ -26,9 +28,9 @@ function requireToPassMessage(address _contract, bytes _data, uint256 _gas) exte
   function maxGasPerTx() external view returns (uint256);
   ```
 
-#### Receive a method call from the AMB bridge
+### Receive a method call from the AMB bridge
 
-In case the contract that is going to receive a method call from the AMB bridge needs to perform some critical actions, it will be good to take the following security considerations:
+If the contract receiving a method call from the AMB bridge needs to perform some critical actions, it is wise to consider the following security measures:
 
 * Check that the `msg.sender` is the address of the bridge.
 * Check the address of the invoking contract from the other side. To do this, the contract can call the method `messageSender()` from the AMB bridge to know who generated the message that is defined as:
@@ -43,15 +45,15 @@ In case the contract that is going to receive a method call from the AMB bridge 
   function transactionHash() external view returns (bytes32);
   ```
 
-#### Security
+### Security
 
-Every time `requireToPassMessage` is called, the AMB bridge validators will listen to the generated event and provide their signature to bridge the message. Once enough signatures are collected, the message is marked as processed and then proceed with the execution of the method call. So it's guaranteed that the message will be executed only one time.
+Every time `requireToPassMessage` is called, the AMB bridge validators will listen to the generated event and provide their signature to bridge the message. Once enough signatures are collected, the message is marked as processed. Only then does it proceed with the execution of the method call. This guarantees the message will be executed only one time.
 
-#### Handling failed messages
+### Handling failed messages
 
-It could be the case that the call execution of message relayed by the bridge could fail. The reasons could be related to some specific logic of the invoked method, to insufficient gas limit provided to the method call or invalid data.
+It is possible that the call execution of message relayed by the bridge could fail. The reasons could be related to some specific logic of the invoked method, an insufficient gas limit provided to the method call, or invalid data.
 
-The AMB bridge exposes methods to help getting information related to the failed message.
+The AMB bridge exposes methods to help retrieve information related to the failed message.
 
 ```text
 function messageCallStatus(bytes32 _txHash) external view returns (bool);
@@ -60,14 +62,14 @@ function failedMessageSender(bytes32 _txHash) external view returns (address);
 function failedMessageDataHash(bytes32 _txHash) external view returns (bytes32);
 ```
 
-All the methods accept as parameter the hash of the transaction that originated the message on the other network.
+All tmethods accept as a parameter the hash of the transaction that originated the message on the other network.
 
 * `messageCallStatus` returns the result of the message call execution.
 * `failedMessageReceiver` returns the address that received the call execution of the message.
 * `failedMessageSender` return the address that generated the message on the other network.
 * `failedMessageDataHash` return the hash `keccak256(data)` associated to the originating transaction hash. The contract-sender is responsible for providing unique sequence as part of the `data`. Where `data` refers to the `data` parameter in `requireToPassMessage` method.
 
-### Example of ERC677 to ERC677 using AMB bridge
+## Example of ERC677 to ERC677 using AMB bridge
 
 We can use AMB to move ERC677 tokens between two chains. To do this, we'll have two contracts that communicate with each other: contract A receives tokens, locks them and instructs contract B to mint the same number of tokens in the other chain. In the inverse case, contract B receives tokens, burns them and instructs contract A to unlock the burned amount in the other chain.
 
@@ -88,11 +90,11 @@ Example of Foreign Token Management contract tested in Kovan
 * [Proxy](https://blockscout.com/eth/kovan/address/0x65ea3665105Ea69b62bd1d4741Fa12561473eD08)
 * [Implementation](https://blockscout.com/eth/kovan/address/0xf1ac8de3213be1f3ee2c55b752be803fde7b25cd)
 
-Deployed bridges contracts you can find [here](https://forum.poa.network/t/using-arbitrary-message-bridging/2710/8).
+Deployed bridges contracts are available [here](https://forum.poa.network/t/using-arbitrary-message-bridging/2710/8).
 
 ![AMB-ERC677-ERC677](https://i.imgur.com/IAIr4YO.png)
 
-#### Token transfer flow
+### Token transfer flow
 
 In the case when a user has Tokens on the Foreign side and wants to bridge them to the Home network: 1. The user calls the method `transferAndCall` of the token contract with the value and the foreign token management contract address as target. 2. The tokens are transferred and the token contract calls `onTokenTransfer` method of the token management contract. 3. In `onTokenTransfer` method, the token management contract calls `requireToPassMessage` method of Foreign AMB bridge contract with parameters indicating that method `handleBridgedTokens` of the Home token management contract should be called with the recipient and value parameters of the token transfer.
 
@@ -104,7 +106,7 @@ Here is a representation of the steps explained above:
 
 Transferring tokens from Home network to the Foreign network works in a similar way. The only difference is that Home Token Management contract will Burn the transferred tokens, and Foreign Token Management contract will unlock the tokens.
 
-#### Code examples
+## Code examples
 
 Taking in consideration that the token contract address, the AMB bridge contract address, the token management contract address of the other network and the execution gas limit were stored in the contract on the initialization of it, this is an example of `onTokenTransfer` implementation:
 
