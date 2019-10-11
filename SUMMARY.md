@@ -5,6 +5,7 @@
 ## xDai Bridge
 
 * [About the xDai Bridge](xdai-bridge/about.md)
+* [Using the xDai bridge](xdai-bridge/using-the-xdai-bridge.md)
 * [How to use the xDai Bridge without the UI](xdai-bridge/how-to-use-xdai-bridge-without-ui.md)
 
 ## AMB Bridge
