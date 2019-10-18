@@ -12,6 +12,8 @@
 
 * [How to develop a cross-blockchain application using the AMB bridge](amb-bridge/how-to-develop-xchain-apps-by-amb.md)
 * [Demo: CryptoKitties Bridge](amb-bridge/how-to-use-cryptokitties-bridge/README.md)
+  * [Deploy CryptoKitty Contracts](amb-bridge/how-to-use-cryptokitties-bridge/deploy-cryptokitty-contracts.md)
+  * [Verify Contracts in BlockScout](amb-bridge/how-to-use-cryptokitties-bridge/verify-contracts-in-blockscout.md)
   * [View Kitties in BlockScout](amb-bridge/how-to-use-cryptokitties-bridge/view-in-blockscout.md)
   * [NiftyWallet Transfer](amb-bridge/how-to-use-cryptokitties-bridge/niftywallet-transfer.md)
   * [MyEtherWallet \(MEW\) Transfer](amb-bridge/how-to-use-cryptokitties-bridge/myetherwallet-mew-transfer.md)

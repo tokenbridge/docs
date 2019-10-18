@@ -12,15 +12,25 @@ description: >-
 You will need a small amount of KETH to complete the transfer process.  You can obtain here: [https://gitter.im/kovan-testnet/faucet](https://gitter.im/kovan-testnet/faucet)
 {% endhint %}
 
-1\) Log into your wallet through the [Nifty wallet chrome extension](https://chrome.google.com/webstore/detail/nifty-wallet/jbdaocneiiinmjbjlgalhcelgbejmnid).
+{% hint style="danger" %}
+In order to follow the process with your own kitties, you must first [deploy your own contracts](https://app.gitbook.com/@poa/s/tokenbridge/~/edit/drafts/-LrL6654d2nfg9pCMDSD/amb-bridge/deploy-cryptokitty-contracts) and use those contract addresses here.
+{% endhint %}
 
-2\) Select the Kovan Test Network.
+### 1\) Log into your wallet through the [Nifty wallet chrome extension](https://chrome.google.com/webstore/detail/nifty-wallet/jbdaocneiiinmjbjlgalhcelgbejmnid). 
+
+Note: This should be the owner wallet address if you followed the deployment process.
+
+### 2\) Select the Kovan Test Network.
 
 ![Select Kovan Test Network](../../.gitbook/assets/kovan_1.png)
 
 ### 3\) Add **KittyCore** contract
 
-* Copy the contract address: `0x13AC5C6338796a31A39e74D70B0153C1bE5f53B4`
+* Copy the contract address.  
+  In our example we use our example KittyCore contract address `0x13AC5C6338796a31A39e74D70B0153C1bE5f53B4` . If you deployed your own contract, use the \[ Foreign \] kittyCore: `0x........` address from [deployment step 5](deploy-cryptokitty-contracts.md#5-deploy-your-contracts) here.
+
+ 
+
 * In Nifty Wallet:
   * 1\) Open accounts menu and scroll to the bottom
   * 2\) Click on `Import Account`
@@ -44,7 +54,8 @@ You will need a small amount of KETH to complete the transfer process.  You can 
 
 ### 4\) Add Mediator \(Proxy\) contract
 
-* Copy the contract address: `0x7dB6493D9B6D99D9A240a6914AdAd5e0E8E8BE40`
+* Copy the contract address: `0x7dB6493D9B6D99D9A240a6914AdAd5e0E8E8BE40`.   
+  * If you deployed your own contract, use the \[ Foreign \] Mediator: `0x........` address from [deployment step 5](deploy-cryptokitty-contracts.md#5-deploy-your-contracts) here.
 * Enter `Import Account` section
 * **Select Type:** `Proxy` as type and paste the address of the contract
 * After ABI is loaded, click **Import**.
@@ -59,12 +70,12 @@ Now that we have the token and mediator contracts available, we will perform 2 t
 ![KittyCore Contract](../../.gitbook/assets/execute_methods.png)
 
 {% hint style="info" %}
-You must own the token you are attempting to transfer. You cannot transfer a token owned by another address. Contact us [on our forum](https://forum.poa.network/c/tokenbridge/) to receive a test token.
+You must own the token you are attempting to transfer. You cannot transfer a token owned by another address.
 {% endhint %}
 
 * 1\) Select the `approve` method
-* 2\) in `_to` parameter, paste the mediator contract address `0x7dB6493D9B6D99D9A240a6914AdAd5e0E8E8BE40` 
-* 3\) in `_tokenId` parameter insert the Id of the token you want to transfer.
+* 2\) in `_to` parameter, paste the mediator contract address. If you deployed your own contracts, you will use the  \(\[ Foreign \] Mediator  `0x.........`  address\) Example:`0x7dB6493D9B6D99D9A240a6914AdAd5e0E8E8BE40` 
+* 3\) in `_tokenId` parameter insert the Id of the token you want to transfer. You can see the tokenIDs you own in the [View Kitties in BlockScout](view-in-blockscout.md) instructions.
 * 4\)  Click **Next**
 
 ![Select the approve method and enter in the mediator contract address and \_tokenId](../../.gitbook/assets/approve.png)
@@ -100,7 +111,7 @@ You must transfer the token to the **same wallet address on the other network**.
 
 Now the token is locked in the Mediator contract in Kovan. Allow a few seconds to process the transaction, then check the [token contract on Sokol](https://blockscout.com/poa/sokol/tokens/0xc6a592ED792de33e6CBBF7ce04Dd9D3884B46B9A/inventory) to see that the token is minted with the same ID and Metadata.
 
-![Token added to Sokol](../../.gitbook/assets/star.png)
+![Token added to Sokol](../../.gitbook/assets/15.png)
 
 ![In the Read Contract tab, you can select the getKitty method to show Kitty MetaData](../../.gitbook/assets/readcontract%20%281%29.png)
 
@@ -112,9 +123,9 @@ The process is similar when transferring from Sokol back to Kovan.
 You can get Sokol Test Tokens here: [https://faucet-sokol.herokuapp.com/](https://faucet-sokol.herokuapp.com/)
 {% endhint %}
 
-Select Sokol Test Network on Nifty Wallet
+Select **Sokol Test Network** on Nifty Wallet
 
-### Add **SimpleBridgeKitty** contract
+### 1\) Add **SimpleBridgeKitty** contract
 
 * Copy the contract address: `0xc6a592ED792de33e6CBBF7ce04Dd9D3884B46B9A`
 * On Nifty Wallet click on `Import Account` menu
@@ -122,7 +133,7 @@ Select Sokol Test Network on Nifty Wallet
 * Click **Import**
 * It is useful to edit the name of the imported contract to for example `SimpleBridgeKitty`
 
-###  Add Mediator contract
+###  2\) Add Mediator contract
 
 * Copy the contract address: `0x5EeC77239398FE328791E28700CAFddB2990ea97`
 * Enter `Import Account` section
@@ -131,23 +142,23 @@ Select Sokol Test Network on Nifty Wallet
 
 Again, two transactions are needed to bridge the token back to Kovan
 
-### Approve Method of Token \(SimpleBridgeKitty\) Contract
+### 3\) Approve Method of Token \(SimpleBridgeKitty\) Contract
 
-Follow the explained steps to call `approve` method of the token contract. 
+Follow the steps explained above to call `approve` method of the token contract. 
 
 * On `_to` parameter paste the mediator contract address `0x5EeC77239398FE328791E28700CAFddB2990ea97`
-* In `_tokenId` parameter insert the Id of the token you want to transfer. Send transaction with the account where you own the Kitty.
+* In `_tokenId` parameter insert the Id of the token you want to transfer. **Send transaction with the account where you own the Kitty**.
 
-### TransferToken Method of Mediator Contract 
+### 4\) TransferToken Method of Mediator Contract 
 
 Follow the explained steps to call `transferToken` of mediator contract. 
 
-* On `_from` parameter paste the address of your account \(same account where Kitty is owned on Sokol\) that will receive the token on the other network
+* On `_from` parameter paste the address of your account \(**same account where Kitty is owned on Sokol**\) that will receive the token on the other network
 * In `_tokenId` parameter insert the Id of the token you want to transfer.
 
-### Finish
+### Success!
 
-In this case the token is burned in Sokol. After waiting a couple of seconds to allow the AMB bridge perform their operations we can check the [token contract on Kovan](https://blockscout.com/eth/kovan/tokens/0x13AC5C6338796a31A39e74D70B0153C1bE5f53B4/inventory) and see that the token bridged is now owned by your account again with the same Id and metadata as before.
+In this case the token is burned in Sokol. After waiting several seconds to allow the AMB bridge perform operations we can check the [token contract on Kovan](https://blockscout.com/eth/kovan/tokens/0x13AC5C6338796a31A39e74D70B0153C1bE5f53B4/inventory) and see that the bridged token is now owned by your account again with the same ID and metadata as before.
 
 
 

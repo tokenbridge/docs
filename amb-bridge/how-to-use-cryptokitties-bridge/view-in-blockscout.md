@@ -2,18 +2,34 @@
 
 ## Display Kitties
 
-1\) Go to BlockScout on Kovan and enter in the contract address:  
-[https://blockscout.com/eth/kovan/address/0x13ac5c6338796a31a39e74d70b0153c1be5f53b4](https://blockscout.com/eth/kovan/address/0x13ac5c6338796a31a39e74d70b0153c1be5f53b4)
+{% hint style="warning" %}
+Contracts must be verified before you can view and interact with methods. See [Verify Contracts in BlockScout](verify-contracts-in-blockscout.md) for details.
+{% endhint %}
 
-2\) To view all kitties and their owners, go to the [Inventory](https://blockscout.com/eth/kovan/tokens/0x13ac5c6338796a31a39e74d70b0153c1be5f53b4/inventory) section. You can access by clicking the shortened token hex next to **KittyCore**, then navigating to the Inventory tab.
+### 1\) Go to BlockScout on Kovan with KittyCore contract address
 
-![Click on 0x13ac to access the token attributes](../../.gitbook/assets/crytpo_kitties_1.png)
+* Example: [https://blockscout.com/eth/kovan/address/0x13ac5c6338796a31a39e74d70b0153c1be5f53b4](https://blockscout.com/eth/kovan/address/0x13ac5c6338796a31a39e74d70b0153c1be5f53b4)
 
-![Inventory Tab shows each unique kitties token including Token ID and Owner Address.](../../.gitbook/assets/inventory.png)
+{% hint style="info" %}
+To view kitties created during the deployment process, use the KittyCore contract address: `0x....12` address ie. _https://blockscout.com/eth/kovan/address/0x...12_  or go to the Kovan BlockScout instance and enter the deployed address into the Search bar.
 
-3\) Select the [Read Contract](https://blockscout.com/eth/kovan/tokens/0x13ac5c6338796a31a39e74d70b0153c1be5f53b4/read_contract)  section to call different methods. Call the `getKitty` method with the Token ID to get metadata for that kitty.
+To view kitties you have bridged to Sokol, use the SimpleBridgeKitty ****address.
+{% endhint %}
 
-![Read Contract tab displays contract methods and allows for queries](../../.gitbook/assets/readcontract2.png)
+### 2\) View all Kitties and their Owners
 
-![Enter the token ID in the getKitty method to display metadata](../../.gitbook/assets/getkitty2.png)
+* Go to the [Inventory](https://blockscout.com/eth/kovan/tokens/0x13ac5c6338796a31a39e74d70b0153c1be5f53b4/inventory) section. 
+* **Click the shortened token hex** next to KittyCore, then navigate to the Inventory tab.
+
+![Click 0x13ac in this example to access token information](../../.gitbook/assets/bs1.png)
+
+![Inventory Tab shows each unique kitties token including Token ID and Owner Address ](../../.gitbook/assets/inventory_tab.png)
+
+### 3\) Select the [Read Contract](https://blockscout.com/eth/kovan/tokens/0x13ac5c6338796a31a39e74d70b0153c1be5f53b4/read_contract) section to call different methods. 
+
+![Read Contract tab displays contract methods and allows for queries](../../.gitbook/assets/read-contract.png)
+
+* Call the `getKitty` method with the **Token ID** to get metadata for that kitty.
+
+![Call getKitty method with the token id \(ie. 7\) to get the metadata ](../../.gitbook/assets/getkitty.png)
 
