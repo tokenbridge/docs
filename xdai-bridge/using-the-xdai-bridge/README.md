@@ -4,7 +4,7 @@ description: >-
   Ethereum mainnet.
 ---
 
-# Using the xDai bridge
+# Using the xDai Bridge
 
 Instructions for usage with the UI are available on the xdaichain.com site
 

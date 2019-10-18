@@ -113,7 +113,7 @@ KITTIES_AMOUNT=15
 ![Click to copy your private key](../../.gitbook/assets/export_3.png)
 
 * HOME\_AMB\_BRIDGE=**0xFe446bEF1DbF7AFE24E81e05BC8B271C1BA9a560**: This is the address for the [currently deployed AMB bridge on the Sokol network](https://blockscout.com/poa/sokol/address/0xfe446bef1dbf7afe24e81e05bc8b271c1ba9a560/contracts). If you deploy elsewhere, use your deployed address address. 
-* HOME\_MEDIATOR\_OWNER=**&lt;YOUR WALLET OWNER ADDRESS&gt;**: You should have access to this wallet address so you can create a kitty later if needed. The following &lt;YOUR WALLET OWNER ADDRESS&gt; parameters can use the same address for the purposes of this tutorial.  For more information, see [TokenBridge roles](../../bridge-fundamentals/tokenbridge-roles.md). 
+* HOME\_MEDIATOR\_OWNER=**&lt;YOUR WALLET OWNER ADDRESS&gt;**: You should have access to this wallet address so you can create a kitty later if needed. The following &lt;YOUR WALLET OWNER ADDRESS&gt; parameters can use the same address for the purposes of this tutorial.  For more information, see [TokenBridge roles](../../about-tokenbridge/tokenbridge-roles.md). 
 * FOREIGN\_AMB\_BRIDGE=**0xFe446bEF1DbF7AFE24E81e05BC8B271C1BA9a560**:  This is the address for the [currently deployed AMB bridge on the Kovan network.](https://blockscout.com/eth/kovan/address/0xfe446bef1dbf7afe24e81e05bc8b271c1ba9a560/contracts) If you deploy elsewhere, use your deployed address. 
 * KITTIES\_AMOUNT=**15**: This is the number of kitties minted by the contract, select any number here. You can send these to other addresses or bridge yourself.
 

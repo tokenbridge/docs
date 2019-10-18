@@ -2,13 +2,13 @@
 description: 'Difference between administrators, validators and users'
 ---
 
-# TokenBridge roles
+# TokenBridge Roles
 
 Administrators on the TokenBridge are responsible for bridge security and upgrades. Every bridge has 2 sides - smart contracts are deployed on each side of the bridge. A side is referred to as either the Home \(or Native\) side or the Foreign side, depending on the bridge mode.
 
-General information regarding the TokenBridge can be found in the [Bridge Definitions, Networks and Components](https://forum.poa.network/t/bridge-definitions-networks-and-components/1824).
+General information regarding the TokenBridge can be found in [Features & Definitions](features.md)
 
-For detailed configuration options and bridge parameters see the [xDai bridge contracts management post](https://forum.poa.network/t/xdai-bridge-contracts-management/1777)
+For detailed configuration options and bridge parameters see [xDai bridge contracts management](../xdai-bridge/xdai-bridge-contracts-management/)
 
 ### Multisignature requirements
 

@@ -2,11 +2,22 @@
 
 * [Welcome](README.md)
 
+## About TokenBridge
+
+* [Features & Definitions](about-tokenbridge/features.md)
+* [TokenBridge Roles](about-tokenbridge/tokenbridge-roles.md)
+
 ## xDai Bridge
 
 * [About the xDai Bridge](xdai-bridge/about.md)
-* [Using the xDai bridge](xdai-bridge/using-the-xdai-bridge.md)
-* [How to use the xDai Bridge without the UI](xdai-bridge/how-to-use-xdai-bridge-without-ui.md)
+* [Using the xDai Bridge](xdai-bridge/using-the-xdai-bridge/README.md)
+  * [How to use the xDai Bridge without the UI](xdai-bridge/using-the-xdai-bridge/how-to-use-xdai-bridge-without-ui.md)
+* [XDai Bridge Contracts Management](xdai-bridge/xdai-bridge-contracts-management/README.md)
+  * [Upgrade Contracts](xdai-bridge/xdai-bridge-contracts-management/upgrade-contracts.md)
+  * [Configuration](xdai-bridge/xdai-bridge-contracts-management/configuration.md)
+  * [Admin Privileges Management](xdai-bridge/xdai-bridge-contracts-management/admin-privileges-management.md)
+  * [ERC20 Tokens Release](xdai-bridge/xdai-bridge-contracts-management/erc20-tokens-release.md)
+  * [xDai Bridge Management API](xdai-bridge/xdai-bridge-contracts-management/xdai-bridge-management-api.md)
 
 ## AMB Bridge
 
@@ -17,8 +28,4 @@
   * [View Kitties in BlockScout](amb-bridge/how-to-use-cryptokitties-bridge/view-in-blockscout.md)
   * [NiftyWallet Transfer](amb-bridge/how-to-use-cryptokitties-bridge/niftywallet-transfer.md)
   * [MyEtherWallet \(MEW\) Transfer](amb-bridge/how-to-use-cryptokitties-bridge/myetherwallet-mew-transfer.md)
-
-## Bridge fundamentals
-
-* [TokenBridge roles](bridge-fundamentals/tokenbridge-roles.md)
 

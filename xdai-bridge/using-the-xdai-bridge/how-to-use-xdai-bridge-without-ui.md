@@ -16,7 +16,7 @@ There is no need to use the Bridge UI if you want transfer your DAI to xDai or x
 * Wait for the relay confirmation by the bridge validators \(time depends on the number of blocks \ the bridge validators wait for to consider the chain finalized, currently set at  `8`\).
 * Check your balance on the xDai chain.
 
-![Sending Dai to xDai on Ethereum](../.gitbook/assets/screenshot_20191009-095817.jpg)
+![Sending Dai to xDai on Ethereum](../../.gitbook/assets/screenshot_20191009-095817.jpg)
 
 ### Transfer xDai from the xDai chain to the Ethereum Mainnet
 
@@ -25,7 +25,7 @@ There is no need to use the Bridge UI if you want transfer your DAI to xDai or x
 * Wait for relay confirmation by the bridge validators \(depends on number of validators and the ETH Mainnet network throughput\)
 * Check your balance on the ETH Mainnet
 
-![Sending xDai to Dai in AlphaWallet](../.gitbook/assets/untitled.png)
+![Sending xDai to Dai in AlphaWallet](../../.gitbook/assets/untitled.png)
 
 {% hint style="success" %}
 Instructions migrated from the POA forum [https://forum.poa.network/t/how-to-relay-dai-stablecoins-without-usage-of-the-bridge-ui/1876](https://forum.poa.network/t/how-to-relay-dai-stablecoins-without-usage-of-the-bridge-ui/1876)
