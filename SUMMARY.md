@@ -6,6 +6,7 @@
 
 * [Features & Definitions](about-tokenbridge/features.md)
 * [TokenBridge Roles](about-tokenbridge/tokenbridge-roles.md)
+* [Transfer Limits](about-tokenbridge/transfer-limits.md)
 
 ## xDai Bridge
 
