@@ -31,3 +31,7 @@
   * [NiftyWallet Transfer](amb-bridge/how-to-use-cryptokitties-bridge/niftywallet-transfer.md)
   * [MyEtherWallet \(MEW\) Transfer](amb-bridge/how-to-use-cryptokitties-bridge/myetherwallet-mew-transfer.md)
 
+## ETH-BNC Bridge
+
+* [About ETH-BNC bridge](eth-bnc-bridge/about-eth-bnc-bridge.md)
+
