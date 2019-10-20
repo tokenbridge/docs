@@ -22,6 +22,7 @@
 ## ETH-BNC Bridge
 
 * [About ETH-BNC bridge](eth-bnc-bridge/about-eth-bnc-bridge.md)
+* [Demo: ETH-BNC bridge](eth-bnc-bridge/running-an-eth-bnc-bridge-demo.md)
 
 ## xDai Bridge
 
