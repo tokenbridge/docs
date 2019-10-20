@@ -8,18 +8,6 @@
 * [TokenBridge Roles](about-tokenbridge/tokenbridge-roles.md)
 * [Transfer Limits](about-tokenbridge/transfer-limits.md)
 
-## xDai Bridge
-
-* [About the xDai Bridge](xdai-bridge/about.md)
-* [Using the xDai Bridge](xdai-bridge/using-the-xdai-bridge/README.md)
-  * [How to use the xDai Bridge without the UI](xdai-bridge/using-the-xdai-bridge/how-to-use-xdai-bridge-without-ui.md)
-* [XDai Bridge Contracts Management](xdai-bridge/xdai-bridge-contracts-management/README.md)
-  * [Upgrade Contracts](xdai-bridge/xdai-bridge-contracts-management/upgrade-contracts.md)
-  * [Configuration](xdai-bridge/xdai-bridge-contracts-management/configuration.md)
-  * [Admin Privileges Management](xdai-bridge/xdai-bridge-contracts-management/admin-privileges-management.md)
-  * [ERC20 Tokens Release](xdai-bridge/xdai-bridge-contracts-management/erc20-tokens-release.md)
-  * [xDai Bridge Management API](xdai-bridge/xdai-bridge-contracts-management/xdai-bridge-management-api.md)
-
 ## AMB Bridge
 
 * [About AMB Bridge](amb-bridge/about-amb-bridge.md)
@@ -34,4 +22,16 @@
 ## ETH-BNC Bridge
 
 * [About ETH-BNC bridge](eth-bnc-bridge/about-eth-bnc-bridge.md)
+
+## xDai Bridge
+
+* [About the xDai Bridge](xdai-bridge/about.md)
+* [Using the xDai Bridge](xdai-bridge/using-the-xdai-bridge/README.md)
+  * [How to use the xDai Bridge without the UI](xdai-bridge/using-the-xdai-bridge/how-to-use-xdai-bridge-without-ui.md)
+* [xDai Bridge Contracts Management](xdai-bridge/xdai-bridge-contracts-management/README.md)
+  * [Upgrade Contracts](xdai-bridge/xdai-bridge-contracts-management/upgrade-contracts.md)
+  * [Configuration](xdai-bridge/xdai-bridge-contracts-management/configuration.md)
+  * [Admin Privileges Management](xdai-bridge/xdai-bridge-contracts-management/admin-privileges-management.md)
+  * [ERC20 Tokens Release](xdai-bridge/xdai-bridge-contracts-management/erc20-tokens-release.md)
+  * [xDai Bridge Management API](xdai-bridge/xdai-bridge-contracts-management/xdai-bridge-management-api.md)
 

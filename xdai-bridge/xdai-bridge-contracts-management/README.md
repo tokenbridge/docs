@@ -2,7 +2,7 @@
 description: Operations performed by owners of the MultiSig wallet
 ---
 
-# XDai Bridge Contracts Management
+# xDai Bridge Contracts Management
 
 ## Action flow
 
