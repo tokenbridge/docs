@@ -6,9 +6,9 @@ description: >-
 
 # About ETH-BNC bridge
 
-The TokenBridge solution suggests for users functionality to transfer digital assets between two EVM based chains. The bridge operations are served by the TokenBridge oracles \(Validators\) - nodes that listen user's relay requests. A user sends funds to a specific \(bridge\) account in one chain and formulate the relay request. Every node votes for the relay operation for the request. As soon as enough votes collected the relay request finalized and the corresponding amount of assets is unlocked.
+The TokenBridge solution allows digital asset transfer between two Ethereum Virtual Machine \(EVM\) based chains. Bridge operations are served by the TokenBridge oracles \(Validators\) - nodes that listen to user's relay requests. A user sends funds to a specific \(bridge\) account in one chain and formulates the relay request. Then, each validator node votes to approve the requested relay operation using a multisig wallet. As soon as enough votes are collected, the relay request is finalized and the corresponding asset amount is unlocked.
 
-The [Binance Chain](https://docs.binance.org/) does not support any kind of multisig wallets that is why the functionality to vote for the request can be implemented with [Threshold Signature Scheme](https://zengo.com/implementing-open-source-tss-to-binance-coin-bnb/) - a system utilizing Multiparty Computation to generate a digital signature of a message in a trustless manner involving subset of validators.
+The [Binance Chain](https://docs.binance.org/) does not support multisig wallets. However, the same voting functionality described above can be implemented with a [Threshold Signature Scheme](https://zengo.com/implementing-open-source-tss-to-binance-coin-bnb/) \(TSS\). A TSS uses Multiparty Computation to generate a digital signature of a message in a trustless manner, using a subset of validators.
 
-The ETH-to-BNC bridge combine the TokenBridge approach with the Threshold Signature Scheme to swap assets from an Ethereum Virtual Machine based chain to the Binance Chain and back with applying the voting mechanics by authorities.
+The ETH-to-BNC bridge combines the TokenBridge approach with a TSS to approve relay operations and facilitate asset transfer between an EVM chain and the Binance chain. 
 

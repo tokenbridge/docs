@@ -1,15 +1,18 @@
+---
+description: The AMB can be used to relay any data between chains
+---
+
 # About the AMB
 
-Intention of the Arbitrary Message Bridge is to relay any data between two EVM-based chains. The originating contract encode data that need to be transferred in form of arbitrary method call together with parameters or without them. It passes them and the target contract address to the AMB contracts. As soon as the data are relayed to the another side by the Arbitrary Message Bridge oracles, the bridge contract on that side will pass the ABI-encoded method to the target contract.
+The Arbitrary Message Bridge \(AMB\) is designed to relay **any data** between two EVM-based chains. The originating contract encodes data in the form of an arbitrary method call, which can also include or exclude parameters. This information, along with the target contract address, is passed to the AMB contracts. As soon as data are relayed from chain A to chain B by the Arbitrary Message Bridge oracles, the bridge contract on side B passes the ABI-encoded method to the target contract.
 
-AMB can be used:
+**AMB usage examples:**
 
-* to transfer NFTs between two chains
-* to trigger a method in one chain after some contract invocation in another chain
-* to propagate tokens prices to another chain
-* to transfer digital assets \(native or ERC20 tokens\) ownership similar to generic TokenBridge bridge
-* to synchronize contracts states between two chains
-* etc.
+* transfer NFTs between two chains
+* trigger a method in one chain after some contract invocation in another chain
+* propagate tokens prices to another chain
+* transfer digital asset \(native or ERC20 tokens\) ownership similar to the generic TokenBridge
+* synchronize contracts states between two chains
 
-Universality of AMB allows to consider it as a low level protocol that can be used to build different type of bridges on top. Once the bridge contracts are deployed and the corresponding validators run the oracles other applications could use them without necessity to deploy their own infrastructure.
+AMB's universality means it can be used as a base layer for bridge and application construction. Once the bridge contracts are deployed and the corresponding validators are running the oracles, other applications can use them without the need to deploy their own infrastructure.
 

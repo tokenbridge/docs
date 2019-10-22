@@ -1,6 +1,6 @@
 # Demo: ETH-BNC bridge
 
-These instructions describes how to run the bridge between an Ethereum-based chain and the Binance Chain testnet.
+These instructions describe how to run the bridge between an Ethereum-based chain and the Binance Chain testnet.
 
 #### Ethereum side of the bridge
 
@@ -11,14 +11,14 @@ This demo supports two ways of dealing with the Ethereum side of a bridge:
 
 **Development mode**
 
-As part of this demo two EVM-based chains \([ganache](https://github.com/trufflesuite/ganache-cli)\) will be started:
+Two EVM-based chains \([ganache](https://github.com/trufflesuite/ganache-cli)\) will be started:
 
 * **Home chain** - it keeps an ERC20 contract \(`0xd5fE0D28e058D375b0b038fFbB446Da37E85fFdc`\) and the bridge contract \(`0x44c158FE850821ae69DaF37AADF5c539e9d0025B`\).
 * **Side chain** - the MPC orchestration contract \(`0xd5fE0D28e058D375b0b038fFbB446Da37E85fFdc`\) is located here Both chains are run in separate docker containers.
 
 **Staging mode**
 
-As part of this demo two EVM-based public chains will be used:
+Two EVM-based public chains will be used:
 
 * **Home chain** - Kovan testnet keeps an ERC20 contract and the bridge contract.
 * **Side chain** - Sokol POA testnet keeps the MPC orchestration contract. Interaction with chains is done by using public available RPC urls.
