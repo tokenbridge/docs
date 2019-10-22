@@ -5,7 +5,10 @@
 ## About TokenBridge
 
 * [Features & Definitions](about-tokenbridge/features/README.md)
-  * [TokenBridge Roles](about-tokenbridge/features/tokenbridge-roles.md)
+  * [TokenBridge Roles](about-tokenbridge/features/tokenbridge-roles/README.md)
+    * [Administrative Groups and Roles](about-tokenbridge/features/tokenbridge-roles/administrative-groups-and-roles.md)
+    * [Validator Roles](about-tokenbridge/features/tokenbridge-roles/validator-roles.md)
+    * [User Roles](about-tokenbridge/features/tokenbridge-roles/user-roles.md)
   * [Transfer Limits](about-tokenbridge/features/transfer-limits.md)
 * [Use Cases](about-tokenbridge/use-cases/README.md)
   * [Mainnet Participation](about-tokenbridge/use-cases/mainnet-participation.md)
