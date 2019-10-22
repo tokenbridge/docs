@@ -1,10 +1,10 @@
 ---
-description: Use MyEtherWallet with MetaMask to transfer a kitty across chains
+description: Use MyEtherWallet with MetaMask to transfer a cat across chains
 ---
 
 # MyEtherWallet \(MEW\) Transfer
 
-## **Transfer a Kitty from Kovan to Sokol** 
+## **Transfer a Cat from Kovan to Sokol** 
 
 {% hint style="info" %}
 You will need a small amount of KETH to complete the transfer.  You can obtain here: [https://gitter.im/kovan-testnet/faucet](https://gitter.im/kovan-testnet/faucet)
@@ -77,7 +77,7 @@ After waiting several seconds to allow for AMB bridge operations, check the [tok
 
 ![Metadata on Sokol - located in Read Contract tab with getKitty method. ](../../.gitbook/assets/metadata.png)
 
-## **Transfer Kitty from Sokol to Kovan**
+## **Transfer Cat from Sokol to Kovan**
 
 {% hint style="info" %}
 The process is identical to the above process other than  using different contract addresses. 

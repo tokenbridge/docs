@@ -1,12 +1,12 @@
 ---
 description: >-
-  Complete steps for transferring a Kitty from Kovan to Sokol and back again,
+  Complete steps for transferring a cat from Kovan to Sokol and back again,
   using NiftyWallet.
 ---
 
 # NiftyWallet Transfer
 
-## **Transfer Kitty: Kovan to Sokol**
+## **Transfer Cat: Kovan to Sokol**
 
 {% hint style="info" %}
 You will need a small amount of KETH to complete the transfer process.  You can obtain here: [https://gitter.im/kovan-testnet/faucet](https://gitter.im/kovan-testnet/faucet)
@@ -115,7 +115,7 @@ Now the token is locked in the Mediator contract in Kovan. Allow a few seconds t
 
 ![In the Read Contract tab, you can select the getKitty method to show Kitty MetaData](../../.gitbook/assets/readcontract%20%281%29.png)
 
-## **Transfer Kitty: Sokol to Kovan**
+## **Transfer Cat: Sokol to Kovan**
 
 The process is similar when transferring from Sokol back to Kovan. 
 
@@ -147,13 +147,13 @@ Again, two transactions are needed to bridge the token back to Kovan
 Follow the steps explained above to call `approve` method of the token contract. 
 
 * On `_to` parameter paste the mediator contract address `0x5EeC77239398FE328791E28700CAFddB2990ea97`
-* In `_tokenId` parameter insert the Id of the token you want to transfer. **Send transaction with the account where you own the Kitty**.
+* In `_tokenId` parameter insert the Id of the token you want to transfer. **Send transaction with the account where you own the Cat**.
 
 ### 4\) TransferToken Method of Mediator Contract 
 
 Follow the explained steps to call `transferToken` of mediator contract. 
 
-* On `_from` parameter paste the address of your account \(**same account where Kitty is owned on Sokol**\) that will receive the token on the other network
+* On `_from` parameter paste the address of your account \(**same account where Cat is owned on Sokol**\) that will receive the token on the other network
 * In `_tokenId` parameter insert the Id of the token you want to transfer.
 
 ### Success!

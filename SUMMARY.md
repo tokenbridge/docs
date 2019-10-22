@@ -4,20 +4,25 @@
 
 ## About TokenBridge
 
-* [Features & Definitions](about-tokenbridge/features.md)
-* [TokenBridge Roles](about-tokenbridge/tokenbridge-roles.md)
-* [Transfer Limits](about-tokenbridge/transfer-limits.md)
+* [Features & Definitions](about-tokenbridge/features/README.md)
+  * [TokenBridge Roles](about-tokenbridge/features/tokenbridge-roles.md)
+  * [Transfer Limits](about-tokenbridge/features/transfer-limits.md)
+* [Use Cases](about-tokenbridge/use-cases/README.md)
+  * [Mainnet Participation](about-tokenbridge/use-cases/mainnet-participation.md)
+  * [Reduce Computation Costs](about-tokenbridge/use-cases/reduce-computation-costs.md)
+* [Roadmap](about-tokenbridge/roadmap.md)
 
-## AMB Bridge
+## Arbitrary Message Bridge \(AMB\) <a id="amb-bridge"></a>
 
-* [About AMB Bridge](amb-bridge/about-amb-bridge.md)
-* [How to develop a cross-blockchain application using the AMB bridge](amb-bridge/how-to-develop-xchain-apps-by-amb.md)
+* [About the AMB](amb-bridge/about-amb-bridge.md)
+* [How to develop a cross-blockchain application using the AMB](amb-bridge/how-to-develop-xchain-apps-by-amb.md)
 * [Demo: CryptoKitties Bridge](amb-bridge/how-to-use-cryptokitties-bridge/README.md)
   * [Deploy CryptoKitty Contracts](amb-bridge/how-to-use-cryptokitties-bridge/deploy-cryptokitty-contracts.md)
   * [Verify Contracts in BlockScout](amb-bridge/how-to-use-cryptokitties-bridge/verify-contracts-in-blockscout.md)
-  * [View Kitties in BlockScout](amb-bridge/how-to-use-cryptokitties-bridge/view-in-blockscout.md)
+  * [View Cats in BlockScout](amb-bridge/how-to-use-cryptokitties-bridge/view-in-blockscout.md)
   * [NiftyWallet Transfer](amb-bridge/how-to-use-cryptokitties-bridge/niftywallet-transfer.md)
   * [MyEtherWallet \(MEW\) Transfer](amb-bridge/how-to-use-cryptokitties-bridge/myetherwallet-mew-transfer.md)
+  * [Create a Test Cat](amb-bridge/how-to-use-cryptokitties-bridge/create-a-test-kitty.md)
 
 ## ETH-BNC Bridge
 

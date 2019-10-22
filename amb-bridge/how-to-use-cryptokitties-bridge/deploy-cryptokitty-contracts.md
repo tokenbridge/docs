@@ -4,12 +4,16 @@ description: You must be the contract owner in order to create a CryptoKitty
 
 # Deploy CryptoKitty Contracts
 
-To create your own CryptoKitties to send across the bridge, you need to deploy your own set of contracts. Only the contract owner can create new kitties. You can create a group of kitties during the deployment process using an env variable.
+To create your own CryptoKitties to send across the bridge, you need to deploy your own set of contracts. Only the contract owner can create new cats. You can also create a group of cats during the deployment process using an env variable.
 
 In this example, we will deploy contracts to the Kovan & Sokol testnets. You will need a small amount of test currency in your wallet for both testnets in order to deploy the contracts.
 
 * [Kovan Faucet](https://faucet.kovan.network/) \(Github account required. If prefered, you can get KETH through the [gitter channel](https://gitter.im/kovan-testnet/faucet)\)
 * [Sokol Faucet](https://faucet-sokol.herokuapp.com/)
+
+{% hint style="warning" %}
+If you would like to try to the bridge feature **without creating your own cat**, please contact us on [Discord](https://discord.gg/mPJ9zkq) or the [TokenBridge forum ](https://forum.poa.network/c/tokenbridge/)with your wallet address, and we will send you a test cat to play with 😻.  With a test cat, you can proceed from [NiftyWallet Transfer](niftywallet-transfer.md) or [MEW transfer](myetherwallet-mew-transfer.md).
+{% endhint %}
 
 {% hint style="info" %}
 We use [Nifty Wallet](https://chrome.google.com/webstore/detail/nifty-wallet/jbdaocneiiinmjbjlgalhcelgbejmnid?hl=en) for the demonstration. Similar functionality can be achieved with MetaMask. Note that Nifty Wallet & MetaMask cannot be active extensions at the same time.
@@ -113,7 +117,7 @@ KITTIES_AMOUNT=15
 ![Click to copy your private key](../../.gitbook/assets/export_3.png)
 
 * HOME\_AMB\_BRIDGE=**0xFe446bEF1DbF7AFE24E81e05BC8B271C1BA9a560**: This is the address for the [currently deployed AMB bridge on the Sokol network](https://blockscout.com/poa/sokol/address/0xfe446bef1dbf7afe24e81e05bc8b271c1ba9a560/contracts). If you deploy elsewhere, use your deployed address address. 
-* HOME\_MEDIATOR\_OWNER=**&lt;YOUR WALLET OWNER ADDRESS&gt;**: You should have access to this wallet address so you can create a kitty later if needed. The following &lt;YOUR WALLET OWNER ADDRESS&gt; parameters can use the same address for the purposes of this tutorial.  For more information, see [TokenBridge roles](../../about-tokenbridge/tokenbridge-roles.md). 
+* HOME\_MEDIATOR\_OWNER=**&lt;YOUR WALLET OWNER ADDRESS&gt;**: You should have access to this wallet address so you can create a cat later if needed. The following &lt;YOUR WALLET OWNER ADDRESS&gt; parameters can use the same address for the purposes of this tutorial.  For more information, see [TokenBridge roles](../../about-tokenbridge/features/tokenbridge-roles.md). 
 * FOREIGN\_AMB\_BRIDGE=**0xFe446bEF1DbF7AFE24E81e05BC8B271C1BA9a560**:  This is the address for the [currently deployed AMB bridge on the Kovan network.](https://blockscout.com/eth/kovan/address/0xfe446bef1dbf7afe24e81e05bc8b271c1ba9a560/contracts) If you deploy elsewhere, use your deployed address. 
 * KITTIES\_AMOUNT=**15**: This is the number of kitties minted by the contract, select any number here. You can send these to other addresses or bridge yourself.
 

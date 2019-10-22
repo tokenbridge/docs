@@ -1,4 +1,4 @@
-# About AMB Bridge
+# About the AMB
 
 Intention of the Arbitrary Message Bridge is to relay any data between two EVM-based chains. The originating contract encode data that need to be transferred in form of arbitrary method call together with parameters or without them. It passes them and the target contract address to the AMB contracts. As soon as the data are relayed to the another side by the Arbitrary Message Bridge oracles, the bridge contract on that side will pass the ABI-encoded method to the target contract.
 

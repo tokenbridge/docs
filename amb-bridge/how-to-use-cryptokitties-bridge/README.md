@@ -4,7 +4,7 @@ description: A demonstration of Arbitrary Message Bridging using CryptoKitties
 
 # Demo: CryptoKitties Bridge
 
-The CryptoKitties bridge allows users to transfer a NFT representing a Kitty from one chain to another. It demonstrates the ability to perform operations with NFTs through the Arbitrary Message Bridge \(AMB\), which is part of [the TokenBridge project](https://github.com/poanetwork/tokenbridge).
+The CryptoKitties bridge allows users to transfer a NFT representing a cat from one chain to another. It demonstrates the ability to perform operations with NFTs through the Arbitrary Message Bridge \(AMB\), which is part of [the TokenBridge project](https://github.com/poanetwork/tokenbridge).
 
 In the demos, we deploy contracts and then transfer an NFT between 2 testnets, **Sokol** and **Kovan**. 
 
@@ -12,14 +12,22 @@ In the demos, we deploy contracts and then transfer an NFT between 2 testnets, *
   * CryptoKitties contract \(KittyCore\) similar to the original [CryptoKitties](https://github.com/cryptocopycats/awesome-cryptokitties/) 
   * A mediator contract \(ForeignMediator\). Kovan is called the foreign bridge in this scenario 
 * **Deployed on Sokol**: 
-  * A modified version of [CryptoKitties](https://github.com/cryptocopycats/awesome-cryptokitties/) which can mint a new Kitty with specified metadata \(SimpleBridgeKitty\)
-  * A mediator contract \(HomeMediator\). Sokol is called the home bridge. Only the mediator contract communicating with the AMB is allowed to mint a Kitty.
+  * A modified version of [CryptoKitties](https://github.com/cryptocopycats/awesome-cryptokitties/) which can mint a new cat with the same specified metadata \(SimpleBridgeKitty\)
+  * A mediator contract \(HomeMediator\). Sokol is called the home bridge. Only the mediator contract communicating with the AMB is allowed to mint a cat.
 
 {% hint style="info" %}
 It is possible to deploy the contracts in the opposite direction as well \(where KittyCore & ForeignMediator are deployed on Sokol  & SimpleBridgeKitty & HomeMediator on Kovan\). For demo purposes, we arbitrarily chose Kovan as the foreign network.
 {% endhint %}
 
 ## Getting Started
+
+{% hint style="warning" %}
+In the following example we deploy contracts enable test CryptoKitty creation. If you choose to deploy your own contracts, you can also create additional test cats using this instruction.
+
+If you would like to try bridging **without creating your own test cat**, please contact us on [Discord](https://discord.gg/mPJ9zkq) or the [TokenBridge forum ](https://forum.poa.network/c/tokenbridge/)with your wallet address, and we will send you a kitty to play with 😻.  With a test cat, you can start from step 4 below.
+{% endhint %}
+
+### Example Instructions
 
 1. [Deploy CryptoKitty Contracts on both networks](deploy-cryptokitty-contracts.md)
 2. [Verify Contracts in BlockScout](verify-contracts-in-blockscout.md)
@@ -37,8 +45,8 @@ It is possible to deploy the contracts in the opposite direction as well \(where
 
 ### Example Contracts in the Sokol \(home\) testnet:
 
-* [HomeMediator](https://blockscout.com/poa/sokol/address/0x5EeC77239398FE328791E28700CAFddB2990ea97/transactions): Token management contract that confirms transaction accuracy, processes and sends token mint and burn requests, and sends requests to unlock Kitties on Kovan side.
-* [SimpleBridgeKitty](https://blockscout.com/poa/sokol/address/0xc6a592ED792de33e6CBBF7ce04Dd9D3884B46B9A): Contract that creates a Kitty with identical attributes \(id, ownership, & metadata\) to the Kitty locked in the Kovan mediator contract. Kitties can only be minted through a request from the Sokol mediator contract.
+* [HomeMediator](https://blockscout.com/poa/sokol/address/0x5EeC77239398FE328791E28700CAFddB2990ea97/transactions): Token management contract that confirms transaction accuracy, processes and sends token mint and burn requests, and sends requests to unlock cats on Kovan side.
+* [SimpleBridgeKitty](https://blockscout.com/poa/sokol/address/0xc6a592ED792de33e6CBBF7ce04Dd9D3884B46B9A): Contract that creates a cat with identical attributes \(id, ownership, & metadata\) to the cat locked in the Kovan mediator contract. Cats can only be minted through a request from the Sokol mediator contract.
 
 ### Contracts source:
 

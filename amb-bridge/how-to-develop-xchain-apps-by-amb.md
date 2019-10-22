@@ -2,7 +2,7 @@
 description: Developing a cross-blockchain application with the arbitrary message bridge
 ---
 
-# How to develop a cross-blockchain application using the AMB bridge
+# How to develop a cross-blockchain application using the AMB
 
 {% hint style="info" %}
 The complete AMB bridge interface can be found [here](https://github.com/poanetwork/poa-bridge-contracts/blob/master/contracts/interfaces/IAMB.sol)

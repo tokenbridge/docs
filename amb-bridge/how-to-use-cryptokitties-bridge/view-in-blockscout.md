@@ -1,6 +1,6 @@
-# View Kitties in BlockScout
+# View Cats in BlockScout
 
-## Display Kitties
+## Display Cats
 
 {% hint style="warning" %}
 Contracts must be verified before you can view and interact with methods. See [Verify Contracts in BlockScout](verify-contracts-in-blockscout.md) for details.
@@ -29,7 +29,7 @@ To view kitties you have bridged to Sokol, use the SimpleBridgeKitty ****address
 
 ![Read Contract tab displays contract methods and allows for queries](../../.gitbook/assets/read-contract.png)
 
-* Call the `getKitty` method with the **Token ID** to get metadata for that kitty.
+* Call the `getKitty` method with the **Token ID** to get metadata for that cat.
 
 ![Call getKitty method with the token id \(ie. 7\) to get the metadata ](../../.gitbook/assets/getkitty.png)
 
