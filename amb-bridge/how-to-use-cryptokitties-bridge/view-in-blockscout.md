@@ -33,3 +33,13 @@ To view kitties you have bridged to Sokol, use the SimpleBridgeKitty ****address
 
 ![Call getKitty method with the token id \(ie. 7\) to get the metadata ](../../.gitbook/assets/getkitty.png)
 
+### 4\) View Individual Cat data
+
+To view an individual NFT, **click on the token ID number** wherever you see it. This is from the [Inventory](https://blockscout.com/eth/kovan/tokens/0x13ac5c6338796a31a39e74d70b0153c1be5f53b4/inventory) section view.
+
+![Click the ID number to get cat details](../../.gitbook/assets/token_id_1.png)
+
+![Individual cat details, including the image and ability to view and copy Metadata](../../.gitbook/assets/metadata%20%281%29.png)
+
+
+

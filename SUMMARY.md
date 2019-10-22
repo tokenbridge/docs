@@ -25,7 +25,7 @@
   * [View Cats in BlockScout](amb-bridge/how-to-use-cryptokitties-bridge/view-in-blockscout.md)
   * [NiftyWallet Transfer](amb-bridge/how-to-use-cryptokitties-bridge/niftywallet-transfer.md)
   * [MyEtherWallet \(MEW\) Transfer](amb-bridge/how-to-use-cryptokitties-bridge/myetherwallet-mew-transfer.md)
-  * [Create a Test Cat](amb-bridge/how-to-use-cryptokitties-bridge/create-a-test-kitty.md)
+  * [Create/Transfer a Test Cat](amb-bridge/how-to-use-cryptokitties-bridge/create-a-test-kitty.md)
 
 ## ETH-BNC Bridge
 
