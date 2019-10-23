@@ -22,8 +22,8 @@ The addresses of the Multisignature Wallet:
 
 The particular action flow will vary for different management operations. 
 
-* [Upgrade Contracts]()
-* [Configuration]()
-* [Admin Privileges Management]()
-* [ERC20 Tokens Release]()
+* [Upgrade Contracts](upgrade-contracts.md)
+* [Configuration](configuration.md)
+* [Admin Privileges Management](admin-privileges-management.md)
+* [ERC20 Tokens Release](erc20-tokens-release.md)
 
