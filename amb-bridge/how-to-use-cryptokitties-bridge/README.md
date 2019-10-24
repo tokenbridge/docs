@@ -16,8 +16,10 @@ In the demos, we deploy contracts and then transfer an NFT between 2 testnets, *
   * A mediator contract \(HomeMediator\). Sokol is called the home bridge. Only the mediator contract communicating with the AMB is allowed to mint a cat.
 
 {% hint style="info" %}
-It is possible to deploy the contracts in the opposite direction as well \(where KittyCore & ForeignMediator are deployed on Sokol  & SimpleBridgeKitty & HomeMediator on Kovan\). For demo purposes, we arbitrarily chose Kovan as the foreign network.
+It is possible to deploy the contracts in the opposite direction as well \(where KittyCore & ForeignMediator are deployed on Sokol & SimpleBridgeKitty & HomeMediator on Kovan\). For demo purposes, we arbitrarily chose Kovan as the foreign network.
 {% endhint %}
+
+![A test cat deployed on Kovan](../../.gitbook/assets/pretty_kitty.png)
 
 ## Getting Started
 

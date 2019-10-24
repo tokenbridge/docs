@@ -7,12 +7,16 @@ description: >-
 # Create/Transfer a Test Cat
 
 {% hint style="warning" %}
- If you would like to try to the bridge feature **without creating your own test cat**, please contact us on [Discord](https://discord.gg/mPJ9zkq) or the [TokenBridge forum ](https://forum.poa.network/c/tokenbridge/)with your wallet address, and we will send you a test cat to play with 😻.  With a test cat, you can proceed from [NiftyWallet Transfer](niftywallet-transfer.md) or [MEW transfer](myetherwallet-mew-transfer.md) instructions.
+ If you would like to try transferring a cat with the bridge **without creating your own test cat**, please contact us on [Discord](https://discord.gg/mPJ9zkq) or the [TokenBridge forum ](https://forum.poa.network/c/tokenbridge/)with your wallet address, and we will send you a test cat to play with 😻.  
+
+With a test cat, you can proceed from [NiftyWallet Transfer](niftywallet-transfer.md) or [MEW transfer](myetherwallet-mew-transfer.md) instructions.
 {% endhint %}
 
 ## Test Cat Creation Instruction
 
 If you deployed your own contracts and have access to the ownership address, you can also create a test cat using the **createPromoKitty** method in the **KittyCore** contract.
+
+![A test cat deployed on Kovan](../../.gitbook/assets/pretty_kitty.png)
 
 ## Nifty Wallet
 
@@ -56,7 +60,7 @@ You can transfer a cat to another address using the `transfer` method in the Kit
 
 ![Execute using the token holders account](../../.gitbook/assets/2kitty3.png)
 
-4\) After the transaction is submitted, check the account on BlockScout \(search by account and click the Tokens tab\) to make sure the cat has been successfully transferred.
+4\) After the transaction is submitted, check the account on BlockScout \(search by **address token was transferred to** and click the **Tokens** tab\) to make sure the cat has been successfully transferred.
 
 ### MyEtherWallet \(MEW\)
 
@@ -94,5 +98,5 @@ You can transfer a cat to another address using the `transfer` method in the Kit
 
 ![Transfer a cat to another address with the transfer method](../../.gitbook/assets/mew2.png)
 
-4\) After the transaction is submitted, check the account on BlockScout \(search by account and click the Tokens tab\) to make sure the cat has been successfully transferred.
+4\) After the transaction is submitted, check the account on BlockScout \(search by **address token was transferred to** and click the **Tokens** tab\) to make sure the cat has been successfully transferred.
 
