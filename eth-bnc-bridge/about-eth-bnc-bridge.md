@@ -10,5 +10,7 @@ The TokenBridge solution allows digital asset transfer between two Ethereum Virt
 
 The [Binance Chain](https://docs.binance.org/) does not support multisig wallets. However, the same voting functionality described above can be implemented with a [Threshold Signature Scheme](https://zengo.com/implementing-open-source-tss-to-binance-coin-bnb/) \(TSS\). A TSS uses Multiparty Computation to generate a digital signature of a message in a trustless manner, using a subset of validators.
 
-The ETH-to-BNC bridge combines the TokenBridge approach with a TSS to approve relay operations and facilitate asset transfer between an EVM chain and the Binance chain. 
+The ETH-to-BNC bridge combines the TokenBridge approach with a TSS to approve relay operations and facilitate asset transfer between an EVM chain and the Binance chain.
+
+The contracts and oracles are available on [this GitHub repo](https://github.com/poanetwork/eth-to-bnc-bridge).
 
