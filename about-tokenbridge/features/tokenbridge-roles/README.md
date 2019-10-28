@@ -10,15 +10,15 @@ General information regarding the TokenBridge can be found in [Features & Defini
 
 For detailed configuration options and bridge parameters see [xDai bridge contracts management](../../../xdai-bridge/xdai-bridge-contracts-management/)
 
+See the following role descriptions:
+
+* [Administrative Groups and Roles](administrative-groups-and-roles.md)
+* [Validator Roles](validator-roles.md)
+* [User Roles](user-roles.md)
+
 ### Multisignature requirements
 
 Multisignature \(multisig\) wallet functionality is required for TokenBridge administrators. Multiple parties must agree on operations before an action is executed.
-
-### Validator Roles
-
-
-
-### 
 
 #### Example User Diagram for the `ERC-to-ERC` Bridge
 

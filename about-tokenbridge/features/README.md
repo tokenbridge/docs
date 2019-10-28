@@ -19,7 +19,7 @@ A bridge can be configured for several different network configurations. This cu
 * **Native to ERC20**: An EVM sidechain coin is converted to an ERC20 compatible token \(ERC677 token\) on the Ethereum network. When a bridge transfer is initiated from the Native side, coins are locked on the Native sidechain and minted on the Ethereum network. When bridged in the opposite direction, tokens are burned on the Foreign side and unlocked in the Native network. The POA to POA20 Bridge uses this mode.
 * **ERC20 to ERC20**: ERC20 compatible tokens are locked on the Foreign network and minted as ERC20 compatible tokens \(ERC677 tokens\) on the Native network. When transferred from Native to Foreign, the ERC677 tokens are burned and the ERC20 tokens are unlocked. Usage of ERC677 tokens on the Foreign network will increase the bridge security.
 * **ERC20 to Native**: Coins are locked in the Foreign Network and ERC20 tokens are minted in the Native network \(the Native network must support [Parity BlockReward](https://wiki.parity.io/Block-Reward-Contract) functionality\). The xDai chain uses this bridge mode.
-* **AMB Bridge:** Transfer arbitrary data between two networks as so the data could be interpreted as an arbitrary contract method invocation. For example, this allows to operate with NFT tokens and their metadata.
+* **AMB Bridge:** Transfer arbitrary data between two networks - data is interpreted as an arbitrary contract method invocation. This allows transfer operations with NFT tokens and their metadata.
 
 ### Bridge Components
 
