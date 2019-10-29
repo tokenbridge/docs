@@ -44,3 +44,9 @@
   * [ERC20 Tokens Release](xdai-bridge/xdai-bridge-contracts-management/erc20-tokens-release.md)
   * [xDai Bridge Management API](xdai-bridge/xdai-bridge-contracts-management/xdai-bridge-management-api.md)
 
+## Media
+
+* [Contact Us](media/contact-us.md)
+* [Media Kit](media/media-kit.md)
+* [Social Media](media/social-media.md)
+
