@@ -1,6 +1,6 @@
 # Roadmap
 
-### Q4 2019 - AMB between ETH-POA and ETH-xDAI
+### AMB between ETH-POA and ETH-xDAI
 
 **Target date: Q4 2019**
 
