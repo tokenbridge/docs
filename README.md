@@ -1,5 +1,5 @@
 ---
-description: TokenBridge provides data transfer capabilities across EVM chains
+description: TokenBridge provides data and token transfer capabilities across EVM chains
 ---
 
 # Welcome
