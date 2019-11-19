@@ -31,6 +31,7 @@
 
 * [About ETH-BNC bridge](eth-bnc-bridge/about-eth-bnc-bridge.md)
 * [Demo: ETH-BNC bridge](eth-bnc-bridge/running-an-eth-bnc-bridge-demo.md)
+* [Creating a Local Binance DEX Testnet](eth-bnc-bridge/creating-a-local-binance-dex-testnet.md)
 
 ## xDai Bridge
 
