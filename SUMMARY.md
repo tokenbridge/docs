@@ -19,6 +19,7 @@
 
 * [About the AMB](amb-bridge/about-amb-bridge.md)
 * [How to develop a cross-blockchain application using the AMB](amb-bridge/how-to-develop-xchain-apps-by-amb.md)
+* [ERC677 to ERC677 bridge on top of AMB](amb-bridge/erc677-to-erc677-bridge-on-top-of-amb.md)
 * [Demo: CryptoKitties Bridge](amb-bridge/how-to-use-cryptokitties-bridge/README.md)
   * [Deploy CryptoKitty Contracts](amb-bridge/how-to-use-cryptokitties-bridge/deploy-cryptokitty-contracts.md)
   * [Verify Contracts in BlockScout](amb-bridge/how-to-use-cryptokitties-bridge/verify-contracts-in-blockscout.md)
