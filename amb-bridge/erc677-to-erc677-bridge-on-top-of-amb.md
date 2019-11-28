@@ -134,10 +134,10 @@ The steps below assume that the AMB is up and running and serves the bridge betw
     * verify the proxy contract by `flats/EternalStorageProxy_flat.sol` \(contract name: `EternalStorageProxy`, compiler version: `v0.4.24+commit.e67f0147`, optimization is enabled, no constructor arguments\)
     * go to the implementation contract from the _Read Contract_ tab
     * verify the implementation contract by `flats/amb_erc677_to_erc677/HomeAMBErc677ToErc677_flat.sol` \(contract name: `HomeAMBErc677ToErc677`, compiler version: `v0.4.24+commit.e67f0147`, optimization is enabled, no constructor arguments\)
-14. Verify the mediator contract `0x1a2546B27293e127fF9a3d0D71A43Dd3733fa1F7` on Home side
+14. Verify the mediator contract `0x1a2546B27293e127fF9a3d0D71A43Dd3733fa1F7` on Foreign side
     * verify the proxy contract by `flats/EternalStorageProxy_flat.sol` \(contract name: `EternalStorageProxy`, compiler version: `v0.4.24+commit.e67f0147`, optimization is enabled, no constructor arguments\)
     * go to the implementation contract from the _Read Contract_ tab
-    * verify the implementation contract by `flats/amb_erc677_to_erc677/ForeignAMBErc677ToErc677_flat.sol` \(contract name: `HomeAMBErc677ToErc677`, compiler version: `v0.4.24+commit.e67f0147`, optimization is enabled, no constructor arguments\)
+    * verify the implementation contract by `flats/amb_erc677_to_erc677/ForeignAMBErc677ToErc677_flat.sol` \(contract name: `ForeignAMBErc677ToErc677`, compiler version: `v0.4.24+commit.e67f0147`, optimization is enabled, no constructor arguments\)
 15. Execute `transferAndCall` method from the token contract on the Foreign side by using NiftyWallet, MyEtherWallet or Remix. The argument `to` for the call must contain the address of the mediator contract `0x1a2546B27293e127fF9a3d0D71A43Dd3733fa1F7`. The `data` argument must be `0x`. The sender of the transaction is the account-recipient used in the mint operation. Make sure:
     1. the amount of tokens must be equal or greater the `FOREIGN_MIN_AMOUNT_PER_TX` parameter used in the deployment
     2. the transaction verified successfully and included into a block.
