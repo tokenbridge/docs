@@ -1,25 +1,29 @@
 ---
-description: How to deploy erc677-to-erc677 bridge based on Aribtrary Message Bridge
+description: How to deploy erc677-to-erc677 bridge based on Arbitrary Message Bridge
 ---
 
 # ERC677 to ERC677 bridge on top of AMB
 
+Instructions for deploying a pair of ERC677-compatible tokens and the bridge mediator contract on top of the Arbitrary Message Bridge \(AMB\). 
 
+The steps below assume that the AMB is up and running and serves the bridge between Kovan \(Foreign\) chain and Sokol \(Home\) chain. Addresses of the deployed AMB bridge contracts:
 
-This manual describes how to deploy the pair of ERC677-compatible tokens and the bridge mediator contract to relay assets between two chains by using Arbitrary Message Bridge \(AMB\).
+* [Kovan](https://blockscout.com/eth/kovan/address/0xfe446bef1dbf7afe24e81e05bc8b271c1ba9a560/contracts) Foreign testnet
+* [Sokol](https://blockscout.com/poa/sokol/address/0xfe446bef1dbf7afe24e81e05bc8b271c1ba9a560/contracts) Home testnet
 
-The steps below assume that the AMB is up and running and serves the bridge between Kovan \(Foreign\) chain and Sokol \(Home\) chain. The addresses of bridge contracts are mentioned [here](https://docs.tokenbridge.net/amb-bridge/how-to-use-cryptokitties-bridge#deployed-amb-bridge-contracts).
+## Instructions
 
 1. `git clone https://github.com/poanetwork/tokenbridge-contracts.git`
-2. `git checkout 3.2.0`
-3. Create an empty `deploy/.env` file by `touch .env`
-4. `docker-compose up --build`
-5. `docker-compose images bridge-contracts`
-6. `docker cp contracts_bridge-contracts_1:/contracts/flats ./`
-7. Deploy the contract `ERC677BridgeToken` from `flats/ERC677BridgeToken_flat.sol` by Remix or MyEtherWallet to the Foreign chain. In the steps below we assume that the address of the deployed token contract is `0x1e402513B7305F758476409da8048fd5b045C0AA`
-8. Verify the contract in the block explorer \(contract name: `ERC677BridgeToken`, compiler version: `v0.4.24+commit.e67f0147`, optimization is enabled, automatic identification of constructor arguments\)
-9. Mint some amount of tokens for an account
-10. Prepare `deploy/.env`
+2. `cd tokenbridge-contracts`
+3. `git checkout 3.2.0`
+4. Create an empty .env file in the deploy directory.  `touch  deploy/.env` 
+5. `docker-compose up --build`
+6. `docker-compose images bridge-contracts`
+7. `docker cp tokenbridge-contracts_bridge-contracts_1:/contracts/flats ./`
+8. Deploy the contract `ERC677BridgeToken` from `flats/ERC677BridgeToken_flat.sol` using Remix or MyEtherWallet to the Foreign \(Kovan\) chain. _**Note:** In the steps below we assume that the address of the deployed token contract is_ `0x1e402513B7305F758476409da8048fd5b045C0AA`
+9. Verify the contract in the block explorer \(contract name: `ERC677BridgeToken`, compiler version: `v0.4.24+commit.e67f0147`, optimization is enabled, automatic identification of constructor arguments\)
+10. Mint some amount of tokens for an account.
+11. Prepare `deploy/.env` as follows:
 
     ```text
     # The type of bridge. Defines set of contracts to be deployed.
@@ -111,7 +115,7 @@ The steps below assume that the AMB is up and running and serves the bridge betw
     FOREIGN_MEDIATOR_REQUEST_GAS_LIMIT=3000000
     ```
 
-11. `docker-compose run bridge-contracts deploy.sh`. It outputs something like this:
+12. `docker-compose run bridge-contracts deploy.sh`. Output will look similar to this:
 
     ```text
     {
@@ -129,17 +133,17 @@ The steps below assume that the AMB is up and running and serves the bridge betw
     }
     ```
 
-12. Verify the token contract `0xAFb605e4463D1326249075b3367A3353DeA34a6D` on the Home side by using `flats/ERC677BridgeToken_flat.sol` \(contract name: `ERC677BridgeToken`, compiler version: `v0.4.24+commit.e67f0147`, optimization is enabled, automatic identification of constructor arguments\)
-13. Verify the mediator contract `0xFaD73D79952041332554e11d896F430a2ecA1Fa8` on Home side
+13. Verify the token contract `0xAFb605e4463D1326249075b3367A3353DeA34a6D` on the Home \(Sokol\) side using `flats/ERC677BridgeToken_flat.sol` \(contract name: `ERC677BridgeToken`, compiler version: `v0.4.24+commit.e67f0147`, optimization is enabled, automatic identification of constructor arguments\)
+14. Verify the mediator contract `0xFaD73D79952041332554e11d896F430a2ecA1Fa8` on Home side
     * verify the proxy contract by `flats/EternalStorageProxy_flat.sol` \(contract name: `EternalStorageProxy`, compiler version: `v0.4.24+commit.e67f0147`, optimization is enabled, no constructor arguments\)
     * go to the implementation contract from the _Read Contract_ tab
     * verify the implementation contract by `flats/amb_erc677_to_erc677/HomeAMBErc677ToErc677_flat.sol` \(contract name: `HomeAMBErc677ToErc677`, compiler version: `v0.4.24+commit.e67f0147`, optimization is enabled, no constructor arguments\)
-14. Verify the mediator contract `0x1a2546B27293e127fF9a3d0D71A43Dd3733fa1F7` on Foreign side
+15. Verify the mediator contract `0x1a2546B27293e127fF9a3d0D71A43Dd3733fa1F7` on Foreign side
     * verify the proxy contract by `flats/EternalStorageProxy_flat.sol` \(contract name: `EternalStorageProxy`, compiler version: `v0.4.24+commit.e67f0147`, optimization is enabled, no constructor arguments\)
     * go to the implementation contract from the _Read Contract_ tab
     * verify the implementation contract by `flats/amb_erc677_to_erc677/ForeignAMBErc677ToErc677_flat.sol` \(contract name: `ForeignAMBErc677ToErc677`, compiler version: `v0.4.24+commit.e67f0147`, optimization is enabled, no constructor arguments\)
-15. Execute `transferAndCall` method from the token contract on the Foreign side by using NiftyWallet, MyEtherWallet or Remix. The argument `to` for the call must contain the address of the mediator contract `0x1a2546B27293e127fF9a3d0D71A43Dd3733fa1F7`. The `data` argument must be `0x`. The sender of the transaction is the account-recipient used in the mint operation. Make sure:
+16. Execute `transferAndCall` method from the token contract on the Foreign side by using NiftyWallet, MyEtherWallet or Remix. The argument `to` for the call must contain the address of the mediator contract `0x1a2546B27293e127fF9a3d0D71A43Dd3733fa1F7`. The `data` argument must be `0x`. The sender of the transaction is the account-recipient used in the mint operation. Make sure:
     1. the amount of tokens must be equal or greater the `FOREIGN_MIN_AMOUNT_PER_TX` parameter used in the deployment
     2. the transaction verified successfully and included into a block.
-16. Check the balance of the sender on the Home side.
+17. Check the balance of the sender on the Home side.
 
