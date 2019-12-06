@@ -16,7 +16,7 @@ The steps below assume that the AMB is up and running and serves the bridge betw
 1. `git clone https://github.com/poanetwork/tokenbridge-contracts.git`
 2. `cd tokenbridge-contracts`
 3. `git checkout 3.2.0`
-4. Create an empty .env file in the deploy directory.  `touch  deploy/.env` 
+4. Create an empty .env file in the deploy directory.  `touch deploy/.env` 
 5. `docker-compose up --build`
 6. `docker-compose images bridge-contracts`
 7. `docker cp tokenbridge-contracts_bridge-contracts_1:/contracts/flats ./`
