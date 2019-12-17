@@ -62,23 +62,32 @@ function failedMessageSender(bytes32 _txHash) external view returns (address);
 function failedMessageDataHash(bytes32 _txHash) external view returns (bytes32);
 ```
 
-All tmethods accept as a parameter the hash of the transaction that originated the message on the other network.
+All methods accept as a parameter the hash of the transaction that originated the message on the other network.
 
 * `messageCallStatus` returns the result of the message call execution.
 * `failedMessageReceiver` returns the address that received the call execution of the message.
-* `failedMessageSender` return the address that generated the message on the other network.
-* `failedMessageDataHash` return the hash `keccak256(data)` associated to the originating transaction hash. The contract-sender is responsible for providing unique sequence as part of the `data`. Where `data` refers to the `data` parameter in `requireToPassMessage` method.
+* `failedMessageSender` returns the address that generated the message on the other network.
+* `failedMessageDataHash` returns the hash `keccak256(data)` associated with the originating transaction hash. The contract-sender is responsible for providing a unique sequence as part of the `data`. Where `data` refers to the `data` parameter in the `requireToPassMessage` method.
 
 ## Example of ERC677 to ERC677 using AMB bridge
 
-We can use AMB to move ERC677 tokens between two chains. To do this, we'll have two contracts that communicate with each other: contract A receives tokens, locks them and instructs contract B to mint the same number of tokens in the other chain. In the inverse case, contract B receives tokens, burns them and instructs contract A to unlock the burned amount in the other chain.
+{% hint style="info" %}
+Explicit deployment instructions are [available here](erc677-to-erc677-bridge-on-top-of-amb.md)
+{% endhint %}
+
+We can use the AMB bridge to move ERC677 tokens between two chains. To do this, we'll have two contracts that communicate with each other: 
+
+* Contract A receives tokens, locks them and send instructions to Contract B.
+* Contract B receives instructions to mint the same number of tokens in the other chain. 
+
+In the inverse case, contract B receives tokens, burns them and instructs contract A to unlock the burned amount in the other chain.
 
 The implementation of the contracts for this ERC677-TO-ERC677 built on top of the AMB bridge can be found [here](https://github.com/poanetwork/poa-bridge-contracts/tree/master/contracts/upgradeable_contracts/amb_erc677_to_erc677).
 
 In this implementation we have:
 
-* A Token Management contract on Foreign side that will lock/unlock transferred tokens and send requests to Mint tokens on Home side.
-* A Token Management contract on Home side that will Mint/Burn transferred tokens and send requests to Unlock tokens on Foreign side.
+* A Token Management contract on Foreign side that locks/unlocks transferred tokens and sends requests to Mint tokens on Home side.
+* A Token Management contract on Home side that mints/burns transferred tokens and send requests to Unlock tokens on Foreign side.
 
 Example of Home Token Management contract tested in Sokol:
 
@@ -96,19 +105,32 @@ Deployed bridges contracts are available [here](https://forum.poa.network/t/usin
 
 ### Token transfer flow
 
-In the case when a user has Tokens on the Foreign side and wants to bridge them to the Home network: 1. The user calls the method `transferAndCall` of the token contract with the value and the foreign token management contract address as target. 2. The tokens are transferred and the token contract calls `onTokenTransfer` method of the token management contract. 3. In `onTokenTransfer` method, the token management contract calls `requireToPassMessage` method of Foreign AMB bridge contract with parameters indicating that method `handleBridgedTokens` of the Home token management contract should be called with the recipient and value parameters of the token transfer.
+A user has tokens on the Foreign side and wants to bridge them to the Home network: 
 
-Then, when the AMB bridge process the message, on Home network: 1. The AMB Oracle will call Home AMB bridge contract. 1. Home AMB bridge will call `handleBridgedTokens` method of the Home Token Management contract. 2. `handleBridgedTokens` method will Mint the Tokens.
+1. The user calls the `transferAndCall` method of the token contract with the value and the foreign token management contract address as a target. 
+2. The tokens are transferred and the token contract calls `onTokenTransfer` method of the token management contract.
+3.  In the `onTokenTransfer` method, the token management contract calls the `requireToPassMessage` method of Foreign AMB bridge contract with parameters indicating that the `handleBridgedTokens` method of the Home token management contract should be called with the recipient and value parameters of the token transfer.
+
+Then, when the AMB bridge processes the message on the Home network: 
+
+1. The AMB Oracle calls the Home AMB bridge contract.
+2. The Home AMB bridge calls the `handleBridgedTokens` method of the Home Token Management contract.
+3. The `handleBridgedTokens` method Mints the Tokens.
 
 Here is a representation of the steps explained above:
 
 ![AMB-ERC677-ERC677-Transfer](https://i.imgur.com/LGDqqkp.png)
 
-Transferring tokens from Home network to the Foreign network works in a similar way. The only difference is that Home Token Management contract will Burn the transferred tokens, and Foreign Token Management contract will unlock the tokens.
+Transferring tokens from the Home network to the Foreign network works in a similar way. The only difference is that Home Token Management contract Burns the transferred tokens, and the Foreign Token Management contract unlocks the tokens.
 
 ## Code examples
 
-Taking in consideration that the token contract address, the AMB bridge contract address, the token management contract address of the other network and the execution gas limit were stored in the contract on the initialization of it, this is an example of `onTokenTransfer` implementation:
+In this example of the `onTokenTransfer` implementation, the following items were stored in the contract on initialization: 
+
+* Token contract address
+* AMB bridge contract address 
+* Token management contract address of the second network 
+* Execution gas limit
 
 ```javascript
 function onTokenTransfer(address _from, uint256 _value, bytes /*_data*/) external returns (bool) {
@@ -129,7 +151,7 @@ function onTokenTransfer(address _from, uint256 _value, bytes /*_data*/) externa
 }
 ```
 
-Here is the example implementation of the method `handleBridgedTokens` on Home network:
+Example implementation of the `handleBridgedTokens` method on the Home network:
 
 ```javascript
 function handleBridgedTokens(address _recipient, uint256 _value, bytes32 /* uniqueSecuence */) external {
@@ -142,7 +164,7 @@ function handleBridgedTokens(address _recipient, uint256 _value, bytes32 /* uniq
 }
 ```
 
-In case the execution of `handleBridgedTokens` fails, any user could call the following method in Home Network to request a fix for the transfer performed previously on the Foreign Network.
+In case the execution of `handleBridgedTokens` fails, any user may call the following method in the Home Network to request a fix for the transfer performed previously on the Foreign Network.
 
 ```javascript
 function requestFailedMessageFix(bytes32 _txHash) external {
@@ -159,7 +181,7 @@ function requestFailedMessageFix(bytes32 _txHash) external {
 }
 ```
 
-Here is the example implementation of the method in Foreign Network that will unlock the transferred tokens after the request to fix a failed message from the Home Network.
+Example implementation of the method in Foreign Network that unlocks the transferred tokens after the request to fix a failed message from the Home Network.
 
 ```javascript
 function fixFailedMessage(bytes32 _dataHash) external {
