@@ -2,7 +2,7 @@
 description: TokenBridge is an interoperability solution for EVM chains
 ---
 
-# Features & Definitions
+# Features, Definitions and Modes
 
 ### Chain and Network Definitions
 
