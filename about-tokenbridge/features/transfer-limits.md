@@ -20,9 +20,9 @@ There are two cases how the limits are applied when tokens are deposited to anot
 
 This case is applicable for the `native-to-erc20` mode and for the mode `erc20-to-erc20` when tokens supporting ERC677 \(`transferAndCall`\) are used on both sides of the bridge.
 
-![Actively controlled deposit for the native-to-erc20 bridge mode](../../.gitbook/assets/image%20%282%29.png)
+![Actively controlled deposit for the native-to-erc20 bridge mode](../../.gitbook/assets/image%20%285%29.png)
 
-![Actively controlled deposit for the erc677-to-erc677 bridge mode](../../.gitbook/assets/image.png)
+![Actively controlled deposit for the erc677-to-erc677 bridge mode](../../.gitbook/assets/image%20%282%29.png)
 
 The first set of checks whether the value of the transaction is within the limits happens on the step 1 for the`native-to-erc20` mode or one the step 2 for the mode `erc20-to-erc20` after invocation of the`onTokenTransfer` method:
 
@@ -43,7 +43,7 @@ Although so far the limits are not synchronized automatically on both side of th
 
 The checks described here happen during tokens transfers in the `erc20-to-native` mode and in the mode `erc20-to-erc20` when generic ERC20 tokens are used on the Foreign side of the bridge.
 
-![Passive perception of deposit for the erc20-to-native bridge mode](../../.gitbook/assets/image%20%285%29.png)
+![Passive perception of deposit for the erc20-to-native bridge mode](../../.gitbook/assets/image%20%2812%29.png)
 
 Since the bridge contract on the Foreign side is not involved in the transfer operation no checks occur on this side. That's why in these bridge modes it is not possible to check minimal allowable value per transaction.
 
@@ -56,9 +56,9 @@ The checks are only applied on the step 3:
 
 It is assumed that the tokens participating in withdrawals are controlled by the bridge \(or bridge owners\) that is why the transfer limits behave similarly in all bridge modes.
 
-![Withdrawal for the erc20-to-native bridge mode](../../.gitbook/assets/image%20%281%29.png)
+![Withdrawal for the erc20-to-native bridge mode](../../.gitbook/assets/image%20%283%29.png)
 
-![Withdrawal for the natvie-to-erc20 and erc20-to-erc20 bridge modes](../../.gitbook/assets/image%20%284%29.png)
+![Withdrawal for the natvie-to-erc20 and erc20-to-erc20 bridge modes](../../.gitbook/assets/image%20%2810%29.png)
 
 The first set of checks for detection whether the withdrawal is within the limits happens on the step 1 for the `erc20-to-native` mode and on the step 2 for the modes `native-to-erc20` and `erc20-to-erc20`. It makes sure that:
 

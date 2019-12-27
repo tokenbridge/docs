@@ -39,6 +39,7 @@
 * [About the xDai Bridge](xdai-bridge/about.md)
 * [Using the xDai Bridge](xdai-bridge/using-the-xdai-bridge/README.md)
   * [How to use the xDai Bridge without the UI](xdai-bridge/using-the-xdai-bridge/how-to-use-xdai-bridge-without-ui.md)
+  * [Alternative receiver for the xDai bridge](xdai-bridge/using-the-xdai-bridge/alternative-receiver-for-the-xdai-bridge.md)
 * [xDai Bridge Contracts Management](xdai-bridge/xdai-bridge-contracts-management/README.md)
   * [Upgrade Contracts](xdai-bridge/xdai-bridge-contracts-management/upgrade-contracts.md)
   * [Configuration](xdai-bridge/xdai-bridge-contracts-management/configuration.md)
