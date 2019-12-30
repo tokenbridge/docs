@@ -10,6 +10,7 @@
     * [Validator Roles](about-tokenbridge/features/tokenbridge-roles/validator-roles.md)
     * [User Roles](about-tokenbridge/features/tokenbridge-roles/user-roles.md)
   * [Transfer Limits](about-tokenbridge/features/transfer-limits.md)
+  * [Contracts verification in explorers](about-tokenbridge/features/contracts-verification-in-explorers.md)
 * [Use Cases](about-tokenbridge/use-cases/README.md)
   * [Mainnet Participation](about-tokenbridge/use-cases/mainnet-participation.md)
   * [Reduce Computation Costs](about-tokenbridge/use-cases/reduce-computation-costs.md)
