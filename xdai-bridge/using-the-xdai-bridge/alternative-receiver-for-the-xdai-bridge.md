@@ -8,6 +8,10 @@ The new feature _Alternative Receiver_ has integrated in the contracts of the xD
 
 Due to different nature of tokens on two sides of the xDai bridge the operations to transfer assets to an alternative receiver from one chain to another differ as well.
 
+{% hint style="danger" %}
+The following instructions are for illustrative purposes only. MyEtherWallet is not totally compatible with xDai for these types of contract calls.  Alternate receiver is designed for use by Multisig wallets and other contracts.
+{% endhint %}
+
 ### Sai/Dai to xDai
 
 1. Choose the Ethereum Mainnet in the MetaMask extension and login to [MyEtherWallet \(MEW\)](https://www.myetherwallet.com/access-my-wallet).
