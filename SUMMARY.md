@@ -14,6 +14,7 @@
 * [Use Cases](about-tokenbridge/use-cases/README.md)
   * [Mainnet Participation](about-tokenbridge/use-cases/mainnet-participation.md)
   * [Reduce Computation Costs](about-tokenbridge/use-cases/reduce-computation-costs.md)
+* [Security Audits](about-tokenbridge/security-audits.md)
 * [Roadmap](about-tokenbridge/roadmap.md)
 
 ## Arbitrary Message Bridge \(AMB\) <a id="amb-bridge"></a>
