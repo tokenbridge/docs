@@ -120,15 +120,17 @@ The steps below assume that the AMB is up and running and serves the bridge betw
     ```text
     {
         "homeBridge": {
-            "address": "0xFaD73D79952041332554e11d896F430a2ecA1Fa8",
-            "deployedBlockNumber": 11969756,
-            "erc677": {
+            "homeBridgeMediator": {
+                "address": "0xFaD73D79952041332554e11d896F430a2ecA1Fa8"
+            },
+            "bridgeableErc677": {
                 "address": "0xAFb605e4463D1326249075b3367A3353DeA34a6D"
             }
         },
         "foreignBridge": {
-            "address": "0x1a2546B27293e127fF9a3d0D71A43Dd3733fa1F7",
-            "deployedBlockNumber": 15083043
+            "foreignBridgeMediator": {
+                "address": "0x1a2546B27293e127fF9a3d0D71A43Dd3733fa1F7"
+            }
         }
     }
     ```
