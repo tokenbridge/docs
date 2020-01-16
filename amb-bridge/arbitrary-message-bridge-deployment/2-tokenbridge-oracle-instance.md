@@ -1,4 +1,4 @@
-# 2\) TokenBridge oracle instance
+# 2\) TokenBridge oracle instances
 
 TBD
 
