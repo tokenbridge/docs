@@ -21,8 +21,6 @@ This data can not be recovered through an account after creation, so be sure to 
 You will need tokens for deployment on both sides of the bridge. This means the DEPLOYMENT\_ACCOUNT and VALIDATOR accounts will require tokens. The DEPLOYMENT\_ACCOUNT will deploy bridge contracts and initialize the bridge, and VALIDATOR accounts use tokens to pay for txs with bridge operations.
 {% endhint %}
 
-
-
 ## Configure and Deploy Bridge Contracts
 
 ### 1\) Create configuration file `amb.config`
