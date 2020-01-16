@@ -78,7 +78,7 @@ Deployment of contracts with usage of the docker image is very straightforward:
 docker run -it --env-file amb.config poanetwork/tokenbridge-contracts deploy.sh
 ```
 
-After successful deployment the following information about token contracts is displayed:
+After successful deployment the following information about the bridge contracts is displayed:
 
 ```text
 {
