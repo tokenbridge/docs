@@ -2,9 +2,13 @@
 description: A demonstration of Arbitrary Message Bridging using CryptoKitties
 ---
 
-# Demo: CryptoKitties Bridge
+# Demo: CryptoKitties AMB bridge extension
 
-The CryptoKitties bridge allows users to transfer a NFT representing a cat from one chain to another. It demonstrates the ability to perform operations with NFTs through the Arbitrary Message Bridge \(AMB\), which is part of [the TokenBridge project](https://github.com/poanetwork/tokenbridge).
+{% hint style="info" %}
+**An AMB bridge extension** is a pair of mediator contracts associated with a specific pair of Arbitrary Message Bridge contracts.
+{% endhint %}
+
+The CryptoKitties bridge extension allows users to transfer a NFT representing a cat from one chain to another. It demonstrates the ability to perform operations with NFTs through the Arbitrary Message Bridge \(AMB\), which is part of [the TokenBridge project](https://github.com/poanetwork/tokenbridge).
 
 In the demos, we deploy contracts and then transfer an NFT between 2 testnets, **Sokol** and **Kovan**. 
 

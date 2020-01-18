@@ -82,24 +82,24 @@ We can use the AMB bridge to move ERC677 tokens between two chains. To do this, 
 
 In the inverse case, contract B receives tokens, burns them and instructs contract A to unlock the burned amount in the other chain.
 
-The implementation of the contracts for this ERC677-TO-ERC677 built on top of the AMB bridge can be found [here](https://github.com/poanetwork/poa-bridge-contracts/tree/master/contracts/upgradeable_contracts/amb_erc677_to_erc677).
+The implementation of the contracts for this ERC677-TO-ERC677 AMB bridge extension can be found [here](https://github.com/poanetwork/poa-bridge-contracts/tree/master/contracts/upgradeable_contracts/amb_erc677_to_erc677).
 
 In this implementation we have:
 
-* A Token Management contract on Foreign side that locks/unlocks transferred tokens and sends requests to Mint tokens on Home side.
-* A Token Management contract on Home side that mints/burns transferred tokens and send requests to Unlock tokens on Foreign side.
+* A Token Management \(mediator\) contract on Foreign side that locks/unlocks transferred tokens and sends requests to Mint tokens on Home side.
+* A Token Management \(mediator\) contract on Home side that mints/burns transferred tokens and send requests to Unlock tokens on Foreign side.
 
-Example of Home Token Management contract tested in Sokol:
+Example of Home Mediator contract tested in Sokol:
 
 * [Proxy](https://blockscout.com/poa/sokol/address/0x6feaEfd9F6d88178579e0F2fd01E511f948d21E3)
 * [Implementation](https://blockscout.com/poa/sokol/address/0xa08d168cc4fdab5d17161417807aa913ad1c9203) 
 
-Example of Foreign Token Management contract tested in Kovan
+Example of Foreign Mediator contract tested in Kovan
 
 * [Proxy](https://blockscout.com/eth/kovan/address/0x65ea3665105Ea69b62bd1d4741Fa12561473eD08)
 * [Implementation](https://blockscout.com/eth/kovan/address/0xf1ac8de3213be1f3ee2c55b752be803fde7b25cd)
 
-Deployed bridges contracts are available [here](https://forum.poa.network/t/using-arbitrary-message-bridging/2710/8).
+Deployed contracts of ERC677-TO-ERC677 bridge extension are available [here](https://forum.poa.network/t/using-arbitrary-message-bridging/2710/8).
 
 ![AMB-ERC677-ERC677](https://i.imgur.com/IAIr4YO.png)
 
@@ -107,21 +107,21 @@ Deployed bridges contracts are available [here](https://forum.poa.network/t/usin
 
 A user has tokens on the Foreign side and wants to bridge them to the Home network: 
 
-1. The user calls the `transferAndCall` method of the token contract with the value and the foreign token management contract address as a target. 
-2. The tokens are transferred and the token contract calls `onTokenTransfer` method of the token management contract.
-3.  In the `onTokenTransfer` method, the token management contract calls the `requireToPassMessage` method of Foreign AMB bridge contract with parameters indicating that the `handleBridgedTokens` method of the Home token management contract should be called with the recipient and value parameters of the token transfer.
+1. The user calls the `transferAndCall` method of the token contract with the value and the foreign mediator contract address as a target. 
+2. The tokens are transferred and the token contract calls `onTokenTransfer` method of the mediator contract.
+3.  In the `onTokenTransfer` method, the mediator contract calls the `requireToPassMessage` method of Foreign AMB bridge contract with parameters indicating that the `handleBridgedTokens` method of the Home mediator contract should be called with the recipient and value parameters of the token transfer.
 
 Then, when the AMB bridge processes the message on the Home network: 
 
 1. The AMB Oracle calls the Home AMB bridge contract.
-2. The Home AMB bridge calls the `handleBridgedTokens` method of the Home Token Management contract.
+2. The Home AMB bridge calls the `handleBridgedTokens` method of the Home mediator contract.
 3. The `handleBridgedTokens` method Mints the Tokens.
 
 Here is a representation of the steps explained above:
 
 ![AMB-ERC677-ERC677-Transfer](https://i.imgur.com/LGDqqkp.png)
 
-Transferring tokens from the Home network to the Foreign network works in a similar way. The only difference is that Home Token Management contract Burns the transferred tokens, and the Foreign Token Management contract unlocks the tokens.
+Transferring tokens from the Home network to the Foreign network works in a similar way. The only difference is that Home mediator contract burns the transferred tokens, and the Foreign mediator contract unlocks the tokens.
 
 ## Code examples
 
@@ -129,7 +129,7 @@ In this example of the `onTokenTransfer` implementation, the following items wer
 
 * Token contract address
 * AMB bridge contract address 
-* Token management contract address of the second network 
+* Mediator contract address of the second network 
 * Execution gas limit
 
 ```javascript

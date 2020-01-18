@@ -1,10 +1,14 @@
 ---
-description: How to deploy erc677-to-erc677 bridge based on Arbitrary Message Bridge
+description: How to deploy erc677-to-erc677 Arbitrary Message Bridge extension
 ---
 
-# ERC677 to ERC677 bridge on top of AMB
+# ERC677 to ERC677 AMB bridge extension
 
 Instructions for deploying a pair of ERC677-compatible tokens and the bridge mediator contract on top of the Arbitrary Message Bridge \(AMB\). 
+
+{% hint style="info" %}
+**An AMB bridge extension** is a pair of mediator contracts associated with a specific pair of Arbitrary Message Bridge contracts.
+{% endhint %}
 
 The steps below assume that the AMB is up and running and serves the bridge between Kovan \(Foreign\) chain and Sokol \(Home\) chain. Addresses of the deployed AMB bridge contracts:
 
