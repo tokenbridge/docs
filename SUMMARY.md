@@ -52,6 +52,12 @@
   * [ERC20 Tokens Release](xdai-bridge/xdai-bridge-contracts-management/erc20-tokens-release.md)
   * [xDai Bridge Management API](xdai-bridge/xdai-bridge-contracts-management/xdai-bridge-management-api.md)
 
+## ETH-XDAI AMB BRIDGE
+
+* [About the ETH-xDai AMB](eth-xdai-amb-bridge/about-the-eth-xdai-amb.md)
+* [sUSD bridge extension](eth-xdai-amb-bridge/susd-bridge-extension/README.md)
+  * [Transfer sUSD through the bridge extension](eth-xdai-amb-bridge/susd-bridge-extension/transfer-susd-through-the-bridge-extension.md)
+
 ## Media
 
 * [Contact Us](media/contact-us.md)

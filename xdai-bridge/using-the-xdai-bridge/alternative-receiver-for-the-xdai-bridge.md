@@ -25,11 +25,11 @@ The following instructions are for illustrative purposes only. MyEtherWallet is 
 "stateMutability":"nonpayable","type":"function"}]
 ```
 
-![](../../.gitbook/assets/image%20%289%29.png)
+![](../../.gitbook/assets/image%20%2813%29.png)
 
 3. Approve the bridge contract to perform operations with tokens:
 
-![](../../.gitbook/assets/image%20%281%29.png)
+![](../../.gitbook/assets/image%20%282%29.png)
 
 where
 
@@ -61,7 +61,7 @@ where
 "payable":false,"stateMutability":"nonpayable","type":"function"}]
 ```
 
-![](../../.gitbook/assets/image%20%286%29.png)
+![](../../.gitbook/assets/image%20%2810%29.png)
 
 6. Choose an appropriate `relayTokens` method. There are four methods there:
 
@@ -70,7 +70,7 @@ where
 * `relayTokens(address _receiver, uint256 _amount, address _token)` -- can be used to specify an alternative receiver to transfer the Sai tokens
 * `relayTokens(address _from, address _receiver, uint256 _amount, address _token)` -- intended to be invoked in scenarios when the Sai tokens deposit is performed by another contract on behalf of a user account \(e.g. by a DEX\)
 
-![](../../.gitbook/assets/image%20%2811%29.png)
+![](../../.gitbook/assets/image%20%2816%29.png)
 
 where
 
@@ -94,11 +94,11 @@ where
 "name":"_receiver"}],"constant":false}]
 ```
 
-![](../../.gitbook/assets/image%20%284%29.png)
+![](../../.gitbook/assets/image%20%286%29.png)
 
 3. Prepare the call of `relayTokens` method:
 
-![](../../.gitbook/assets/image%20%287%29.png)
+![](../../.gitbook/assets/image%20%2811%29.png)
 
 where
 
