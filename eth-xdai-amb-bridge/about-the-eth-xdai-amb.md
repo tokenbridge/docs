@@ -2,7 +2,7 @@
 
 The goal of Arbitrary Message Bridge \(AMB\) between the Ethereum Mainnet and the xDai chain is to extend the number of the applications that use cross-chain communications.
 
-Every application could [build its own AMB extension](https://docs.tokenbridge.net/amb-bridge/how-to-develop-xchain-apps-by-amb) which is represented in form of two mediators contracts as so either assets or arbitrary data will be transferred between chains.
+Every application could [build its own AMB extension](https://docs.tokenbridge.net/amb-bridge/how-to-develop-xchain-apps-by-amb) which is represented in form of two mediators contracts as so either assets or arbitrary data will be transferred between chains. The deployed mediator contracts **will not** require to setup a set of oracles so it allows to launch the application sooner and reduce the cost of application ownership.
 
 The mediator contracts must rely on the following information about the ETH-xDai Arbitrary Message Bridge:
 
