@@ -20,7 +20,7 @@
 ## Arbitrary Message Bridge \(AMB\) <a id="amb-bridge"></a>
 
 * [About the AMB](amb-bridge/about-amb-bridge.md)
-* [Arbitrary Message Bridge deployment](amb-bridge/arbitrary-message-bridge-deployment/README.md)
+* [Arbitrary Message Bridge Deployment](amb-bridge/arbitrary-message-bridge-deployment/README.md)
   * [1\) AMB contracts deployment](amb-bridge/arbitrary-message-bridge-deployment/1-amb-contracts-deployment.md)
   * [2\) TokenBridge oracle instances](amb-bridge/arbitrary-message-bridge-deployment/2-tokenbridge-oracle-instance.md)
 * [How to develop a cross-blockchain application using the AMB](amb-bridge/how-to-develop-xchain-apps-by-amb.md)

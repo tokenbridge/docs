@@ -1,13 +1,13 @@
 ---
-description: Instructions how to set up the Arbitrary Message Bridge
+description: Instructions on how to set up the Arbitrary Message Bridge
 ---
 
-# Arbitrary Message Bridge deployment
+# Arbitrary Message Bridge Deployment
 
 {% hint style="info" %}
-**Instructions in Process**
+**AMB Deployment Instructions**
 
-The steps provided in this part of the TokenBridge documentation are for developers that are interesting to set up their own instance of Arbitrary Message Bridge.
+The steps provided here are for developers interested in to setting up their own Arbitrary Message Bridge instance.
 {% endhint %}
 
 The following topics cover AMB deployment:

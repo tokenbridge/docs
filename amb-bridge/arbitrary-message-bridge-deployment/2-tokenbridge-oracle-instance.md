@@ -1,16 +1,18 @@
 # 2\) TokenBridge oracle instances
 
 {% hint style="info" %}
-Everything described here needs to be performed for every oracle instance.
+All instructions must be performed for every oracle instance.
 {% endhint %}
 
-The TokenBridge oracle instance deployment is being performed by using [Ansible](https://docs.ansible.com/ansible/latest/index.html). Moreover the process below assumes that there are two nodes: one node where Ansible playbooks will orchestrate the deployment process and another node \(target node\) where the oracle instance is going to be. That's why it is necessary to make sure that the orchestration node satisfy the following dependencies:
+The TokenBridge oracle instance deployment uses [Ansible](https://docs.ansible.com/ansible/latest/index.html). Moreover the process below assumes there are two nodes: one node where Ansible playbooks orchestrate the deployment process \(orchestration node\) and another node \(target node\) where the oracle instance is deployed. 
+
+The orchestration node must satisfy the following dependencies:
 
 * Python 2 \(v2.6-v2.7\)/Python3 \(v3.5+\)
 * Ansible v2.3+ \(on Ubuntu based systems it could be installed by `apt-get install ansible` \)
 * Git
 
-For the target node the requirement is to have a functional Ubuntu 16.04 or 18.04 launched.
+The target must have a functional Ubuntu 16.04 or 18.04 launched.
 
 {% hint style="info" %}
 Another recommendation is to configure a remote service to collect the oracle logs. For example, [SolarWinds Papertrail](https://papertrailapp.com/) could be used for this purposes - after registration it will provide log server domain name and port that will be used for the oracle configuration.
