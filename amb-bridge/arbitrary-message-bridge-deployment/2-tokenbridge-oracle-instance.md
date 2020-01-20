@@ -86,7 +86,7 @@ If the target node contains `python3` instead of `python`, the option `-e 'ansib
 {% endhint %}
 
 ```bash
-ansible-playbook --private-key=~/.ssh/<privkey.file> -i test.hosts.yml site.yml
+ansible-playbook --private-key=~/.ssh/<privkey.file> -i hosts.yml site.yml
 ```
 
 This command will run the following actions on the target node:
