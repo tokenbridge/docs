@@ -127,5 +127,5 @@ The `transfer` method of the bridgeable token contract will automatically notify
 
 4. Check the gas price, then **Submit** the transaction through the web3 wallet extension and wait until it is included in the chain.
 
-5. It will require the AMB bridge some time to transfer tokens to the Ethereum Mainnet. After several minutes, the balance of the account specified as `_to` in the `transfer` method call will increase. The result of the relay operation can be monitored [in Etherscan](https://etherscan.io/token/0x57ab1e02fee23774580c119740129eac7081e9d3?a=0x71f12d03e1711cb96e11e1a5c12da7466699db8d), and should be viewable in your web3wallet connected to the Ethereum Mainnet.
+5. It will require the AMB bridge some time to transfer tokens to the Ethereum Mainnet. After several minutes, the balance of the account specified as `_to` in the `transfer` method call will increase. The result of the relay operation can be monitored [in Etherscan](https://etherscan.io/token/0x57ab1e02fee23774580c119740129eac7081e9d3?a=0x71f12d03e1711cb96e11e1a5c12da7466699db8d), and should be viewable in your web3 wallet connected to the Ethereum Mainnet.
 
