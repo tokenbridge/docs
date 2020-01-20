@@ -27,7 +27,7 @@ You will need a small amount of Ether for gas fees and an amount of sUSD to tran
 
 * 4\) Click **Continue**.
 
-![](../../.gitbook/assets/mediator_1.png)
+![](../../.gitbook/assets/susd1.png)
 
 2. Approve the mediator contract to perform operations with tokens:
 
@@ -36,11 +36,11 @@ You will need a small amount of Ether for gas fees and an amount of sUSD to tran
 * 3\) Enter the **Value** - the amount of tokens \(in Wei\) to transfer.
 * 4\) Press Write to initiate the approval.
 
-![](../../.gitbook/assets/mediator_2.png)
+![](../../.gitbook/assets/susd2.png)
 
 3. Check that the Gas price is not set too high, then **Submit** the transaction with a web3 wallet \(like MetaMask or Nifty wallet - here we use Nifty\). Wait to proceed until it is included in the chain.
 
-![](../../.gitbook/assets/mediator_3.png)
+![](../../.gitbook/assets/susd3.png)
 
 4. Press the **Back** button. You will now initialize the mediator contract interface:
 
@@ -59,7 +59,7 @@ You will need a small amount of Ether for gas fees and an amount of sUSD to tran
 
 * 3\) Press **Continue**.
 
-![](../../.gitbook/assets/mediator_4.png)
+![](../../.gitbook/assets/susd4.png)
 
 5\) Choose an appropriate `relayTokens` method. There are two possible methods:
 
@@ -71,7 +71,7 @@ You will need a small amount of Ether for gas fees and an amount of sUSD to tran
 * 3\)`_amount` -- the amount of tokens \(in Wei\) to transfer; it must be less or equal amount of tokens approved for the bridge operations.
 * 4\) Press **Write**.
 
-![](../../.gitbook/assets/new1.png)
+![](../../.gitbook/assets/susd5.png)
 
 7. Check the gas price, then Submit the transaction your web3wallet and wait until it is included in the chain.
 
@@ -84,9 +84,9 @@ You will need a small amount of Ether for gas fees and an amount of sUSD to tran
 * 3\) Enter the sUSD xDai Token Address:  `0x4C36d2919e407f0Cc2Ee3c993ccF8ac26d9CE64e` 
 * 4\) Click **Add.**
 
-![](../../.gitbook/assets/nifty_1.png)
+![](../../.gitbook/assets/nifty1.png)
 
-![](../../.gitbook/assets/nifty_2.png)
+![](../../.gitbook/assets/nifty2.png)
 
 {% hint style="success" %}
 You should now see your newly transferred sUSD balance on the xDAi chain.
@@ -110,7 +110,7 @@ You should now see your newly transferred sUSD balance on the xDAi chain.
 
 * 3\) Click **Continue.**
 
-![](../../.gitbook/assets/new3.png)
+![](../../.gitbook/assets/send1.png)
 
 3. Transfer the sUSD bridgeable tokens to the mediator contract:
 
@@ -119,7 +119,7 @@ You should now see your newly transferred sUSD balance on the xDAi chain.
 * 3\) Enter the value to transfer in Wei in the `_value` field.
 * 4\) Click **Write.**
 
-![](../../.gitbook/assets/transfer.png)
+![](../../.gitbook/assets/send2%20%281%29.png)
 
 {% hint style="info" %}
 The `transfer` method of the bridgeable token contract will automatically notify the mediator contract about the new amount of tokens transferred to the mediator contract account. For this reason, no other action is required from the user side to finish the withdrawal request.
