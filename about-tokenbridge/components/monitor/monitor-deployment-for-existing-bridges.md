@@ -6,17 +6,19 @@ description: Instructions how to deploy monitor for existing bridges
 
 The TokenBridge monitor instance deployment uses [Ansible](https://docs.ansible.com/ansible/latest/index.html). Moreover the process below assumes there are two nodes: one node where Ansible playbooks orchestrate the deployment process \(orchestration node\) and another node \(target node\) where the monitor instance is deployed. 
 
-The orchestration node must satisfy the following dependencies:
+The **orchestration node** must satisfy the following dependencies:
 
 * Python 2 \(v2.6-v2.7\)/Python3 \(v3.5+\)
 * Ansible v2.3+ \(on Ubuntu based systems it could be installed by `apt-get install ansible` \)
 * Git
 
-The target must have a functional Ubuntu 16.04 or 18.04 launched.
+The **target must** have a functional Ubuntu 16.04 or 18.04 launched.
 
-As soon as both nodes are ready the next steps should be performed \(only on the orchestration node\):
+For these instructions, You will use an [Infura account](https://infura.io/) with a project ID. You can create a free account and the id will be located there. Alternately, you can choose a different mainnet endpoint.
 
-1. Generate a pair of SSH keys that will be used by the orchestration node to remotely login to the target node. The generated public key must be added to `.ssh/authorized_keys` on the target node in the home directory of the user \(usually `root` or `ubuntu`\) that will be configured to perform deployment actions.
+## Tasks on Orchestration Node
+
+1. Login and generate a pair of SSH keys that will be used by the orchestration node to remotely login to the target node. The generated public key must be added to `.ssh/authorized_keys` on the target node in the home directory of the user \(usually `root` or `ubuntu`\) that will be configured to perform deployment actions.
 
 2. Clone the TokenBridge git repository and change the working directory:
 
@@ -25,12 +27,17 @@ git clone --recursive https://github.com/poanetwork/tokenbridge.git
 cd tokenbridge/deployment
 ```
 
-3. Prepare four files in the directory \`group\_vars\`. Every file will be used to send requests to one of the bridges: xDai bridge, POA bridge, wETC bridge, ETH-xDai Arbitrary message bridge:
+3. Prepare the follwoing four files in the directory \`group\_vars\`. Every file will be used to send requests to one of the bridges: xDai bridge, POA bridge, wETC bridge, ETH-xDai Arbitrary message bridge:
+
+* **`group_vars/xdai.yml`**
+* **`group_vars/poa.yml`**
+* **`group_vars/wetc.yml`**
+* **`group_vars/amb-xdai.yml`**
 
 {% hint style="warning" %}
 Replace all places templated with tags \(&lt;&gt;\) with actual values. In order to achieve this it is necessary to define in advance **the port** where the monitor web-service will listen users' requests and **the JSON RPC url** to communicate with Ethereum Mainnet nodes.
 
-Note that the web service port must be specified only in the first file.
+The web service port must be specified **only in the first file**.
 {% endhint %}
 
 **`group_vars/xdai.yml`**
@@ -136,7 +143,7 @@ MONITOR_VALIDATOR_FOREIGN_TX_LIMIT: 2000000
 MONITOR_TX_NUMBER_THRESHOLD: 50
 ```
 
-4. Create the `hosts.yml` file
+4. Return to the deployment directory \(`cd ..`\) and create the `hosts.yml` file
 
 {% hint style="warning" %}
 Replace all variables templated with tags \(&lt;&gt;\) with actual values.
@@ -148,13 +155,13 @@ xdai:
   children:
     monitor:
       hosts:
-        <monitor node ip address>:
+        <target node ip address 1.2.3.4>:
           ansible_user: <user>
 ```
 
 Here `<user>` is the account that will ssh into the monitor node for deployment actions. This is typically `ubuntu` or `root`.
 
-5. Finally it is necessary to Ansible playbook to deploy the monitor instance on the remote node and then propagate the rest of configuration to the same system.
+5. Next, the Ansible playbook will deploy the monitor instance on the remote target node, then propagate the rest of configuration to the same system.
 
 {% hint style="warning" %}
 If the target node contains `python3` instead of `python`, the option `-e 'ansible_python_interpreter=/usr/bin/python3'` must be added to the command below.
@@ -172,8 +179,8 @@ ansible-playbook --private-key=~/.ssh/<privkey.file> -i hosts.yml site.yml
 
 6. Wait for 5-6 minutes and check availability of the monitor statistic in the web service by URLs:
 
-* http://&lt;monitor node ip address&gt;/xdai
-* http://&lt;monitor node ip address&gt;/poa
-* http://&lt;monitor node ip address&gt;/wetc
-* http://&lt;monitor node ip address&gt;/amb-xdai
+* http://&lt;target node ip address:port&gt;/xdai
+* http://&lt;monitor node ip address:port&gt;/poa
+* http://&lt;monitor node ip address:port&gt;/wetc
+* http://&lt;monitor node ip address:port&gt;/amb-xdai
 
