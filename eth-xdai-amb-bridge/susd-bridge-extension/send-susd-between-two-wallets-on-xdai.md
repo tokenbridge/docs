@@ -6,27 +6,9 @@ sUSD can be sent between any two xDai enabled wallets. You will need a small amo
 
 In this example we use [**Alpha Wallet**](https://alphawallet.com/), a mobile wallet with built-in xDai support, and ****[**Nifty wallet**](https://chrome.google.com/webstore/detail/nifty-wallet/jbdaocneiiinmjbjlgalhcelgbejmnid?hl=en), a web3 enabled wallet similar to MetaMask but better equipped to work with xDai.
 
-1\) Assuming you have transferred sUSD to an address on the xDai chain, open that account in your Alpha Wallet and skip to step 2. To import an existing account to Alpha:
+1\) Assuming you have transferred sUSD to an address on the xDai chain, open that account in your Alpha Wallet. If you need to import an existing account, [follow these instructions](https://www.xdaichain.com/for-users/wallets/alpha-wallet/importing-an-existing-account-to-alpha-wallet).
 
-* a\) Go to **Settings** -&gt; **Change Wallet.**
-
-![](../../.gitbook/assets/settings_1.png)
-
-
-
-* b\) Click + .
-
-![](../../.gitbook/assets/settings_2.png)
-
-* c\) Select **Import Wallet.**
-
-![](../../.gitbook/assets/settings_3.png)
-
-* 4\) Add **Method** \(seed, keystore, private key or watch\) & click **Import.**
-
-![](../../.gitbook/assets/settings_4.png)
-
-2\) Alpha wallet automatically displays all tokens your address contains, on both the Ethereum Main network and the xDai chain. Here you can see we have sUSD on Ethereum and sUSD on xDai \(chain is denoted by the colored tag\).
+2\) Alpha wallet automatically displays all tokens your address contains on both the Ethereum Main network and the xDai chain. Here you can see we have sUSD on Ethereum and sUSD on xDai \(chain is denoted by the colored tag\).
 
 ![](../../.gitbook/assets/synth1.png)
 
