@@ -4,7 +4,7 @@ description: Description of the AMB bridge extension allowing for sUSD token tra
 
 # sUSD bridge extension
 
-The sUSD bridge extension of ETH-xDai Arbitrary Message Bridge is the pair of mediator contracts \(similar to used [here](https://docs.tokenbridge.net/amb-bridge/erc677-to-erc677-bridge-on-top-of-amb)\) allowing to transfer [Synth sUSD](https://etherscan.io/token/0x57ab1e02fee23774580c119740129eac7081e9d3) from the Ethereum Mainnet to the xDai chain and back.
+The sUSD bridge extension of the ETH-xDai Arbitrary Message Bridge is a pair of mediator contracts \(similar to the ones used [here](https://docs.tokenbridge.net/amb-bridge/erc677-to-erc677-bridge-on-top-of-amb)\) allowing the user to transfer [Synth sUSD](https://etherscan.io/token/0x57ab1e02fee23774580c119740129eac7081e9d3) from the Ethereum Mainnet to the xDai chain and back.
 
 * Mediator contract at Ethereum Mainnet:
   * [`0x71F12d03E1711cb96E11E1A5c12Da7466699Db8D`](https://etherscan.io/address/0x71F12d03E1711cb96E11E1A5c12Da7466699Db8D)
