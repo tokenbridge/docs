@@ -161,10 +161,10 @@ xdai:
 
 Here `<user>` is the account that will ssh into the monitor node for deployment actions. This is typically `ubuntu` or `root`.
 
-5. Next, the Ansible playbook will deploy the monitor instance on the remote target node, then propagate the rest of configuration to the same system.
+5. Next, the Ansible playbook will deploy the monitor instance on the remote target node, then propagate the rest of configuration to the same system. You will run the playbook each time after re-configuring the hosts.yml file
 
 {% hint style="warning" %}
-If the target node contains `python3` instead of `python`, the option `-e 'ansible_python_interpreter=/usr/bin/python3'` must be added to the command below.
+If the target node contains `python3` instead of `python`, append `-e 'ansible_python_interpreter=/usr/bin/python3'` to the end of the ansible-playbook command \(after hosts.yml\). Try this if you get a node connection / ssh error.
 {% endhint %}
 
 ```text

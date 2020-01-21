@@ -1,7 +1,13 @@
+---
+description: >-
+  Once transferred to the xDai chain, sUSD can be sent easily from address to
+  address.
+---
+
 # Send sUSD between two wallets on xDai
 
 {% hint style="success" %}
-sUSD can be sent between any two xDai enabled wallets. You will need a small amount of sUSD on xDai to send from one wallet to another. To transfer sUSD from the Ethereum Mainnet to the xDai Chain, see the [transfer using the bridge extension](transfer-susd-through-the-bridge-extension.md) post.
+sUSD can be sent between any two xDai enabled wallets. You will need some amount of sUSD on the xDai chain, as well as some xDai for gas \(less than $.01\), to send from one wallet to another. To transfer sUSD from the Ethereum Mainnet to the xDai Chain, see the [transfer using the bridge extension](transfer-susd-through-the-bridge-extension.md) post.
 {% endhint %}
 
 In this example we use [**Alpha Wallet**](https://alphawallet.com/), a mobile wallet with built-in xDai support, and ****[**Nifty wallet**](https://chrome.google.com/webstore/detail/nifty-wallet/jbdaocneiiinmjbjlgalhcelgbejmnid?hl=en), a web3 enabled wallet similar to MetaMask but better equipped to work with xDai.
