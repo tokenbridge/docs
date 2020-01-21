@@ -180,7 +180,7 @@ If the target node contains `python3` instead of `python`, append `-e 'ansible_p
 
 Depending on your ssh setup, you may not need the `--private-key` flag
 
-⏳ Building containers can take a long time depending on target node resources. Be patient and maybe have a ☕ during  deployment!
+⏳ Building containers can take a few minutes depending on target node resources. Be patient and maybe have a ☕ during  deployment!
 {% endhint %}
 
 ```text
