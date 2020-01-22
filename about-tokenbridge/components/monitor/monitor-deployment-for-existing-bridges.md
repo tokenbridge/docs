@@ -25,7 +25,7 @@ ssh-keygen -t rsa
 cat ~/.ssh/id_rsa.pub | ssh user@hostname 'cat >> .ssh/authorized_keys'
 ```
 
-Check that user has appropriate permissions and change if needed. Use `ls-l` to check permissions, if assigned to root and you are using ubuntu user, use the `chown` command to update permissions.
+Check that user has appropriate permissions and change if needed. Use `ls -l` to check permissions, if assigned to root and you are using ubuntu user, use the `chown` command to update permissions.
 
 ```text
 ls -l
@@ -95,7 +95,7 @@ COMMON_FOREIGN_GAS_PRICE_SPEED_TYPE: "fast"
 COMMON_FOREIGN_GAS_PRICE_FALLBACK: 10000000000
 COMMON_FOREIGN_GAS_PRICE_FACTOR: 1
 
-MONITOR_HOME_START_BLOCK: 2300000
+MONITOR_HOME_START_BLOCK: 2477327
 MONITOR_FOREIGN_START_BLOCK: 5578725
 MONITOR_VALIDATOR_HOME_TX_LIMIT: 300000
 MONITOR_VALIDATOR_FOREIGN_TX_LIMIT: 300000
@@ -176,7 +176,7 @@ Here `<user>` is the account that will ssh into the monitor node for deployment 
 5. Next, the Ansible playbook will deploy the monitor instance on the remote target node, then propagate the rest of configuration to the same system. You will run the playbook each time after re-configuring the hosts.yml file
 
 {% hint style="warning" %}
-If the target node contains `python3` instead of `python`, append `-e 'ansible_python_interpreter=/usr/bin/python3'` to the end of the ansible-playbook command \(after hosts.yml\). Try this if you get a node connection / ssh error.
+If the target node contains `python3` instead of `python`, append `-e 'ansible_python_interpreter=/usr/bin/python3'` to the end of the ansible-playbook command \(before `-i hosts.yml`\). Try this if you get a node connection / ssh error.
 
 Depending on your ssh setup, you may not need the `--private-key` flag
 
