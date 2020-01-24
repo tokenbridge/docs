@@ -59,7 +59,7 @@
 
 * [About the ETH-xDai AMB](eth-xdai-amb-bridge/about-the-eth-xdai-amb.md)
 * [sUSD bridge extension](eth-xdai-amb-bridge/susd-bridge-extension/README.md)
-  * [Transfer sUSD between the ETH Mainnet and the xDai Chain using the bridge extension](eth-xdai-amb-bridge/susd-bridge-extension/transfer-susd-through-the-bridge-extension.md)
+  * [Transfer sUSD between the ETH Mainnet and the xDai Chain using the sUSD bridge extension](eth-xdai-amb-bridge/susd-bridge-extension/transfer-susd-through-the-bridge-extension.md)
   * [Send sUSD between two wallets on xDai](eth-xdai-amb-bridge/susd-bridge-extension/send-susd-between-two-wallets-on-xdai.md)
 
 ## Media

@@ -2,7 +2,7 @@
 description: Instructions on relaying Synth sUSD tokens through the sUSD bridge extension
 ---
 
-# Transfer sUSD between the ETH Mainnet and the xDai Chain using the bridge extension
+# Transfer sUSD between the ETH Mainnet and the xDai Chain using the sUSD bridge extension
 
 One of the simplest ways to transfer Synth sUSD tokens through the bridge extension is to use [MyEtherWallet \(MEW\)](https://www.myetherwallet.com/access-my-wallet). MEW may be used for both types of operations: to deposit tokens to the xDai chain and to withdraw tokens from the xDai chain.
 
