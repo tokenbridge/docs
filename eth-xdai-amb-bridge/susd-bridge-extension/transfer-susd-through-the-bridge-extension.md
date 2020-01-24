@@ -36,6 +36,14 @@ You will need a small amount of Ether for gas fees and an amount of sUSD to tran
 * 3\) Enter the **Value** - the amount of tokens \(in Wei\) to transfer.
 * 4\) Press Write to initiate the approval.
 
+{% hint style="warning" %}
+Note that minimum and maximum transaction amounts are embedded into the bridge. 
+
+* **Min** per transaction: **$0.50 sUSD**
+* **Max** per transaction: **$1,000.00 sUSD**
+* Transaction limit **max per day**: **$3,000.00 sUSD**
+{% endhint %}
+
 ![](../../.gitbook/assets/susd2.png)
 
 3. Check that the Gas price is not set too high, then **Submit** the transaction with a web3 wallet \(like MetaMask or Nifty wallet - here we use Nifty\). Wait to proceed until it is included in the chain.
@@ -118,6 +126,14 @@ You should now see your newly transferred sUSD balance on the xDAi chain.
 * 2\) Enter in the `_to` address:`0xD9a3039cfC70aF84AC9E566A2526fD3b683B995B` . This is the  mediator contract serving the bridge extension in the xDai chain.
 * 3\) Enter the value to transfer in Wei in the `_value` field.
 * 4\) Click **Write.**
+
+{% hint style="warning" %}
+Note that minimum and maximum transaction amounts are embedded into the bridge. 
+
+* **Min** per transaction: **$0.50 sUSD**
+* **Max** per transaction: **$1,000.00 sUSD**
+* Transaction limit **max per day**: **$3,000.00 sUSD**
+{% endhint %}
 
 ![](../../.gitbook/assets/send2%20%281%29.png)
 
