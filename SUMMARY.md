@@ -36,12 +36,6 @@
   * [MyEtherWallet \(MEW\) Transfer](amb-bridge/how-to-use-cryptokitties-bridge/myetherwallet-mew-transfer.md)
   * [Create/Transfer a Test Cat](amb-bridge/how-to-use-cryptokitties-bridge/create-a-test-kitty.md)
 
-## ETH-BNC Bridge
-
-* [About ETH-BNC bridge](eth-bnc-bridge/about-eth-bnc-bridge.md)
-* [Demo: ETH-BNC bridge](eth-bnc-bridge/running-an-eth-bnc-bridge-demo.md)
-* [Creating a Local Binance DEX Testnet](eth-bnc-bridge/creating-a-local-binance-dex-testnet.md)
-
 ## xDai Bridge
 
 * [About the xDai Bridge](xdai-bridge/about.md)
@@ -63,6 +57,12 @@
 * [sUSD bridge extension](eth-xdai-amb-bridge/susd-bridge-extension/README.md)
   * [Transfer sUSD between the ETH Mainnet and the xDai Chain using the sUSD bridge extension](eth-xdai-amb-bridge/susd-bridge-extension/transfer-susd-through-the-bridge-extension.md)
   * [Send sUSD between two wallets on xDai](eth-xdai-amb-bridge/susd-bridge-extension/send-susd-between-two-wallets-on-xdai.md)
+
+## ETH-BNC Bridge
+
+* [About ETH-BNC bridge](eth-bnc-bridge/about-eth-bnc-bridge.md)
+* [Demo: ETH-BNC bridge](eth-bnc-bridge/running-an-eth-bnc-bridge-demo.md)
+* [Creating a Local Binance DEX Testnet](eth-bnc-bridge/creating-a-local-binance-dex-testnet.md)
 
 ## Media
 
