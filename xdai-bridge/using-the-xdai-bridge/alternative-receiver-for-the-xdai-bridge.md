@@ -25,7 +25,7 @@ The following instructions are for illustrative purposes only. MyEtherWallet is 
 "stateMutability":"nonpayable","type":"function"}]
 ```
 
-![](../../.gitbook/assets/image%20%2817%29.png)
+![](../../.gitbook/assets/image%20%2818%29.png)
 
 3. Approve the bridge contract to perform operations with tokens:
 
@@ -70,7 +70,7 @@ where
 * `relayTokens(address _receiver, uint256 _amount, address _token)` -- can be used to specify an alternative receiver to transfer the Sai tokens
 * `relayTokens(address _from, address _receiver, uint256 _amount, address _token)` -- intended to be invoked in scenarios when the Sai tokens deposit is performed by another contract on behalf of a user account \(e.g. by a DEX\)
 
-![](../../.gitbook/assets/image%20%2820%29.png)
+![](../../.gitbook/assets/image%20%2821%29.png)
 
 where
 

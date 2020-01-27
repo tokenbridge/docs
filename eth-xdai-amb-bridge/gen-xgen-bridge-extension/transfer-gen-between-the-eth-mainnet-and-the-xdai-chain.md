@@ -38,7 +38,7 @@ For demonstration purposes we use [MyEtherWallet \(MEW\)](https://www.myetherwal
 
 ![](../../.gitbook/assets/image%20%288%29.png)
 
-2. Activate and open a web3 wallet \(like MetaMask or Nifty Wallet\) and select the Ethereum Mainnet chain. Chose the account that will send the tokens \(the same as it was used on the step 1.4\). Go to [MyEtherWallet \(MEW\)](https://www.myetherwallet.com/access-my-wallet) and select the option to login with a web3 wallet. Next:
+2. Activate and open a web3 wallet \(like MetaMask or Nifty Wallet\) and select the Ethereum Mainnet chain. Choose the account that will send the tokens \(the same as it was used on the step 1.4\). Go to [MyEtherWallet \(MEW\)](https://www.myetherwallet.com/access-my-wallet) and select the option to login with a web3 wallet. Next:
 
 * 1\) Select the **Interact with Contract** item from the sidebar menu
 * 2\) Initialize the GEN token contract interface by entering the DAOstack token contract address in the **Contract Address** field: `0x543ff227f64aa17ea132bf9886cab5db55dcaddf`.
@@ -53,7 +53,7 @@ For demonstration purposes we use [MyEtherWallet \(MEW\)](https://www.myetherwal
 
 * 4\) Click **Continue**
 
-![](../../.gitbook/assets/image%20%2816%29.png)
+![](../../.gitbook/assets/image%20%2817%29.png)
 
 3. Fill the parameters to execute the `transfer` method:
 
@@ -63,7 +63,7 @@ For demonstration purposes we use [MyEtherWallet \(MEW\)](https://www.myetherwal
 * 4\) Enter the **\_data** with the hexadecimal string copied in the step 1.7. Prepend the string by `0x` symbols.
 * 5\) Press **Write** to send the tokens.
 
-![](../../.gitbook/assets/image%20%2821%29.png)
+![](../../.gitbook/assets/image%20%2822%29.png)
 
 4. Check that the Gas price is not set too high, then **Submit** the transaction with a web3 wallet \(like MetaMask or Nifty wallet\). Wait to proceed until it is included in the chain.
 
@@ -88,7 +88,7 @@ For demonstration purposes we use [MyEtherWallet \(MEW\)](https://www.myetherwal
 
 * 3\) Click **Continue.**
 
-![](../../.gitbook/assets/image%20%2822%29.png)
+![](../../.gitbook/assets/image%20%2823%29.png)
 
 
 
@@ -105,6 +105,49 @@ For demonstration purposes we use [MyEtherWallet \(MEW\)](https://www.myetherwal
 4. Check the gas price, then **Submit** the transaction through the web3 wallet extension and wait until it is included in the chain.
 
 5. It will require the AMB bridge some time to transfer tokens to the Ethereum Mainnet. After several minutes, the GEN balance of the account that sent the tokens will increase. The result of the relay operation can be monitored [in Etherscan](https://etherscan.io/token/0x543ff227f64aa17ea132bf9886cab5db55dcaddf?a=0x6eA6C65E14661C0BcaB5bc862fE5E7D3B5630C2F), and should be viewable in your web3 wallet connected to the Ethereum Mainnet.
+
+## Withdraw GEN tokens from the xDai chain \(the DAOstack token\)
+
+{% hint style="warning" %}
+This actions are valid only in case if the xGEN token will be represented by DAOstack-developed contract. The plan is that the substitute of the interim token by DAOstack contract will happen after some trial period. Till that time the actions below are not applicable - use [the way specific for the interim token](https://docs.tokenbridge.net/eth-xdai-amb-bridge/gen-xgen-bridge-extension/transfer-gen-between-the-eth-mainnet-and-the-xdai-chain#withdraw-gen-tokens-from-the-xdai-chain-the-interim-token).
+{% endhint %}
+
+{% hint style="warning" %}
+It is assumed that the address of the DAOstack-developed token will be `0x543ff227f64aa17ea132bf9886cab5db55dcaddf.`
+{% endhint %}
+
+1. Prepare the encoded call of the method `onTokenTransfer` by the same way as it is described by the first step in [the section "Deposit GEN tokens to the xDai chain"](https://docs.tokenbridge.net/eth-xdai-amb-bridge/gen-xgen-bridge-extension/transfer-gen-between-the-eth-mainnet-and-the-xdai-chain#deposit-gen-tokens-to-the-xdai-chain).
+
+2. Choose the xDai chain in the browser wallet extension and login to [MyEtherWallet \(MEW\)](https://www.myetherwallet.com/access-my-wallet). The account that will send the tokens must be the same as the account \_from used to encode the mediator contract's method in the previous step. \(the same as it was used on the step 1.4\). Go to [MyEtherWallet \(MEW\)](https://www.myetherwallet.com/access-my-wallet) and select the option to login with a web3 wallet. Next:
+
+* 1\) Select the **Interact with Contract** item from the sidebar menu
+* 2\) Initialize the xGEN token contract interface by entering the DAOstack token contract address in the **Contract Address** field: `0x543ff227f64aa17ea132bf9886cab5db55dcaddf`.
+* 3\) Add the following JSON in the **`ABI/JSON Interface`** field:
+
+```javascript
+[{"constant":false,"inputs":[{"name":"_to","type":"address"},
+{"name":"_value","type":"uint256"},{"name":"_data","type":"bytes"}],
+"name":"transfer","outputs":[{"name":"","type":"bool"}],
+"payable":false,"stateMutability":"nonpayable","type":"function"}]
+```
+
+* 4\) Click **Continue**
+
+![](../../.gitbook/assets/image%20%2826%29.png)
+
+3. Fill the parameters to execute the `transfer` method:
+
+* 1\) Select `transfer` from the **Select an Item** dropdown
+* 2\) Enter the **\_to** address `0xe47097ceF3B0bcbb0095A21523714bF0022E2DB8`. This is the mediator contract serving the bridge extension on the xDai chain.
+* 3\) Enter the **\_value** - the amount of tokens \(in Wei\) to transfer. It must be the same as the value encoded in the call of _onTokenTransfer_.
+* 4\) Enter the **\_data** with the hexadecimal string - encoded value of `onTokenTransfer` call. Prepend the string by `0x` symbols.
+* 5\) Press **Write** to send the tokens.
+
+![](../../.gitbook/assets/image%20%2815%29.png)
+
+4. Check that the Gas price is not set too high, then **Submit** the transaction with a web3 wallet \(like MetaMask or Nifty wallet\). Wait to proceed until it is included in the chain.
+
+5.  It will require the AMB bridge some time to transfer tokens to the Ethereum Mainnet. After several minutes, the GEN balance of the account that sent the tokens will increase. The result of the relay operation can be monitored [in Etherscan](https://etherscan.io/token/0x543ff227f64aa17ea132bf9886cab5db55dcaddf?a=0x6eA6C65E14661C0BcaB5bc862fE5E7D3B5630C2F), and should be viewable in your web3 wallet connected to the Ethereum Mainnet.
 
 
 

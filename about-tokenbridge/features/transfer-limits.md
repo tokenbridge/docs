@@ -43,7 +43,7 @@ Although so far the limits are not synchronized automatically on both side of th
 
 The checks described here happen during tokens transfers in the `erc20-to-native` mode and in the mode `erc20-to-erc20` when generic ERC20 tokens are used on the Foreign side of the bridge.
 
-![Passive perception of deposit for the erc20-to-native bridge mode](../../.gitbook/assets/image%20%2823%29.png)
+![Passive perception of deposit for the erc20-to-native bridge mode](../../.gitbook/assets/image%20%2824%29.png)
 
 Since the bridge contract on the Foreign side is not involved in the transfer operation no checks occur on this side. That's why in these bridge modes it is not possible to check minimal allowable value per transaction.
 
@@ -58,7 +58,7 @@ It is assumed that the tokens participating in withdrawals are controlled by the
 
 ![Withdrawal for the erc20-to-native bridge mode](../../.gitbook/assets/image%20%286%29.png)
 
-![Withdrawal for the natvie-to-erc20 and erc20-to-erc20 bridge modes](../../.gitbook/assets/image%20%2818%29.png)
+![Withdrawal for the natvie-to-erc20 and erc20-to-erc20 bridge modes](../../.gitbook/assets/image%20%2819%29.png)
 
 The first set of checks for detection whether the withdrawal is within the limits happens on the step 1 for the `erc20-to-native` mode and on the step 2 for the modes `native-to-erc20` and `erc20-to-erc20`. It makes sure that:
 
