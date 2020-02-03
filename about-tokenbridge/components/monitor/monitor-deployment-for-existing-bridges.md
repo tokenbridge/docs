@@ -45,7 +45,6 @@ cd tokenbridge/deployment
 * **`group_vars/poa.yml`**
 * **`group_vars/wetc.yml`**
 * **`group_vars/amb-xdai.yml`**
-* **`group_vars/amb-poa.yml`**
 
 {% hint style="warning" %}
 Replace all places templated with tags \(&lt;&gt;\) with actual values. In order to achieve this it is necessary to define in advance **the port** where the monitor web-service will listen users' requests and **the JSON RPC url** to communicate with Ethereum Mainnet nodes.
@@ -156,31 +155,6 @@ MONITOR_VALIDATOR_FOREIGN_TX_LIMIT: 2000000
 MONITOR_TX_NUMBER_THRESHOLD: 50
 ```
 
-**`group_vars/amb-poa.yml`**
-
-```yaml
----
-MONITOR_BRIDGE_NAME: "amb-poa"
-
-COMMON_HOME_RPC_URL: "https://core.poa.network"
-COMMON_HOME_BRIDGE_ADDRESS: "0xD9a3039cfC70aF84AC9E566A2526fD3b683B995B"
-COMMON_FOREIGN_RPC_URL: "https://mainnet.infura.io/v3/<infura project id>"
-COMMON_FOREIGN_BRIDGE_ADDRESS: "0x2140ECDC45c89ca112523637824513baE72C8671"
-
-COMMON_HOME_GAS_PRICE_FALLBACK: 5000000000
-COMMON_HOME_GAS_PRICE_FACTOR: 1
-COMMON_FOREIGN_GAS_PRICE_SUPPLIER_URL: "https://gasprice.poa.network/"
-COMMON_FOREIGN_GAS_PRICE_SPEED_TYPE: "fast"
-COMMON_FOREIGN_GAS_PRICE_FALLBACK: 10000000000
-COMMON_FOREIGN_GAS_PRICE_FACTOR: 1
-
-MONITOR_HOME_START_BLOCK: 13259999
-MONITOR_FOREIGN_START_BLOCK: 9359576
-MONITOR_VALIDATOR_HOME_TX_LIMIT: 2000000
-MONITOR_VALIDATOR_FOREIGN_TX_LIMIT: 2000000
-MONITOR_TX_NUMBER_THRESHOLD: 50
-```
-
 4. Return to the deployment directory \(`cd ..`\) and create the `hosts.yml` file
 
 {% hint style="warning" %}
@@ -217,8 +191,6 @@ sed -i 's/poa/wetc/' hosts.yml
 ansible-playbook --private-key=~/.ssh/<privkey.file> -i hosts.yml site.yml
 sed -i 's/wetc/amb-xdai/' hosts.yml
 ansible-playbook --private-key=~/.ssh/<privkey.file> -i hosts.yml site.yml
-sed -i 's/amb-xdai/amb-poa/' hosts.yml
-ansible-playbook --private-key=~/.ssh/<privkey.file> -i hosts.yml site.yml
 ```
 
 6. Wait for 5-6 minutes and check availability of the monitor statistic in the web service: 
@@ -229,7 +201,6 @@ ansible-playbook --private-key=~/.ssh/<privkey.file> -i hosts.yml site.yml
 * http://&lt;monitor node ip address:port&gt;/poa
 * http://&lt;monitor node ip address:port&gt;/wetc
 * http://&lt;monitor node ip address:port&gt;/amb-xdai
-* http://&lt;monitor node ip address:port&gt;/amb-poa
 
 2\) If URL method is unavailable you can **login to the target node** and: `curl http://<target node ip address:port>/xdai` from the command line to check operability.
 
