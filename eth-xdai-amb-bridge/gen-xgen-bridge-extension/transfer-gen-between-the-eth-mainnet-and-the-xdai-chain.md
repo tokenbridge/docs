@@ -36,7 +36,7 @@ For demonstration purposes we use [MyEtherWallet \(MEW\)](https://www.myetherwal
 * 6\) Leave the **\_data** field empty.
 * 7\) Click **Copy** to copy the content of the **ABI-encoded output** text field and store it somewhere.
 
-![](../../.gitbook/assets/image%20%288%29.png)
+![](../../.gitbook/assets/image%20%289%29.png)
 
 2. Activate and open a web3 wallet \(like MetaMask or Nifty Wallet\) and select the Ethereum Mainnet chain. Choose the account that will send the tokens \(the same as it was used on the step 1.4\). Go to [MyEtherWallet \(MEW\)](https://www.myetherwallet.com/access-my-wallet) and select the option to login with a web3 wallet. Next:
 
@@ -53,7 +53,7 @@ For demonstration purposes we use [MyEtherWallet \(MEW\)](https://www.myetherwal
 
 * 4\) Click **Continue**
 
-![](../../.gitbook/assets/image%20%2817%29.png)
+![](../../.gitbook/assets/image%20%2821%29.png)
 
 3. Fill the parameters to execute the `transfer` method:
 
@@ -63,7 +63,7 @@ For demonstration purposes we use [MyEtherWallet \(MEW\)](https://www.myetherwal
 * 4\) Enter the **\_data** with the hexadecimal string copied in the step 1.7. Prepend the string by `0x` symbols.
 * 5\) Press **Write** to send the tokens.
 
-![](../../.gitbook/assets/image%20%2822%29.png)
+![](../../.gitbook/assets/image%20%2826%29.png)
 
 4. Check that the Gas price is not set too high, then **Submit** the transaction with a web3 wallet \(like MetaMask or Nifty wallet\). Wait to proceed until it is included in the chain.
 
@@ -88,7 +88,7 @@ For demonstration purposes we use [MyEtherWallet \(MEW\)](https://www.myetherwal
 
 * 3\) Click **Continue.**
 
-![](../../.gitbook/assets/image%20%2823%29.png)
+![](../../.gitbook/assets/image%20%2827%29.png)
 
 
 
@@ -100,7 +100,7 @@ For demonstration purposes we use [MyEtherWallet \(MEW\)](https://www.myetherwal
 * 4\) Enter `0x` symbols to the **\_data** field.
 * 5\) Click **Write.**
 
-![](../../.gitbook/assets/image%20%2814%29.png)
+![](../../.gitbook/assets/image%20%2816%29.png)
 
 4. Check the gas price, then **Submit** the transaction through the web3 wallet extension and wait until it is included in the chain.
 
@@ -133,7 +133,7 @@ It is assumed that the address of the DAOstack-developed token will be `0x543ff2
 
 * 4\) Click **Continue**
 
-![](../../.gitbook/assets/image%20%2826%29.png)
+![](../../.gitbook/assets/image%20%2830%29.png)
 
 3. Fill the parameters to execute the `transfer` method:
 
@@ -143,7 +143,7 @@ It is assumed that the address of the DAOstack-developed token will be `0x543ff2
 * 4\) Enter the **\_data** with the hexadecimal string - encoded value of `onTokenTransfer` call. Prepend the string by `0x` symbols.
 * 5\) Press **Write** to send the tokens.
 
-![](../../.gitbook/assets/image%20%2815%29.png)
+![](../../.gitbook/assets/image%20%2817%29.png)
 
 4. Check that the Gas price is not set too high, then **Submit** the transaction with a web3 wallet \(like MetaMask or Nifty wallet\). Wait to proceed until it is included in the chain.
 
