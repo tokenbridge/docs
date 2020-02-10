@@ -9,7 +9,7 @@ This manual is not intended as an official protocol to transfer GEN tokens throu
 {% endhint %}
 
 {% hint style="info" %}
-It is assumed that accounts executing operations below have a small amount of Ether and xDai for gas fees as well as an amount of GENs to transfer. GEN can be obtained through [Uniswap](https://uniswap.exchange/) or other exchanges.
+It is assumed that accounts executing operations below have a small amount of Ether and xDai for gas fees as well as an amount of GENs to transfer. GEN tokens can be obtained through [Uniswap](https://uniswap.exchange/) or other exchanges.
 {% endhint %}
 
 For demonstration purposes we use [MyEtherWallet \(MEW\)](https://www.myetherwallet.com/access-my-wallet)  to move assets from the Ethereum Mainnet to the xDai chain. These actions may be applied to any other wallet with similar capabilities.
@@ -60,7 +60,7 @@ For demonstration purposes we use [MyEtherWallet \(MEW\)](https://www.myetherwal
 * 1\) Select `transfer` from the **Select an Item** dropdown
 * 2\) Enter the **\_to** address `0x6eA6C65E14661C0BcaB5bc862fE5E7D3B5630C2F`. This is the mediator contract serving the bridge extension on the Ethereum Mainnet
 * 3\) Enter the **\_value** - the amount of tokens \(in Wei\) to transfer. It must be the same as the value specified in the step 1.5.
-* 4\) Enter the **\_data** with the hexadecimal string copied in the step 1.7. Prepend the string by `0x` symbols.
+* 4\) Enter the **\_data** with the hexadecimal string copied in step 1.7. Prepend the string by `0x` symbols.
 * 5\) Press **Write** to send the tokens.
 
 ![](../../.gitbook/assets/image%20%2826%29.png)
@@ -71,7 +71,7 @@ For demonstration purposes we use [MyEtherWallet \(MEW\)](https://www.myetherwal
 
 ## Withdraw GEN tokens from the xDai chain \(the interim token\)
 
-1. Choose the xDai chain in the browser wallet extension and login to [MyEtherWallet \(MEW\)](https://www.myetherwallet.com/access-my-wallet). Select to the **Interact with Contract** item in the side navigation menu. \(_note: you must have xGEN tokens in your wallet on the xDai chain to proceed_\)
+1. Choose the xDai chain in the browser wallet extension and login to [MyEtherWallet \(MEW\)](https://www.myetherwallet.com/access-my-wallet). Select the **Interact with Contract** item in the side navigation menu. \(_note: you must have xGEN tokens in your wallet on the xDai chain to proceed_\)
 
 2. Initialize the xGEN bridgeable token contract interface:
 
@@ -109,16 +109,16 @@ For demonstration purposes we use [MyEtherWallet \(MEW\)](https://www.myetherwal
 ## Withdraw GEN tokens from the xDai chain \(the DAOstack token\)
 
 {% hint style="warning" %}
-This actions are valid only in case if the xGEN token will be represented by DAOstack-developed contract. The plan is that the substitute of the interim token by DAOstack contract will happen after some trial period. Till that time the actions below are not applicable - use [the way specific for the interim token](https://docs.tokenbridge.net/eth-xdai-amb-bridge/gen-xgen-bridge-extension/transfer-gen-between-the-eth-mainnet-and-the-xdai-chain#withdraw-gen-tokens-from-the-xdai-chain-the-interim-token).
+This actions are valid only in case if the xGEN token will be represented by DAOstack-developed contract. The plan is that the substitute of the interim token by DAOstack contract will happen after some trial period. Until that time the actions below are not applicable - use [the way specified for the interim token](https://docs.tokenbridge.net/eth-xdai-amb-bridge/gen-xgen-bridge-extension/transfer-gen-between-the-eth-mainnet-and-the-xdai-chain#withdraw-gen-tokens-from-the-xdai-chain-the-interim-token).
 {% endhint %}
 
 {% hint style="warning" %}
 It is assumed that the address of the DAOstack-developed token will be `0x543ff227f64aa17ea132bf9886cab5db55dcaddf.`
 {% endhint %}
 
-1. Prepare the encoded call of the method `onTokenTransfer` by the same way as it is described by the first step in [the section "Deposit GEN tokens to the xDai chain"](https://docs.tokenbridge.net/eth-xdai-amb-bridge/gen-xgen-bridge-extension/transfer-gen-between-the-eth-mainnet-and-the-xdai-chain#deposit-gen-tokens-to-the-xdai-chain).
+1. Prepare the encoded call of the method `onTokenTransfer` by the same way as it is described by the first step in [the section _Deposit GEN tokens to the xDai chain_](https://docs.tokenbridge.net/eth-xdai-amb-bridge/gen-xgen-bridge-extension/transfer-gen-between-the-eth-mainnet-and-the-xdai-chain#deposit-gen-tokens-to-the-xdai-chain)_._
 
-2. Choose the xDai chain in the browser wallet extension and login to [MyEtherWallet \(MEW\)](https://www.myetherwallet.com/access-my-wallet). The account that will send the tokens must be the same as the account \_from used to encode the mediator contract's method in the previous step. \(the same as it was used on the step 1.4\). Go to [MyEtherWallet \(MEW\)](https://www.myetherwallet.com/access-my-wallet) and select the option to login with a web3 wallet. Next:
+2. Choose the xDai chain in the browser wallet extension and login to [MyEtherWallet \(MEW\)](https://www.myetherwallet.com/access-my-wallet). The account that will send the tokens must be the same as the `account _from` used to encode the mediator contract's method in the previous step. \(the same as in step 1.4\). Go to [MyEtherWallet \(MEW\)](https://www.myetherwallet.com/access-my-wallet) and select the option to login with a web3 wallet. Next:
 
 * 1\) Select the **Interact with Contract** item from the sidebar menu
 * 2\) Initialize the xGEN token contract interface by entering the DAOstack token contract address in the **Contract Address** field: `0x543ff227f64aa17ea132bf9886cab5db55dcaddf`.
@@ -143,7 +143,7 @@ It is assumed that the address of the DAOstack-developed token will be `0x543ff2
 * 4\) Enter the **\_data** with the hexadecimal string - encoded value of `onTokenTransfer` call. Prepend the string by `0x` symbols.
 * 5\) Press **Write** to send the tokens.
 
-![](../../.gitbook/assets/image%20%2817%29.png)
+![](../../.gitbook/assets/contract-interact-xdai.png)
 
 4. Check that the Gas price is not set too high, then **Submit** the transaction with a web3 wallet \(like MetaMask or Nifty wallet\). Wait to proceed until it is included in the chain.
 
