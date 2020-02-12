@@ -4,6 +4,8 @@
 
 **Target date: Q4 2019**
 
+**Status:** ✅ Complete \([https://forum.poa.network/t/eth-to-xdai-arbitrary-message-bridge-launched/3245](https://forum.poa.network/t/eth-to-xdai-arbitrary-message-bridge-launched/3245)\)
+
 The bridges currently deployed between the Ethereum Mainnet, POA Network and xDai Chain only transfer fungible tokens. However, several projects have requested the ability to transfer other types of digital assets, for example non-fungible tokens. 
 
 First, the AMB will be set up between the Ethereum Mainnet and the xDai Chain. Next, it will be deployed between the Mainnet and POA Network. Once AMB bridges are available,  the same set of validator nodes will be able to transfer data between bridged chains for dozens of different applications. No reconfiguration will be required to facilitate these transfers.
@@ -11,6 +13,8 @@ First, the AMB will be set up between the Ethereum Mainnet and the xDai Chain. N
 ### Upgrade xDAI bridge to support alternative receiver and relative withdrawal limits
 
 **Target date: Q4 2019**
+
+**Status:** ✅ Complete [https://www.xdaichain.com/for-users/converting-xdai-via-bridge/alternate-receiver-send-dai-to-another-xdai-address](https://www.xdaichain.com/for-users/converting-xdai-via-bridge/alternate-receiver-send-dai-to-another-xdai-address)
 
 * **Alternative receiver:** Any contract in one chain will have the ability to send tokens cross-chain to any external address or contract. This feature will benefit owners of multsig wallets - they will be able to exchange Dai to xDai and vice versa. 
 * **Relative withdrawal limits**: The current daily withdrawal limit is absolute, creating a potential security issue if all funds are withdrawn. The new configuration will base withdrawal limits on the total bridge balance. For example, a 6% relative limit will restrict daily withdrawal operations to 6% of the overall bridge balance.
