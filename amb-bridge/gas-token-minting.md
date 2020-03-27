@@ -12,7 +12,7 @@ Ethereum Mainnet gas policy and gas refund mechanism allow a possibility of gas 
 
 For now, there is no any fee managing logic inside AMB bridge, since no tokens are generally transferred as a part of message bridging. Thus, the AMB bridge by default works in subsidized mode.
 
-The automatic gas token minting can be used as an alternative for fee collection. For every message pass request, when someone is calling `requireToPassMessage` on the Foreign AMB bridge contract, the configured amount of gas tokens will be generated and transferred to the configured receiver address.
+The automatic gas token minting can be used as an alternative for fee collection. For every message pass request, when someone is calling `requireToPassMessage` on the Foreign AMB bridge contract, the configured amount of gas tokens will be generated and transferred to the configured receiver address. \(Note: the process of minting gas tokens is an expensive operation in terms of gas usage, the exact transaction gas usage will depend on the configured minting parameter in the contract\) 
 
 ## GST2 token
 
@@ -37,13 +37,13 @@ This variant is also the cheapest one \(in terms of the total spent gas\) and sh
 
 This case is applicable when your account, which directly interacts with the bridge, already have some gas tokens. If you don't want to spend additional gas for minting unnecessary gas tokens, you can allow bridge contract to spend gas tokens from your interactor address by calling `approve` method on GST2 contract.
 
-The bridge will withdraw a configured amount of tokens from your account, instead of minting them. This approach results in the sufficient gas savings needed for an end call to the bridge contract, since the bridge won't spend any gas on minting tokens.
+First, if the current configured minting parameter is `X`, make sure that your account has at least `X` gas token on its balance, and the current allowance to the bridge account is at least `X` as well. During the call, the bridge will withdraw the configured amount of tokens from your account, instead of minting them. This approach results in the sufficient gas savings needed for an end call to the bridge contract, since the bridge won't spend any gas on minting tokens.
 
 This approach is recommended for environments with tight gas limit restrictions and accounts with other external gas tokens source.
 
 ### Hybrid approach
 
-Previously mentioned approaches can be used by the bridge simultaneously. The bridge will use both strategies when the provided allowance less than the target amount of gas tokens. The bridge will withdraw all approved tokens from sender account, then it will mint the remaining amount of gas tokens.
+Previously mentioned approaches can be used by the bridge simultaneously. The bridge will use both strategies when the provided allowance is less than the target amount of gas tokens. The bridge will withdraw all approved tokens from sender account, then it will mint the remaining amount of gas tokens. \(Note: make sure that your gas token allowance to the bridge contract does not exceed your real gas token balance\)
 
 This way if an interaction is recommended when you need some kind of compromise between other strategies. The spent gas for such case will be also somewhere in the middle between the gas amount for full minting and full allowance approaches.
 
