@@ -27,7 +27,7 @@ Before changing the token from the interim token contract \(`0x3E12081DD66A3600F
 
 * 3\) Click **Continue.**
 
-![](../../.gitbook/assets/image%20%2819%29.png)
+![](../../.gitbook/assets/image%20%2823%29.png)
 
 3. Change the owner of the DAOstack token contract to the GEN-xGEN AMB extension mediator contract:
 
@@ -35,7 +35,7 @@ Before changing the token from the interim token contract \(`0x3E12081DD66A3600F
 * 2\) Enter in the **NewOwner** address: `0xe47097ceF3B0bcbb0095A21523714bF0022E2DB8`. This is the  mediator contract serving the bridge extension in the xDai chain.
 * 3\) Click **Write.**
 
-![](../../.gitbook/assets/image%20%2820%29.png)
+![](../../.gitbook/assets/image%20%2824%29.png)
 
 4. Check the gas price, then **Submit** the transaction through the web3 wallet extension and wait until it is included in the chain.
 
@@ -56,7 +56,7 @@ Before changing the token from the interim token contract \(`0x3E12081DD66A3600F
 
 * 3\) Click **Continue.**
 
-![](../../.gitbook/assets/image%20%284%29.png)
+![](../../.gitbook/assets/image%20%285%29.png)
 
 3. Set the new token contract to be used as the bridgeable token the GEN-xGEN AMB extension on the xDai chain:
 
@@ -64,7 +64,7 @@ Before changing the token from the interim token contract \(`0x3E12081DD66A3600F
 * 2\) Enter in the **\_token** address: `0x543Ff227F64Aa17eA132Bf9886cAb5DB55DCAddf`. This is the DAOstack token contract.
 * 3\) Click **Write.**
 
-![](../../.gitbook/assets/image%20%2811%29.png)
+![](../../.gitbook/assets/image%20%2814%29.png)
 
 4. Check the gas price, then **Submit** the transaction through the web3 wallet extension and wait until it is included in the chain.
 

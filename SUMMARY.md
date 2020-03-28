@@ -73,7 +73,8 @@
 ## Kovan-Sokol AMB Brdige
 
 * [About the Kovan-Sokol AMB](kovan-sokol-amb-brdige/about-the-kovan-sokol-amb.md)
-* [native-to-ERC20 bridge extension](kovan-sokol-amb-brdige/native-to-erc20-bridge-extension.md)
+* [native-to-ERC20 bridge extension](kovan-sokol-amb-brdige/native-to-erc20-bridge-extension/README.md)
+  * [Transfer SPOA through native-to-ERC20 extension without UI](kovan-sokol-amb-brdige/native-to-erc20-bridge-extension/transfer-spoa-through-native-to-erc20-extension-without-ui.md)
 
 ## Media
 
