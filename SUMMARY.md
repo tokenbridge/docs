@@ -72,8 +72,8 @@
 
 ## Kovan-Sokol AMB Brdige
 
-* [About the Kovan-Sokol AMB](kovan-sokol-amb-brdige/about-the-kovan-sokol-amb/README.md)
-  * [native-to-ERC20 bridge extension](kovan-sokol-amb-brdige/about-the-kovan-sokol-amb/native-to-erc20-bridge-extension.md)
+* [About the Kovan-Sokol AMB](kovan-sokol-amb-brdige/about-the-kovan-sokol-amb.md)
+* [native-to-ERC20 bridge extension](kovan-sokol-amb-brdige/native-to-erc20-bridge-extension.md)
 
 ## Media
 
