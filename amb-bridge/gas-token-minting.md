@@ -20,8 +20,28 @@ Note: the process of minting gas tokens is an expensive operation in terms of ga
 
 ## GST2 token
 
-The Foreign AMB bridge uses the GST2 ERC-20 token on the Ethereum Mainnet: [0x0000000000b3F879cb30FE243b4Dfee438691c04](https://etherscan.io/token/0x0000000000b3F879cb30FE243b4Dfee438691c04).  
-This is a regular ERC-20 token, which creates stub contracts when minting gas tokens, and calls `selfdestruct` on them when burning tokens.
+The AMB bridge contracts will use the the GST2 ERC-20 token represented by the following contracts:
+
+* the Ethereum Mainnet: [`0x0000000000b3F879cb30FE243b4Dfee438691c04`](https://etherscan.io/address/0x0000000000b3F879cb30FE243b4Dfee438691c04#code)\`\`
+* the Kovan Testnet: [`0x0000000000170CcC93903185bE5A2094C870Df62`](https://kovan.etherscan.io/address/0x0000000000170ccc93903185be5a2094c870df62#code)\`\`
+
+These are a regular ERC-20 tokens, which creates stub contracts when minting gas tokens, and calls `selfdestruct` on them when burning tokens.
+
+## GasToken as fee
+
+As per scenarios described below the AMB contract will either mint Gas Tokens increasing the gas consumption of the transaction requesting to pass data through the bridge or accept Gas Tokens from the transaction sender.
+
+The amount of Gas Tokens required for the bridge operation to pass data can be received by calling the method `gasTokenTargetMintValue()` from the AMB contract. This value should be divided by `100` to get actual amount of tokens.
+
+For example, the following call to [the AMB bridge contract on the Kovan testnet](https://kovan.etherscan.io/address/0xfe446bef1dbf7afe24e81e05bc8b271c1ba9a560#readProxyContract):
+
+```bash
+curl https://kovan.infura.io/v3/YOUR-PROJECT-ID \
+  -X POST -H "Content-Type: application/json" \
+  -d '{"jsonrpc":"2.0","method":"eth_call","params":[{"to":"0xFe446bEF1DbF7AFE24E81e05BC8B271C1BA9a560","data":"0xde6e02b8"}, "latest"],"id":1}'
+```
+
+will return `0x50` in hexadecimal form or `80` in decimals. It corresponds to `0.80` Gas Tokens. It means that the transaction to pass data through the AMB bridge will consume extra `~3000000` gas.
 
 ## Possible scenarios
 
