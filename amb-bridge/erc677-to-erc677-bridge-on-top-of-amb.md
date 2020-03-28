@@ -10,10 +10,7 @@ Instructions for deploying a pair of ERC677-compatible tokens and the bridge med
 **An AMB bridge extension** is a pair of mediator contracts associated with a specific pair of Arbitrary Message Bridge contracts.
 {% endhint %}
 
-The steps below assume that the AMB is up and running and serves the bridge between Kovan \(Foreign\) chain and Sokol \(Home\) chain. Addresses of the deployed AMB bridge contracts:
-
-* [Kovan](https://blockscout.com/eth/kovan/address/0xfe446bef1dbf7afe24e81e05bc8b271c1ba9a560/contracts) Foreign testnet
-* [Sokol](https://blockscout.com/poa/sokol/address/0xfe446bef1dbf7afe24e81e05bc8b271c1ba9a560/contracts) Home testnet
+The steps below assume that the AMB is up and running and serves [the bridge between Kovan \(Foreign\) chain and Sokol \(Home\) chain](https://docs.tokenbridge.net/kovan-sokol-amb-brdige/about-the-kovan-sokol-amb).
 
 ## Instructions
 
