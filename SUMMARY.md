@@ -70,6 +70,10 @@
 
 * [About the ETH-POA AMB](eth-poa-amb-bridge/about-the-eth-poa-amb.md)
 
+## Kovan-Sokol AMB Brdige
+
+* [About the Kovan-Sokol AMB](kovan-sokol-amb-brdige/about-the-kovan-sokol-amb.md)
+
 ## Media
 
 * [Contact Us](media/contact-us.md)
