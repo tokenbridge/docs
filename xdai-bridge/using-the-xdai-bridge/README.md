@@ -17,5 +17,5 @@ The bridge can also be used without the UI. [Instructions are here](how-to-use-x
 
 ### Advanced operations
 
-It is possible to move Sai/Dai to xDai and back to an alternative receiver by calling the bridge methods directly how it is presented in [this manual](https://docs.tokenbridge.net/xdai-bridge/using-the-xdai-bridge/alternative-receiver-for-the-xdai-bridge).
+It is possible to move Dai to xDai and back to an alternative receiver by calling the bridge methods directly how it is presented in [this manual](https://docs.tokenbridge.net/xdai-bridge/using-the-xdai-bridge/alternative-receiver-for-the-xdai-bridge).
 
