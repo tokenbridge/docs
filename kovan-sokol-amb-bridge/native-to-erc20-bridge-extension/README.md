@@ -4,7 +4,7 @@ description: >-
   tokens
 ---
 
-# native-to-ERC20 bridge extension
+# Native-to-ERC20 bridge extension
 
 The native-to-ERC20 bridge extension of the Kovan-Sokol Arbitrary Message Bridge is a pair of mediator contracts allowing to test transfers of native tokens to another chain in form of ERC20-compatible tokens.
 

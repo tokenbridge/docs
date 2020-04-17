@@ -70,11 +70,11 @@
 
 * [About the ETH-POA AMB](eth-poa-amb-bridge/about-the-eth-poa-amb.md)
 
-## Kovan-Sokol AMB Brdige
+## Kovan-Sokol AMB Bridge
 
-* [About the Kovan-Sokol AMB](kovan-sokol-amb-brdige/about-the-kovan-sokol-amb.md)
-* [native-to-ERC20 bridge extension](kovan-sokol-amb-brdige/native-to-erc20-bridge-extension/README.md)
-  * [Transfer SPOA through native-to-ERC20 extension without UI](kovan-sokol-amb-brdige/native-to-erc20-bridge-extension/transfer-spoa-through-native-to-erc20-extension-without-ui.md)
+* [About the Kovan-Sokol AMB](kovan-sokol-amb-bridge/about-the-kovan-sokol-amb.md)
+* [Native-to-ERC20 bridge extension](kovan-sokol-amb-bridge/native-to-erc20-bridge-extension/README.md)
+  * [Transfer SPOA through native-to-ERC20 extension without UI](kovan-sokol-amb-bridge/native-to-erc20-bridge-extension/transfer-spoa-through-native-to-erc20-extension-without-ui.md)
 
 ## Media
 
