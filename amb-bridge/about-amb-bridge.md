@@ -20,9 +20,15 @@ AMB's universality means it can be used as a base layer for bridge and applicati
 Check out the [ETH-xDai AMB ](../eth-xdai-amb-bridge/about-the-eth-xdai-amb.md)section to view and try some live extensions.
 {% endhint %}
 
+## Video Explainers
+
 ### AMB Overview with Igor Barinov - EthCC 2020
 
 {% embed url="https://youtu.be/ybnf2tR9sZQ" %}
+
+### AMB cross-chain transfers with Alex Kolotov - [NonCon 2020](https://noncon.org/)
+
+{% embed url="https://www.youtube.com/watch?v=3-2deK21Q14" %}
 
 
 
