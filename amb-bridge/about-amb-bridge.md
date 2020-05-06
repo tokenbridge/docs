@@ -30,5 +30,13 @@ Check out the [ETH-xDai AMB ](../eth-xdai-amb-bridge/about-the-eth-xdai-amb.md)s
 
 {% embed url="https://www.youtube.com/watch?v=3-2deK21Q14" %}
 
+### AMB presentation at Waves online Meetup \(Russian presentation\)
+
+На онлайн-митапе эксперты обсудят современные тенденции развития технологии, а также поделятся практическими решениями.
+
+Александр Колотов, руководитель группы разработки в проекте TokenBridge, преподаватель Университета Иннополис
+
+{% embed url="https://youtu.be/8qSnHB9g8K8?t=282" %}
+
 
 
