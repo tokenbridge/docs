@@ -1,14 +1,14 @@
-# Create a burner wallet plugin for your AMB bridge extension
+# Create a Burner Wallet plugin for your AMB bridge extension
 
-The [TokenBridge burner wallet plugin](https://www.npmjs.com/package/@poanet/tokenbridge-bw-exchange) allows the burner wallet to exchange assets interacting with AMB mediators. You can use the definitions it provides to create your own assets or exchange pairs so user can operate with them easily.
+The [TokenBridge burner wallet plugin](https://www.npmjs.com/package/@poanet/tokenbridge-bw-exchange) allows the burner wallet to exchange assets interacting with AMB mediators. You can use the definitions it provides to create your own assets or exchange pairs so users can easily interact with them.
 
-### Introduction
+## Introduction
 
 The [Burner Wallet 2.0](https://github.com/burner-wallet/burner-wallet-2) is a modular, extendable and customizable web application.
 
-It provides a set of packages and plugins that allow you to extend the basic functionality. Here we will focus on the Assets package and the Exchange Plugin.
+It provides a set of packages and plugins that allow you to extend the basic functionality. Here we will focus on the **Assets package** and the **Exchange Plugin**.
 
-**Assets**
+### **Assets**
 
 You can add any native or ERC20 token to track its balance and send transactions. For example you can define a new ERC20 and add it to the wallet:
 
@@ -27,7 +27,7 @@ const core = new BurnerCore({
 });
 ```
 
-The `ERC20Asset` class extends from the `Asset` class. The `Asset` class provides several methods to allow the wallet interact with the token. The following are the most important to pay attention and that could be overridden if your token behaves differently.
+The `ERC20Asset` class extends from the `Asset` class. The `Asset` class provides several methods which allow the wallet interact with the token. The following are the most important to pay attention to and that could be overridden if your token behaves differently.
 
 * `getBalance`: Indicates how to get the balance of your asset.
 * `startWatchingAddress`: Indicates how to listen to value transfers incoming into your account.
@@ -43,7 +43,7 @@ The `@burner-wallet/core` module contains some standard gateways:
 * XDaiGateway 
 * InjectedGateway \(which transmits messages through an injected Web3 provider such as Metamask\).
 
-**Exchange Plugin**
+### **Exchange Plugin**
 
 The `@burner-wallet/exchange` package is an extendable plugin for implementing asset exchanges and bridges. The exchange module accepts an array of trading pairs.
 
@@ -60,12 +60,12 @@ const exchange = new Exchange({
 * `exchangeAtoB`: Indicates how to send A Asset to be exchanged for B Asset. Here you can add logic to detect exchange finalization for example for a more complex exchange operation like bridges.
 * `exchangeBtoA`: Indicates how to send B Asset to be exchanged for A Asset. Here you can add logic to detect exchange finalization for example for a more complex exchange operation like bridges.
 
-Exchange pairs examples:
+**Exchange pairs examples:**
 
 * [XDAIBridge](https://github.com/burner-wallet/burner-wallet-2/blob/develop/packages/exchange/src/pairs/XDaiBridge.ts): It allows the user to exchange the pair DAI &lt;&gt; xDAI. Since validators need to verify the transaction, and release the tokens on the other network, this pair detects the exchange finalization by listening to events on the bridge contracts.
 * [Uniswap](https://github.com/burner-wallet/burner-wallet-2/blob/develop/packages/exchange/src/pairs/Uniswap.ts): It allows the user to exchange the pair DAI &lt;&gt; ETH by using Uniswap. In this case, `exchangeAtoB` is extended for converting DAI to ETH, since it requires performing two transactions. First calling `approve` on the token contract and then calling the method from the Uniswap contract.     
 
-**TokenBridge Plugin**
+## **TokenBridge Plugin**
 
 The [TokenBridge Burner Wallet 2 Plugin](https://github.com/poanetwork/tokenbridge/tree/develop/burner-wallet-plugin/tokenbridge-bw-exchange) provides some generic resources that can be used and extended:
 
@@ -74,13 +74,13 @@ The [TokenBridge Burner Wallet 2 Plugin](https://github.com/poanetwork/tokenbrid
 * `Mediator` Pair - Represents an Exchange Pair that interacts with mediators extensions.
 * `TokenBridgeGateway` - A gateway to operate with ETC, POA Sokol and POA Core networks.
 
-The asset `ERC677Asset` extends from `ERC20Asset` and overrides some methods:
+The asset `ERC677Asset` extends the `ERC20Asset` and overrides some methods:
 
 * `_send`: In this case the method `transferAndCall` is used instead of the `transfer` method.
-* `startWatchingAddress`: Add logic to correctly track the transfer events related to the wallet account.
+* `startWatchingAddress`: Adds logic to correctly track the transfer events related to the wallet account.
 * `getTx`: Overrides the logic to return the stored information about a transfer transaction to avoid errors on the information displayed.
 
-The asset `NativeMediatorAsset` extends from the `NativeAsset` of the burner wallet core. It extends the functionality with the following method:
+The asset `NativeMediatorAsset` extends the `NativeAsset` of the Burner Wallet core. It extends the functionality with the following method:
 
 * `scanMediatorEvents`: Add logic to watch transfer from mediator contracts to the wallet account to display it in the activity list.
 * `getTx`: Overrides the logic to return the stored information about a transfer transaction to avoid errors on the information displayed.
@@ -100,7 +100,7 @@ The gateway `TokenBridgeGateway` extends from the `Gateway` class of the burner 
 * POA Sokol
 * POA Core
 
-#### Project structure
+### Project structure
 
 There are three main folders in the project:
 
@@ -108,7 +108,7 @@ There are three main folders in the project:
 * `test-wallet` - is a burner wallet instance ready to test your plugin and resources in testnets
 * `my-plugin` - is the folder where the plugin code is located. To change the name of the plugin it is necessary to update the folder name `my-plugin` and all mentions to `my-plugin` to the new name of your plugin.
 
-Inside `my-plugin` you can find the files that defines the resources to be exposed by the plugin to be used by the burner wallet in order to interact with the ERC677 to ERC677 bridge extension:
+Inside `my-plugin` you can find the files that defines the resources to be exposed by the plugin to be used by the Burner Wallet in order to interact with the ERC677 to ERC677 bridge extension:
 
 * `Stake` - extends from `ERC677Asset` defined in `@poanet/tokenbridge-bw-exchange`
 * `xStake` - extends from `ERC677Asset` defined in `@poanet/tokenbridge-bw-exchange`
@@ -127,7 +127,7 @@ Inside the `wallet` folder, the file `wallet/src/index.tsx` integrates the plugi
 import { Stake, xStake, StakeBridge } from 'my-plugin'
 ```
 
-To be able to use and to display the balances for `Stake` and `xStake` it is necessary to list them in the list of assets as follow:
+To  use and to display the balances for `Stake` and `xStake` it is necessary to list them in the list of assets as follow:
 
 ```text
 const core = new BurnerCore({
@@ -136,11 +136,11 @@ const core = new BurnerCore({
 })
 ```
 
-This is how the main Burner Wallet page will looks like:
+#### Main Burner Wallet page interface with Stake & xStake defined:
 
 ![](https://i.imgur.com/YRjpvFo.png)
 
-Then, in order to perform exchange operations between the assets it is needed that the defined pair is included in the Exchange plugin as follows:
+Then, in order to perform exchange operations between the assets, the defined pair is included in the Exchange plugin as follows:
 
 ```text
 const exchange = new Exchange({
@@ -148,19 +148,21 @@ const exchange = new Exchange({
 })
 ```
 
-This is how the exchange section will look like:
+#### Exchange section interface with defined pairs:
 
 ![](https://i.imgur.com/rkLbNye.png)
 
-#### Clone the sample repo
+## Get Started
+
+### Clone the sample repo
 
 Clone the [sample repo](https://github.com/poanetwork/tokenbridge-burner-wallet-plugin) to create a plugin project that uses the TokenBridge plugin. This sample repo contains a ready to publish plugin for a ERC677 to ERC677 bridge extension, but you can later modify it to define your own resources.
 
-#### Install dependencies
+### Install dependencies
 
 Run `yarn install`. This repo uses Lerna and Yarn Workspaces, so `yarn install` will install all dependencies and link modules in the repo.
 
-#### Build
+### Build
 
 To build the plugin package, from the root folder of project, you need to run the following command:
 
@@ -168,7 +170,7 @@ To build the plugin package, from the root folder of project, you need to run th
 yarn build
 ```
 
-#### Test plugin and resources in testnets
+### Test plugin and resources in testnets
 
 The project includes a burner wallet instance where you can test the implementation of the plugin in testnet. For that, you have to make sure that the build step was performed and that the resources you modified are correctly imported and used in the `src/index.tsx` file of the `test-wallet` folder.
 
@@ -193,7 +195,7 @@ To start the burner wallet instance run:
 yarn start-test-wallet
 ```
 
-#### Run plugin in Mainnet
+### Run plugin in Mainnet
 
 The project includes a burner wallet instance where you can use the implementation of the plugin. For that, you have to make sure that the build step was performed and that the plugin resources you modified are correctly imported and used in the `src/index.tsx` file of the `wallet` folder.
 
@@ -209,7 +211,7 @@ To start the burner wallet instance run:
 yarn start-wallet
 ```
 
-#### Publish to npm
+### Publish to npm
 
 In order to make the plugin accessible for other projects it needs to be published in the npm registry. For that, you can follow these steps:
 

@@ -36,7 +36,7 @@
   * [NiftyWallet Transfer](amb-bridge/how-to-use-cryptokitties-bridge/niftywallet-transfer.md)
   * [MyEtherWallet \(MEW\) Transfer](amb-bridge/how-to-use-cryptokitties-bridge/myetherwallet-mew-transfer.md)
   * [Create/Transfer a Test Cat](amb-bridge/how-to-use-cryptokitties-bridge/create-a-test-kitty.md)
-* [Create a burner wallet plugin for your AMB bridge extension](amb-bridge/create-a-burner-wallet-plugin-for-your-amb-bridge-extension.md)
+* [Create a Burner Wallet plugin for your AMB bridge extension](amb-bridge/create-a-burner-wallet-plugin-for-your-amb-bridge-extension.md)
 
 ## xDai Bridge
 
