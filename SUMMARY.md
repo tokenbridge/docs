@@ -16,6 +16,7 @@
     * [Monitor deployment for existing bridges](about-tokenbridge/components/monitor/monitor-deployment-for-existing-bridges.md)
 * [Use Cases](about-tokenbridge/use-cases/README.md)
   * [Mainnet Participation](about-tokenbridge/use-cases/mainnet-participation.md)
+  * [Cross-Chain Project Highlights](about-tokenbridge/use-cases/cross-chain-project-highlights.md)
   * [Reduce Computation Costs](about-tokenbridge/use-cases/reduce-computation-costs.md)
 * [Security Audits](about-tokenbridge/security-audits.md)
 * [Roadmap](about-tokenbridge/roadmap.md)
