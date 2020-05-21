@@ -6,7 +6,7 @@ description: >-
 
 # Cross-Chain Project Highlights
 
-## **Projects using the TokenBridge solution for token transfers**
+## **Thundercore**
 
 > **Project:** [Thundercore](https://www.thundercore.com/)  
 > **Bridge UI:** [**https://stablecoin.thundercore.com/**](https://stablecoin.thundercore.com/)  
@@ -14,11 +14,15 @@ description: >-
 
 ![ThunderCore bridge](../../.gitbook/assets/thundercore.png)
 
+## Ethercore
+
 > **Project:** [EtherCore](https://www.ethercore.io/)  
 > **Bridge UI:** [**https://bridge.ethercore.io/**](https://bridge.ethercore.io/)  
 > **Description:** EtherCore Mainchain &lt;-&gt; EtherCore SideChain bridge for the ERE token
 
 ![](../../.gitbook/assets/ethercore.png)
+
+## **Artis**
 
 > **Project:** [Artis](https://artis.eco/)  
 > **Bridge UI:** [**https://bridge.artis.network/**](https://bridge.artis.network/)  
@@ -26,7 +30,9 @@ description: >-
 
 ![](../../.gitbook/assets/artis-1.png)
 
-> **Project:** Ocean  
+## **Ocean Protocol**
+
+> **Project:** [Ocean Protocol](https://oceanprotocol.com/)  
 > **Bridge UI:** [https://bridge.oceanprotocol.com/](https://bridge.oceanprotocol.com/)  
 > **Description:** Transfer OCEAN tokens between Ethereum and the Ocean Pacific Network
 
