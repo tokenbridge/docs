@@ -78,6 +78,12 @@
 * [Native-to-ERC20 bridge extension](kovan-sokol-amb-bridge/native-to-erc20-bridge-extension/README.md)
   * [Transfer SPOA through native-to-ERC20 extension without UI](kovan-sokol-amb-bridge/native-to-erc20-bridge-extension/transfer-spoa-through-native-to-erc20-extension-without-ui.md)
 
+## RINKEBY-XDAI AMB BRIDGE
+
+* [About the Rinkeby-xDai AMB](rinkeby-xdai-amb-bridge/about-the-rinkeby-xdai-amb.md)
+* [MOON bridge extension](rinkeby-xdai-amb-bridge/moon-bridge-extension/README.md)
+  * [Transfer Moons between Rinkeby and xDai Chain using the MOON bridge extension](rinkeby-xdai-amb-bridge/moon-bridge-extension/transfer-moons-between-rinkeby-and-xdai-chain-using-the-moon-bridge-extension.md)
+
 ## Media
 
 * [Contact Us](media/contact-us.md)
