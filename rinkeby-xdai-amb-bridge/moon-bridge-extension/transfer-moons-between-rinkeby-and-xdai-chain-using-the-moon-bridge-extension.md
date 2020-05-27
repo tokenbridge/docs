@@ -5,7 +5,7 @@ description: Instructions on relaying MOON tokens through the MOON AMB bridge ex
 # Transfer Moons between Rinkeby and xDai Chain using the MOON bridge extension
 
 {% hint style="warning" %}
-The instructions below represent a technical way to transfer tokens. We are expecting a DApp \(e.g. Burner Wallet 2\) will adopt these instructions to provide a better user experience.
+The instructions below use MyEtherWallet to transfer tokens and is not very intuitive. We expect a DApp \(e.g. Burner Wallet 2\) will adopt these instructions to provide a better user experience.
 {% endhint %}
 
 [MyEtherWallet \(MEW\)](https://www.myetherwallet.com/access-my-wallet) is an obvious tool to transfer MOON tokens through the bridge extension. MEW may be used for both types of operations: to deposit tokens to the xDai chain and to withdraw tokens from the xDai chain.
@@ -41,9 +41,9 @@ You will need a small amount of Rinkeby Testnet ether for gas fees and an amount
 {% hint style="warning" %}
 Note that minimum and maximum transaction amounts for deposit are embedded into the extension. 
 
-* **Min** per transaction: **1 MOON** \(_the MOON's decimals is 0_\)
-* **Max** per transaction: **100,000,000,000,000,000,000,000 MOON**
-* Transaction limit **max per day**: **6,000,000,000,000,000,000,000,000 MOON**
+* **Min** per transaction: **1 MOON** \(_the MOON's decimals is 0, 1 Moon = 1,000,000,000,000,000,000_\)
+* **Max** per transaction: **100,000,000,000,000,000,000,000 \(100,000 MOON\)**
+* Transaction limit **max per day**: **6,000,000,000,000,000,000,000,000 \(6M MOON\)**
 {% endhint %}
 
 3. Check that the Gas price - 1 Gwei is enough, then **Submit** the transaction with a web3 wallet \(like MetaMask or Nifty wallet\). Wait to proceed until it is included in the chain.
@@ -77,11 +77,11 @@ Note that minimum and maximum transaction amounts for deposit are embedded into 
 
 7. Check the gas price, then Submit the transaction your web3 wallet and wait until it is included in the chain.
 
-8. It will require the AMB bridge a short \(20-40 seconds\) amount time to relay the deposit request to the xDai chain. After some time the balance of the account specified as `_receiver` in the `relayTokens` method call will increase. The result of the relay operation can be monitored in [Blockscout](https://blockscout.com/poa/xdai/tokens/0xC5C35D01B20f8d5cb65C60f02113EF6cd8e79910/token_transfers).
+8. It will require the AMB bridge a short \(20-40 seconds\) amount of time to relay the deposit request to the xDai chain. After some time the balance of the account specified as `_receiver` in the `relayTokens` method call will increase. The result of the relay operation can be monitored in [Blockscout](https://blockscout.com/poa/xdai/tokens/0xC5C35D01B20f8d5cb65C60f02113EF6cd8e79910/token_transfers).
 
 ## Withdraw MOON tokens from the xDai chain
 
-No special operations are required to transfer MOON tokens back to the Rinkeby Testnet. Just send MOON tokens in the xDai chain to the mediator `0x1E0507046130c31DEb20EC2f870ad070Ff266079`.
+No special operations are required to transfer MOON tokens back to the Rinkeby Testnet. Just send MOON tokens in the xDai chain to the mediator `0x1E0507046130c31DEb20EC2f870ad070Ff266079`. You will need a very small amount of xDai to process.
 
-In order to specify an alternative receiver of the tokens in the Rinkeby Testnet, the method `relayTokens` from the mediator contract can be used.
+If you want to specify an alternative receiver of the tokens in the Rinkeby Testnet, the  `relayTokens` method from the mediator contract can be used.
 
