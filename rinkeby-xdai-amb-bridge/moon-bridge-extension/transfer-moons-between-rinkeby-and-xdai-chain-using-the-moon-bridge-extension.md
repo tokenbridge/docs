@@ -5,10 +5,10 @@ description: Instructions on relaying MOON tokens through the MOON AMB bridge ex
 # Transfer Moons between Rinkeby and xDai Chain using the MOON bridge extension
 
 {% hint style="warning" %}
-The instructions below use MyEtherWallet to transfer tokens and is not very intuitive. We expect a DApp \(e.g. Burner Wallet 2\) will adopt these instructions to provide a better user experience.
+The instructions below use MyEtherWallet to transfer tokens. This method is not very intuitive. We expect a DApp \(e.g. Burner Wallet 2\) will adopt these instructions to provide a better user experience.
 {% endhint %}
 
-[MyEtherWallet \(MEW\)](https://www.myetherwallet.com/access-my-wallet) is an obvious tool to transfer MOON tokens through the bridge extension. MEW may be used for both types of operations: to deposit tokens to the xDai chain and to withdraw tokens from the xDai chain.
+We use [MyEtherWallet \(MEW\)](https://www.myetherwallet.com/access-my-wallet)  to transfer MOON tokens through the bridge extension. MEW may be used for both types of operations: to deposit tokens to the xDai chain and to withdraw tokens from the xDai chain.
 
 {% hint style="info" %}
 You will need a small amount of Rinkeby Testnet ether for gas fees and an amount of Moons to transfer for this tutorial.
@@ -16,7 +16,7 @@ You will need a small amount of Rinkeby Testnet ether for gas fees and an amount
 
 ## Deposit MOON tokens to the xDai chain
 
-1. Activate and open a web3 wallet \(like MetaMask or Nifty Wallet\) and select the Rinkeby Testnet. Go to [MyEtherWallet \(MEW\)](https://www.myetherwallet.com/access-my-wallet) and select the option to login with a web3 wallet. Next:
+1. Activate and open a web3 wallet \(like MetaMask or Nifty Wallet\) and select the Rinkeby Testnet. Go to [MyEtherWallet \(MEW\)](https://www.myetherwallet.com/access-my-wallet) and select the option to **login with MewCX \(MetaMask or other web3 wallet\)**. Use a wallet that contains some amount of Moon tokens. Next:
 
 * 1\) Select the **Interact with Contract** item from the sidebar menu
 * 2\) Initialize the MOON token contract interface by entering the Moon token contract address in the **Contract Address** field: `0xdf82c9014f127243ce1305dfe54151647d74b27a` 
@@ -29,14 +29,16 @@ You will need a small amount of Rinkeby Testnet ether for gas fees and an amount
 "stateMutability":"nonpayable","type":"function"}]
 ```
 
-* 4\) Click **Continue**.
+* 4\) Click **Continue.**
+
+![Interact with a contract using MEW](../../.gitbook/assets/mew1%20%281%29.png)
 
 2. Approve the mediator contract to perform operations with tokens:
 
 * 1\) Select `approve` from the **Select an Item** dropdown
 * 2\) Enter the **Spender** address `0xFEaB457D95D9990b7eb6c943c839258245541754`. This is the mediator contract serving the bridge extension on the Rinkeby Testnet.
 * 3\) Enter the **Value** - the amount of tokens \(in Wei\) to transfer.
-* 4\) Press Write to initiate the approval.
+* 4\) Press **Write** to initiate the approval.
 
 {% hint style="warning" %}
 Note that minimum and maximum transaction amounts for deposit are embedded into the extension. 
@@ -46,9 +48,9 @@ Note that minimum and maximum transaction amounts for deposit are embedded into 
 * Transaction limit **max per day**: **6,000,000,000,000,000,000,000,000 \(6M MOON\)**
 {% endhint %}
 
-3. Check that the Gas price - 1 Gwei is enough, then **Submit** the transaction with a web3 wallet \(like MetaMask or Nifty wallet\). Wait to proceed until it is included in the chain.
+3. Check that the Gas price - 1 Gwei is enough, then **Submit** the transaction using your web3 wallet \(like MetaMask or Nifty wallet\). Wait to proceed until it is included in the chain.
 
-4. Press the **Back** button. You will now initialize the mediator contract interface:
+4. Press the **Back** button. You will now initialize the mediator contract interface from the Interact with Contract interface:
 
 * 1\) Enter the mediator contract address: `0xFEaB457D95D9990b7eb6c943c839258245541754` 
 * 2\) Enter the following JSON in the **`ABI/JSON Interface`** field:
@@ -70,7 +72,7 @@ Note that minimum and maximum transaction amounts for deposit are embedded into 
 1. `relayTokens(address _receiver, uint256 _amount)`- Used to transfer MOON tokens to a recipient in the xDai chain.
 2. `relayTokens(address _from, address _receiver, uint256 _amount)` - Used in scenarios when the MOON tokens deposit is performed by another contract on behalf of a user account \(e.g. a wallet contract\).
 
-* 1\) Select the **first** relayTokens method
+* 1\) Select the **first** relayTokens method.
 * 2\) `_receiver` - Enter the account that will receive the MOON tokens on the xDai chain. We assume the same account that deposits the token also receives the token, so enter the address \(from your web3wallet & shown in MEW\) you are initiating the transfer from.
 * 3\)`_amount` -- the amount of tokens \(in Wei\) to transfer; it must be less or equal amount of tokens approved for the bridge operations.
 * 4\) Press **Write**.
@@ -81,7 +83,7 @@ Note that minimum and maximum transaction amounts for deposit are embedded into 
 
 ## Withdraw MOON tokens from the xDai chain
 
-No special operations are required to transfer MOON tokens back to the Rinkeby Testnet. Just send MOON tokens in the xDai chain to the mediator `0x1E0507046130c31DEb20EC2f870ad070Ff266079`. You will need a very small amount of xDai to process.
+No special operations are required to transfer MOON tokens back to the Rinkeby Testnet. Just send MOON tokens in the xDai chain to the mediator `0x1E0507046130c31DEb20EC2f870ad070Ff266079`. They will be sent to the same wallet address. You will need a very small amount of xDai to process.
 
-If you want to specify an alternative receiver of the tokens in the Rinkeby Testnet, the  `relayTokens` method from the mediator contract can be used.
+If you want to specify an alternative receiver of the tokens \(a different address\) in the Rinkeby Testnet, the  `relayTokens` method from the mediator contract can be used.
 
