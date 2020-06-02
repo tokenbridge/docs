@@ -37,7 +37,7 @@ You will need a small amount of Rinkeby Testnet ether for gas fees and an amount
 
 * 1\) Select `approve` from the **Select an Item** dropdown
 * 2\) Enter the **Spender** address `0xFEaB457D95D9990b7eb6c943c839258245541754`. This is the mediator contract serving the bridge extension on the Rinkeby Testnet.
-* 3\) Enter the **Value** - the amount of tokens \(in Wei\) to transfer.
+* 3\) Enter the **Value** - the amount of tokens \(in Wei\) you approve to transfer from this address. Leave Value in ETH field blank.
 * 4\) Press **Write** to initiate the approval.
 
 {% hint style="warning" %}
