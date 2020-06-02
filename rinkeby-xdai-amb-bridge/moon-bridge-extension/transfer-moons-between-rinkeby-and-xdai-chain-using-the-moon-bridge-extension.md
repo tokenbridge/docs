@@ -87,9 +87,9 @@ No special operations are required to transfer MOON tokens back to the Rinkeby T
 
 If you want to specify an alternative receiver of the tokens \(a different address\) in the Rinkeby Testnet, the  `relayTokens` method from the mediator contract can be used.
 
-## Viewing your Moon Tokens
+## Viewing your MOON Tokens
 
-You will need to add the Moon contract addresses to your wallet to view.  For instructions on adding custom tokens, [see the sUSD tutorial](../../eth-xdai-amb-bridge/susd-bridge-extension/transfer-susd-through-the-bridge-extension.md#view-balances). Add 18 decimals of precision to view accurate balance.
+You will need to add the Moon contract addresses to your wallet to view, and be sure you are connected to the correct chain.  For instructions on adding custom tokens, [see the sUSD tutorial](../../eth-xdai-amb-bridge/susd-bridge-extension/transfer-susd-through-the-bridge-extension.md#view-balances). Add 18 decimals of precision to view accurate balance.
 
 * Moon tokens on Rinkby [`0xDF82c9014F127243CE1305DFE54151647d74B27A`](https://rinkeby.etherscan.io/address/0xdf82c9014f127243ce1305dfe54151647d74b27a)\`\`
 * xMoon tokens on xDai [`0xC5C35D01B20f8d5cb65C60f02113EF6cd8e79910`](https://blockscout.com/poa/xdai/address/0xC5C35D01B20f8d5cb65C60f02113EF6cd8e79910/transactions)
