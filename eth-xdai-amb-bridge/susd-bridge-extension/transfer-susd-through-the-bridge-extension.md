@@ -85,6 +85,8 @@ Note that minimum and maximum transaction amounts are embedded into the bridge.
 
 8. It will require the AMB bridge a short amount time to relay the deposit request to the xDai chain. After some time the balance of the account specified as `_receiver` in the `relayTokens` method call will increase. The result of the relay operation can be monitored [in Blockscout](https://blockscout.com/poa/xdai/tokens/0x4c36d2919e407f0cc2ee3c993ccf8ac26d9ce64e/token_transfers).
 
+## View Balances
+
 9\) To view your sUSD token balance on the xDai chain using Nifty Wallet \( use a similar process with MetaMask\):
 
 * 1\) Select the **xDai chain**.

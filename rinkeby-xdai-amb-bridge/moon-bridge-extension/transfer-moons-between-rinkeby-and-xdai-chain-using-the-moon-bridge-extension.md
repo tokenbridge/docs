@@ -73,8 +73,8 @@ Note that minimum and maximum transaction amounts for deposit are embedded into 
 2. `relayTokens(address _from, address _receiver, uint256 _amount)` - Used in scenarios when the MOON tokens deposit is performed by another contract on behalf of a user account \(e.g. a wallet contract\).
 
 * 1\) Select the **first** relayTokens method.
-* 2\) `_receiver` - Enter the account that will receive the MOON tokens on the xDai chain. We assume the same account that deposits the token also receives the token, so enter the address \(from your web3wallet & shown in MEW\) you are initiating the transfer from.
-* 3\)`_amount` -- the amount of tokens \(in Wei\) to transfer; it must be less or equal amount of tokens approved for the bridge operations.
+* 2\) `_receiver` - Enter the account that will receive the MOON tokens on the xDai chain. Typically we assume the same account that deposits the token also receives the token, so enter the address \(from your web3wallet & shown in MEW\) you are initiating the transfer from. However, you can enter another address if you prefer.
+* 3\)`_amount` -- the amount of tokens \(in Wei\) to transfer; it must be less or equal to the amount of tokens approved for the bridge operations in step 2.3.
 * 4\) Press **Write**.
 
 7. Check the gas price, then Submit the transaction your web3 wallet and wait until it is included in the chain.
@@ -86,4 +86,13 @@ Note that minimum and maximum transaction amounts for deposit are embedded into 
 No special operations are required to transfer MOON tokens back to the Rinkeby Testnet. Just send MOON tokens in the xDai chain to the mediator `0x1E0507046130c31DEb20EC2f870ad070Ff266079`. They will be sent to the same wallet address. You will need a very small amount of xDai to process.
 
 If you want to specify an alternative receiver of the tokens \(a different address\) in the Rinkeby Testnet, the  `relayTokens` method from the mediator contract can be used.
+
+## Viewing your Moon Tokens
+
+You will need to add the Moon contract addresses to your wallet to view.  For instructions on adding custom tokens, [see the sUSD tutorial](../../eth-xdai-amb-bridge/susd-bridge-extension/transfer-susd-through-the-bridge-extension.md#view-balances). Add 18 decimals of precision to view accurate balance.
+
+* Moon tokens on Rinkby [`0xDF82c9014F127243CE1305DFE54151647d74B27A`](https://rinkeby.etherscan.io/address/0xdf82c9014f127243ce1305dfe54151647d74b27a)\`\`
+* xMoon tokens on xDai [`0xC5C35D01B20f8d5cb65C60f02113EF6cd8e79910`](https://blockscout.com/poa/xdai/address/0xC5C35D01B20f8d5cb65C60f02113EF6cd8e79910/transactions)
+
+
 
