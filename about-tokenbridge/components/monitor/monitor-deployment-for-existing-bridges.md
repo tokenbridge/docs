@@ -39,13 +39,15 @@ git clone --recursive https://github.com/poanetwork/tokenbridge.git
 cd tokenbridge/deployment
 ```
 
-3. Prepare the follwoing four files in the directory \`group\_vars\`. Every file will be used to send requests to one of the bridges: xDai bridge, POA bridge, wETC bridge, ETH-xDai Arbitrary message bridge:
+3. Prepare the following four files in the directory \`group\_vars\`. Every file will be used to send requests to one of the bridges:
 
-* **`group_vars/xdai.yml`**
-* **`group_vars/poa.yml`**
-* **`group_vars/wetc.yml`**
-* **`group_vars/amb-xdai.yml`**
-* **`group_vars/amb-poa.yml`**
+* xDai bridge: **`group_vars/xdai.yml`**
+* POA bridge: **`group_vars/poa.yml`**
+* wETC bridge: **`group_vars/wetc.yml`**
+* ETH-xDai Arbitrary message bridge: **`group_vars/amb-xdai.yml`**
+* ETH-POA Arbitrary message bridge: **`group_vars/amb-poa.yml`**
+* Rinkeby-xDai Arbitrary message bridge: **`group_vars/amb-rinkeby.yml`**
+* Kovan-Sokol Arbitrary message bridge \(test bed\): **`group_vars/amb-test.yml`**
 
 {% hint style="warning" %}
 Replace all places templated with tags \(&lt;&gt;\) with actual values. In order to achieve this it is necessary to define in advance **the port** where the monitor web-service will listen users' requests and **the JSON RPC url** to communicate with Ethereum Mainnet nodes.
@@ -181,6 +183,52 @@ MONITOR_VALIDATOR_FOREIGN_TX_LIMIT: 2000000
 MONITOR_TX_NUMBER_THRESHOLD: 50
 ```
 
+**`group_vars/amb-rinkeby.yml`**
+
+```yaml
+---
+MONITOR_BRIDGE_NAME: "amb-rinkeby"
+
+COMMON_HOME_RPC_URL: "https://xdai.poanetwork.dev/"
+COMMON_HOME_BRIDGE_ADDRESS: "0xc38D4991c951fE8BCE1a12bEef2046eF36b0FA4A"
+COMMON_FOREIGN_RPC_URL: "https://rinkeby.infura.io/v3/<infura project id>"
+COMMON_FOREIGN_BRIDGE_ADDRESS: "0xD4075FB57fCf038bFc702c915Ef9592534bED5c1"
+
+COMMON_HOME_GAS_PRICE_FALLBACK: 1000000000
+COMMON_HOME_GAS_PRICE_FACTOR: 1
+COMMON_FOREIGN_GAS_PRICE_FALLBACK: 1000000000
+COMMON_FOREIGN_GAS_PRICE_FACTOR: 1
+
+MONITOR_HOME_START_BLOCK: 10030211
+MONITOR_FOREIGN_START_BLOCK: 6529875
+MONITOR_VALIDATOR_HOME_TX_LIMIT: 2000000
+MONITOR_VALIDATOR_FOREIGN_TX_LIMIT: 2000000
+MONITOR_TX_NUMBER_THRESHOLD: 50
+```
+
+**`group_vars/amb-test.yml`**
+
+```yaml
+---
+MONITOR_BRIDGE_NAME: "amb-test"
+
+COMMON_HOME_RPC_URL: "https://sokol.poa.network"
+COMMON_HOME_BRIDGE_ADDRESS: "0xFe446bEF1DbF7AFE24E81e05BC8B271C1BA9a560"
+COMMON_FOREIGN_RPC_URL: "https://kovan.infura.io/v3/<infura project id>"
+COMMON_FOREIGN_BRIDGE_ADDRESS: "0xFe446bEF1DbF7AFE24E81e05BC8B271C1BA9a560"
+
+COMMON_HOME_GAS_PRICE_FALLBACK: 5000000000
+COMMON_HOME_GAS_PRICE_FACTOR: 1
+COMMON_FOREIGN_GAS_PRICE_FALLBACK: 5000000000
+COMMON_FOREIGN_GAS_PRICE_FACTOR: 1
+
+MONITOR_HOME_START_BLOCK: 9849617
+MONITOR_FOREIGN_START_BLOCK: 12372926
+MONITOR_VALIDATOR_HOME_TX_LIMIT: 2000000
+MONITOR_VALIDATOR_FOREIGN_TX_LIMIT: 2000000
+MONITOR_TX_NUMBER_THRESHOLD: 50
+```
+
 4. Return to the deployment directory \(`cd ..`\) and create the `hosts.yml` file
 
 {% hint style="warning" %}
@@ -206,7 +254,7 @@ If the target node contains `python3` instead of `python`, append `-e 'ansible_p
 
 Depending on your ssh setup, you may not need the `--private-key` flag
 
-⏳ Building containers can take a few minutes depending on target node resources. Be patient and maybe have a ☕ during  deployment!
+⏳ Automated deployment and the remote node configuration can take a few minutes depending on target node resources. Be patient and maybe have a ☕ during  these operations!
 {% endhint %}
 
 ```text
@@ -219,6 +267,10 @@ sed -i 's/wetc/amb-xdai/' hosts.yml
 ansible-playbook --private-key=~/.ssh/<privkey.file> -i hosts.yml site.yml
 sed -i 's/amb-xdai/amb-poa/' hosts.yml
 ansible-playbook --private-key=~/.ssh/<privkey.file> -i hosts.yml site.yml
+sed -i 's/amb-poa/amb-rinkeby/' hosts.yml
+ansible-playbook --private-key=~/.ssh/<privkey.file> -i hosts.yml site.yml
+sed -i 's/amb-rinkeby/amb-test/' hosts.yml
+ansible-playbook --private-key=~/.ssh/<privkey.file> -i hosts.yml site.yml
 ```
 
 6. Wait for 5-6 minutes and check availability of the monitor statistic in the web service: 
@@ -226,10 +278,12 @@ ansible-playbook --private-key=~/.ssh/<privkey.file> -i hosts.yml site.yml
 1\) By URL:
 
 * http://&lt;target node ip address:port&gt;/xdai
-* http://&lt;monitor node ip address:port&gt;/poa
-* http://&lt;monitor node ip address:port&gt;/wetc
-* http://&lt;monitor node ip address:port&gt;/amb-xdai
-* http://&lt;monitor node ip address:port&gt;/amb-poa
+* http://&lt;target node ip address:port&gt;/poa
+* http://&lt;target node ip address:port&gt;/wetc
+* http://&lt;target node ip address:port&gt;/amb-xdai
+* http://&lt;target node ip address:port&gt;/amb-poa
+* http://&lt;target node ip address:port&gt;/amb-rinkeby
+* http://&lt;target node ip address:port&gt;/amb-test
 
 2\) If URL method is unavailable you can **login to the target node** and: `curl http://<target node ip address:port>/xdai` from the command line to check operability.
 

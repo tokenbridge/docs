@@ -16,6 +16,10 @@ By using the links below it is possible to get the status of the existing bridge
   * General health status: [https://bridge-monitoring.poa.net/amb-xdai](https://bridge-monitoring.poa.net/amb-xdai)
 * **ETH-POA Arbitrary Message bridge**
   * General health status: [https://bridge-monitoring.poa.net/amb-poa](https://bridge-monitoring.poa.net/amb-poa)
+* **Rinkeby-xDAI Arbitrary Message bridge**
+  * General health status: [https://bridge-monitoring.poa.net/amb-rinkeby](https://bridge-monitoring.poa.net/amb-rinkeby)
+* **Kovan-Sokol Arbitrary Message bridge**
+  * General health status: [https://bridge-monitoring.poa.net/amb-test](https://bridge-monitoring.poa.net/amb-test)
 
 ### Status dashboard
 
