@@ -51,6 +51,8 @@
   * [Admin Privileges Management](xdai-bridge/xdai-bridge-contracts-management/admin-privileges-management.md)
   * [ERC20 Tokens Release](xdai-bridge/xdai-bridge-contracts-management/erc20-tokens-release.md)
   * [xDai Bridge Management API](xdai-bridge/xdai-bridge-contracts-management/xdai-bridge-management-api.md)
+* [xDai Bridge oracle maintenance](xdai-bridge/xdai-bridge-oracle-maintenance/README.md)
+  * [Oracle migration to a new server](xdai-bridge/xdai-bridge-oracle-maintenance/oracle-migration-to-a-new-server.md)
 
 ## ETH-XDAI AMB BRIDGE
 
