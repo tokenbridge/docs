@@ -91,8 +91,8 @@ If you want to specify an alternative receiver of the tokens \(a different addre
 
 You will need to add the Moon contract addresses to your wallet to view, and be sure you are connected to the correct chain.  For instructions on adding custom tokens, [see the sUSD tutorial](../../eth-xdai-amb-bridge/susd-bridge-extension/transfer-susd-through-the-bridge-extension.md#view-balances). Add 18 decimals of precision to view accurate balance.
 
-* Moon tokens on Rinkby [`0xDF82c9014F127243CE1305DFE54151647d74B27A`](https://rinkeby.etherscan.io/address/0xdf82c9014f127243ce1305dfe54151647d74b27a)\`\`
-* xMoon tokens on xDai [`0xC5C35D01B20f8d5cb65C60f02113EF6cd8e79910`](https://blockscout.com/poa/xdai/address/0xC5C35D01B20f8d5cb65C60f02113EF6cd8e79910/transactions)
+* Moon tokens on Rinkeby [`0xDF82c9014F127243CE1305DFE54151647d74B27A`](https://rinkeby.etherscan.io/address/0xdf82c9014f127243ce1305dfe54151647d74b27a)\`\`
+* xMoon tokens on xDai [`0x1e16aa4Df73d29C029d94CeDa3e3114EC191E25A`](https://blockscout.com/poa/xdai/tokens/0x1e16aa4Df73d29C029d94CeDa3e3114EC191E25A)
 
 
 
