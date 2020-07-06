@@ -23,3 +23,5 @@ DApp developers may also find this pair of chains useful for their cross-chain a
   * Fee: none
   * Finalization rate: `2` block
 
+It is possible to get an AMB transaction status by using the Live Monitoring app: [https://alm-rinkeby.herokuapp.com/](https://alm-rinkeby.herokuapp.com/).
+

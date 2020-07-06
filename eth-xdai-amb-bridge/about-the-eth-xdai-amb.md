@@ -23,3 +23,5 @@ The mediator contracts rely on the following information about the ETH-xDai Arbi
 A detailed description of the AMB and examples of AMB extensions are available here: [Arbitrary Message Bridge \(AMB\)](https://docs.tokenbridge.net/amb-bridge/about-amb-bridge).
 {% endhint %}
 
+It is possible to get an AMB transaction status by using the Live Monitoring app: [https://alm-xdai.herokuapp.com/](https://alm-xdai.herokuapp.com/).
+
