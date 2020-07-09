@@ -2,7 +2,7 @@
 description: How to deploy erc677-to-erc677 Arbitrary Message Bridge extension
 ---
 
-# ERC20/ERC677 to ERC677 AMB bridge extension
+# ERC677 to ERC677 AMB bridge extension
 
 Instructions for deploying a pair of ERC677-compatible tokens and the bridge mediator contract on top of the Arbitrary Message Bridge \(AMB\). 
 
