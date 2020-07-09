@@ -140,7 +140,7 @@ The following pre-requisites are required to deploy the AMB extension:
 
 ```text
  docker run -ti --rm --env-file erc-to-erc.config \
-     poanetwork/tokenbridge-contracts:quorum deploy.sh
+     poanetwork/tokenbridge-contracts:latest deploy.sh
 ```
 
 Output will look similar to this:
