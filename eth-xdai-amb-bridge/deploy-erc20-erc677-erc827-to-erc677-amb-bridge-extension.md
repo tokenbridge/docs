@@ -164,9 +164,9 @@ Output will look similar to this:
  }
 ```
 
-4. Check on [Etherscan](https://etherscan.io/) and [BlockScout](https://blockscout.com/poa/xdai/) that the contracts with addresses listed above are verified. Mark the mediator contract on the Ethereum Mainnet side as a proxy contract in  Etherscan so you can read the extension parameters here.
+4. Check on [Etherscan](https://etherscan.io/) and [BlockScout](https://blockscout.com/poa/xdai/) that the contracts with addresses listed above are verified. Mark the mediator contract on the Ethereum Mainnet side as a proxy contract in Etherscan so you can read the extension parameters here.
 
 ![](../.gitbook/assets/image%20%2836%29.png)
 
-5. Verify that tokens can be transferred in both directions through the bridge. For this, the procedure to use [the sUSD bridge AMB extension](https://docs.tokenbridge.net/eth-xdai-amb-bridge/susd-bridge-extension/transfer-susd-through-the-bridge-extension) can be applied.
+5. Verify that tokens can be transferred in both directions through the bridge. See the [the sUSD bridge AMB extension](https://docs.tokenbridge.net/eth-xdai-amb-bridge/susd-bridge-extension/transfer-susd-through-the-bridge-extension) for an example process.
 
