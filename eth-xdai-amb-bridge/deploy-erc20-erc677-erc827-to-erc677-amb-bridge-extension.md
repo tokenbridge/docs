@@ -10,19 +10,21 @@ Instructions for deploying the bridge mediator contract on top of [the Arbitrary
 An AMB bridge extension is a pair of mediator contracts associated with a specific pair of Arbitrary Message Bridge contracts.
 {% endhint %}
 
-The steps below assumes that there is an ERC20 or an ERC677/827 token in the Ethereum Mainnet that is intended to be transferred to the the xDai chain.
+The steps below assume there is an ERC20 or an ERC677/827 token which exists in the Ethereum Mainnet that you want to transfer to the the xDai chain.
 
 The mediators developed by the TokenBridge team will be used during deployment. If a customization of the mediators is required, additional steps are required to prepare the docker image with modified contracts.
 
-The deployment process will create a new ERC677 token contract on the xDai chain as so the AMB mediator will have rights to mint new tokens for any request to relay tokens through this AMB extension. More details about the extension internal may be got from here: ["How to develop a cross-blockchain application using the AMB"](https://docs.tokenbridge.net/amb-bridge/how-to-develop-xchain-apps-by-amb).
+The deployment process will create a new ERC677 token contract on the xDai chain.  The AMB mediator will have rights to mint new tokens for any request to relay tokens through this AMB extension. More details about the extension internals are available here: ["How to develop a cross-blockchain application using the AMB"](https://docs.tokenbridge.net/amb-bridge/how-to-develop-xchain-apps-by-amb).
+
+## Prerequisites
 
 The following pre-requisites are required to deploy the AMB extension:
 
-* a private key of an account which will be used to deploy contracts, the account must be funded before performing the deployment steps.
-* an address of an account that will have rights to update the extension parameters, different accounts could be used for different chains;
-* an address of an account that will have rights to upgrade the extension contracts, different accounts could be used for different chains;
-* a JSON RPC url to send deployment transaction to the Ethereum Mainnet, URL provided by [INFURA](https://infura.io/) with the API key can be used here;
-* [the Etherscan API key](https://etherscan.io/apis) to allow the contracts to be verified automatically as part of the deployment process.
+1. The private key of an account used to deploy the contracts. The account must be funded before performing the deployment steps.
+2. An account address that will be given rights to update the extension parameters. Different accounts may be used for different chains.
+3. An account address that will be given rights to upgrade the extension contracts. Different accounts may be used for different chains.
+4. A JSON RPC url to send deployment transaction to the Ethereum Mainnet. URL provided by [INFURA](https://infura.io/) with the API key can be used here.
+5. [The Etherscan API key](https://etherscan.io/apis) which allows contracts to be verified automatically during the deployment process.
 
 ## Instructions
 
@@ -136,7 +138,7 @@ The following pre-requisites are required to deploy the AMB extension:
  FOREIGN_EXPLORER_API_KEY=...
 ```
 
-3. Run deployment process by specifying the path to the configuration file:
+3. Run dthe eployment process by specifying the path to the configuration file:
 
 ```text
  docker run -ti --rm --env-file erc-to-erc.config \
@@ -163,9 +165,9 @@ Output will look similar to this:
  }
 ```
 
-4. Check by [Etherscan](https://etherscan.io/) and [BlockScout](https://blockscout.com/poa/xdai/) that the contracts with addresses listed above are verified. Mark the mediator contract on the Ethereum Mainnet side as a proxy contract in the Etherscan to be able read the extension parameters from this block explorer.
+4. Check on [Etherscan](https://etherscan.io/) and [BlockScout](https://blockscout.com/poa/xdai/) that the contracts with addresses listed above are verified. Mark the mediator contract on the Ethereum Mainnet side as a proxy contract in  Etherscan so you can read the extension parameters here.
 
 ![](../.gitbook/assets/image%20%2836%29.png)
 
-5. Verify that tokens could be transfered in any direction through the bridge. For this, the procedure to use [the sUSD bridge AMB extension](https://docs.tokenbridge.net/eth-xdai-amb-bridge/susd-bridge-extension/transfer-susd-through-the-bridge-extension) can be applied.
+5. Verify that tokens can be transferred in both directions through the bridge. For this, the procedure to use [the sUSD bridge AMB extension](https://docs.tokenbridge.net/eth-xdai-amb-bridge/susd-bridge-extension/transfer-susd-through-the-bridge-extension) can be applied.
 
