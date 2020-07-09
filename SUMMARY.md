@@ -91,7 +91,11 @@
 
 * [About the qDai chain](eth-qdai-bridge/about-the-qdai-chain.md)
 * [About the ETH-qDai AMB](eth-qdai-bridge/about-the-eth-qdai-amb.md)
-* [qDai bridge extension](eth-qdai-bridge/qdai-bridge-extension.md)
+* [qDai bridge extension](eth-qdai-bridge/qdai-bridge-extension/README.md)
+  * [Using the qDai Bridge](eth-qdai-bridge/qdai-bridge-extension/using-the-qdai-bridge/README.md)
+    * [Configuring MetaMask](eth-qdai-bridge/qdai-bridge-extension/using-the-qdai-bridge/configuring-metamask.md)
+    * [Transfer DAI with UI](eth-qdai-bridge/qdai-bridge-extension/using-the-qdai-bridge/transfer-dai-with-ui.md)
+    * [Transfer DAI without UI](eth-qdai-bridge/qdai-bridge-extension/using-the-qdai-bridge/transfer-dai-without-ui.md)
 
 ## Media
 
