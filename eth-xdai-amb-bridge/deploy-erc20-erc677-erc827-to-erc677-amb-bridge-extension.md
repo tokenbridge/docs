@@ -4,13 +4,13 @@ description: How to deploy an erc-to-erc Arbitrary Message Bridge extension
 
 # Deploy ERC20/ERC677/ERC827 to ERC677 AMB bridge extension
 
-Instructions for deploying the bridge mediator contract on top of [the Arbitrary Message Bridge \(AMB\) between the Ethereum Mainnet and the xDai chain](https://docs.tokenbridge.net/eth-xdai-amb-bridge/about-the-eth-xdai-amb).
+Instructions for deploying bridge mediator contracts on top of [the Arbitrary Message Bridge \(AMB\) between the Ethereum Mainnet and the xDai chain](https://docs.tokenbridge.net/eth-xdai-amb-bridge/about-the-eth-xdai-amb).
 
 {% hint style="info" %}
 An AMB bridge extension is a pair of mediator contracts associated with a specific pair of Arbitrary Message Bridge contracts.
 {% endhint %}
 
-The steps below assume there is an ERC20 or an ERC677/827 token which exists on Ethereum that you want to transfer to the the xDai chain.
+The steps below assume there is an ERC20 or an ERC677/827 token which exists on Ethereum that you want to transfer to and from the xDai chain.
 
 The mediators developed by the TokenBridge team will be used during deployment. If customizations are required for the mediators, additional steps will be needed to prepare the docker image with modified contracts.
 
