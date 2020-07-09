@@ -206,6 +206,31 @@ MONITOR_VALIDATOR_FOREIGN_TX_LIMIT: 2000000
 MONITOR_TX_NUMBER_THRESHOLD: 50
 ```
 
+**`group_vars/amb-qdai.yml`**
+
+```yaml
+---
+MONITOR_BRIDGE_NAME: "amb-qdai"
+
+COMMON_HOME_RPC_URL: "https://quorum-rpc.tokenbridge.net"
+COMMON_HOME_BRIDGE_ADDRESS: "0xD4075FB57fCf038bFc702c915Ef9592534bED5c1"
+COMMON_FOREIGN_RPC_URL: "https://mainnet.infura.io/v3/<infura project id>"
+COMMON_FOREIGN_BRIDGE_ADDRESS: "0xcEb06eCea3F588Cb60e39BD4DB7869013C6f65a5"
+
+COMMON_HOME_GAS_PRICE_FALLBACK: 1000000000
+COMMON_HOME_GAS_PRICE_FACTOR: 1
+COMMON_FOREIGN_GAS_PRICE_SUPPLIER_URL: "https://gasprice.poa.network/"
+COMMON_FOREIGN_GAS_PRICE_SPEED_TYPE: "fast"
+COMMON_FOREIGN_GAS_PRICE_FALLBACK: 10000000000
+COMMON_FOREIGN_GAS_PRICE_FACTOR: 1
+
+MONITOR_HOME_START_BLOCK: 464831
+MONITOR_FOREIGN_START_BLOCK: 10370242
+MONITOR_VALIDATOR_HOME_TX_LIMIT: 2000000
+MONITOR_VALIDATOR_FOREIGN_TX_LIMIT: 2000000
+MONITOR_TX_NUMBER_THRESHOLD: 50
+```
+
 **`group_vars/amb-test.yml`**
 
 ```yaml
@@ -269,7 +294,9 @@ sed -i 's/amb-xdai/amb-poa/' hosts.yml
 ansible-playbook --private-key=~/.ssh/<privkey.file> -i hosts.yml site.yml
 sed -i 's/amb-poa/amb-rinkeby/' hosts.yml
 ansible-playbook --private-key=~/.ssh/<privkey.file> -i hosts.yml site.yml
-sed -i 's/amb-rinkeby/amb-test/' hosts.yml
+sed -i 's/amb-rinkeby/amb-qdai/' hosts.yml
+ansible-playbook --private-key=~/.ssh/<privkey.file> -i hosts.yml site.yml
+sed -i 's/amb-qdai/amb-test/' hosts.yml
 ansible-playbook --private-key=~/.ssh/<privkey.file> -i hosts.yml site.yml
 ```
 
@@ -283,6 +310,7 @@ ansible-playbook --private-key=~/.ssh/<privkey.file> -i hosts.yml site.yml
 * http://&lt;target node ip address:port&gt;/amb-xdai
 * http://&lt;target node ip address:port&gt;/amb-poa
 * http://&lt;target node ip address:port&gt;/amb-rinkeby
+* http://&lt;target node ip address:port&gt;/amb-qdai
 * http://&lt;target node ip address:port&gt;/amb-test
 
 2\) If URL method is unavailable you can **login to the target node** and: `curl http://<target node ip address:port>/xdai` from the command line to check operability.
