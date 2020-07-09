@@ -10,11 +10,9 @@ Instructions for deploying bridge mediator contracts on top of [the Arbitrary Me
 An AMB bridge extension is a pair of mediator contracts associated with a specific pair of Arbitrary Message Bridge contracts.
 {% endhint %}
 
-The steps below assume there is an ERC20 or an ERC677/827 token which exists on Ethereum that you want to transfer to and from the xDai chain.
-
 The mediators developed by the TokenBridge team will be used during deployment. If customizations are required for the mediators, additional steps will be needed to prepare the docker image with modified contracts.
 
-The following deployment process will create a new ERC677 token contract on the xDai chain.  The AMB mediator will have rights to mint new tokens for any request to relay tokens through this AMB extension. More details about the extension internals are available here: ["How to develop a cross-blockchain application using the AMB"](https://docs.tokenbridge.net/amb-bridge/how-to-develop-xchain-apps-by-amb).
+The steps below assume you will use an existing ERC20 or an ERC677/827 token on Ethereum when creating the new ERC677 token contract on xDai. The AMB mediator will have rights to mint new tokens for any request to relay tokens through this AMB extension. More details about the extension internals are available here: ["How to develop a cross-blockchain application using the AMB"](https://docs.tokenbridge.net/amb-bridge/how-to-develop-xchain-apps-by-amb).
 
 ## Prerequisites
 
@@ -24,7 +22,8 @@ The following pre-requisites are required to deploy the AMB extension:
 2. An account address that will be given rights to update the extension parameters. Different accounts may be used for different chains.
 3. An account address that will be given rights to upgrade the extension contracts. Different accounts may be used for different chains.
 4. A JSON RPC url to send deployment transaction to the Ethereum Mainnet. URL provided by [INFURA](https://infura.io/) with the API key can be used here.
-5. [The Etherscan API key](https://etherscan.io/apis) which allows contracts to be verified automatically during the deployment process.
+5. The existing Ethereum ERC20/ERC677/ERC827 token contract address.
+6. [The Etherscan API key](https://etherscan.io/apis) which allows contracts to be verified automatically during the deployment process.
 
 ## Instructions
 
