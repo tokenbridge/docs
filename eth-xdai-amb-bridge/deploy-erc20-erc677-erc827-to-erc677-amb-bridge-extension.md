@@ -10,11 +10,11 @@ Instructions for deploying the bridge mediator contract on top of [the Arbitrary
 An AMB bridge extension is a pair of mediator contracts associated with a specific pair of Arbitrary Message Bridge contracts.
 {% endhint %}
 
-The steps below assume there is an ERC20 or an ERC677/827 token which exists in the Ethereum Mainnet that you want to transfer to the the xDai chain.
+The steps below assume there is an ERC20 or an ERC677/827 token which exists on Ethereum that you want to transfer to the the xDai chain.
 
-The mediators developed by the TokenBridge team will be used during deployment. If a customization of the mediators is required, additional steps are required to prepare the docker image with modified contracts.
+The mediators developed by the TokenBridge team will be used during deployment. If customizations are required for the mediators, additional steps will be needed to prepare the docker image with modified contracts.
 
-The deployment process will create a new ERC677 token contract on the xDai chain.  The AMB mediator will have rights to mint new tokens for any request to relay tokens through this AMB extension. More details about the extension internals are available here: ["How to develop a cross-blockchain application using the AMB"](https://docs.tokenbridge.net/amb-bridge/how-to-develop-xchain-apps-by-amb).
+The following deployment process will create a new ERC677 token contract on the xDai chain.  The AMB mediator will have rights to mint new tokens for any request to relay tokens through this AMB extension. More details about the extension internals are available here: ["How to develop a cross-blockchain application using the AMB"](https://docs.tokenbridge.net/amb-bridge/how-to-develop-xchain-apps-by-amb).
 
 ## Prerequisites
 
@@ -138,7 +138,7 @@ The following pre-requisites are required to deploy the AMB extension:
  FOREIGN_EXPLORER_API_KEY=...
 ```
 
-3. Run dthe eployment process by specifying the path to the configuration file:
+3. Run the deployment process by specifying the path to the configuration file:
 
 ```text
  docker run -ti --rm --env-file erc-to-erc.config \
