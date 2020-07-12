@@ -4,24 +4,24 @@ description: How to develop a web-application to transfer tokens through AMB
 
 # UI to transfer tokens through AMB
 
-This manual describes how to rapidly develop a web-application to transfer tokens through Arbitrary Message Bridge between the Ethereum Mainnet and the xDai chain. It assumes that [an `erc-to-erc` extension](https://docs.tokenbridge.net/eth-xdai-amb-bridge/deploy-erc20-erc677-erc827-to-erc677-amb-bridge-extension) was deployed by using these steps.
+This manual describes how to rapidly develop a web-application to transfer tokens using the Arbitrary Message Bridge between the Ethereum Mainnet and the xDai chain. It assumes that an `erc-to-erc` extension was deployed [using these steps](deploy-erc20-erc677-erc827-to-erc677-amb-bridge-extension.md).
 
 {% hint style="info" %}
-The application will be based on [the Burner Wallet 2 interface](https://github.com/burner-wallet/burner-wallet-2). Quick launch of new application became possible with [the TokenBridge plugin developed for the Arbitrary Message Bridge mediators](https://github.com/poanetwork/tokenbridge/tree/master/burner-wallet-plugin).
+The application is based on [the Burner Wallet 2 interface](https://github.com/burner-wallet/burner-wallet-2). Quick launch of a new application is possible with [the TokenBridge plugin developed for the Arbitrary Message Bridge mediators](https://github.com/poanetwork/tokenbridge/tree/master/burner-wallet-plugin).
 {% endhint %}
 
 ![The main page of the BW2-based application to transfer tokens through AMB](../.gitbook/assets/image%20%2837%29.png)
 
 ## Prerequisites
 
-Before the application developing, it is necessary to prepare:
+Before developing the application developing, the following must be prepared:
 
 * the AMB mediator addressed responsible for working with the bridgeable tokens
 * the ERC20/ERC677/ERC827 token contract address in the Ethereum Mainnet
 * the ERC677 token contract address deployed together with the mediators
 
 {% hint style="warning" %}
-Below for demonstration purposes the data for [the sUSD AMB extension](https://docs.tokenbridge.net/eth-xdai-amb-bridge/susd-bridge-extension) will be used.
+For demonstration purposes, data for [the sUSD AMB extension](https://docs.tokenbridge.net/eth-xdai-amb-bridge/susd-bridge-extension) will be used below.
 {% endhint %}
 
 ## Instructions
@@ -33,7 +33,7 @@ git clone https://github.com/poanetwork/tokenbridge-burner-wallet-plugin.git
 cd tokenbridge-burner-wallet-plugin bw-plugin
 ```
 
-2. Add the assets are going to be bridged by creating two files:
+2. Add the assets to bridge d by creating two files:
 
 * `my-plugin/src/assets/sUSD.ts` is for the asset on the Ethereum Mainnet;
 * `my-plugin/src/assets/xsUSD.ts` is for the ERC677 token created by the `erc-to-erc` AMB extension deployment process.
@@ -67,7 +67,7 @@ export default new ERC677Asset({
 {% endtab %}
 {% endtabs %}
 
-3. Rename `my-plugin/src/pairs/StakeBridge.ts` to `my-plugin/src/pairs/sUSDBridge.ts` and replace its content by
+3. Rename `my-plugin/src/pairs/StakeBridge.ts` to `my-plugin/src/pairs/sUSDBridge.ts` and replace its contents as follows:
 
 {% code title="my-plugin/src/pairs/sUSDBridge.ts" %}
 ```javascript
@@ -104,46 +104,46 @@ export { default as sUSDBridge } from './pairs/sUSDBridge'
 
 5. Modify `wallet/src/index.tsx` to operate with new objects:
 
-* the line 10 contains:
+* line 10 contains:
 
   ```text
   import { sUSD, xsUSD, sUSDBridge } from 'my-plugin'
   ```
 
-* the line 15 contains: 
+* line 15 contains: 
 
   ```text
   assets: [sUSD, xsUSD]
   ```
 
-* the line 19 contains:
+* line 19 contains:
 
   ```text
   pairs: [new sUSDBridge()]
   ```
 
-6. Build the docker image with the wallet 
+6. Build the docker image with the wallet. 
 
 ```text
 docker-compose build wallet
 ```
 
-7. Run locally the container with the wallet application by specifying the port to listen and [an Infura Project ID](https://infura.io/docs) which will be used by the application to connect to an Infura JSON RPC node:
+7. Run the container locally with the wallet application by specifying the port to listen to and [an Infura Project ID](https://infura.io/docs) which will be used by the application to connect to an Infura JSON RPC node:
 
 ```text
 docker run -ti -p 8080:8080 -e PORT=8080 \
   -e REACT_APP_INFURA_KEY=YOUR-PROJECT-ID --rm bw-plugin_wallet:latest
 ```
 
-8. Wait for start of the application server. The line with the URL address to connect to the wallet application will be displayed:
+8. Wait for the application server to start. The line with the URL address to connect to the wallet application will display:
 
 ```text
 wallet:   Local:            http://localhost:8080/
 ```
 
-9. Run a browser by URL appeared in the terminal \(`http://localhost:8080/`\). The browser must have [the MetaMask extension](https://metamask.io/) installed. [A xDai RPC endpoint must be added](https://www.xdaichain.com/for-users/wallets/metamask/metamask-setup) to the network set of MetaMask. Press the "Exchange" button to test transferring the bridgeable tokens through AMB.
+9. Run a browser and use the URL in the terminal \(`http://localhost:8080/`\). The browser must have [the MetaMask extension](https://metamask.io/) installed. [The xDai RPC endpoint must be added](https://www.xdaichain.com/for-users/wallets/metamask/metamask-setup) to the network set of MetaMask. Press the "Exchange" button to test a transfer of bridgeable tokens through the AMB.
 
 ![The exchange page allows to bridge tokens through AMB](../.gitbook/assets/image%20%2847%29.png)
 
-10. After testing the application, it can be either deployed to a platform like Heroku or the developped pluging could be published as [a NPM library](https://www.npmjs.com/) and integrated into the [Burner Factory](http://burnerfactory.com/): [https://github.com/burner-factory/verified-plugins](https://github.com/burner-factory/verified-plugins).
+10. After testing the application, it can either be deployed to a platform like Heroku or the developed pluging can be published as [a NPM library](https://www.npmjs.com/) and integrated into the [Burner Factory](http://burnerfactory.com/): [https://github.com/burner-factory/verified-plugins](https://github.com/burner-factory/verified-plugins).
 
