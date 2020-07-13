@@ -6,7 +6,7 @@ description: ETH-qDai Arbitrary Message Bridge information
 
 An Arbitrary Message Bridge \(AMB\) between the Ethereum Mainnet and the qDai chain demonstrates the ability to transfer data between a public network and an enterprise chain built using Quorum technology.
 
-Any application can [build its own AMB extension](https://docs.tokenbridge.net/amb-bridge/how-to-develop-xchain-apps-by-amb). This is represented by two mediator contracts so that either assets or arbitrary data can be transferred between chains. The deployed mediator contracts **do not** require a set of oracles to be setup, allowing an application to launch quickly and reducing the cost of application ownership.
+Any application can [build its own AMB extension](https://docs.tokenbridge.net/amb-bridge/how-to-develop-xchain-apps-by-amb). An extension is represented by two mediator contracts so that either assets or arbitrary data can be transferred between chains. The deployed mediator contracts **do not** require a set of oracles to be setup, allowing an application to launch quickly and reducing the cost of application ownership.
 
 The mediator contracts rely on the following information about the ETH-qDai Arbitrary Message Bridge:
 
