@@ -16,7 +16,7 @@ The application is based on [the Burner Wallet 2 interface](https://github.com/b
 
 Before developing the application developing, the following must be prepared:
 
-* the AMB mediator addressed responsible for working with the bridgeable tokens
+* the AMB mediator address responsible for working with the bridgeable tokens
 * the ERC20/ERC677/ERC827 token contract address in the Ethereum Mainnet
 * the ERC677 token contract address deployed together with the mediators
 
