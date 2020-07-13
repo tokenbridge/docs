@@ -33,7 +33,7 @@ git clone https://github.com/poanetwork/tokenbridge-burner-wallet-plugin.git
 cd tokenbridge-burner-wallet-plugin bw-plugin
 ```
 
-2. Add the assets to bridge d by creating two files:
+2. Add the assets to bridge by creating two files:
 
 * `my-plugin/src/assets/sUSD.ts` is for the asset on the Ethereum Mainnet;
 * `my-plugin/src/assets/xsUSD.ts` is for the ERC677 token created by the `erc-to-erc` AMB extension deployment process.
@@ -135,13 +135,13 @@ docker run -ti -p 8080:8080 -e PORT=8080 \
   -e REACT_APP_INFURA_KEY=YOUR-PROJECT-ID --rm bw-plugin_wallet:latest
 ```
 
-8. Wait for the application server to start. The line with the URL address to connect to the wallet application will display:
+8. Wait for the application server to start. The URL address to connect to the wallet application will display:
 
 ```text
 wallet:   Local:            http://localhost:8080/
 ```
 
-9. Run a browser and use the URL in the terminal \(`http://localhost:8080/`\). The browser must have [the MetaMask extension](https://metamask.io/) installed. [The xDai RPC endpoint must be added](https://www.xdaichain.com/for-users/wallets/metamask/metamask-setup) to the network set of MetaMask. Press the "Exchange" button to test a transfer of bridgeable tokens through the AMB.
+9. Run a browser and paste the URL in the terminal \(`http://localhost:8080/`\). The browser must have [the MetaMask extension](https://metamask.io/) installed. [The xDai RPC endpoint must be added](https://www.xdaichain.com/for-users/wallets/metamask/metamask-setup) to MetaMask. Press the "Exchange" button to test a transfer of bridgeable tokens through the AMB.
 
 ![The exchange page allows to bridge tokens through AMB](../.gitbook/assets/image%20%2847%29.png)
 
