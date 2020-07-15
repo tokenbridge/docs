@@ -13,7 +13,7 @@ The mediator contracts rely on the following information about the Kovan-Sokol A
 * **Kovan Testnet**:
   * AMB contract: [`0xFe446bEF1DbF7AFE24E81e05BC8B271C1BA9a560`](https://kovan.etherscan.io/address/0xfe446bef1dbf7afe24e81e05bc8b271c1ba9a560#code)\`\`
   * Gas limit to call method in the POA Network: `2000000`
-  * Fee: `0.80` [Gas Tokens](https://docs.tokenbridge.net/amb-bridge/gas-token-minting)
+  * Fee: `0.05` [Gas Tokens](https://docs.tokenbridge.net/amb-bridge/gas-token-minting)
   * Finalization rate: `1` blocks
 * **Sokol Testnet**:
   * AMB contract: [`0xFe446bEF1DbF7AFE24E81e05BC8B271C1BA9a560`](https://blockscout.com/poa/sokol/address/0xFe446bEF1DbF7AFE24E81e05BC8B271C1BA9a560/contracts)\`\`
