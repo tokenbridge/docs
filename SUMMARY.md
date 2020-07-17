@@ -14,6 +14,7 @@
 * [Components](about-tokenbridge/components/README.md)
   * [Monitor](about-tokenbridge/components/monitor/README.md)
     * [Monitor deployment for existing bridges](about-tokenbridge/components/monitor/monitor-deployment-for-existing-bridges.md)
+  * [AMB Live Monitoring application](about-tokenbridge/components/amb-live-monitoring-application.md)
 * [Use Cases](about-tokenbridge/use-cases/README.md)
   * [Mainnet Participation](about-tokenbridge/use-cases/mainnet-participation.md)
   * [Cross-Chain Project Highlights](about-tokenbridge/use-cases/cross-chain-project-highlights.md)
