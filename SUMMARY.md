@@ -88,6 +88,7 @@
 * [About the Rinkeby-xDai AMB](rinkeby-xdai-amb-bridge/about-the-rinkeby-xdai-amb.md)
 * [MOON bridge extension](rinkeby-xdai-amb-bridge/moon-bridge-extension/README.md)
   * [Transfer Moons between Rinkeby and xDai Chain using the MOON bridge extension](rinkeby-xdai-amb-bridge/moon-bridge-extension/transfer-moons-between-rinkeby-and-xdai-chain-using-the-moon-bridge-extension.md)
+* [BRICK bridge extension](rinkeby-xdai-amb-bridge/brick-bridge-extension.md)
 
 ## ETH-QDAI Bridge
 
