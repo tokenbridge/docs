@@ -16,7 +16,7 @@ The following bridges are fully-functional in production environments:
 
 * \*\*\*\*[**POA Bridge**](https://bridge.poa.net/) \(POA network to Eth Mainnet\):The POA Bridge was the first EVM cross-chain production bridge in existence.
 * \*\*\*\*[**xDai Bridge**](https://dai-bridge.poa.network/) \(Eth Mainnet to xDai Network\): The xDai chain uses the ERC20-to-Native TokenBridge functionality to provide fast, inexpensive and stable transactions.
-* \*\*\*\*[**Eth Classic Bridge**](https://wetc.app/) \(Eth Classic to Eth Mainnet\): The Eth Classic Bridge connects ETC to ETH, where ETC is available as WETC.
+* \*\*\*\*[**Eth Classic Bridge**](https://wetc-app.herokuapp.com/) \(Eth Classic to Eth Mainnet\): The Eth Classic Bridge connects ETC to ETH, where ETC is available as WETC.
 
 Additional bridges in development include the [**Arbitrary Message Bridge**](amb-bridge/about-amb-bridge.md) \(AMB\) and the [**Binance Bridge**](eth-bnc-bridge/about-eth-bnc-bridge.md) \(ETH - BNC\) which are actively running  in test environments.
 
