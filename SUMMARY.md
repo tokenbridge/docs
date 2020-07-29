@@ -90,6 +90,11 @@
   * [Transfer Moons between Rinkeby and xDai Chain using the MOON bridge extension](rinkeby-xdai-amb-bridge/moon-bridge-extension/transfer-moons-between-rinkeby-and-xdai-chain-using-the-moon-bridge-extension.md)
 * [BRICK bridge extension](rinkeby-xdai-amb-bridge/brick-bridge-extension.md)
 
+## ETH-ETC AMB BRIDGE
+
+* [About the ETH-ETC AMB](eth-etc-amb-bridge/about-the-eth-etc-amb.md)
+* [WETC AMB extension](eth-etc-amb-bridge/wetc-amb-extension.md)
+
 ## ETH-QDAI Bridge
 
 * [About the qDai chain](eth-qdai-bridge/about-the-qdai-chain.md)
@@ -105,9 +110,4 @@
 * [Contact Us](media/contact-us.md)
 * [Media Kit](media/media-kit.md)
 * [Social Media](media/social-media.md)
-
-## ETH-ETC AMB BRIDGE
-
-* [About the ETH-ETC AMB](eth-etc-amb-bridge/about-the-eth-etc-amb.md)
-* [WETC AMB extension](eth-etc-amb-bridge/wetc-amb-extension.md)
 
