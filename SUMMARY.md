@@ -106,3 +106,8 @@
 * [Media Kit](media/media-kit.md)
 * [Social Media](media/social-media.md)
 
+## ETH-ETC AMB BRIDGE
+
+* [About the ETH-ETC AMB](eth-etc-amb-bridge/about-the-eth-etc-amb.md)
+* [WETC AMB extension](eth-etc-amb-bridge/wetc-amb-extension.md)
+
