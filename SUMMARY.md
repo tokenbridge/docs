@@ -66,8 +66,9 @@
 * [sUSD bridge extension](eth-xdai-amb-bridge/susd-bridge-extension/README.md)
   * [Transfer sUSD between the ETH Mainnet and the xDai Chain using the sUSD bridge extension](eth-xdai-amb-bridge/susd-bridge-extension/transfer-susd-through-the-bridge-extension.md)
   * [Send sUSD between two wallets on xDai](eth-xdai-amb-bridge/susd-bridge-extension/send-susd-between-two-wallets-on-xdai.md)
-* [Deploy ERC20/ERC677/ERC827 to ERC677 AMB bridge extension](eth-xdai-amb-bridge/deploy-erc20-erc677-erc827-to-erc677-amb-bridge-extension.md)
-* [UI to transfer tokens through AMB](eth-xdai-amb-bridge/ui-to-transfer-tokens-through-amb.md)
+* [ERC20-to-ERC20 extension linked with a particular token](eth-xdai-amb-bridge/erc20-to-erc20-extension-linked-with-a-particular-token/README.md)
+  * [Deploy ERC20 to ERC677 AMB bridge extension](eth-xdai-amb-bridge/erc20-to-erc20-extension-linked-with-a-particular-token/deploy-erc20-erc677-erc827-to-erc677-amb-bridge-extension.md)
+  * [UI to transfer tokens through AMB](eth-xdai-amb-bridge/erc20-to-erc20-extension-linked-with-a-particular-token/ui-to-transfer-tokens-through-amb.md)
 
 ## ETH-BNC Bridge
 
