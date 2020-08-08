@@ -4,7 +4,7 @@ description: Instructions to setup the ALM application locally
 
 # Local deployment
 
-For testing purposes or in case if existing instances of ALM are not available the application can be deployed locally in the containerised environment.
+For testing purposes or in case if [the existing instances of ALM](https://docs.tokenbridge.net/about-tokenbridge/components/amb-live-monitoring-application#existing-alm-instances) are not available the application can be deployed locally in the containerised environment.
 
 ## Build and run
 
