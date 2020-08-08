@@ -20,6 +20,16 @@ AMB's universality means it can be used as a base layer for bridge and applicati
 Check out the [ETH-xDai AMB ](../eth-xdai-amb-bridge/about-the-eth-xdai-amb.md)section to view and try some live extensions.
 {% endhint %}
 
+### Existing extensions
+
+Starting from the launch of the AMB project there were developed several extensions:
+
+* [native-to-erc20](https://github.com/poanetwork/tokenbridge-contracts/tree/master/contracts/upgradeable_contracts/amb_native_to_erc20) - an extension that allows transfer a native tokens on one chain to another ERC677 tokens on another chain. It works similarly to the POA20 bridge.
+* [CryptoKitties NFTs](https://github.com/poanetwork/cryptokitties-xdai-demo) - an extension prepared for demonstration purposes. It allows to transfer CryptoKitties ERC721 tokens from the Ethereum Mainnet to the xDai chain
+* [erc20-to-erc20](https://github.com/poanetwork/tokenbridge-contracts/tree/master/contracts/upgradeable_contracts/amb_erc677_to_erc677) - an extension to transfer an ERC20 token linked with the extension to an ERC677 token. 
+* [erc20-to-native](https://github.com/poanetwork/tokenbridge-contracts/tree/master/contracts/upgradeable_contracts/amb_erc20_to_native) - an extension to transfer an ERC20 token in one chain to a native tokens in another chain. It works similarly to the xDai bridge.
+* [mutli-erc20-to-erc677](https://github.com/poanetwork/tokenbridge-contracts/tree/master/contracts/upgradeable_contracts/multi_amb_erc20_to_erc677) - an extensions that allows to transfer **any** ERC20 token to another ERC677 token. It also could be called as multi-token bridging.
+
 ## Video Explainers
 
 ### AMB Overview with Igor Barinov - EthCC 2020

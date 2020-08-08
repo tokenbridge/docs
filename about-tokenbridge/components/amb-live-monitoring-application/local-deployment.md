@@ -11,7 +11,7 @@ For testing purposes or in case if [the existing instances of ALM](https://docs.
 ### 1. Clone the repo
 
 ```bash
-git clone --recurse-submodules https://github.com/poanetwork/tokenbridge.git
+git clone --recursive https://github.com/poanetwork/tokenbridge.git
 cd tokenbridge/alm
 ```
 
