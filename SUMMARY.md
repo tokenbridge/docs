@@ -14,7 +14,8 @@
 * [Components](about-tokenbridge/components/README.md)
   * [Monitor](about-tokenbridge/components/monitor/README.md)
     * [Monitor deployment for existing bridges](about-tokenbridge/components/monitor/monitor-deployment-for-existing-bridges.md)
-  * [AMB Live Monitoring application](about-tokenbridge/components/amb-live-monitoring-application.md)
+  * [AMB Live Monitoring application](about-tokenbridge/components/amb-live-monitoring-application/README.md)
+    * [ALM transition states](about-tokenbridge/components/amb-live-monitoring-application/alm-transition-states.md)
 * [Use Cases](about-tokenbridge/use-cases/README.md)
   * [Mainnet Participation](about-tokenbridge/use-cases/mainnet-participation.md)
   * [Cross-Chain Project Highlights](about-tokenbridge/use-cases/cross-chain-project-highlights.md)
@@ -86,6 +87,7 @@
 ## RINKEBY-XDAI AMB BRIDGE
 
 * [About the Rinkeby-xDai AMB](rinkeby-xdai-amb-bridge/about-the-rinkeby-xdai-amb.md)
+* [AMB Live Monitoring application](rinkeby-xdai-amb-bridge/amb-live-monitoring-application.md)
 * [MOON bridge extension](rinkeby-xdai-amb-bridge/moon-bridge-extension/README.md)
   * [Transfer Moons between Rinkeby and xDai Chain using the MOON bridge extension](rinkeby-xdai-amb-bridge/moon-bridge-extension/transfer-moons-between-rinkeby-and-xdai-chain-using-the-moon-bridge-extension.md)
 * [BRICK bridge extension](rinkeby-xdai-amb-bridge/brick-bridge-extension.md)
