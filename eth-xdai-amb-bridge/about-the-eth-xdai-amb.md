@@ -19,9 +19,9 @@ The mediator contracts rely on the following information about the ETH-xDai Arbi
   * Gas limit to call method in the Ethereum Mainnet: `2000000`
   * Finalization rate: `1` block
 
+It is possible to get an AMB transaction status by using [the Live Monitoring app](https://docs.tokenbridge.net/about-tokenbridge/components/amb-live-monitoring-application): [http://alm-xdai.herokuapp.com/](http://alm-xdai.herokuapp.com/).
+
 {% hint style="success" %}
 A detailed description of the AMB and examples of AMB extensions are available here: [Arbitrary Message Bridge \(AMB\)](https://docs.tokenbridge.net/amb-bridge/about-amb-bridge).
 {% endhint %}
-
-It is possible to get an AMB transaction status by using the Live Monitoring app: [https://alm-xdai.herokuapp.com/](https://alm-xdai.herokuapp.com/).
 

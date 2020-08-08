@@ -19,6 +19,8 @@ The mediator contracts rely on the following information about the ETH-ETC Arbit
   * Gas limit to call method in the Ethereum Mainnet: `2000000`
   * Finalization rate: `8` block
 
+It is possible to get an AMB transaction status by using [the Live Monitoring app](https://docs.tokenbridge.net/about-tokenbridge/components/amb-live-monitoring-application): [https://alm-etc.herokuapp.com/](https://alm-etc.herokuapp.com/).
+
 {% hint style="success" %}
 A detailed description of the AMB and examples of AMB extensions are available here: [Arbitrary Message Bridge \(AMB\)](https://docs.tokenbridge.net/amb-bridge/about-amb-bridge).
 {% endhint %}

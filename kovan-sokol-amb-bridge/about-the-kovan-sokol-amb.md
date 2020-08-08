@@ -21,3 +21,5 @@ The mediator contracts rely on the following information about the Kovan-Sokol A
   * Fee: none
   * Finalization rate: `1` block
 
+It is possible to get an AMB transaction status by using [the Live Monitoring app](https://docs.tokenbridge.net/about-tokenbridge/components/amb-live-monitoring-application): [https://alm-test-amb.herokuapp.com/](https://alm-test-amb.herokuapp.com/).
+
