@@ -14,7 +14,7 @@ The main aim of the application to track a status of the requests the users are 
 
 ![AMB Live Monitor](../.gitbook/assets/alm-monitor1.png)
 
-## Foreign -&gt; Home \(Rinkeby -&gt; xDai\) State Transitions
+## Getting status for Foreign -&gt; Home \(Rinkeby -&gt; xDai\) transactions
 
 Note that transactions must use the Arbitrary Message Bridge to be monitored \(transactions using a different bridge mode, such as the current xDai &lt;-&gt; Dai bridge are not monitored\). 
 
@@ -46,7 +46,7 @@ Click on an age metric to view the transaction details in Etherscan.
 
 ![](../.gitbook/assets/success-1.png)
 
-## Home -&gt; Foreign \(xDai -&gt; Rinkeby\) State Transitions
+## Getting status for Home -&gt; Foreign \(xDai -&gt; Rinkeby\) transactions
 
 ### Example transaction hash
 

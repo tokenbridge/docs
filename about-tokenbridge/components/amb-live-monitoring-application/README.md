@@ -8,6 +8,10 @@ The monitoring application shows confirmations and the transaction status for ea
 
 The main aim of the application is to track the status of requests the users are sending through AMB mediators and help to understand the reason why a particular request is not processed yet.
 
+{% hint style="warning" %}
+Transactions must use the Arbitrary Message Bridge contracts to be monitored. Transactions using a vanilla TokenBridge contracts \(e.g. POA-POA20 or Dai-xDai\) bridge are discoverable by the ALM app. 
+{% endhint %}
+
 ![AMB Live Monitoring application](../../../.gitbook/assets/alm-monitor1.png)
 
 ## Existing ALM instances
