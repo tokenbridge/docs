@@ -10,21 +10,21 @@ New tokens deployed by the multi-token mediator are not verified automatically i
 
 #### Step 1: Find the token contract by the token symbol
 
-![](../../.gitbook/assets/image%20%2886%29.png)
+![](../../.gitbook/assets/image%20%2889%29.png)
 
 The bridgeable token name is extended by "on xDai":
 
-![](../../.gitbook/assets/image%20%2871%29.png)
+![](../../.gitbook/assets/image%20%2874%29.png)
 
 #### Step 2: Verify the contract
 
-![](../../.gitbook/assets/image%20%2870%29.png)
+![](../../.gitbook/assets/image%20%2873%29.png)
 
-![](../../.gitbook/assets/image%20%2874%29.png)
+![](../../.gitbook/assets/image%20%2877%29.png)
 
 Fill the form as per the recommendations below and press the button "Verify & publish":
 
-![](../../.gitbook/assets/image%20%2876%29.png)
+![](../../.gitbook/assets/image%20%2879%29.png)
 
 The Solidity Contract Code is the following:
 
@@ -199,5 +199,5 @@ contract TokenProxy is Proxy {
 
 After the successful verification, the number of the tabs in the contract window will be extended by tabs "Read Contract", "Write Contract", "Read Proxy" and "Write Proxy"
 
-![](../../.gitbook/assets/image%20%2859%29.png)
+![](../../.gitbook/assets/image%20%2860%29.png)
 

@@ -20,21 +20,21 @@ Also, the MetaMask/NiftyWallet must be unlocked and rights to access the account
 
 For the demonstration purposes the Sai token is chosen to be transferred:
 
-![](../../.gitbook/assets/image%20%2885%29.png)
+![](../../.gitbook/assets/image%20%2888%29.png)
 
 #### Step 1: approve the mediator contract to transfer tokens
 
 The mediator contract will use `transferFrom` functionality of the ERC20 token contract to lock the tokens, that's why it must be explicitly approved to perform this operation.
 
-![](../../.gitbook/assets/image%20%2873%29.png)
+![](../../.gitbook/assets/image%20%2876%29.png)
 
 First of all, it is required to connect the Web3 provider \(MetaMask/NiftyWallet\). Then, the mediator contract address on the Ethereum Mainnet \(`0x88ad09518695c6c3712AC10a214bE5109a655671`\) and the amount of tokens that is going to be transferred must be entered in the text field belonging to the `approve` method.
 
-![](../../.gitbook/assets/image%20%2866%29.png)
+![](../../.gitbook/assets/image%20%2869%29.png)
 
 The button "Write" must be pressed after that to send the transaction.
 
-![](../../.gitbook/assets/image%20%2865%29.png)
+![](../../.gitbook/assets/image%20%2868%29.png)
 
 The window of the MetaMask/NiftyWallet will appear. The gas price could be adjusted there in order to speed up the transaction verification. As soon as the transaction is confirmed in the MetaMask/NiftyWallet, it is necessary to wait for the verification by the block miners. Depending on the gas price specified and traffic congestions it could take from several seconds till several minutes.
 
@@ -42,23 +42,23 @@ The window of the MetaMask/NiftyWallet will appear. The gas price could be adjus
 
 Before the next action, the token contract address needs to be copied.
 
-![](../../.gitbook/assets/image%20%2888%29.png)
+![](../../.gitbook/assets/image%20%2891%29.png)
 
 Then the mediator contract \([`0x88ad09518695c6c3712AC10a214bE5109a655671`](https://etherscan.io/address/0x88ad09518695c6c3712AC10a214bE5109a655671)\) should be opened in Etherscan.
 
-![](../../.gitbook/assets/image%20%2862%29.png)
+![](../../.gitbook/assets/image%20%2865%29.png)
 
 The mediator contract is a proxy contract, so in order to call a method of the implementation contract the "Write as proxy" tab must be used.
 
-![](../../.gitbook/assets/image%20%2858%29.png)
+![](../../.gitbook/assets/image%20%2859%29.png)
 
 Since it is a new contract opened in Etherscan, it is required to connect the Web3 provider \(MetaMask/NiftyWallet\) again. Then, the token contract address and the amount of tokens that is going to be transferred must be entered in the text field belonging to the `relayTokens` method.
 
-![](../../.gitbook/assets/image%20%2884%29.png)
+![](../../.gitbook/assets/image%20%2887%29.png)
 
 The button "Write" must be pressed after that to send the transaction.
 
-![](../../.gitbook/assets/image%20%2875%29.png)
+![](../../.gitbook/assets/image%20%2878%29.png)
 
 The window of the MetaMask/NiftyWallet will appear. The gas price could be adjusted there in order to speed up the transaction verification. As soon as the transaction is confirmed in the MetaMask/NiftyWallet, it is necessary to wait for the verification by the block miners. Depending on the gas price specified and traffic congestions it could take from several seconds till several minutes.
 
@@ -66,9 +66,9 @@ When the transaction is included in a block, the Arbitrary Message Bridge valida
 
 It is possible to monitor the process of the confirmation sending and the the AMB request execution by [the AMB Live Monitoring tool](https://docs.tokenbridge.net/about-tokenbridge/components/amb-live-monitoring-application): [https://alm-xdai.herokuapp.com/](https://alm-xdai.herokuapp.com/). The hash \(tx id\) of the transaction used to call `relayTokens` should be specified in the ALM entry page and it will check the status of the AMB request initiated by this transaction in real time
 
-![The ALM entry page with the transaction id specifed](../../.gitbook/assets/image%20%2880%29.png)
+![The ALM entry page with the transaction id specifed](../../.gitbook/assets/image%20%2883%29.png)
 
-![The example of ALM response in case of successful execution of the AMB request](../../.gitbook/assets/image%20%2869%29.png)
+![The example of ALM response in case of successful execution of the AMB request](../../.gitbook/assets/image%20%2872%29.png)
 
 If the AMB request is executed successfully the following will happen:
 
@@ -77,13 +77,13 @@ If the AMB request is executed successfully the following will happen:
 
 So, eventually it is possible to find the token contract on the xDai chain \(in the current example, Sai tokens has the symbol "DAI", that's why it is being used to discover the new token contract\)
 
-![](../../.gitbook/assets/image%20%2887%29.png)
+![](../../.gitbook/assets/image%20%2890%29.png)
 
 The link that is available on the token name will lead to the token view in the BlockScout:
 
-![](../../.gitbook/assets/image%20%2867%29.png)
+![](../../.gitbook/assets/image%20%2870%29.png)
 
-![](../../.gitbook/assets/image%20%2878%29.png)
+![](../../.gitbook/assets/image%20%2881%29.png)
 
 The token view will allow to see that the amount of tokens transferred from the Ethereum Mainnet chain was minted successfully \(the sender is the address `0x0000000...000000`\). 
 
@@ -109,13 +109,13 @@ The token contract deployed by the mutli-token mediator supports ERC677 standard
 
 The required method is available on the tab "Write Proxy" of the token contract in BlockScout:
 
-![](../../.gitbook/assets/image%20%2877%29.png)
+![](../../.gitbook/assets/image%20%2880%29.png)
 
-![](../../.gitbook/assets/image%20%2883%29.png)
+![](../../.gitbook/assets/image%20%2886%29.png)
 
 The text fields should be filled with the multi-token mediator contract address on the xDai chain \(`0xf6A78083ca3e2a662D6dd1703c939c8aCE2e268d`\), amount of tokens to transfer and "0x" in the `_data` field. To send the transaction the button "Write" must be pressed.
 
-![](../../.gitbook/assets/image%20%2861%29.png)
+![](../../.gitbook/assets/image%20%2863%29.png)
 
 The window of the MetaMask/NiftyWallet will appear. The gas price should be 1 GWei. As soon as the transaction is confirmed in the MetaMask/NiftyWallet, it is necessary to wait for the verification by the xDai chain authorities. Usually, it takes few seconds.
 
@@ -123,7 +123,7 @@ When the transaction is included in a block, the Arbitrary Message Bridge valida
 
 Here is also possible to monitor the process of the confirmation sending and the the AMB request execution by [the AMB Live Monitoring tool](https://docs.tokenbridge.net/about-tokenbridge/components/amb-live-monitoring-application): [https://alm-xdai.herokuapp.com/](https://alm-xdai.herokuapp.com/). The hash \(tx id\) of the transaction used to call `transferAndCall` should be specified in the ALM entry page and it will check the status of the AMB request initiated by this transaction in real time:
 
-![](../../.gitbook/assets/image%20%2864%29.png)
+![](../../.gitbook/assets/image%20%2867%29.png)
 
 As the result, the requested amount of tokens reduced by the fee amount will be unlocked on the Ethereum Mainnet.
 
@@ -133,11 +133,11 @@ If the token on the Ethereum Mainnet side is ERC677 or ERC827 compatible it is p
 
 Below is example with the STAKE token contract:
 
-![](../../.gitbook/assets/image%20%2879%29.png)
+![](../../.gitbook/assets/image%20%2882%29.png)
 
 The mutli-token mediator contract address on the Ethereum Mainnet \(`0x88ad09518695c6c3712AC10a214bE5109a655671`\) must be specified as the recipient of the tokens, amount of tokens is filled in the "value" field, the field "data" contains "0x".
 
-![](../../.gitbook/assets/image%20%2882%29.png)
+![](../../.gitbook/assets/image%20%2885%29.png)
 
 ## Simplification for the token on the xDai side
 

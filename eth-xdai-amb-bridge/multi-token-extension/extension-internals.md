@@ -12,7 +12,7 @@ Below are few pictures for those who would like to get the general idea how the 
 
 ![](../../.gitbook/assets/image%20%2857%29.png)
 
-![](../../.gitbook/assets/image%20%2860%29.png)
+![](../../.gitbook/assets/image%20%2861%29.png)
 
-![](../../.gitbook/assets/image%20%2868%29.png)
+![](../../.gitbook/assets/image%20%2871%29.png)
 
