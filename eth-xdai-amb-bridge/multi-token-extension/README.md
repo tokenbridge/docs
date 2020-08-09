@@ -13,7 +13,7 @@ An AMB bridge extension is a pair of mediator contracts associated with a specif
 By using this extension any user \(not only the token contract owner\) is able to transfer tokens from the Ethereum Mainnet to the chain with cheap and fast transactions without necessity to deploy any additional contracts. The specified amount tokens is locked in the mediator contract, a new token contract is deployed automatically on the xDai chain and the required amount tokens is minted on the xDai chain. The reverse operation burns bridgeable tokens on the xDai chain and unlocks the tokens on the required token contract in the Ethereum Mainnet.
 
 {% hint style="info" %}
-More details for the operations to deposit and withdraw tokens are available here.
+More details for the operations to deposit and withdraw tokens are available [here](https://docs.tokenbridge.net/eth-xdai-amb-bridge/multi-token-extension/extension-internals).
 {% endhint %}
 
 ## Technical information and parameters of the extension

@@ -141,5 +141,15 @@ The mutli-token mediator contract address on the Ethereum Mainnet \(`0x88ad09518
 
 ## Simplification for the token on the xDai side
 
+{% hint style="danger" %}
+Don't use the `transfer` method to send the tokens to the multi-token mediator on the Ethereum Mainnet. It will lead to loss of the tokens. 
+{% endhint %}
+
 The token contact deployed on the xDai chain is a customized version of ERC677 standard. It contains [the changes](https://github.com/poanetwork/tokenbridge-contracts/blob/e09bd71bb67cf2ebce3cd7a4ec7130beea733018/contracts/ERC677BridgeToken.sol#L58-L62) that allows to use the `transfer` method to withdraw tokens from the xDai chain instead of `transferAndCall`. So, it is enough to specify the multi-token mediator contract address on the xDai chain \(`0xf6A78083ca3e2a662D6dd1703c939c8aCE2e268d`\) as the recipient and amount of tokens to initiate request to transfer tokens back to the Ethereum Mainnet.
+
+{% hint style="danger" %}
+The method described above works only for the tokens deployed by the multi-token mediator in the xDai chain.
+{% endhint %}
+
+
 
