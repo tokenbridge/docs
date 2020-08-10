@@ -6,149 +6,154 @@ description: >-
 
 # How to transfer tokens
 
-The instructions below will use the Etherscan UI and the Blockscout UI to demonstrate the process of the tokens transfer. For sure, some applications would like to introduce a more convenient UI. So, in this case the application will need to call the methods of the multi-token mediators contracts described in this manual.
+The instructions below use the Etherscan UI and the Blockscout UI to demonstrate the token transfer process. We expect future applications will introduce a more convenient UI. In this case the application will need to call the methods of the multi-token mediators contracts described in this manual.
 
 ## General case
 
-The general case consider a transfer of "pure" ERC20 token. For the tokens compatible with ERC677 and ERC827 token standards the steps could be simplified - see [the separate section below](https://docs.tokenbridge.net/eth-xdai-amb-bridge/multi-token-extension/how-to-transfer-tokens#simplification-for-erc-677-erc827-tokens).
+The general case consider a transfer of "pure" ERC20 token. For tokens compatible with ERC677 and ERC827 token standards the steps could be simplified - see [the separate section below](https://docs.tokenbridge.net/eth-xdai-amb-bridge/multi-token-extension/how-to-transfer-tokens#simplification-for-erc-677-erc827-tokens).
 
-### Ethereum Mainnet -&gt; xDai chain
+### Ethereum -&gt; xDai Chain
 
-The steps below assume that the account performing the actions owns some amount of an ERC20 tokens on the Ethereum Mainnet. Also, the account must be funded with some ether to cover gas fees.
+The steps below assume:
 
-Also, the MetaMask/NiftyWallet must be unlocked and rights to access the account must be granted for Etherscan.
+1.  The account performing the actions owns some amount of an ERC20 token on Ethereum.
+2. The account is funded with some ether to cover gas fees.
+3. The MetaMask/NiftyWallet must be unlocked and rights to access the account must be granted for Etherscan.
 
-For the demonstration purposes the Sai token is chosen to be transferred:
+For demonstration purposes we transfer Sai tokens.
 
 ![](../../.gitbook/assets/image%20%2888%29.png)
 
-#### Step 1: approve the mediator contract to transfer tokens
+#### Step 1: Approve the mediator contract to transfer tokens
 
-The mediator contract will use `transferFrom` functionality of the ERC20 token contract to lock the tokens, that's why it must be explicitly approved to perform this operation.
+The mediator contract uses `transferFrom` functionality of the ERC20 token contract to lock the tokens; it must be explicitly approved to perform this operation.
 
 ![](../../.gitbook/assets/image%20%2876%29.png)
 
-First of all, it is required to connect the Web3 provider \(MetaMask/NiftyWallet\). Then, the mediator contract address on the Ethereum Mainnet \(`0x88ad09518695c6c3712AC10a214bE5109a655671`\) and the amount of tokens that is going to be transferred must be entered in the text field belonging to the `approve` method.
+First, connect to the Web3 provider \(MetaMask/NiftyWallet\). Next, click on Write Contract and go to the `approve` method. Enter the following:
+
+* guy \(address\) field:  the mediator contract address on Ethereum \(`0x88ad09518695c6c3712AC10a214bE5109a655671`\) 
+* wad \(uint256\):  the amount of tokens to transfer in wei
 
 ![](../../.gitbook/assets/image%20%2869%29.png)
 
-The button "Write" must be pressed after that to send the transaction.
+Press the "Write" button to send the transaction.
 
 ![](../../.gitbook/assets/image%20%2868%29.png)
 
-The window of the MetaMask/NiftyWallet will appear. The gas price could be adjusted there in order to speed up the transaction verification. As soon as the transaction is confirmed in the MetaMask/NiftyWallet, it is necessary to wait for the verification by the block miners. Depending on the gas price specified and traffic congestions it could take from several seconds till several minutes.
+The MetaMask/NiftyWallet window will appear. Gas price can be adjusted to speed up transaction verification. After the transaction is confirmed in MetaMask/NiftyWallet, it is necessary to wait for verification by the block miners. Depending on the gas price specified and traffic congestion it can take several seconds to several minutes.
 
-#### Step 2: initiating the transfer request
+#### Step 2: Initiate the transfer request
 
-Before the next action, the token contract address needs to be copied.
+Copy the contract address before proceeding. 
 
 ![](../../.gitbook/assets/image%20%2891%29.png)
 
-Then the mediator contract \([`0x88ad09518695c6c3712AC10a214bE5109a655671`](https://etherscan.io/address/0x88ad09518695c6c3712AC10a214bE5109a655671)\) should be opened in Etherscan.
+Next, open the mediator contract \([`0x88ad09518695c6c3712AC10a214bE5109a655671`](https://etherscan.io/address/0x88ad09518695c6c3712AC10a214bE5109a655671)\)  in Etherscan.
 
 ![](../../.gitbook/assets/image%20%2865%29.png)
 
-The mediator contract is a proxy contract, so in order to call a method of the implementation contract the "Write as proxy" tab must be used.
+The mediator contract is a proxy contract; Click contract then click the "Write as Proxy" tab.
 
 ![](../../.gitbook/assets/image%20%2859%29.png)
 
-Since it is a new contract opened in Etherscan, it is required to connect the Web3 provider \(MetaMask/NiftyWallet\) again. Then, the token contract address and the amount of tokens that is going to be transferred must be entered in the text field belonging to the `relayTokens` method.
+Since you are opening a new contract in Etherscan,  you will connect to the Web3 provider \(MetaMask/NiftyWallet\) again. Then, in the `relayTokens` method enter the token contract address and the amount of tokens to transfer. 
 
 ![](../../.gitbook/assets/image%20%2887%29.png)
 
-The button "Write" must be pressed after that to send the transaction.
+Press the "Write" button to send the transaction.
 
 ![](../../.gitbook/assets/image%20%2878%29.png)
 
-The window of the MetaMask/NiftyWallet will appear. The gas price could be adjusted there in order to speed up the transaction verification. As soon as the transaction is confirmed in the MetaMask/NiftyWallet, it is necessary to wait for the verification by the block miners. Depending on the gas price specified and traffic congestions it could take from several seconds till several minutes.
+The MetaMask/NiftyWallet will appear and the gas price can be adjusted to speed up the transaction verification. Once the transaction is confirmed in the MetaMask/NiftyWallet, wait for the block miners to verify. Depending on the gas price specified and traffic congestion it could take from several seconds to several minutes.
 
-When the transaction is included in a block, the Arbitrary Message Bridge validators will wait for 8 blocks. After that, they will send confirmations to the xDai chain that the multi-token mediator contract must be invoked to complete the transfer of the tokens.
+Once the transaction is included in a block, the Arbitrary Message Bridge validators will wait for 8 additional blocks. Then, they will send confirmations to the xDai chain to invoke the multi-token mediator contract and complete the tokens transfer.
 
-It is possible to monitor the process of the confirmation sending and the the AMB request execution by [the AMB Live Monitoring tool](https://docs.tokenbridge.net/about-tokenbridge/components/amb-live-monitoring-application): [https://alm-xdai.herokuapp.com/](https://alm-xdai.herokuapp.com/). The hash \(tx id\) of the transaction used to call `relayTokens` should be specified in the ALM entry page and it will check the status of the AMB request initiated by this transaction in real time
+You can monitor the confirmation and AMB request execution with [the AMB Live Monitoring tool](https://docs.tokenbridge.net/about-tokenbridge/components/amb-live-monitoring-application): [https://alm-xdai.herokuapp.com/](https://alm-xdai.herokuapp.com/). Specify the hash \(tx id\) of the transaction used to call `relayTokens`  in the ALM entry page to check the status of the AMB request initiated by this transaction in real time
 
 ![The ALM entry page with the transaction id specifed](../../.gitbook/assets/image%20%2883%29.png)
 
 ![The example of ALM response in case of successful execution of the AMB request](../../.gitbook/assets/image%20%2872%29.png)
 
-If the AMB request is executed successfully the following will happen:
+If the AMB request is executed successfully:
 
-* If no transactions for this token contract to transfer assets through the AMB happened before, a new ERC677 token contract will be deployed in the xDai chain. The token contract will be initialized with the same symbol and decimals as for the original token in the Ethereum Mainnet. The name of the new token will be extended with the letters "on xDai" \(e.g. "Dai Stablecoin v1.0 on xDai"\). At the end, the requested amount of tokens will be minted and sent to the account that called `relayTokens`.
-* If the ERC677 token has already been registered by the mediator for the original ERC20 token, obviously, deployment of the contract will be skipped but the requested amount of tokens will be minted and sent to the account that called `relayTokens`.
+* **If token has not been transferred with AMB before**: If this is the first transaction for this particular token using the AMB,  a new ERC677 token contract will be deployed to the xDai chain. The token contract will be initialized with the same symbol and decimals as for the original token on Ethereum. The name of the new token will be extended with the letters "on xDai" \(e.g. "Dai Stablecoin v1.0 on xDai"\). At the end, the requested amount of tokens will be minted and sent to the account that called `relayTokens`.
+* **If token has been previously transferred with AMB:** If If the ERC677 token has already been registered by the mediator for the original ERC20 token, deployment of the contract will be skipped but the requested amount of tokens will be minted and sent to the account that called `relayTokens`.
 
-So, eventually it is possible to find the token contract on the xDai chain \(in the current example, Sai tokens has the symbol "DAI", that's why it is being used to discover the new token contract\)
+Once the process is complete and indexed by BlockScout, it is possible to find the token contract on the xDai chain \(in the current example, Sai tokens has the symbol "DAI", that's why it is being used to discover the new token contract\).
 
 ![](../../.gitbook/assets/image%20%2890%29.png)
 
-The link that is available on the token name will lead to the token view in the BlockScout:
+The link available on the token name will lead to the token view in BlockScout:
 
 ![](../../.gitbook/assets/image%20%2870%29.png)
 
 ![](../../.gitbook/assets/image%20%2881%29.png)
 
-The token view will allow to see that the amount of tokens transferred from the Ethereum Mainnet chain was minted successfully \(the sender is the address `0x0000000...000000`\). 
+In token view you can see that the amount of tokens transferred from Ethereum was minted successfully \(the sender is the address `0x0000000...000000`\). 
 
 {% hint style="info" %}
-This view also contains the information that this token was bridged and a link to the original token.
+This view also informs the viewer that the token is bridged and provides a link to view the original token. 
 {% endhint %}
 
-After that the token can be added to the MetaMask/NiftyWallet by the address. Thus, the usual operations to transfer tokens to another EOA or contracts are available.
+At this point, the token can be added to MetaMask/NiftyWallet and operations \(like transferring tokens, sending to other contracts etc\) are available for use.
 
-### xDai chain -&gt; Ethereum Mainnet
+### xDai Chain -&gt; Ethereum
 
-The steps below assume that the account performing the actions must be funded with some xDai to cover gas fees.
+The steps below assume that the account performing the actions is funded with some xDai to cover gas fees.
 
 Also, the MetaMask/NiftyWallet must be unlocked and rights to access the account must be granted for BlockScout.
 
 {% hint style="warning" %}
-Make sure that the token contract is verified in BlockScout. The token contracts deployed as part of the multi-token mediator operations are not verified automatically, so if the token does not allow read and write in the block explorer, [the steps to verify the contract](https://docs.tokenbridge.net/eth-xdai-amb-bridge/multi-token-extension/new-token-contract-verification-in-blockscout) are required to be performed.
+Make sure that the token contract is verified in BlockScout. Token contracts deployed as part of the multi-token mediator operations are not verified automatically, so if the token does not allow read and write in the block explorer, follow [the steps to verify the contract](https://docs.tokenbridge.net/eth-xdai-amb-bridge/multi-token-extension/new-token-contract-verification-in-blockscout) before starting.
 {% endhint %}
 
-#### Step: transferAndCall invokation to transfer tokens
+#### Step 1: transferAndCall method to transfer tokens
 
-The token contract deployed by the mutli-token mediator supports ERC677 standard and that's why, instead of calling `approve` and `relayTokens`, one method `transferAndCall` can be used to transfer tokens to the mediator contract and notify it about this action at the same time.
+The token contract deployed by the mutli-token mediator supports the ERC677 standard, so instead of calling  `approve` and `relayTokens`, a single method `transferAndCall` can be used to transfer tokens to the mediator contract and notify it regarding this action at the same time.
 
-The required method is available on the tab "Write Proxy" of the token contract in BlockScout:
+Go to the "Write Proxy" tab of the token contract in BlockScout:
 
 ![](../../.gitbook/assets/image%20%2880%29.png)
 
 ![](../../.gitbook/assets/image%20%2886%29.png)
 
-The text fields should be filled with the multi-token mediator contract address on the xDai chain \(`0xf6A78083ca3e2a662D6dd1703c939c8aCE2e268d`\), amount of tokens to transfer and "0x" in the `_data` field. To send the transaction the button "Write" must be pressed.
+In the transferAndCall method enter the multi-token mediator contract address on the xDai chain \(`0xf6A78083ca3e2a662D6dd1703c939c8aCE2e268d`\), amount of tokens to transfer, and "0x" in the `_data` field. Press Write to send the transaction.
 
 ![](../../.gitbook/assets/image%20%2863%29.png)
 
-The window of the MetaMask/NiftyWallet will appear. The gas price should be 1 GWei. As soon as the transaction is confirmed in the MetaMask/NiftyWallet, it is necessary to wait for the verification by the xDai chain authorities. Usually, it takes few seconds.
+The MetaMask/NiftyWallet window will appear. Gas price should be 1 GWei, adjust if needed. Once the transaction is confirmed in the MetaMask/NiftyWallet, wait for verification by the xDai chain validators. This is typically completed in a few seconds.
 
-When the transaction is included in a block, the Arbitrary Message Bridge validators will wait for one more block. After that, they will collect confirmations in the xDai chain and transfer them to the Ethereum Mainnet. The transaction sent by a validator to the Ethereum Mainnet will execute the request to unlock the tokens.
+Once the transaction is included in a block, the Arbitrary Message Bridge validators will wait for one more block. After that, they will collect confirmations in the xDai chain and transfer them to Ethereum. The transaction sent by a validator to Ethereum will execute the request to unlock the tokens.
 
-Here is also possible to monitor the process of the confirmation sending and the the AMB request execution by [the AMB Live Monitoring tool](https://docs.tokenbridge.net/about-tokenbridge/components/amb-live-monitoring-application): [https://alm-xdai.herokuapp.com/](https://alm-xdai.herokuapp.com/). The hash \(tx id\) of the transaction used to call `transferAndCall` should be specified in the ALM entry page and it will check the status of the AMB request initiated by this transaction in real time:
+You can monitor this process using [the AMB Live Monitoring tool](https://docs.tokenbridge.net/about-tokenbridge/components/amb-live-monitoring-application): [https://alm-xdai.herokuapp.com/](https://alm-xdai.herokuapp.com/). Specify the hash \(tx id\) of the transaction used to call `transferAndCall` in the ALM entry page and it will check the status of the AMB request initiated by this transaction in real time:
 
 ![](../../.gitbook/assets/image%20%2867%29.png)
 
-As the result, the requested amount of tokens reduced by the fee amount will be unlocked on the Ethereum Mainnet.
+The requested amount of tokens - reduced by the fee amount - will be unlocked on Ethereum.
 
 ## Simplification for ERC677/ERC827 tokens
 
-If the token on the Ethereum Mainnet side is ERC677 or ERC827 compatible it is possible to omit the call of the `approve` method and call only the `transferAndCall` method in the token contract.
+If the token on Ethereum is ERC677 or ERC827 compatible it is possible to omit the `approve` method call and only call the `transferAndCall` method in the token contract.
 
 Below is example with the STAKE token contract:
 
 ![](../../.gitbook/assets/image%20%2882%29.png)
 
-The mutli-token mediator contract address on the Ethereum Mainnet \(`0x88ad09518695c6c3712AC10a214bE5109a655671`\) must be specified as the recipient of the tokens, amount of tokens is filled in the "value" field, the field "data" contains "0x".
+Click Write Contract and specify the multi-token mediator contract address on Ethereum \(`0x88ad09518695c6c3712AC10a214bE5109a655671`\)as the recipient of the tokens, the amount of tokens in wei the "value" field, and 0x in the "data" field. Click Write to execute.
 
 ![](../../.gitbook/assets/image%20%2885%29.png)
 
-## Simplification for the token on the xDai side
+## Simplification for token transfers from the xDai side
 
 {% hint style="danger" %}
-Don't use the `transfer` method to send the tokens to the multi-token mediator on the Ethereum Mainnet. It will lead to loss of the tokens. 
+Do Not Use the `transfer` method to send tokens to the multi-token mediator on Ethereum. It will lead to loss of tokens. 
 {% endhint %}
 
-The token contact deployed on the xDai chain is a customized version of ERC677 standard. It contains [the changes](https://github.com/poanetwork/tokenbridge-contracts/blob/e09bd71bb67cf2ebce3cd7a4ec7130beea733018/contracts/ERC677BridgeToken.sol#L58-L62) that allows to use the `transfer` method to withdraw tokens from the xDai chain instead of `transferAndCall`. So, it is enough to specify the multi-token mediator contract address on the xDai chain \(`0xf6A78083ca3e2a662D6dd1703c939c8aCE2e268d`\) as the recipient and amount of tokens to initiate request to transfer tokens back to the Ethereum Mainnet.
+The token contact deployed on the xDai chain is a customized version of ERC677 standard. It contains [the changes](https://github.com/poanetwork/tokenbridge-contracts/blob/e09bd71bb67cf2ebce3cd7a4ec7130beea733018/contracts/ERC677BridgeToken.sol#L58-L62) that allow calling the `transfer` method to withdraw tokens from the xDai chain instead of `transferAndCall`. So, it is enough to specify the multi-token mediator contract address on the xDai chain \(`0xf6A78083ca3e2a662D6dd1703c939c8aCE2e268d`\) as the recipient and amount of tokens to initiate request to transfer tokens back to Ethereum.
 
-{% hint style="danger" %}
-The method described above works only for the tokens deployed by the multi-token mediator in the xDai chain.
+{% hint style="warning" %}
+The method described above works only for tokens deployed by the multi-token mediator in the xDai chain.
 {% endhint %}
 
 

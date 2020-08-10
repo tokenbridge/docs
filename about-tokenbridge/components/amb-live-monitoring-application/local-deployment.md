@@ -4,7 +4,7 @@ description: Instructions to setup the ALM application locally
 
 # Local deployment
 
-For testing purposes or in case if [the existing instances of ALM](https://docs.tokenbridge.net/about-tokenbridge/components/amb-live-monitoring-application#existing-alm-instances) are not available the application can be deployed locally in the containerised environment.
+For testing purposes, or if [the existing instances of ALM](https://docs.tokenbridge.net/about-tokenbridge/components/amb-live-monitoring-application#existing-alm-instances) are not available, the application can be deployed locally in a containerised environment.
 
 ## Build and run
 
@@ -23,7 +23,7 @@ Copy the configuration file template
 cp .env.example .env
 ```
 
-an open it in your favourite text editor:
+and open it in your favourite text editor:
 
 ```bash
 # Addresses of the AMB contracts.
@@ -31,7 +31,7 @@ COMMON_HOME_BRIDGE_ADDRESS=0x...
 COMMON_FOREIGN_BRIDGE_ADDRESS=0x...
 
 # URLs to the JSON RPC nodes.
-# Infura URLs must be specified togehter with a project id.
+# Infura URLs must be specified together with a project id.
 COMMON_HOME_RPC_URL=https://link.to.rpc.node.at.home
 COMMON_FOREIGN_RPC_URL=https://link.to.rpc.node.at.foreign
 
@@ -56,7 +56,7 @@ ALM_FOREIGN_EXPLORER_TX_TEMPLATE=https://another.url/tx/%s
 ALM_HOME_EXPLORER_API=https://some.explorer.url/api
 ALM_FOREIGN_EXPLORER_API=https://another.explorer.url/api
 
-# Port where the application will listen to. This port will be also
+# Port the application will listen to. This port will also be used
 # by the docker-compose tool when the application starts
 PORT=8080
 ```
@@ -73,15 +73,15 @@ docker-compose build
 docker-compose up -d
 ```
 
-Use a browser to get into [http://localhost:8080](http://localhost:8080/) \(if another value was configured for the parameter `PORT` use it instead of 8080.
+Use a browser to get into [http://localhost:8080](http://localhost:8080/) \(if another value was configured for the parameter `PORT` use it instead of 8080\).
 
-The main window of the application will look like the following:
+Application home window:
 
 ![](../../../.gitbook/assets/image%20%2856%29.png)
 
 ## Examples of existing AMBs configs
 
-Since there are several deployed instances for existing Arbitrary Message Bridges, it is worth to share their configs as so anyone could have an opportunity to run the AMB Live Monitoring tool locally.
+Existing config files of deployed instances are below for reference:
 
 {% hint style="warning" %}
 Replace `PROJECT-ID` and `ETHERSCAN-API-KEY` in the configurations files with your data.

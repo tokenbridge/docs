@@ -1,12 +1,10 @@
 ---
-description: >-
-  Instructions how to verify the token contract deployed by the mutli-token
-  mediator
+description: Instructions to verify a token contract deployed by the multi-token mediator
 ---
 
 # New token contract verification in BlockScout
 
-New tokens deployed by the multi-token mediator are not verified automatically in BlockScout. Sometimes it is necessary to read some data from the token contract directly in the block explorer or even call a method of the token contract \(e.g. to transfer tokens back to the Ethereum Mainnet\). That's why any user could follow the instructions below to verify the contract in BlockScout that will lead to appearing read and write functionality for the contract.
+New tokens deployed by the multi-token mediator are not verified automatically in BlockScout. Sometimes it is necessary to read data from the token contract directly in the block explorer or even call a method of the token contract \(e.g. to transfer tokens back to the Ethereum Mainnet\). Follow the instructions below to verify the contract in BlockScout. Once verified, you can read and write to the contract using the BlockScout interface.  
 
 #### Step 1: Find the token contract by the token symbol
 
@@ -22,11 +20,11 @@ The bridgeable token name is extended by "on xDai":
 
 ![](../../.gitbook/assets/image%20%2877%29.png)
 
-Fill the form as per the recommendations below and press the button "Verify & publish":
+Click on the Code tab, click Verify and Publish, then fill the form following the recommendations below \(see solidity contract code below this image\).   Press the "Verify & publish" button at the bottom of the form to finish.
 
 ![](../../.gitbook/assets/image%20%2879%29.png)
 
-The Solidity Contract Code is the following:
+#### Solidity Contract Code:
 
 ```javascript
 pragma solidity 0.4.24;
@@ -197,7 +195,7 @@ contract TokenProxy is Proxy {
 }
 ```
 
-After the successful verification, the number of the tabs in the contract window will be extended by tabs "Read Contract", "Write Contract", "Read Proxy" and "Write Proxy"
+After verification is successful, the number tabs in the contract window will be extended to allow users to "Read Contract", "Write Contract", "Read Proxy" and "Write Proxy"
 
 ![](../../.gitbook/assets/image%20%2860%29.png)
 

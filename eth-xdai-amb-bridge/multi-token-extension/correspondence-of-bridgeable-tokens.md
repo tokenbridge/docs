@@ -1,35 +1,31 @@
 ---
-description: >-
-  The manual to find the correspondence between tokens linked with the
-  multi-token mediator
+description: Find the analogous token address for tokens bridged on Ethereum and xDai
 ---
 
-# Correspondence of bridgeable tokens
+# Corresponding token contract addresses
 
-Some users that own tokens transferred by the multi-token mediator would find useful to see ways how to discover which token contract in the Ethereum Mainnet corresponds to the token in the xDai chain.
+There are several approaches to discover the token contract on the Ethereum Mainnet that corresponds to the token contract on the xDai chain. 
 
-It can be achieved by two approaches presented below.
+#### Approach \#1: BlockScout 
 
-#### Approach \#1: the BlockScout feature
-
-The BlockScout provides an ability to see if some token was bridged through the multi-token extension.
+BlockScout allows you to see if a token was bridged using the multi-token extension.
 
 ![](../../.gitbook/assets/image%20%2890%29.png)
 
-The link that is available on the token name will lead to the token view in the BlockScout:
+The link available on the token name leads to the token view in the BlockScout:
 
 ![](../../.gitbook/assets/image%20%2870%29.png)
 
-This view contains the information that this token was bridged and a link to the original token.
+This view contains information that this token was bridged and a link to the original token.
 
 ![](../../.gitbook/assets/image%20%2858%29.png)
 
-#### Approach \#2: the mediator storage
+#### Approach \#2: Mediator storage
 
-The multi-token mediator on the xDai chain \([`0xf6A78083ca3e2a662D6dd1703c939c8aCE2e268d`](https://blockscout.com/poa/xdai/address/0xf6A78083ca3e2a662D6dd1703c939c8aCE2e268d)\) provides methods that allow to see correspondence of bridgeable tokens:
+The multi-token mediator on the xDai chain \([`0xf6A78083ca3e2a662D6dd1703c939c8aCE2e268d`](https://blockscout.com/poa/xdai/address/0xf6A78083ca3e2a662D6dd1703c939c8aCE2e268d)\) provides methods for viewing correspondence of bridgeable tokens:
 
-* `foreignTokenAddress` - returns an address of the token contract on the Ethereum Mainnet by specifying the address of the token contract on the xDai chain.
-* `homeTokenAddress` - returns an address of the token contract on the xDai chain by specifying the address of the token contract on the Ethereum Mainnet chain.
+* `foreignTokenAddress` - returns the address of the token contract on the Ethereum Mainnet by specifying the address the token contract on the xDai chain.
+* `homeTokenAddress` - returns the address of the token contract on the xDai chain by specifying the address of the token contract on the Ethereum chain.
 
 ![The contract page in the BlockScout allows to read the contract&apos;s data](../../.gitbook/assets/image%20%2892%29.png)
 
