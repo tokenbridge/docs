@@ -6,11 +6,11 @@ description: >-
 
 # How to transfer tokens
 
-The instructions below use the Etherscan UI and the Blockscout UI to demonstrate the token transfer process. We expect future applications will introduce a more convenient UI. In this case the application will need to call the methods of the multi-token mediators contracts described in this manual.
+The instructions below use the Etherscan UI and the Blockscout UI to demonstrate the token transfer process. We expect future applications will introduce a more convenient UI. In this case the application will need to call the methods of the multi-token mediators contracts described below.
 
 ## General case
 
-The general case consider a transfer of "pure" ERC20 token. For tokens compatible with ERC677 and ERC827 token standards the steps could be simplified - see [the separate section below](https://docs.tokenbridge.net/eth-xdai-amb-bridge/multi-token-extension/how-to-transfer-tokens#simplification-for-erc-677-erc827-tokens).
+The general case considers a transfer of a "pure" ERC20 token. For tokens compatible with ERC677 and ERC827 token standards the steps may be simplified - see [the separate section below](https://docs.tokenbridge.net/eth-xdai-amb-bridge/multi-token-extension/how-to-transfer-tokens#simplification-for-erc-677-erc827-tokens).
 
 ### Ethereum -&gt; xDai Chain
 
