@@ -20,6 +20,10 @@ This view contains information that this token was bridged and a link to the ori
 
 ![](../../.gitbook/assets/image%20%2858%29.png)
 
+BlockScout also distinguishes bridged tokens at the _Top tokens_ page by specifying _bridged?_ property. A worker which fetches this property checks new unprocessed tokens every 1 minute and updates bridged status and it is bridged, adds a link to the original token.
+
+![](../../.gitbook/assets/image-2-.png)
+
 #### Approach \#2: Mediator storage
 
 The multi-token mediator on the xDai chain \([`0xf6A78083ca3e2a662D6dd1703c939c8aCE2e268d`](https://blockscout.com/poa/xdai/address/0xf6A78083ca3e2a662D6dd1703c939c8aCE2e268d)\) provides methods for viewing correspondence of bridgeable tokens:
