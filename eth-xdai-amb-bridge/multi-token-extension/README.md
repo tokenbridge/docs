@@ -16,6 +16,8 @@ By using this extension any user \(not only the token contract owner\) can trans
 More details for the operations to deposit and withdraw tokens are available [here](https://docs.tokenbridge.net/eth-xdai-amb-bridge/multi-token-extension/extension-internals).
 {% endhint %}
 
+{% embed url="https://www.youtube.com/watch?v=WMubACRjS\_4" caption="Lead Architect Alexander Kolotov speaks at EdCon on the Multi-token tool" %}
+
 ## Technical information and extension parameters
 
 * Mediator contract on Ethereum: [`0x88ad09518695c6c3712AC10a214bE5109a655671`](https://etherscan.io/address/0x88ad09518695c6c3712AC10a214bE5109a655671)
