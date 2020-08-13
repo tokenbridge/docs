@@ -31,14 +31,14 @@ Transfer limits are configured per a particular pair of tokens.
 
 Default limits to transfer assets **from Ethereum to the xDai chain**:
 
-* Daily limit: 1'000'000 tokens
-* Maximum per transaction: 100'000 tokens
+* Daily limit: 1'000'000'000'000'000'000 tokens
+* Maximum per transaction: 1'000'000'000 tokens
 * Minimum per transaction: 1 token
 
 Default limits to transfer assets **from the xDai chain to Ethereum** 
 
-* Daily limit: 10'000 tokens
-* Maximum per transaction: 3'000 tokens
+* Daily limit: 1'000'000'000'000'000'000 tokens
+* Maximum per transaction: 1'000'000'000 tokens
 * Minimum per transaction: 1 token
 
 ### Bridge operation fees
@@ -48,5 +48,5 @@ Fees are also configurable per a particular pair of tokens.
 **Default fees:**
 
 * There are no fees \(except gas fees for the originating transaction\) to transfer assets from the Ethereum o the xDai chain.
-* The fee to transfer assets \(besides gas fees for the originating transaction\) from the xDai chain to Ethereum is **0.5%**.
+* The fee to transfer assets \(besides gas fees for the originating transaction\) from the xDai chain to Ethereum is **0.05%**.
 
