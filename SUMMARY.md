@@ -62,7 +62,7 @@
 * [About the ETH-xDai AMB](eth-xdai-amb-bridge/about-the-eth-xdai-amb.md)
 * [Multi-token extension](eth-xdai-amb-bridge/multi-token-extension/README.md)
   * [How to transfer tokens](eth-xdai-amb-bridge/multi-token-extension/how-to-transfer-tokens.md)
-  * [UI to transfer tokens](eth-xdai-amb-bridge/multi-token-extension/ui-to-transfer-tokens.md)
+  * [Token transfer UI](eth-xdai-amb-bridge/multi-token-extension/ui-to-transfer-tokens.md)
   * [New token contract verification in BlockScout](eth-xdai-amb-bridge/multi-token-extension/new-token-contract-verification-in-blockscout.md)
   * [Corresponding token contract addresses](eth-xdai-amb-bridge/multi-token-extension/correspondence-of-bridgeable-tokens.md)
   * [Extension internals & diagrams](eth-xdai-amb-bridge/multi-token-extension/extension-internals.md)
