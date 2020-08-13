@@ -17,18 +17,19 @@ The Arbitrary Message Bridge \(AMB\) is designed to relay **any data** between t
 AMB's universality means it can be used as a base layer for bridge and application construction. Once the bridge contracts are deployed and the corresponding validators are running the oracles, other applications can use them without the need to deploy their own infrastructure.
 
 {% hint style="success" %}
-Check out the [ETH-xDai AMB ](../eth-xdai-amb-bridge/about-the-eth-xdai-amb.md)section to view and try some live extensions.
+* Check out the [ETH-xDai AMB ](../eth-xdai-amb-bridge/about-the-eth-xdai-amb.md)section to view and try some live extensions.
+* Learn about our new [multi-token extension,](../eth-xdai-amb-bridge/multi-token-extension/) where an ERC20 on Ethereum is bridged and automatically created on xDai!
 {% endhint %}
 
 ### Existing extensions
 
-Starting from the launch of the AMB project there were developed several extensions:
+We have developed several AMB extensions. A brief description and links to the Github repos are below.
 
-* [native-to-erc20](https://github.com/poanetwork/tokenbridge-contracts/tree/master/contracts/upgradeable_contracts/amb_native_to_erc20) - an extension that allows transfer a native tokens on one chain to another ERC677 tokens on another chain. It works similarly to the POA20 bridge.
-* [CryptoKitties NFTs](https://github.com/poanetwork/cryptokitties-xdai-demo) - an extension prepared for demonstration purposes. It allows to transfer CryptoKitties ERC721 tokens from the Ethereum Mainnet to the xDai chain
-* [erc20-to-erc20](https://github.com/poanetwork/tokenbridge-contracts/tree/master/contracts/upgradeable_contracts/amb_erc677_to_erc677) - an extension to transfer an ERC20 token linked with the extension to an ERC677 token. 
-* [erc20-to-native](https://github.com/poanetwork/tokenbridge-contracts/tree/master/contracts/upgradeable_contracts/amb_erc20_to_native) - an extension to transfer an ERC20 token in one chain to a native tokens in another chain. It works similarly to the xDai bridge.
-* [mutli-erc20-to-erc677](https://github.com/poanetwork/tokenbridge-contracts/tree/master/contracts/upgradeable_contracts/multi_amb_erc20_to_erc677) - an extensions that allows to transfer **any** ERC20 token to another ERC677 token. It also could be called as multi-token bridging.
+* [native-to-erc20](https://github.com/poanetwork/tokenbridge-contracts/tree/master/contracts/upgradeable_contracts/amb_native_to_erc20) - an extension that allows a user to transfer native tokens on one chain to ERC677 tokens on another chain. It works similarly to the POA20 bridge.
+* [CryptoKitties NFTs](https://github.com/poanetwork/cryptokitties-xdai-demo) - an extension prepared for demonstration purposes. It allows users to transfer CryptoKitties ERC721 tokens from the Ethereum Mainnet to the xDai chain.
+* [erc20-to-erc20](https://github.com/poanetwork/tokenbridge-contracts/tree/master/contracts/upgradeable_contracts/amb_erc677_to_erc677) - an extension to transfer an ERC20 token linked with the extension to an ERC677 token on another chain. 
+* [erc20-to-native](https://github.com/poanetwork/tokenbridge-contracts/tree/master/contracts/upgradeable_contracts/amb_erc20_to_native) - an extension to transfer an ERC20 token on one chain to a native token on another chain. It works similarly to the xDai bridge.
+* [mutli-erc20-to-erc677](https://github.com/poanetwork/tokenbridge-contracts/tree/master/contracts/upgradeable_contracts/multi_amb_erc20_to_erc677) - an extension that allows users to transfer **any** ERC20 token to an ERC677 token on another chain. This is also known as as multi-token bridging.
 
 ## Video Explainers
 
@@ -39,6 +40,12 @@ Starting from the launch of the AMB project there were developed several extensi
 ### AMB cross-chain transfers with Alex Kolotov - [NonCon 2020](https://noncon.org/)
 
 {% embed url="https://www.youtube.com/watch?v=3-2deK21Q14" %}
+
+### AMB multi-token extension presentation at EDCON 2020
+
+{% embed url="https://youtu.be/WMubACRjS\_4" %}
+
+
 
 ### AMB presentation at Waves online Meetup \(Russian presentation\)
 
