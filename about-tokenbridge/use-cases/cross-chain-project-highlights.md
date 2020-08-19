@@ -38,3 +38,11 @@ description: >-
 
 ![](../../.gitbook/assets/ocean-bridge.png)
 
+## **Energy Web Foundation**
+
+> **Project:** [EnergyWeb Foundation](https://www.energyweb.org/)  
+> **Bridge UI:** [**https://bridge.energyweb.org/**](https://bridge.energyweb.org/)  
+> **Description:** Transfer EWT tokens between the Energy Web Chain and Ethereum
+
+![](../../.gitbook/assets/ewt.png)
+
