@@ -33,7 +33,7 @@ Default limits to transfer assets **from Ethereum to the xDai chain**:
 
 * Daily limit: 1'000'000'000'000'000'000 tokens
 * Maximum per transaction: 1'000'000'000 tokens
-* Minimum per transaction: 1 token
+* Minimum per transaction: 0.001 token
 
 Default limits to transfer assets **from the xDai chain to Ethereum** 
 
