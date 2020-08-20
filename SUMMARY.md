@@ -66,6 +66,7 @@
   * [New token contract verification in BlockScout](eth-xdai-amb-bridge/multi-token-extension/new-token-contract-verification-in-blockscout.md)
   * [Corresponding token contract addresses](eth-xdai-amb-bridge/multi-token-extension/correspondence-of-bridgeable-tokens.md)
   * [Extension internals & diagrams](eth-xdai-amb-bridge/multi-token-extension/extension-internals.md)
+  * [The Bridged Tokens List](eth-xdai-amb-bridge/multi-token-extension/the-bridged-tokens-list.md)
 * [ERC20-to-ERC20 extension linked with a particular token](eth-xdai-amb-bridge/erc20-to-erc20-extension-linked-with-a-particular-token/README.md)
   * [Deploy ERC20 to ERC677 AMB bridge extension](eth-xdai-amb-bridge/erc20-to-erc20-extension-linked-with-a-particular-token/deploy-erc20-erc677-erc827-to-erc677-amb-bridge-extension.md)
   * [UI to transfer tokens through AMB](eth-xdai-amb-bridge/erc20-to-erc20-extension-linked-with-a-particular-token/ui-to-transfer-tokens-through-amb.md)

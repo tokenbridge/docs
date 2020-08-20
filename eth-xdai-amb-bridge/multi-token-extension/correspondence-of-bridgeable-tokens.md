@@ -20,7 +20,7 @@ This view contains information that this token was bridged and a link to the ori
 
 ![](../../.gitbook/assets/image%20%2858%29.png)
 
-BlockScout also distinguishes bridged tokens at the _Top tokens_ page by specifying _bridged?_ property. A worker which fetches this property checks new unprocessed tokens every 1 minute and updates bridged status and it is bridged, adds a link to the original token.
+BlockScout also distinguishes bridged tokens at the _Top of the tokens_ page by specifying the bridged  property. A worker which fetches this property checks new unprocessed tokens every 1 minute and updates bridged status and it is bridged, adds a link to the original token.
 
 ![](../../.gitbook/assets/image-2-.png)
 
