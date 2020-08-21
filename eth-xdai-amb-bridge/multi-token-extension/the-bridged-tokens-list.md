@@ -19,6 +19,7 @@ The multi-token bridge extension is now being used to bridge many tokens from Et
 | USDC | [0xDDAfbb505ad214D7b80b1f830fcCc89B60fb7A83](https://blockscout.com/poa/xdai/tokens/0xDDAfbb505ad214D7b80b1f830fcCc89B60fb7A83/token_transfers) | [0xa0b86991c6218b36c1d19d4a2e9eb0ce3606eb48](https://etherscan.io/token/0xa0b86991c6218b36c1d19d4a2e9eb0ce3606eb48) |
 | DAI | [0x44fA8E6f47987339850636F88629646662444217](https://blockscout.com/poa/xdai/tokens/0x44fA8E6f47987339850636F88629646662444217/token_transfers) | [0x6b175474e89094c44da98b954eedeac495271d0f](https://etherscan.io/token/0x6b175474e89094c44da98b954eedeac495271d0f) |
 | SAI | [0xc439E5B1DEe4f866B681E7c5E5dF140aA47fBf19](https://blockscout.com/poa/xdai/tokens/0xc439E5B1DEe4f866B681E7c5E5dF140aA47fBf19/token_transfers) | [0x89d24a6b4ccb1b6faa2625fe562bdd9a23260359](https://etherscan.io/token/0x89d24a6b4ccb1b6faa2625fe562bdd9a23260359) |
+| JOON | [0x5fE9885226677F3Eb5C9ad8aB6c421B4EA38535d](https://blockscout.com/poa/xdai/tokens/0x5fE9885226677F3Eb5C9ad8aB6c421B4EA38535d/token_transfers) | [0x174897edd3ce414084a009d22db31c7b7826400d](https://etherscan.io/token/0x174897edd3ce414084a009d22db31c7b7826400d) |
 
 
 
