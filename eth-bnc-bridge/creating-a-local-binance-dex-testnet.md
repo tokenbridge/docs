@@ -4,7 +4,7 @@ description: Using a local dev environment provides needed testing flexibility
 
 # Creating a Local Binance DEX Testnet
 
-The Binance public testnet at [ https://testnet-explorer.binance.org](%20https://testnet-explorer.binance.org) is useful for testing DApps and other Binance-based applications. However, limitations include:
+The Binance public testnet at [https://testnet-explorer.binance.org](%20https://testnet-explorer.binance.org) is useful for testing DApps and other Binance-based applications. However, limitations include:
 
 * Issuing test tokens costs 500BNB
 * Listing test tokens costs 1000 BNB
