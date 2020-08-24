@@ -85,21 +85,21 @@
   * [Transfer Moons between Rinkeby and xDai Chain using the MOON bridge extension](rinkeby-xdai-amb-bridge/moon-bridge-extension/transfer-moons-between-rinkeby-and-xdai-chain-using-the-moon-bridge-extension.md)
 * [BRICK bridge extension](rinkeby-xdai-amb-bridge/brick-bridge-extension.md)
 
-## Kovan-Sokol AMB
+## Kovan-Sokol AMB <a id="kovan-sokol-amb-bridge"></a>
 
-* [About the Kovan-Sokol AMB](kovan-sokol-amb/about-the-kovan-sokol-amb.md)
-* [Multi-token extension \(testing\)](kovan-sokol-amb/multi-token-extension-testing.md)
-* [Native-to-ERC20 bridge extension](kovan-sokol-amb/native-to-erc20-bridge-extension/README.md)
-  * [Transfer SPOA through native-to-ERC20 extension without UI](kovan-sokol-amb/native-to-erc20-bridge-extension/transfer-spoa-through-native-to-erc20-extension-without-ui.md)
+* [About the Kovan-Sokol AMB](kovan-sokol-amb-bridge/about-the-kovan-sokol-amb.md)
+* [Multi-token extension \(testing\)](kovan-sokol-amb-bridge/multi-token-extension-testing.md)
+* [Native-to-ERC20 bridge extension](kovan-sokol-amb-bridge/native-to-erc20-bridge-extension/README.md)
+  * [Transfer SPOA through native-to-ERC20 extension without UI](kovan-sokol-amb-bridge/native-to-erc20-bridge-extension/transfer-spoa-through-native-to-erc20-extension-without-ui.md)
 
-## ETH-POA AMB
+## ETH-POA AMB <a id="eth-poa-amb-bridge"></a>
 
-* [About the ETH-POA AMB](eth-poa-amb/about-the-eth-poa-amb.md)
+* [About the ETH-POA AMB](eth-poa-amb-bridge/about-the-eth-poa-amb.md)
 
-## ETH-ETC AMB
+## ETH-ETC AMB <a id="eth-etc-amb-bridge"></a>
 
-* [About the ETH-ETC AMB](eth-etc-amb/about-the-eth-etc-amb.md)
-* [WETC AMB extension](eth-etc-amb/wetc-amb-extension.md)
+* [About the ETH-ETC AMB](eth-etc-amb-bridge/about-the-eth-etc-amb.md)
+* [WETC AMB extension](eth-etc-amb-bridge/wetc-amb-extension.md)
 
 ## ETH-QDAI AMB <a id="eth-qdai-bridge"></a>
 
