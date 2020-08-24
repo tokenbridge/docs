@@ -61,6 +61,7 @@
 
 * [About the ETH-xDai AMB](eth-xdai-amb-bridge/about-the-eth-xdai-amb.md)
 * [Multi-token extension](eth-xdai-amb-bridge/multi-token-extension/README.md)
+  * [Untitled](eth-xdai-amb-bridge/multi-token-extension/untitled.md)
   * [How to transfer tokens](eth-xdai-amb-bridge/multi-token-extension/how-to-transfer-tokens.md)
   * [Token transfer UI](eth-xdai-amb-bridge/multi-token-extension/ui-to-transfer-tokens.md)
   * [New token contract verification in BlockScout](eth-xdai-amb-bridge/multi-token-extension/new-token-contract-verification-in-blockscout.md)
@@ -101,15 +102,15 @@
 * [About the ETH-ETC AMB](eth-etc-amb/about-the-eth-etc-amb.md)
 * [WETC AMB extension](eth-etc-amb/wetc-amb-extension.md)
 
-## ETH-QDAI AMB
+## ETH-QDAI AMB <a id="eth-qdai-bridge"></a>
 
-* [About the qDai chain](eth-qdai-amb/about-the-qdai-chain.md)
-* [About the ETH-qDai AMB](eth-qdai-amb/about-the-eth-qdai-amb.md)
-* [qDai bridge extension](eth-qdai-amb/qdai-bridge-extension.md)
-* [Using the qDai Bridge](eth-qdai-amb/using-the-qdai-bridge/README.md)
-  * [Configuring MetaMask](eth-qdai-amb/using-the-qdai-bridge/configuring-metamask.md)
-  * [Transfer DAI with UI](eth-qdai-amb/using-the-qdai-bridge/transfer-dai-with-ui.md)
-  * [Transfer DAI without UI](eth-qdai-amb/using-the-qdai-bridge/transfer-dai-without-ui.md)
+* [About the qDai chain](eth-qdai-bridge/about-the-qdai-chain.md)
+* [About the ETH-qDai AMB](eth-qdai-bridge/about-the-eth-qdai-amb.md)
+* [qDai bridge extension](eth-qdai-bridge/qdai-bridge-extension.md)
+* [Using the qDai Bridge](eth-qdai-bridge/using-the-qdai-bridge/README.md)
+  * [Configuring MetaMask](eth-qdai-bridge/using-the-qdai-bridge/configuring-metamask.md)
+  * [Transfer DAI with UI](eth-qdai-bridge/using-the-qdai-bridge/transfer-dai-with-ui.md)
+  * [Transfer DAI without UI](eth-qdai-bridge/using-the-qdai-bridge/transfer-dai-without-ui.md)
 
 ## ETH-BNC Bridge
 
