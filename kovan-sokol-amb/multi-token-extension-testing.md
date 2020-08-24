@@ -8,7 +8,7 @@ description: >-
 
 This is a test version of the Multi-token AMB extension. It can be used if an application would like to better understand the principles of transferring the tokens to another chain.
 
-Almost everything that it is applicable for [the extension between the Ethereum Mainnet and xDai chain](https://docs.tokenbridge.net/eth-xdai-amb-bridge/multi-token-extension) could be applied to this extension. Refer to the documentation section that provides lots of useful information how to deal with the extension: ["Multi-token extension"](https://docs.tokenbridge.net/eth-xdai-amb-bridge/multi-token-extension).
+Almost everything that it is applicable for [the extension between the Ethereum Mainnet and xDai chain ](../eth-xdai-amb/multi-token-extension/)\could be applied to this extension. Refer to the documentation section that provides lots of useful information on managing the extension: ["Multi-token extension"](https://docs.tokenbridge.net/eth-xdai-amb-bridge/multi-token-extension).
 
 ## Technical information and extension parameters
 

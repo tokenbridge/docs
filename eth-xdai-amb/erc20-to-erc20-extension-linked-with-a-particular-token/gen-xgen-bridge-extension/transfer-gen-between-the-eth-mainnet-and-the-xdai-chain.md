@@ -109,7 +109,7 @@ For demonstration purposes we use [MyEtherWallet \(MEW\)](https://www.myetherwal
 ## Withdraw GEN tokens from the xDai chain \(the DAOstack token\)
 
 {% hint style="warning" %}
-This actions are valid only in case if the xGEN token will be represented by DAOstack-developed contract. The plan is that the substitute of the interim token by DAOstack contract will happen after some trial period. Until that time the actions below are not applicable - use [the way specified for the interim token](https://docs.tokenbridge.net/eth-xdai-amb-bridge/gen-xgen-bridge-extension/transfer-gen-between-the-eth-mainnet-and-the-xdai-chain#withdraw-gen-tokens-from-the-xdai-chain-the-interim-token).
+These actions are valid only when the xGEN token is represented by DAOstack-developed contract. In this case there are plans to substitute the interim token with a DAOstack contract after some trial period. Until that time the actions below are not applicable - use [the way specified for the interim token](https://docs.tokenbridge.net/eth-xdai-amb-bridge/gen-xgen-bridge-extension/transfer-gen-between-the-eth-mainnet-and-the-xdai-chain#withdraw-gen-tokens-from-the-xdai-chain-the-interim-token).
 {% endhint %}
 
 {% hint style="warning" %}
