@@ -168,5 +168,5 @@ Output will look similar to this:
 
 ![](../../.gitbook/assets/image%20%2836%29.png)
 
-5. Verify that tokens can be transferred in both directions through the bridge. See the [the sUSD bridge AMB extension](https://docs.tokenbridge.net/eth-xdai-amb-bridge/susd-bridge-extension/transfer-susd-through-the-bridge-extension) for an example process.
+5. Verify that tokens can be transferred in both directions through the bridge. See the [the sUSD bridge AMB extension](susd-bridge-extension/) for an example process.
 
