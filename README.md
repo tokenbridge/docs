@@ -15,7 +15,7 @@ TokenBridge docs are organized in the sidebar menu.
 3. Bridge-by-bridge details. Each section includes technical and connection details as well as links to examples and use-cases.
    1. \*\*\*\*[**xDai Bridge**](xdai-bridge/about.md): ERC20-to-Native TokenBridge implementation
    2. \*\*\*\*[**ETH-xDai AMB**](eth-xdai-amb-bridge/about-the-eth-xdai-amb.md): AMB between Ethereum and xDai, includes the Multi-token bridge extension.
-   3. \*\*\*\*[**Rinkeby-xDai AMB**](rinkeby-xdai-amb/about-the-rinkeby-xdai-amb.md): AMB between Rinkeby testnet and xDai. Used for xMOON projects.
+   3. \*\*\*\*[**Rinkeby-xDai AMB**](rinkeby-xdai-amb-bridge/about-the-rinkeby-xdai-amb.md): AMB between Rinkeby testnet and xDai. Used for xMOON projects.
    4. \*\*\*\*[**Kovan-Sokol AMB**](kovan-sokol-amb/about-the-kovan-sokol-amb.md): Useful for testing applications and extensions.
    5. \*\*\*\*[**ETH-POA AMB**](eth-poa-amb/about-the-eth-poa-amb.md): AMB between Ethereum mainnet and POA Network.
    6. \*\*\*\*[**ETH-ETC AMB**](eth-etc-amb/about-the-eth-etc-amb.md):  AMB between Ethereum Mainnet and Ethereum Classic. Used to create WETC on Ethereum.

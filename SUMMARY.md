@@ -78,13 +78,13 @@
     * [Transfer sUSD between the ETH Mainnet and the xDai Chain using the sUSD bridge extension](eth-xdai-amb-bridge/erc20-to-erc20-extension-linked-with-a-particular-token/susd-bridge-extension/transfer-susd-through-the-bridge-extension.md)
     * [Send sUSD between two wallets on xDai](eth-xdai-amb-bridge/erc20-to-erc20-extension-linked-with-a-particular-token/susd-bridge-extension/send-susd-between-two-wallets-on-xdai.md)
 
-## RINKEBY-XDAI AMB
+## RINKEBY-XDAI AMB <a id="rinkeby-xdai-amb-bridge"></a>
 
-* [About the Rinkeby-xDai AMB](rinkeby-xdai-amb/about-the-rinkeby-xdai-amb.md)
-* [AMB Live Monitoring application](rinkeby-xdai-amb/amb-live-monitoring-application.md)
-* [MOON bridge extension](rinkeby-xdai-amb/moon-bridge-extension/README.md)
-  * [Transfer Moons between Rinkeby and xDai Chain using the MOON bridge extension](rinkeby-xdai-amb/moon-bridge-extension/transfer-moons-between-rinkeby-and-xdai-chain-using-the-moon-bridge-extension.md)
-* [BRICK bridge extension](rinkeby-xdai-amb/brick-bridge-extension.md)
+* [About the Rinkeby-xDai AMB](rinkeby-xdai-amb-bridge/about-the-rinkeby-xdai-amb.md)
+* [AMB Live Monitoring application](rinkeby-xdai-amb-bridge/amb-live-monitoring-application.md)
+* [MOON bridge extension](rinkeby-xdai-amb-bridge/moon-bridge-extension/README.md)
+  * [Transfer Moons between Rinkeby and xDai Chain using the MOON bridge extension](rinkeby-xdai-amb-bridge/moon-bridge-extension/transfer-moons-between-rinkeby-and-xdai-chain-using-the-moon-bridge-extension.md)
+* [BRICK bridge extension](rinkeby-xdai-amb-bridge/brick-bridge-extension.md)
 
 ## Kovan-Sokol AMB
 
