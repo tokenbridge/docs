@@ -4,7 +4,7 @@ description: Instructions to verify a token contract deployed by the multi-token
 
 # New token contract verification in BlockScout
 
-New tokens deployed by the multi-token mediator are not verified automatically in BlockScout. Sometimes it is necessary to read data from the token contract directly in the block explorer or even call a method of the token contract \(e.g. to transfer tokens back to the Ethereum Mainnet\). Follow the instructions below to verify the contract in BlockScout. Once verified, you can read and write to the contract using the BlockScout interface.  
+New tokens deployed by the multi-token mediator are not verified automatically in BlockScout. Sometimes it is necessary to read data from the token contract directly in the block explorer or even call a method of the token contract \(e.g. to transfer tokens back to the Ethereum Mainnet\). Follow the instructions below to verify the contract in BlockScout. Once verified, you can read and write to the contract using the BlockScout interface.
 
 #### Step 1: Find the token contract by the token symbol
 
