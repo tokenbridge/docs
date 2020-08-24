@@ -57,25 +57,25 @@
 * [xDai Bridge oracle maintenance](xdai-bridge/xdai-bridge-oracle-maintenance/README.md)
   * [Oracle migration to a new server](xdai-bridge/xdai-bridge-oracle-maintenance/oracle-migration-to-a-new-server.md)
 
-## ETH-XDAI AMB
+## ETH-XDAI AMB <a id="eth-xdai-amb-bridge"></a>
 
-* [About the ETH-xDai AMB](eth-xdai-amb/about-the-eth-xdai-amb.md)
-* [Multi-token extension](eth-xdai-amb/multi-token-extension/README.md)
-  * [How to transfer tokens](eth-xdai-amb/multi-token-extension/how-to-transfer-tokens.md)
-  * [Token transfer UI](eth-xdai-amb/multi-token-extension/ui-to-transfer-tokens.md)
-  * [New token contract verification in BlockScout](eth-xdai-amb/multi-token-extension/new-token-contract-verification-in-blockscout.md)
-  * [Corresponding token contract addresses](eth-xdai-amb/multi-token-extension/correspondence-of-bridgeable-tokens.md)
-  * [Extension internals & diagrams](eth-xdai-amb/multi-token-extension/extension-internals.md)
-  * [🌱 Bridged Tokens List](eth-xdai-amb/multi-token-extension/the-bridged-tokens-list.md)
-* [ERC20-to-ERC20 extension linked with a particular token](eth-xdai-amb/erc20-to-erc20-extension-linked-with-a-particular-token/README.md)
-  * [Deploy ERC20 to ERC677 AMB bridge extension](eth-xdai-amb/erc20-to-erc20-extension-linked-with-a-particular-token/deploy-erc20-erc677-erc827-to-erc677-amb-bridge-extension.md)
-  * [UI to transfer tokens through AMB](eth-xdai-amb/erc20-to-erc20-extension-linked-with-a-particular-token/ui-to-transfer-tokens-through-amb.md)
-  * [GEN-xGEN bridge extension](eth-xdai-amb/erc20-to-erc20-extension-linked-with-a-particular-token/gen-xgen-bridge-extension/README.md)
-    * [Transfer GEN between the ETH Mainnet and the xDai Chain](eth-xdai-amb/erc20-to-erc20-extension-linked-with-a-particular-token/gen-xgen-bridge-extension/transfer-gen-between-the-eth-mainnet-and-the-xdai-chain.md)
-    * [Change the token contract on the xDai chain](eth-xdai-amb/erc20-to-erc20-extension-linked-with-a-particular-token/gen-xgen-bridge-extension/change-the-token-contract-on-the-xdai-chain.md)
-  * [sUSD bridge extension](eth-xdai-amb/erc20-to-erc20-extension-linked-with-a-particular-token/susd-bridge-extension/README.md)
-    * [Transfer sUSD between the ETH Mainnet and the xDai Chain using the sUSD bridge extension](eth-xdai-amb/erc20-to-erc20-extension-linked-with-a-particular-token/susd-bridge-extension/transfer-susd-through-the-bridge-extension.md)
-    * [Send sUSD between two wallets on xDai](eth-xdai-amb/erc20-to-erc20-extension-linked-with-a-particular-token/susd-bridge-extension/send-susd-between-two-wallets-on-xdai.md)
+* [About the ETH-xDai AMB](eth-xdai-amb-bridge/about-the-eth-xdai-amb.md)
+* [Multi-token extension](eth-xdai-amb-bridge/multi-token-extension/README.md)
+  * [How to transfer tokens](eth-xdai-amb-bridge/multi-token-extension/how-to-transfer-tokens.md)
+  * [Token transfer UI](eth-xdai-amb-bridge/multi-token-extension/ui-to-transfer-tokens.md)
+  * [New token contract verification in BlockScout](eth-xdai-amb-bridge/multi-token-extension/new-token-contract-verification-in-blockscout.md)
+  * [Corresponding token contract addresses](eth-xdai-amb-bridge/multi-token-extension/correspondence-of-bridgeable-tokens.md)
+  * [Extension internals & diagrams](eth-xdai-amb-bridge/multi-token-extension/extension-internals.md)
+  * [🌱 Bridged Tokens List](eth-xdai-amb-bridge/multi-token-extension/the-bridged-tokens-list.md)
+* [ERC20-to-ERC20 extension linked with a particular token](eth-xdai-amb-bridge/erc20-to-erc20-extension-linked-with-a-particular-token/README.md)
+  * [Deploy ERC20 to ERC677 AMB bridge extension](eth-xdai-amb-bridge/erc20-to-erc20-extension-linked-with-a-particular-token/deploy-erc20-erc677-erc827-to-erc677-amb-bridge-extension.md)
+  * [UI to transfer tokens through AMB](eth-xdai-amb-bridge/erc20-to-erc20-extension-linked-with-a-particular-token/ui-to-transfer-tokens-through-amb.md)
+  * [GEN-xGEN bridge extension](eth-xdai-amb-bridge/erc20-to-erc20-extension-linked-with-a-particular-token/gen-xgen-bridge-extension/README.md)
+    * [Transfer GEN between the ETH Mainnet and the xDai Chain](eth-xdai-amb-bridge/erc20-to-erc20-extension-linked-with-a-particular-token/gen-xgen-bridge-extension/transfer-gen-between-the-eth-mainnet-and-the-xdai-chain.md)
+    * [Change the token contract on the xDai chain](eth-xdai-amb-bridge/erc20-to-erc20-extension-linked-with-a-particular-token/gen-xgen-bridge-extension/change-the-token-contract-on-the-xdai-chain.md)
+  * [sUSD bridge extension](eth-xdai-amb-bridge/erc20-to-erc20-extension-linked-with-a-particular-token/susd-bridge-extension/README.md)
+    * [Transfer sUSD between the ETH Mainnet and the xDai Chain using the sUSD bridge extension](eth-xdai-amb-bridge/erc20-to-erc20-extension-linked-with-a-particular-token/susd-bridge-extension/transfer-susd-through-the-bridge-extension.md)
+    * [Send sUSD between two wallets on xDai](eth-xdai-amb-bridge/erc20-to-erc20-extension-linked-with-a-particular-token/susd-bridge-extension/send-susd-between-two-wallets-on-xdai.md)
 
 ## RINKEBY-XDAI AMB
 

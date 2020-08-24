@@ -10,7 +10,7 @@ The instructions below use the Etherscan UI and the Blockscout UI to demonstrate
 
 ## General Case: ERC20 Token Transfer
 
-The general case describes a "pure" ERC20 token. For tokens compatible with ERC677 and ERC827 token standards the steps may be simplified - see [the separate section below](https://docs.tokenbridge.net/eth-xdai-amb-bridge/multi-token-extension/how-to-transfer-tokens#simplification-for-erc-677-erc827-tokens).
+The general case describes a "pure" ERC20 token. For tokens compatible with ERC677 and ERC827 token standards the steps may be simplified - see [the separate section below](how-to-transfer-tokens.md#simplification-for-erc-677-erc827-tokens).
 
 ### Ethereum -&gt; xDai Chain
 
