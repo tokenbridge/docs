@@ -4,7 +4,7 @@ description: Tokens Bridged using the multi-token bridge extension
 
 # 🌱 Bridged Tokens List
 
-The multi-token bridge extension is now being used to bridge many tokens from Ethereum to xDai. When a token is bridged, the name is appended with _**on xDai**_.  On a token page, you can also find the link to the original token on Ethereum. For more, see the [corresponding token contract addresses page](correspondence-of-bridgeable-tokens.md).
+The OmniBridge multi-token bridge extension is now being used to bridge many tokens from Ethereum to xDai. When a token is bridged, the name is appended with _**on xDai**_.  On a token page, you can also find the link to the original token on Ethereum. For more, see the [corresponding token contract addresses page](correspondence-of-bridgeable-tokens.md).
 
 ## 🌱 The Bridged Token List is growing daily! 🌱
 

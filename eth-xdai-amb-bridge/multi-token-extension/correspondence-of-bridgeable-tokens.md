@@ -2,7 +2,7 @@
 description: Find the analogous token address for tokens bridged on Ethereum and xDai
 ---
 
-# Corresponding token contract addresses
+# Corresponding token contract addresses \(ETH - XDAI\)
 
 There are several approaches to discover the token contract on the Ethereum Mainnet that corresponds to the token contract on the xDai chain. 
 

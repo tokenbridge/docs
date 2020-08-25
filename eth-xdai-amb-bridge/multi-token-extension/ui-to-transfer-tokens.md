@@ -1,7 +1,7 @@
-# Token transfer UI
+# OmniBridge UI
 
 {% hint style="info" %}
-👷 A general UI for the multi-token extension is currently under construction. Check back soon for updates. 
+👷 The OmniBridge UI is currently under construction. Check back soon for updates. 
 {% endhint %}
 
 At the moment, there is no uniform UI to allow users to transfer tokens through the AMB multi-token extension. One option for a token owner \(without programming knowledge\) is to use [solUI](https://solui.dev/).

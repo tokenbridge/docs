@@ -1,10 +1,10 @@
 ---
 description: >-
   This page introduces details about how the token transfers through the
-  multi-token extension work
+  OmniBridge multi-token extension work
 ---
 
-# Extension internals & diagrams
+# OmniBridge Extension internals & diagrams
 
 Comprehensive description of the contracts call flows is available in [the documentation of the extension](https://github.com/poanetwork/tokenbridge-contracts/blob/master/contracts/upgradeable_contracts/multi_amb_erc20_to_erc677/callflows.md) on the GitHub TokenBridge contracts repo.
 

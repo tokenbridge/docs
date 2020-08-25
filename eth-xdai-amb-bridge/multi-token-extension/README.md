@@ -2,9 +2,9 @@
 description: Useful documents for the multi-token AMB extension
 ---
 
-# Multi-token extension
+# OmniBridge multi-token extension
 
-The multi-token extension for the Arbitrary Message Bridge between Ethereum and the xDai chain is the simplest way to transfer **ANY** ERC20/ERC677/ERC827 token to the xDai chain.
+The OmniBridge multi-token extension for the Arbitrary Message Bridge between Ethereum and the xDai chain is the simplest way to transfer **ANY** ERC20/ERC677/ERC827 token to the xDai chain.
 
 {% hint style="info" %}
 An AMB bridge extension is a pair of mediator contracts associated with a specific pair of Arbitrary Message Bridge contracts.
@@ -22,7 +22,7 @@ More details for the operations to deposit and withdraw tokens are available [he
 
 {% embed url="https://www.youtube.com/watch?v=WMubACRjS\_4" caption="Lead Architect Alexander Kolotov speaks at EdCon on the Multi-token tool" %}
 
-## Technical information and extension parameters
+## OmniBridge technical information and extension parameters
 
 * Mediator contract on Ethereum: [`0x88ad09518695c6c3712AC10a214bE5109a655671`](https://etherscan.io/address/0x88ad09518695c6c3712AC10a214bE5109a655671)
 * Mediator contract on the xDai chain: [`0xf6A78083ca3e2a662D6dd1703c939c8aCE2e268d`](https://blockscout.com/poa/xdai/address/0xf6A78083ca3e2a662D6dd1703c939c8aCE2e268d)
