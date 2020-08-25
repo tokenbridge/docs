@@ -2,7 +2,7 @@
 description: A demonstration of Arbitrary Message Bridging using CryptoKitties
 ---
 
-# Demo: CryptoKitties AMB bridge extension
+# 😸 CryptoKitties AMB bridge extension Demo
 
 {% hint style="info" %}
 **An AMB bridge extension** is a pair of mediator contracts associated with a specific pair of Arbitrary Message Bridge contracts.

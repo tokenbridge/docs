@@ -33,7 +33,7 @@
 * [How to develop a cross-blockchain application using the AMB](amb-bridge/how-to-develop-xchain-apps-by-amb.md)
 * [ERC677 to ERC677 AMB bridge extension](amb-bridge/erc677-to-erc677-bridge-on-top-of-amb.md)
 * [Gas Token Minting](amb-bridge/gas-token-minting.md)
-* [Demo: CryptoKitties AMB bridge extension](amb-bridge/how-to-use-cryptokitties-bridge/README.md)
+* [😸 CryptoKitties AMB bridge extension Demo](amb-bridge/how-to-use-cryptokitties-bridge/README.md)
   * [Deploy CryptoKitty Contracts](amb-bridge/how-to-use-cryptokitties-bridge/deploy-cryptokitty-contracts.md)
   * [Verify Contracts in BlockScout](amb-bridge/how-to-use-cryptokitties-bridge/verify-contracts-in-blockscout.md)
   * [View Cats in BlockScout](amb-bridge/how-to-use-cryptokitties-bridge/view-in-blockscout.md)
