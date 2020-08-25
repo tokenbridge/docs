@@ -1,8 +1,8 @@
 ---
-description: Useful documents for the multi-token AMB extension
+description: Using OmniBridge to bridge ANY ERC20-type token to the xDai chain
 ---
 
-# OmniBridge multi-token extension
+# 🌉 OmniBridge Extension
 
 The OmniBridge multi-token extension for the Arbitrary Message Bridge between Ethereum and the xDai chain is the simplest way to transfer **ANY** ERC20/ERC677/ERC827 token to the xDai chain.
 
@@ -14,7 +14,7 @@ An AMB bridge extension is a pair of mediator contracts associated with a specif
 The list of the tokens already bridged through the extension is available [here](the-bridged-tokens-list.md).
 {% endhint %}
 
-By using this extension any user \(not only the token contract owner\) can transfer tokens from  Ethereum to a chain with fast, inexpensive transactions \(in this case the xDai chain\) without deploying any additional contracts. The specified token amount is locked in the mediator contract, a new token contract is deployed automatically on the xDai chain, and the requested token amount is minted on the xDai chain. The reverse operation burns bridgeable tokens on the xDai chain and unlocks the tokens from the token contract on Ethereum.
+By using this extension any user \(not only the token contract owner\) can transfer tokens from Ethereum to a chain with fast, inexpensive transactions \(in this case the xDai chain\) without deploying any additional contracts. The specified token amount is locked in the mediator contract, a new token contract is deployed automatically on the xDai chain, and the requested token amount is minted on the xDai chain. The reverse operation burns bridgeable tokens on the xDai chain and unlocks the tokens from the token contract on Ethereum.
 
 {% hint style="info" %}
 More details for the operations to deposit and withdraw tokens are available [here.](extension-internals.md)

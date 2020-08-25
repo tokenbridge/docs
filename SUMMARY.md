@@ -60,7 +60,7 @@
 ## ETH-XDAI AMB <a id="eth-xdai-amb-bridge"></a>
 
 * [About the ETH-xDai AMB](eth-xdai-amb-bridge/about-the-eth-xdai-amb.md)
-* [OmniBridge multi-token extension](eth-xdai-amb-bridge/multi-token-extension/README.md)
+* [🌉 OmniBridge Extension](eth-xdai-amb-bridge/multi-token-extension/README.md)
   * [How to transfer tokens](eth-xdai-amb-bridge/multi-token-extension/how-to-transfer-tokens.md)
   * [OmniBridge UI](eth-xdai-amb-bridge/multi-token-extension/ui-to-transfer-tokens.md)
   * [New token contract verification in BlockScout](eth-xdai-amb-bridge/multi-token-extension/new-token-contract-verification-in-blockscout.md)
