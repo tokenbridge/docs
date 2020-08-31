@@ -9,7 +9,7 @@ description: Following a withdrawal from xDai to Dai
 3. The request generates an event on the xDai side.
 4. Bridge validator nodes catch this event and send confirmation \(signatures\) to the contract on the xDai side.
 5. Once enough signatures are collected \(currently 3 of 4\), one of the bridge validators sends the signatures to Ethereum.
-6. The bridge contract on Ethereum checks that the signatures are valid. If they are,  the requested Dai is unlocked for the user.
+6. The bridge contract on Ethereum checks that the signatures are valid. If they are,  the requested Dai is unlocked for the user.  _Note: This final step can be delayed if Ethereum mainnet is congested._
 
 To track the relay we locate the originating transaction, find the corresponding transactions from confirmed validators, then find the transaction with signatures on Ethereum. 
 
