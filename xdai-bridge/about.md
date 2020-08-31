@@ -24,12 +24,12 @@ There are currently two bridges on xDai that connect it to the Ethereum Mainnet.
       </td>
     </tr>
     <tr>
-      <td style="text-align:left">Contract on Mainnet Side</td>
+      <td style="text-align:left">Proxy Contract on Mainnet Side</td>
       <td style="text-align:left"><a href="https://etherscan.io/address/0x4aa42145Aa6Ebf72e164C9bBC74fbD3788045016#readProxyContract">https://etherscan.io/address/0x4aa42145Aa6Ebf72e164C9bBC74fbD3788045016#readProxyContract</a>
       </td>
     </tr>
     <tr>
-      <td style="text-align:left">Contract on xDai side</td>
+      <td style="text-align:left">Proxy Contract on xDai side</td>
       <td style="text-align:left"><a href="https://blockscout.com/poa/xdai/address/0x7301CFA0e1756B71869E93d4e4Dca5c7d0eb0AA6/transactions
 ">https://blockscout.com/poa/xdai/address/0x7301CFA0e1756B71869E93d4e4Dca5c7d0eb0AA6/transactions<br /></a>
       </td>

@@ -62,6 +62,7 @@
 
 * [About the ETH-xDai AMB](eth-xdai-amb-bridge/about-the-eth-xdai-amb/README.md)
   * [Bridge Fees](eth-xdai-amb-bridge/about-the-eth-xdai-amb/bridge-fees.md)
+  * [MultiSig](eth-xdai-amb-bridge/about-the-eth-xdai-amb/multisig.md)
 * [🌉 OmniBridge Extension](eth-xdai-amb-bridge/multi-token-extension/README.md)
   * [How to transfer tokens](eth-xdai-amb-bridge/multi-token-extension/how-to-transfer-tokens.md)
   * [OmniBridge UI](eth-xdai-amb-bridge/multi-token-extension/ui-to-transfer-tokens.md)
