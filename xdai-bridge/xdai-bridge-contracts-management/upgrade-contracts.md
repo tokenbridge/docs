@@ -2,7 +2,7 @@
 description: Upgrading bridge or validators contracts
 ---
 
-# Upgrade Contracts
+# Upgrade Contracts - Instructions
 
 There are two possible scenarios for how the bridge or validators contracts can be upgraded:
 
