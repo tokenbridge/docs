@@ -34,8 +34,7 @@ There are currently two bridges on xDai that connect it to the Ethereum Mainnet.
       </td>
     </tr>
     <tr>
-      <td style="text-align:left"><a href="https://blockscout.com/poa/xdai/address/0x7301CFA0e1756B71869E93d4e4Dca5c7d0eb0AA6/read_proxy">Current Bridge Validators</a>
-      </td>
+      <td style="text-align:left">Current Bridge Validators</td>
       <td style="text-align:left">
         <p><a href="https://blockscout.com/poa/xdai/address/0x7301CFA0e1756B71869E93d4e4Dca5c7d0eb0AA6/read_proxy">https://dai-bridge.poa.network/status </a>
         </p>
