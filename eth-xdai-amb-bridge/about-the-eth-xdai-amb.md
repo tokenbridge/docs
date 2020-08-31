@@ -21,7 +21,9 @@ The mediator contracts rely on the following information about the ETH-xDai Arbi
 
 It is possible to get an AMB transaction status by using [the Live Monitoring app](https://docs.tokenbridge.net/about-tokenbridge/components/amb-live-monitoring-application): [http://alm-xdai.herokuapp.com/](http://alm-xdai.herokuapp.com/)
 
-Transactions require a multi-sig for successful transfer. Current validators can be viewed with the live monitoring application. An example transaction view is available here:  [https://alm-xdai.herokuapp.com/100/0x83f61bb582610c4cd7b6347a84f470020bfeeea699340016cdcf3c31ff0312e3](https://alm-xdai.herokuapp.com/100/0x83f61bb582610c4cd7b6347a84f470020bfeeea699340016cdcf3c31ff0312e3)
+Transactions require a multi-sig \(for bridge validators, not users\) for a successful transfer. Current validators can be viewed with the live monitoring application. An example transaction view is available here:  [https://alm-xdai.herokuapp.com/100/0x83f61bb582610c4cd7b6347a84f470020bfeeea699340016cdcf3c31ff0312e3](https://alm-xdai.herokuapp.com/100/0x83f61bb582610c4cd7b6347a84f470020bfeeea699340016cdcf3c31ff0312e3)
+
+Withdrawal requests call the `transfer` method of the token contracts with the mediator contract address as the recipient \(the multitoken/erc20-to-erc20 extension for AMB\)
 
 {% hint style="success" %}
 A detailed description of the AMB and examples of AMB extensions are available here: [Arbitrary Message Bridge \(AMB\)](https://docs.tokenbridge.net/amb-bridge/about-amb-bridge).
