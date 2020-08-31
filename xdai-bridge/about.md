@@ -24,22 +24,23 @@ There are currently two bridges on xDai that connect it to the Ethereum Mainnet.
       </td>
     </tr>
     <tr>
-      <td style="text-align:left">Proxy Contract on Mainnet Side</td>
-      <td style="text-align:left"><a href="https://etherscan.io/address/0x4aa42145Aa6Ebf72e164C9bBC74fbD3788045016#readProxyContract">https://etherscan.io/address/0x4aa42145Aa6Ebf72e164C9bBC74fbD3788045016#readProxyContract</a>
+      <td style="text-align:left">Ethereum Proxy Contract</td>
+      <td style="text-align:left"><a href="https://etherscan.io/address/0x4aa42145Aa6Ebf72e164C9bBC74fbD3788045016#readProxyContract">0x4aa42145Aa6Ebf72e164C9bBC74fbD3788045016</a>
       </td>
     </tr>
     <tr>
-      <td style="text-align:left">Proxy Contract on xDai side</td>
-      <td style="text-align:left"><a href="https://blockscout.com/poa/xdai/address/0x7301CFA0e1756B71869E93d4e4Dca5c7d0eb0AA6/transactions
-">https://blockscout.com/poa/xdai/address/0x7301CFA0e1756B71869E93d4e4Dca5c7d0eb0AA6/transactions<br /></a>
+      <td style="text-align:left">xDai Proxy Contract</td>
+      <td style="text-align:left"><a href="https://blockscout.com/poa/xdai/address/0x7301CFA0e1756B71869E93d4e4Dca5c7d0eb0AA6/read_proxy">0x7301CFA0e1756B71869E93d4e4Dca5c7d0eb0AA6</a>
       </td>
     </tr>
     <tr>
-      <td style="text-align:left">Current Bridge Validators</td>
+      <td style="text-align:left"><a href="https://blockscout.com/poa/xdai/address/0x7301CFA0e1756B71869E93d4e4Dca5c7d0eb0AA6/read_proxy">Current Bridge Validators</a>
+      </td>
       <td style="text-align:left">
-        <p><a href="https://dai-bridge.poa.network/status">https://dai-bridge.poa.network/status</a> 
+        <p><a href="https://blockscout.com/poa/xdai/address/0x7301CFA0e1756B71869E93d4e4Dca5c7d0eb0AA6/read_proxy">https://dai-bridge.poa.network/status </a>
         </p>
-        <p>(MakerDAO, Giveth, POA, Protofire)</p>
+        <p><a href="https://blockscout.com/poa/xdai/address/0x7301CFA0e1756B71869E93d4e4Dca5c7d0eb0AA6/read_proxy">(MakerDAO, Giveth, POA, Protofire)</a>
+        </p>
       </td>
     </tr>
   </tbody>
