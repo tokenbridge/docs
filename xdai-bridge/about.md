@@ -4,7 +4,7 @@ description: 'The xDai bridge is used to transform Dai into xDai, and xDai back 
 
 # About the xDai Bridge
 
-There are currenlty two bridges on xDai that connect it to the Ethereum Mainnet. The ERC-20 to Native Bridge, and the xDai &lt;-&gt; ETH AMB. This sections covers the ERC20-Native Bridge
+There are currently two bridges on xDai that connect it to the Ethereum Mainnet. The ERC-20 to Native Bridge, and the [xDai &lt;-&gt; ETH AMB](../eth-xdai-amb-bridge/about-the-eth-xdai-amb.md). This sections covers the ERC20-Native Bridge.
 
 |  |  |
 | :--- | :--- |
