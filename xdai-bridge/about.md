@@ -42,6 +42,10 @@ There are currently two bridges on xDai that connect it to the Ethereum Mainnet.
         </p>
       </td>
     </tr>
+    <tr>
+      <td style="text-align:left">Max per day</td>
+      <td style="text-align:left">100,000 per day in either direction. Day resets at 00:00 UTC.</td>
+    </tr>
   </tbody>
 </table>
 
