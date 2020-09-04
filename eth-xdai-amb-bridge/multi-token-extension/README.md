@@ -11,7 +11,7 @@ An AMB bridge extension is a pair of mediator contracts associated with a specif
 {% endhint %}
 
 {% hint style="success" %}
-The list of the tokens already bridged through the extension is available [here](the-bridged-tokens-list.md).
+The list of the tokens already bridged through the extension is available [here](the-bridged-tokens-list/).
 
 A [UI is in process](ui-to-transfer-tokens.md). For now you can follow the [How to transfer tokens](how-to-transfer-tokens.md) section to perform operations.
 {% endhint %}
