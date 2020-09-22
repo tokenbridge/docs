@@ -1,7 +1,9 @@
 # OmniBridge UI
 
-{% hint style="info" %}
-👷 The OmniBridge UI is currently under construction. Check back soon for updates. 
+{% hint style="warning" %}
+OmniBridge and OmniBridge UI is experimental software in Beta, use at your own risk. Unofficial OmniBridge UI can be accessed here [https://xdai-omnibridge.web.app/  
+](https://xdai-omnibridge.web.app/
+)
 {% endhint %}
 
 At the moment, there is no uniform UI to allow users to transfer tokens through the AMB multi-token extension. One option for a token owner \(without programming knowledge\) is to use [solUI](https://solui.dev/).
