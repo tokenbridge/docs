@@ -175,13 +175,21 @@ In Home -&gt; Foreign transactions there are waiting/pending states for confirma
     </tr>
     <tr>
       <td style="text-align:left">Execution Waiting</td>
-      <td style="text-align:left">The specified transaction was included in a block and the validators collected
-        signatures. Either
-        <br />1. One of the validators is waiting for chain finalization.
-        <br />2. A validator skipped its duty to relay signatures. Check status again
-        after a few blocks.</td>
+      <td style="text-align:left">
+        <p>The specified transaction was included in a block and the validators collected
+          signatures. Either
+          <br />1. One of the validators is waiting for chain finalization.
+          <br />2. A validator skipped its duty to relay signatures.
+          <br />3. The execution transaction is still pending (e.g. due to the gas price
+          spike).</p>
+        <p>Check status again after a few blocks.</p>
+      </td>
       <td style="text-align:left">Signatures were collected in the Home chain but the transaction from the
-        validator to forward signatures was not yet found on the Foreign side.</td>
+        validator to forward signatures was not yet found on the Foreign side.
+        <br
+        />It could be also due to a specific RPC endpoint used for the chain - the
+        oracle sent the transaction to the Foreign side but it is not possible
+        to found it due to the RPC endpoint functionality (e.g. on Infura)</td>
     </tr>
     <tr>
       <td style="text-align:left">Execution Pending</td>
