@@ -20,7 +20,7 @@ There are currently two bridges on xDai that connect it to the Ethereum Mainnet.
     </tr>
     <tr>
       <td style="text-align:left">UI</td>
-      <td style="text-align:left"><a href="https://dai-bridge.poa.network/">https://dai-bridge.poa.network/</a>
+      <td style="text-align:left"><a href="https://bridge.xdaichain.com/">https://bridge.xdaichain.com/</a>
       </td>
     </tr>
     <tr>
@@ -36,7 +36,7 @@ There are currently two bridges on xDai that connect it to the Ethereum Mainnet.
     <tr>
       <td style="text-align:left">Current Bridge Validators</td>
       <td style="text-align:left">
-        <p><a href="https://blockscout.com/poa/xdai/address/0x7301CFA0e1756B71869E93d4e4Dca5c7d0eb0AA6/read_proxy">https://dai-bridge.poa.network/status </a>
+        <p><a href="https://bridge.xdaichain.com/status">https://bridge.xdaichain.com/status</a> 
         </p>
         <p><a href="https://blockscout.com/poa/xdai/address/0x7301CFA0e1756B71869E93d4e4Dca5c7d0eb0AA6/read_proxy">(MakerDAO, Giveth, POA, Protofire)</a>
         </p>
@@ -52,5 +52,5 @@ There are currently two bridges on xDai that connect it to the Ethereum Mainnet.
 
 The xDai chain uses the ERC20 to Native TokenBridge functionality to provide fast, inexpensive and stable transactions. This bridge allows users to transform DAI \(an ERC20 stable token\) on the mainnet into xDAI on a compatible chain. xDAI tokens can then be sent quickly and with minimal cost on the xDAI network. The xDAI chain has been a breakout success in the Ethereum community, providing an easy way for vendors to accept a stable cryptocurrency.
 
-![xDai Bridge UI](../.gitbook/assets/bridge.png)
+![](../.gitbook/assets/bridge1.jpg)
 

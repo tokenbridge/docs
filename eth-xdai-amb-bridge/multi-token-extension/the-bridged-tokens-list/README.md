@@ -4,13 +4,15 @@ description: Tokens Bridged using the multi-token bridge extension
 
 # 🌱 Bridged Tokens List
 
+## 🌱 The Bridged Token List is growing daily! 🌱
+
 {% hint style="success" %}
 A dynamic list with additional information is now available at [https://blockscout.com/poa/xdai/bridged-tokens](https://blockscout.com/poa/xdai/bridged-tokens)
 {% endhint %}
 
-The OmniBridge multi-token bridge extension is now being used to bridge many tokens from Ethereum to xDai. When a token is bridged, the name is appended with _**on xDai**_.  On a token page, you can also find the link to the original token on Ethereum. For more, see the [corresponding token contract addresses page](../correspondence-of-bridgeable-tokens.md).
+The OmniBridge multi-token bridge extension is now being used to bridge many tokens from Ethereum to xDai. When a token is bridged, the name is appended with _**on xDai**_.  On a token page, you can also find the link to the original token on Ethereum. For more, see the [corresponding token contract addresses page](../correspondence-of-bridgeable-tokens.md). 
 
-## 🌱 The Bridged Token List is growing daily! 🌱
+_List last updated Sept 2020. See the_ [_dynamic list on BlockScout_](https://blockscout.com/poa/xdai/bridged-tokens) _for up-to-date information._
 
 | Token | On xDai | On Ethereum  |
 | :--- | :--- | :--- |

@@ -30,7 +30,9 @@ The following bridges are fully-functional in production environments:
 * \*\*\*\*[**xDai Bridge**](https://dai-bridge.poa.network/) \(Eth Mainnet to xDai Network\): The xDai chain uses the ERC20-to-Native TokenBridge functionality to provide fast, inexpensive and stable transactions.
 * \*\*\*\*[**Eth Classic Bridge**](https://wetc-app.herokuapp.com/) \(Eth Classic to Eth Mainnet\): The Eth Classic Bridge connects ETC to ETH, where ETC is available as WETC.
 
-![POA Bridg UI](.gitbook/assets/poa-bridge.png)
+![POA Bridge UI](.gitbook/assets/poa-bridge.png)
+
+![xDai Bridge UI](.gitbook/assets/bridge1.jpg)
 
 ## \*\*\*\*
 
