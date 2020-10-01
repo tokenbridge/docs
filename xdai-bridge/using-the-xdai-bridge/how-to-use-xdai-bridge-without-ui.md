@@ -10,7 +10,7 @@ There is no need to use the Bridge UI if you want transfer your DAI to xDai or x
 
 ## Transfer Dai from the Ethereum Mainnet to the xDai Chain
 
-* Make a usual transfer of DAI tokens \(`0x89d24A6b4CcB1B6fAA2625fE562bDD9a23260359`\) on the ETH Mainnet with any wallet software designed for ERC20 transfers \(e.g. [NiftyWallet ](https://chrome.google.com/webstore/detail/nifty-wallet/jbdaocneiiinmjbjlgalhcelgbejmnid?hl=en), [MyEtherWallet.com](http://myetherwallet.com/), [TrustWallet](https://trustwallet.com/)\). 
+* Make a usual transfer of DAI tokens \(`0x6b175474e89094c44da98b954eedeac495271d0f`\) on the ETH Mainnet with any wallet software designed for ERC20 transfers \(e.g. [NiftyWallet ](https://chrome.google.com/webstore/detail/nifty-wallet/jbdaocneiiinmjbjlgalhcelgbejmnid?hl=en), [MyEtherWallet.com](http://myetherwallet.com/), [TrustWallet](https://trustwallet.com/)\). 
   * Use the Token Bridge address `0x4aa42145Aa6Ebf72e164C9bBC74fbD3788045016` as the recipient of the payment.
 * Wait for transaction confirmation in the ETH Mainnet \(transaction time depends on the gas price you setup for the transfer transaction and the network throughput\).
 * Wait for the relay confirmation by the bridge validators \(time depends on the number of blocks \ the bridge validators wait for to consider the chain finalized, currently set at  `8`\).
