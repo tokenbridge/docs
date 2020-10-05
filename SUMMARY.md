@@ -68,6 +68,7 @@
   * [OmniBridge UI](eth-xdai-amb-bridge/multi-token-extension/ui-to-transfer-tokens.md)
   * [New token contract verification in BlockScout](eth-xdai-amb-bridge/multi-token-extension/new-token-contract-verification-in-blockscout.md)
   * [Corresponding token contract addresses \(ETH - XDAI\)](eth-xdai-amb-bridge/multi-token-extension/correspondence-of-bridgeable-tokens.md)
+  * [Get status of the OmniBridge deposit](eth-xdai-amb-bridge/multi-token-extension/get-status-of-the-omnibridge-deposit.md)
   * [OmniBridge Extension internals & diagrams](eth-xdai-amb-bridge/multi-token-extension/extension-internals.md)
   * [🌱 Bridged Tokens List](eth-xdai-amb-bridge/multi-token-extension/the-bridged-tokens-list/README.md)
     * [Token list compilation](eth-xdai-amb-bridge/multi-token-extension/the-bridged-tokens-list/token-list-compilation.md)
