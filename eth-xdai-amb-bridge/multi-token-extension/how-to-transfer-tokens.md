@@ -6,7 +6,9 @@ description: >-
 
 # How to transfer tokens
 
-The instructions below use the Etherscan UI and the Blockscout UI to demonstrate the token transfer process. We expect future applications will introduce a more convenient UI. In this case the application will need to call the methods of the multi-token mediators contracts described below.
+The instructions below use the Etherscan UI and the Blockscout UI to demonstrate the token transfer process. 
+
+There is an [unofficial OMNIBRIDGE UI](https://xdai-omnibridge.web.app/) now available which calls the methods of the multi-token mediators contracts described below. 
 
 ## General Case: ERC20 Token Transfer
 
