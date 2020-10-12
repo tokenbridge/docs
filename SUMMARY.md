@@ -66,7 +66,7 @@
 * [🌉 OmniBridge Extension](eth-xdai-amb-bridge/multi-token-extension/README.md)
   * [How to transfer tokens](eth-xdai-amb-bridge/multi-token-extension/how-to-transfer-tokens.md)
   * [OmniBridge UI](eth-xdai-amb-bridge/multi-token-extension/ui-to-transfer-tokens/README.md)
-    * [Untitled](eth-xdai-amb-bridge/multi-token-extension/ui-to-transfer-tokens/untitled.md)
+    * [Transfer any ERC20 from Ethereum to xDai](eth-xdai-amb-bridge/multi-token-extension/ui-to-transfer-tokens/untitled.md)
   * [New token contract verification in BlockScout](eth-xdai-amb-bridge/multi-token-extension/new-token-contract-verification-in-blockscout.md)
   * [Corresponding token contract addresses \(ETH - XDAI\)](eth-xdai-amb-bridge/multi-token-extension/correspondence-of-bridgeable-tokens.md)
   * [Get status of the OmniBridge deposit](eth-xdai-amb-bridge/multi-token-extension/get-status-of-the-omnibridge-deposit.md)
