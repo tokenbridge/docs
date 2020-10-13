@@ -20,12 +20,27 @@ There is no need to use the Bridge UI if you want transfer your DAI to xDai or x
 
 ### Transfer xDai from the xDai chain to the Ethereum Mainnet
 
-* Send xDai coins to the Token Bridge address `0x7301CFA0e1756B71869E93d4e4Dca5c7d0eb0AA6` on the xDai Сhain using any wallet software.
-* Wait for the transaction confirmation in the xDai chain \(5 seconds\).
-* Wait for relay confirmation by the bridge validators \(depends on number of validators and the ETH Mainnet network throughput\)
-* Check your balance on the ETH Mainnet
+1\) Send xDai coins to the Token Bridge address `0x7301CFA0e1756B71869E93d4e4Dca5c7d0eb0AA6` on the xDai Сhain using any wallet software.
 
-![Sending xDai to Dai in AlphaWallet](../../.gitbook/assets/untitled.png)
+2\) Wait for the transaction confirmation on the xDai chain \(5 seconds\).
+
+3\) Copy the transaction hash of the confirmation and connect to the Ethereum mainnet.  
+  
+4\)  Visit the helper contract: [https://blockscout.com/poa/xdai/address/0x6A92e97A568f5F58590E8b1f56484e6268CdDC51/read-contract](https://blockscout.com/poa/xdai/address/0x6A92e97A568f5F58590E8b1f56484e6268CdDC51/read-contract)  
+  
+5\) In the “getMessageHash” method field add the following information from your originating transaction and press the Query button. The method will return a hashed message.
+
+*  DAI recipient \(typically the transaction sender but may differ if the ‘relayTokens’ functionality is used\)
+* Value \(in Wei - do not include fees, only amount sent\)
+* Originating transaction hash
+
+5\) Copy the message hash and paste into the “getMessage” method. If you receive 0x0 it means either the bridge oracles did not send a confirmation for the withdrawal yet or the data entered in the step 3 is incorrect. Double check the info and if it is correct you will eventually receive the message.
+
+6\) Once you receive the message, use the message hash again this time in the method “getSignatures”. It will return a blob with packed signatures provided by the validator. The method could fail, if not enough signatures are collected.
+
+7\) Go to Etherscan: [https://etherscan.io/address/0x4aa42145aa6ebf72e164c9bbc74fbd3788045016\#writeProxyContract](https://etherscan.io/address/0x4aa42145aa6ebf72e164c9bbc74fbd3788045016#writeProxyContract)
+
+8\) Enter the message and the signatures to the method “executeSignatures” and press the “Write” button. If the method reverts, the withdrawal was likely already executed. You can check all input for the recipient here: [https://etherscan.io/token/0x6b175474e89094c44da98b954eedeac495271d0f?a=0x](https://etherscan.io/token/0x6b175474e89094c44da98b954eedeac495271d0f?a=0x)..., where the address of the recipient follows after “a=“. \(edited\) 
 
 {% hint style="success" %}
 Instructions migrated from the POA forum [https://forum.poa.network/t/how-to-relay-dai-stablecoins-without-usage-of-the-bridge-ui/1876](https://forum.poa.network/t/how-to-relay-dai-stablecoins-without-usage-of-the-bridge-ui/1876)
