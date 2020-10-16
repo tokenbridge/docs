@@ -57,7 +57,7 @@ Due to different nature of tokens on two sides of the xDai bridge the operations
 ### xDai to Dai
 
 {% hint style="info" %}
-Since Etherscan does not currently support xDai, we use MyEtherWallet for this example. You can also use Nifty Wallet.
+Since Etherscan does not currently support xDai, we use MyEtherWallet for this example. You can also use Nifty Wallet or BlockScout.
 {% endhint %}
 
 1. Choose the xDai chain in the browser wallet extension and login to [MyEtherWallet \(MEW\)](https://www.myetherwallet.com/access-my-wallet). 
@@ -81,7 +81,31 @@ where
 * `_receiver` -- Account to receive Dai tokens on the Ethereum Mainnet
 * `Value in ETH` -- the amount of native tokens \(in ether\) to transfer
 
-4. Submit the transaction in the MetaMask and wait when it is included in the chain.
+4. Submit the transaction in the MetaMask and wait when it is included in the chain. Copy the transaction hash of the confirmation  
+  
+5.  Visit the helper contract: [https://blockscout.com/poa/xdai/address/0x6A92e97A568f5F58590E8b1f56484e6268CdDC51/read-contract](https://blockscout.com/poa/xdai/address/0x6A92e97A568f5F58590E8b1f56484e6268CdDC51/read-contract)  
+  
+6. In the `getMessageHash` method field add the following information from your originating transaction and press the Query button. The method will return a hashed message.
 
-5. It will require the xDai bridge some time to relay the withdrawal request to the Ethereum Mainnet. Eventually the balance of the receiver account in the Dai token contract will be increased.
+*  DAI recipient \(alternate address funds were sent to\)
+* Value \(in **Wei** - do not include fees, only amount sent \(Wei converter at [http://eth-converter.com/](http://eth-converter.com/)\)
+* Originating transaction hash
+
+6\) Copy the message hash and paste into the `getMessage` method. If you receive 0x0 it means either the bridge oracles did not send a confirmation for the withdrawal yet or the data entered in the step 3 is incorrect. Double check the info and if it is correct you will eventually receive the message.
+
+7\) Once you receive the message, use the message hash again this time with the `getSignatures` method. It will return a blob with packed signatures provided by the validator. The method could fail if not enough signatures are collected.
+
+![](../../.gitbook/assets/blockscout1.jpg)
+
+8\) Go to Etherscan on mainnet and connect a web3 wallet: [https://etherscan.io/address/0x4aa42145aa6ebf72e164c9bbc74fbd3788045016\#writeProxyContract](https://etherscan.io/address/0x4aa42145aa6ebf72e164c9bbc74fbd3788045016#writeProxyContract)
+
+9\) Enter the message \(from `getMessage` method above\) and the signatures blob to the  `executeSignatures` method, press the **Write** button and complete the transaction with a Web3 wallet. If the method reverts, the withdrawal was likely already executed. You can check all input for the recipient here: [https://etherscan.io/token/0x6b175474e89094c44da98b954eedeac495271d0f?a=0x](https://etherscan.io/token/0x6b175474e89094c44da98b954eedeac495271d0f?a=0x)..., where the recipient's address follows after “a=“.
+
+![](../../.gitbook/assets/etherscan1.jpg)
+
+Once you have written to the contract method, a View your **transaction** button will appear. Click to view the pending transaction. 
+
+![](../../.gitbook/assets/etherscan3.jpg)
+
+![A completed transaction](../../.gitbook/assets/etherscan2.jpg)
 
