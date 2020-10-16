@@ -19,7 +19,11 @@ Due to different nature of tokens on two sides of the xDai bridge the operations
 
 ![](../../.gitbook/assets/1-etherscan.png)
 
-4. Approve the bridge contract to perform operations with tokens:
+4. Approve the bridge contract to perform operations with tokens
+
+{% hint style="info" %}
+You must give your approval to permit a contract to transfer tokens, as the default behavior only allows the token owner to transfer. This approval for the contract is the same mechanism Uniswap and other apps use for similar functionality. 
+{% endhint %}
 
 * `usr(address)` -- the address of the xDai bridge contract in the Ethereum Mainnet: `0x4aa42145Aa6Ebf72e164C9bBC74fbD3788045016`
 * `wad(uint256)` -- the amount of tokens \(in Wei\) approved to send through the bridge \(in this case 2 Dai\): `2000000000000000000`
