@@ -30,7 +30,7 @@ There are currently two bridges on xDai that connect it to the Ethereum Mainnet.
     </tr>
     <tr>
       <td style="text-align:left">xDai Proxy Contract</td>
-      <td style="text-align:left"><a href="https://blockscout.com/poa/xdai/address/0x7301CFA0e1756B71869E93d4e4Dca5c7d0eb0AA6/read_proxy">0x7301CFA0e1756B71869E93d4e4Dca5c7d0eb0AA6</a>
+      <td style="text-align:left"><a href="https://blockscout.com/poa/xdai/address/0x7301CFA0e1756B71869E93d4e4Dca5c7d0eb0AA6/read-proxy">0x7301CFA0e1756B71869E93d4e4Dca5c7d0eb0AA6</a>
       </td>
     </tr>
     <tr>
