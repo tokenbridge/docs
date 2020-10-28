@@ -47,6 +47,11 @@ There are currently two bridges on xDai that connect it to the Ethereum Mainnet.
       <td style="text-align:left">Updated to 10,000,000 per day in either direction with <a href="https://forum.poa.network/t/increase-daily-limit-for-xdai-withdrawals-from-the-xdai-to-the-mainnet/3823">governance decision</a>.
         Day resets at 00:00 UTC.</td>
     </tr>
+    <tr>
+      <td style="text-align:left">FAQs</td>
+      <td style="text-align:left"><a href="https://www.xdaichain.com/about-xdai/faqs/bridges-xdai-bridge-and-omnibridge">https://www.xdaichain.com/about-xdai/faqs/bridges-xdai-bridge-and-omnibridge</a>
+      </td>
+    </tr>
   </tbody>
 </table>
 

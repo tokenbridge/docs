@@ -20,6 +20,8 @@ By using this extension any user \(not only the token contract owner\) can trans
 
 {% hint style="info" %}
 More details for the operations to deposit and withdraw tokens are available [here.](extension-internals.md)
+
+General FAQs are located here: [https://www.xdaichain.com/about-xdai/faqs/bridges-xdai-bridge-and-omnibridge](https://www.xdaichain.com/about-xdai/faqs/bridges-xdai-bridge-and-omnibridge)
 {% endhint %}
 
 {% embed url="https://www.youtube.com/watch?v=WMubACRjS\_4" caption="Lead Architect Alexander Kolotov speaks at EdCon on the Multi-token tool" %}
