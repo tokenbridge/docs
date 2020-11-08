@@ -38,3 +38,15 @@ The TokenBridge has undergone multiple independent security audits and assessmen
 [Quantstamp Security Audit PDF](https://github.com/poanetwork/tokenbridge/blob/73d500210546e2959536dc569f1aec5752077225/audit/quantstamp/POA-Network-Token-bridge-security-assessment-report.pdf)
 {% endhint %}
 
+## TokenBridge Audit by Quantstamp \(covers OmniBridge\)
+
+**Completed:** November 6, 2020
+
+**Conclusion**: No high and medium risk issues found, all low risk issues addressed.
+
+**Contracts:** Revised in version 5.5.0-rc0 to address audit. [https://github.com/poanetwork/tokenbridge-contracts/releases/tag/5.5.0-rc0](https://github.com/poanetwork/tokenbridge-contracts/releases/tag/5.5.0-rc0)
+
+{% hint style="success" %}
+[Quantstamp Security Audit PDF](https://github.com/poanetwork/tokenbridge/blob/master/audit/quantstamp/POA-Network-TokenBridge-contracts-5.4.1-security-assessment-report.pdf)
+{% endhint %}
+
