@@ -8,7 +8,7 @@ description: >-
 
 The instructions below use the Etherscan UI and the Blockscout UI to demonstrate the token transfer process. 
 
-There is an [unofficial OMNIBRIDGE UI](https://xdai-omnibridge.web.app/) now available which calls the methods of the multi-token mediators contracts described below. 
+There is an [OMNIBRIDGE UI](https://omni.xdaichain.com/) now available which calls the methods of the multi-token mediators contracts described below. 
 
 ## General Case: ERC20 Token Transfer
 

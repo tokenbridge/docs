@@ -1,7 +1,7 @@
 # OmniBridge UI
 
 {% hint style="warning" %}
-OmniBridge and OmniBridge UI is experimental software in Beta, use at your own risk. The unofficial OmniBridge UI can be accessed here [https://xdai-omnibridge.web.app/  
+OmniBridge and OmniBridge UI is experimental software in Beta, use at your own risk. The OmniBridge UI can be accessed here [https://omni.xdaichain.com/  
 ](https://xdai-omnibridge.web.app/
 )
 {% endhint %}

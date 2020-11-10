@@ -3,16 +3,14 @@
 It is possible to use the OmniBridge UI to transfer any ERC20 from Ethereum to xDai. Any user can initiate this initial transfer. Once the token exists on xDai, it can be transferred back and forth using the same UI.
 
 {% hint style="warning" %}
-OmniBridge and OmniBridge UI are experimental Beta software, use at your own risk. Access the unofficial OmniBridge UI: [https://xdai-omnibridge.web.app/](https://xdai-omnibridge.web.app/
-)
+OmniBridge and OmniBridge UI are experimental Beta software, use at your own risk. Access the unofficial OmniBridge UI: [https://omni.xdaichain.com/](https://omni.xdaichain.com/)
 {% endhint %}
 
 ## Token Transfer
 
 In this example, we transfer the Basic Attention Token \(BAT\) from Ethereum to xDai. When we start, this token does not yet exist on xDai. It takes less than 5 minutes and some ETH for gas fees.
 
-1\) Go to the OmniBridge UI at [https://xdai-omnibridge.web.app/](https://xdai-omnibridge.web.app/
-)
+1\) Go to the OmniBridge UI at [https://omni.xdaichain.com/](https://omni.xdaichain.com/)
 
 1. Connect your MetaMask to Ethereum Mainnet
 2. Select the Token you want to transfer \(here we select BAT\) and enter the amount.
