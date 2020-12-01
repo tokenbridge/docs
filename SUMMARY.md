@@ -93,7 +93,8 @@
 
 ## Kovan-Sokol AMB <a id="kovan-sokol-amb-bridge"></a>
 
-* [About the Kovan-Sokol AMB](kovan-sokol-amb-bridge/about-the-kovan-sokol-amb.md)
+* [About the Kovan-Sokol AMB](kovan-sokol-amb-bridge/about-the-kovan-sokol-amb/README.md)
+  * [Submit confirmations manually](kovan-sokol-amb-bridge/about-the-kovan-sokol-amb/submit-confirmations-manually.md)
 * [Multi-token extension \(testing\)](kovan-sokol-amb-bridge/multi-token-extension-testing.md)
 * [Native-to-ERC20 bridge extension](kovan-sokol-amb-bridge/native-to-erc20-bridge-extension/README.md)
   * [Transfer SPOA through native-to-ERC20 extension without UI](kovan-sokol-amb-bridge/native-to-erc20-bridge-extension/transfer-spoa-through-native-to-erc20-extension-without-ui.md)
