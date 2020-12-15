@@ -15,13 +15,9 @@ The steps below assume that the AMB is up and running and serves [the bridge bet
 ## Instructions
 
 1. `docker pull poanetwork/tokenbridge-contracts:latest` 
-2. Deploy an ERC20 token contract to the Foreign \(Kovan\) chain. The contract `PermittableToken` \(`PermittableToken_flat.sol`\) from the archive `tokenbridge-contracts-flattened-...zip` located on [the release page in the TokenBridge contracts repo](https://github.com/poanetwork/tokenbridge-contracts/releases/latest) can be used for this. The deployment can be performed with Remix or MyEtherWallet. _**Note:** In the steps below we assume that the address of the deployed token contract is_ `0xff94183659f549D6273349696d73686Ee1d2AC83`.
-3. Verify the contract in the block explorer \(contract name: `PermittableToken`
-
-   , compiler version: `v0.4.24+commit.e67f0147`, optimization is enabled, automatic identification of constructor arguments\).  
-
-4. Mint some amount of tokens for an account. 
-5. Create `amb-erc20-to-erc677.config` config file with the following content:
+2. Deploy an ERC20 token contract to the Foreign \(Kovan\) chain. The contract `PermittableToken` \(`PermittableToken_flat.sol`\) from the archive `tokenbridge-contracts-flattened-...zip` located on [the release page in the TokenBridge contracts repo](https://github.com/poanetwork/tokenbridge-contracts/releases/latest) can be used for this. The deployment can be performed with Remix or MyEtherWallet. _**Note:** In the steps below we assume that the address of the deployed token contract is_ `0xff94183659f549D6273349696d73686Ee1d2AC83`.  Verify the contract in the block explorer \(contract name: `PermittableToken`, compiler version: `v0.4.24+commit.e67f0147`, optimization is enabled, automatic identification of constructor arguments\). 
+3. Mint some amount of tokens for an account. 
+4. Create `amb-erc20-to-erc677.config` config file with the following content:
 
    ```text
    # The type of bridge. Defines set of contracts to be deployed.
@@ -130,7 +126,7 @@ The steps below assume that the AMB is up and running and serves [the bridge bet
 
    _**Please note:**_ if `HOME_EXPLORER_URL`, `FOREIGN_EXPLORER_URL` and `FOREIGN_EXPLORER_API_KEY` are not configured, it will be necessary to verify the contracts in the block explorers manually. The flattened contracts sources from the archive `tokenbridge-contracts-flattened-...zip` located on [the release page in the TokenBridge contracts repo](https://github.com/poanetwork/tokenbridge-contracts/releases/latest) can be used for this. _It is highly recommended to allow the deployment process to verify the contracts automatically since the verification could be not trivial and take lots of steps._  
 
-6. `docker run -ti --rm --env-fileamb-erc20-to-erc677.config`
+5. `docker run -ti --rm --env-fileamb-erc20-to-erc677.config`
 
     `poanetwork/tokenbridge-contracts:latest deploy.sh`  
    Output will look similar to this:
@@ -161,7 +157,7 @@ The steps below assume that the AMB is up and running and serves [the bridge bet
 
    ```
 
-7. If `HOME_EXPLORER_URL`, `FOREIGN_EXPLORER_URL` and `FOREIGN_EXPLORER_API_KEY` were not configured, verify the sources in the block explorers. Otherwise, skip this step. 
-8. If your own ERC20 token was used in the configuration for the extension, execute the `approve` method on the token contract on the Foreign side as so the approved address is the mediator contract `0xC3C5dcCeB4276aEd47c2129B2F3906Ec66803361`. Then invoke the `relayTokens` method on the mediator contract. Note that for these two operations the amount of tokens must be equal or greater the `FOREIGN_MIN_AMOUNT_PER_TX` parameter used in the deployment.  If the `PermittableToken` contract was used for the token on the foreign side, invoke `transferAndCall` method from the token contract. The argument `to` for the call must contain the address of the mediator contract `0xC3C5dcCeB4276aEd47c2129B2F3906Ec66803361`. The `data` argument must be `0x`.   For both cases the sender of the transaction is used as the account to receive the tokens on another side of the bridge.  The transaction hash can be used [on the AMB Live monitoring app](https://docs.tokenbridge.net/about-tokenbridge/components/amb-live-monitoring-application) to track the status of the transfer confirmation and execution. 
-9. The method `transferAndCall` can be used with the token contract \(`0xB36296478099555f9a2AD45AeA6E7b6c82DCc56d`\) on the Home side to transfer tokens back to the Foreign chain. The argument `to` for the call must contain the address of the mediator contract `0x8f33Ad10fdc10B56D4d4Ca09D5A5910D62d82375`. The `data` argument must be `0x`. 
+6. If `HOME_EXPLORER_URL`, `FOREIGN_EXPLORER_URL` and `FOREIGN_EXPLORER_API_KEY` were not configured, verify the sources in the block explorers. Otherwise, skip this step. 
+7. If your own ERC20 token was used in the configuration for the extension, execute the `approve` method on the token contract on the Foreign side as so the approved address is the mediator contract `0xC3C5dcCeB4276aEd47c2129B2F3906Ec66803361`. Then invoke the `relayTokens` method on the mediator contract. Note that for these two operations the amount of tokens must be equal or greater the `FOREIGN_MIN_AMOUNT_PER_TX` parameter used in the deployment.  If the `PermittableToken` contract was used for the token on the foreign side, invoke `transferAndCall` method from the token contract. The argument `to` for the call must contain the address of the mediator contract `0xC3C5dcCeB4276aEd47c2129B2F3906Ec66803361`. The `data` argument must be `0x`.   For both cases the sender of the transaction is used as the account to receive the tokens on another side of the bridge.  The transaction hash can be used [on the AMB Live monitoring app](https://docs.tokenbridge.net/about-tokenbridge/components/amb-live-monitoring-application) to track the status of the transfer confirmation and execution. 
+8. The method `transferAndCall` can be used with the token contract \(`0xB36296478099555f9a2AD45AeA6E7b6c82DCc56d`\) on the Home side to transfer tokens back to the Foreign chain. The argument `to` for the call must contain the address of the mediator contract `0x8f33Ad10fdc10B56D4d4Ca09D5A5910D62d82375`. The `data` argument must be `0x`. 
 
