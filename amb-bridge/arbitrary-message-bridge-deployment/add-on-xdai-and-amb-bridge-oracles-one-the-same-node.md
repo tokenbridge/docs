@@ -4,39 +4,42 @@ description: >-
   oracles on the same node
 ---
 
-# Add-on: xDai and AMB bridge oracles one the same node
+# Add-on: xDai and AMB bridge oracles on the same node
 
-Having the xDai bridge and Arbitrary Message Bridge oracles on the same node could have several benefits:
+Having the xDai bridge and Arbitrary Message Bridge oracles on the same node can have several benefits:
 
-* reduces amount of the hardware resources
-* reduce amount of work to perform administration and maintenance operations
-* allow to share the same local blockchain nodes to increase security of the bridges
+* reduces the amount of hardware resources;
+* reduces required work for node administration and maintenance;
+* allows for local blockchain node sharing,  increasing bridge security.
 
-In general the process to prepare the node to serve the xDai and AMB bridges will consist of the following phases:
+In general the process to prepare the node to serve the xDai and AMB bridges consists of the following phases:
 
 1. Configure and deploy the xDai bridge oracle.
 2. Modify the configuration on the xDai bridge oracle’s node to use the local OpenEthereum instance and to run AMB oracle’s workers.
-3. Synchronize the local OpenEthereum instance
-4. Run the oracles
+3. Synchronize the local OpenEthereum instance.
+4. Run the oracles.
 
-### Hardware requirements
+### Hardware Requirements
 
-In order to have xDai TokenBridge workers, OpenEthereum and the AMB workers on the same machine it is recommeded to have at least 4 CPU cores and 8 GBs of RAM, minimum 50 Gb of disk memory.
+Minimums required to run xDai TokenBridge workers, OpenEthereum and the AMB workers on the same machine:
+
+* 4 CPU cores and 8 GBs RAM
+* 50 Gb disk memory
 
 ### Phase 1. Configure and deploy the xDai bridge oracle
 
-Since the oracle deployment procedure uses the ansible playbooks, two system are required one to to deploy the oracle, another to host the oracle.
+The oracle deployment procedure uses ansible playbooks, so two system are required. One hosts the oracle and a second deploys the oracle.
 
-1. For the system which will be used to host the oracle:
-   * when creating the node, set a meaningful hostname that can identify this oracle instance \(e.g. bridge-ProjectName\) 
+1. System for **hosting the oracle**:
+   * when creating the node, set a meaningful hostname that can identify this oracle instance \(e.g. bridge-ProjectName\)
    * record the IP address \(required for file setup\)
    * setup ssh access to your node via public+private keys \(using passwords is less secure\)
-2. The next steps are for the system which will be used to run the ansible playbooks. It is assumed that this system has installed:
+2. System for **deploying the oracle** \(will run ansible playbooks\). Installation assumptions:
    * Python 2 \(v2.6-v2.7\)/Python3 \(v3.5+\)
    * [Ansible v2.3+](https://docs.ansible.com/ansible/latest/installation_guide/intro_installation.html)
    * Git
 3. Copy the private key to access the oracle host to `~/.ssh/` directory.
-4. Clone this repository and go to the deployment folder
+4. Clone this repository and go to the deployment folder.
 
    ```text
     $ git clone https://github.com/poanetwork/tokenbridge.git
@@ -63,9 +66,9 @@ Since the oracle deployment procedure uses the ansible playbooks, two system are
               syslog_server_port: "<destination to forward logs, e.g. papertrail>"
    ```
 
-   _Note:_ the private key specified here is for the xDai bridge not for the AMB bridge.
+   _**Note**: the private key specified here is for the xDai bridge not for the AMB bridge._  
 
-6. Prepare the Infura project ID which will be used by the oracle as the main JSON RPC endpoint to get updates from the Ethereum Mainnet.
+6. Prepare the Infura project ID used by the oracle as the main JSON RPC endpoint to get updates from the Ethereum Mainnet.
 7. Visit [http://etherscan.io/](http://etherscan.io/) and [https://blockscout.com/poa/xdai/](https://blockscout.com/poa/xdai/) to write down the latest blocks produced by the Ethereum Mainnet and the xDai chain.
 8. Create the file `group_vars/xdai-bridge.yml` with the following content:
 
@@ -105,7 +108,7 @@ Since the oracle deployment procedure uses the ansible playbooks, two system are
 
    _Note:_ fill `COMMON_FOREIGN_RPC_URL`, `ORACLE_HOME_START_BLOCK` and `ORACLE_FOREIGN_START_BLOCK` with the information from the steps 6 and 7.
 
-9. Run the ansible playbook
+9. Run the ansible playbook.
 
    ```text
     $ ansible-playbook -e 'ansible_python_interpreter=/usr/bin/python3' -i hosts.yml site.yml
@@ -117,7 +120,7 @@ Since the oracle deployment procedure uses the ansible playbooks, two system are
     $ ansible-playbook -e 'ansible_python_interpreter=/usr/bin/python3' --private-key=~/.ssh/<priv-key-file> -i hosts.yml site.yml
    ```
 
-10. When deployment is finished, login to the host system and stop the xDai bridge oracle by the command:
+10. When deployment is finished, login to the host system and stop the xDai bridge oracle.
 
     ```text
     $ sudo systemctl stop poabridge
@@ -131,7 +134,7 @@ Since the oracle deployment procedure uses the ansible playbooks, two system are
 
 ### Phase 2. Re-configure the host environment for OpenEthereum and AMB
 
-The steps below should be executed on the system where the xDai bridge oracle was deployed. It is assumed that the xDai oracle is stopped \(`sudo systemctl stop poabridge`\).
+The steps below should be executed on the system **where the xDai bridge oracle was deployed**. It is assumed that the xDai oracle is stopped \(`sudo systemctl stop poabridge`\).
 
 1. Add the private key and address of the AMB oracle to `/root/.key`. Use your favorite editor `sudo nano /root/.key` or `sudo vim /root/.key`
 
@@ -188,9 +191,9 @@ The steps below should be executed on the system where the xDai bridge oracle wa
     AMB_FOREIGN_START_BLOCK=<latest block from the Ethereum Mainnet>
    ```
 
-   _Note 1:_ the file can alrady have `ORACLE_ALLOW_HTTP_FOR_RPC` set to 'no' and `ORACLE_TX_REDUNDANCY` set to 'True'. Remove that old lines.
+   _Note 1:_ the file may already have `ORACLE_ALLOW_HTTP_FOR_RPC` set to 'no' and `ORACLE_TX_REDUNDANCY` set to 'True'. Remove these old lines.
 
-   _Note 2:_ fill `AMB_HOME_START_BLOCK` and `AMB_FOREIGN_START_BLOCK` with the information from the step 5.
+   _Note 2:_ fill `AMB_HOME_START_BLOCK` and `AMB_FOREIGN_START_BLOCK` with the information from step 5.
 
 8. Replace the first docker compose configuration file \(`docker-compose.yml`\) with a new one to optimize the number of the xDai bridge oracle workers:
 
@@ -199,7 +202,7 @@ The steps below should be executed on the system where the xDai bridge oracle wa
            -L -o docker-compose.yml
    ```
 
-9. Replace the second docker compose configuration file \(`docker-compose-erc-native.yml`\) with a new one as so the service OpenEthereum and AMB workers will be added:
+9. Replace the second docker compose configuration file \(`docker-compose-erc-native.yml`\) with a new one so that the service OpenEthereum and AMB workers are added:
 
    ```text
     $ curl https://github.com/poanetwork/tokenbridge/releases/download/2.6.0-rc3/xdai-parity-amb-combined-docker-compose-erc-native.yml \
@@ -210,7 +213,7 @@ The steps below should be executed on the system where the xDai bridge oracle wa
 
 This step assumes that the current working directory is `/home/poadocker/bridge/oracle`.
 
-Run the parity to synchornize the chain \(it will take few minutes but depends on the internet channel bandwidth\). As soon as you see that new blocks appearing every 5 seconds, the service can be stopped \(by `Ctrl+C`\):
+Run OE to synchronize the chain \(it will take few minutes depending on the internet channel bandwidth\). As soon as you see new blocks appearing every 5 seconds, the service can be stopped \(by `Ctrl+C`\):
 
 ```text
 $ sudo docker pull openethereum/openethereum:v3.0.1
@@ -224,13 +227,13 @@ $ sudo -u "poadocker" docker-compose -f docker-compose-erc-native.yml up parity
 $ sudo systemctl start poabridge
 ```
 
-Check that the openethereum service was run by:
+Check the OpenEthereum service was run:
 
 ```text
 $ sudo docker logs parity
 ```
 
-Make sure that the bridge workers are able to access to the openethereum’s RPC service:
+Make sure bridge workers are able to access OpenEthereum’s RPC service:
 
 ```text
 $ sudo docker exec -ti oracle_bridge_affirmation_1 curl -X POST -H "Content-Type: application/json" --data '{"jsonrpc":"2.0","method":"eth_chainId","id":1}' http://parity:8545/
