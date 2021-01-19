@@ -30,6 +30,7 @@
 * [Arbitrary Message Bridge Deployment](amb-bridge/arbitrary-message-bridge-deployment/README.md)
   * [1\) AMB contracts deployment](amb-bridge/arbitrary-message-bridge-deployment/1-amb-contracts-deployment.md)
   * [2\) TokenBridge oracle instances](amb-bridge/arbitrary-message-bridge-deployment/2-tokenbridge-oracle-instance.md)
+  * [Add-on: xDai and AMB bridge oracles one the same node](amb-bridge/arbitrary-message-bridge-deployment/add-on-xdai-and-amb-bridge-oracles-one-the-same-node.md)
 * [How to develop a cross-blockchain application using the AMB](amb-bridge/how-to-develop-xchain-apps-by-amb.md)
 * [ERC677 to ERC677 AMB bridge extension](amb-bridge/erc677-to-erc677-bridge-on-top-of-amb.md)
 * [Gas Token Minting](amb-bridge/gas-token-minting.md)
