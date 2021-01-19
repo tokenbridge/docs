@@ -60,7 +60,7 @@ Since the oracle deployment procedure uses the ansible playbooks, two system are
             <ip.to.host>:
               ansible_user: <username to ssh into the host node. Typically ubuntu or root>
               ORACLE_VALIDATOR_ADDRESS_PRIVATE_KEY: "cafecafe...cafecafe"
-              syslog_server_port: "<pappertrail log destination (ask for the xDai team)>"
+              syslog_server_port: "<destination to forward logs, e.g. papertrail>"
    ```
 
    _Note:_ the private key specified here is for the xDai bridge not for the AMB bridge.
@@ -153,7 +153,7 @@ The steps below should be executed on the system where the xDai bridge oracle wa
 3. Replace the bridge startup script to use the new key for the AMB oracle:
 
    ```text
-    $ curl https://github.com/poanetwork/tokenbridge/releases/download/2.6.0-rc3/xdai-amb-combined-poabridge \
+    $ sudo curl https://github.com/poanetwork/tokenbridge/releases/download/2.6.0-rc3/xdai-amb-combined-poabridge \
            -L -o poabridge
    ```
 
