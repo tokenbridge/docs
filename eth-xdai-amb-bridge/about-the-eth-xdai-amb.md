@@ -19,11 +19,20 @@ The mediator contracts rely on the following information about the ETH-xDai Arbi
   * Gas limit to call method in the Ethereum Mainnet: `2000000`
   * Finalization rate: `8` blocks
 
-It is possible to get an AMB transaction status by using [the Live Monitoring app](https://docs.tokenbridge.net/about-tokenbridge/components/amb-live-monitoring-application): [http://alm-xdai.herokuapp.com/](http://alm-xdai.herokuapp.com/)
+### Transactions
 
-Transactions require a multi-sig \(for bridge validators, not users\) for a successful transfer. Current validators can be viewed with the live monitoring application. An example transaction view is available here:  [https://alm-xdai.herokuapp.com/100/0x83f61bb582610c4cd7b6347a84f470020bfeeea699340016cdcf3c31ff0312e3](https://alm-xdai.herokuapp.com/100/0x83f61bb582610c4cd7b6347a84f470020bfeeea699340016cdcf3c31ff0312e3)
+It is possible to get an AMB transaction status by using [the Live Monitoring app](https://docs.tokenbridge.net/about-tokenbridge/components/amb-live-monitoring-application): [http://alm-xdai.herokuapp.com/](http://alm-xdai.herokuapp.com/). Transactions require a multi-sig \(for bridge validators, not users\) for a successful transfer. Current validators can be viewed with the live monitoring application. 
 
-Withdrawal requests call the `transfer` method of the token contracts with the mediator contract address as the recipient \(the multitoken/erc20-to-erc20 extension for AMB\)
+* Example transaction:  [http://alm-xdai.herokuapp.com/1/0x28c8e26e3bac936d8780ba177266f94d36f8c4cb88d49e161fffc3adf3d076aa](http://alm-xdai.herokuapp.com/1/0x28c8e26e3bac936d8780ba177266f94d36f8c4cb88d49e161fffc3adf3d076aa)
+* [More on xDai AMB Bridge Validators](https://www.xdaichain.com/for-validators/for-bridge-validators#current-amb-bridge-validators)
+
+### Fees
+
+There are currently no fees for users when bridging between xDai and Ethereum. Fees are subsidized by the validators. In future iterations, small fees may be introduced to cover expenses incurred when sending transactions from xDai to Ethereum. These fees will be assessed with the transferring asset. Claims on Ethereum will also be processed by the user rather than validators.
+
+### Withdrawal Requests
+
+Withdrawal requests call the `transfer` method of the token contracts with the mediator contract address as the recipient \(the multitoken/erc20-to-erc20 extension for AMB\).
 
 {% hint style="success" %}
 A detailed description of the AMB and examples of AMB extensions are available here: [Arbitrary Message Bridge \(AMB\)](https://docs.tokenbridge.net/amb-bridge/about-amb-bridge).

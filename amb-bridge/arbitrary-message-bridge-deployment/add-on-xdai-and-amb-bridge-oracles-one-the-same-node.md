@@ -6,7 +6,7 @@ description: >-
 
 # Add-on: xDai and AMB bridge oracles on the same node
 
-Having the xDai bridge and Arbitrary Message Bridge oracles on the same node can have several benefits:
+There are several benefits to hosting the xDai bridge and Arbitrary Message Bridge oracles on the same node:
 
 * reduces the amount of hardware resources;
 * reduces required work for node administration and maintenance;
