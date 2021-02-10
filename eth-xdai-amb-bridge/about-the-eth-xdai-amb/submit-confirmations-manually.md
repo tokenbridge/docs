@@ -26,3 +26,9 @@ So, below is the list of actions that can be executed in the BlockScout and Ethe
 
 ![](../../.gitbook/assets/image%20%2899%29.png)
 
+{% hint style="warning" %}
+The MetaMask will show high gas estimate for this transaction. In fact, in the most cases the final gas consumption will be lower. Please refer to [the OmniBridge UI FAQ](https://www.xdaichain.com/about-xdai/faqs/bridges-xdai-bridge-and-omnibridge#metamask-is-showing-very-high-fees-to-claim-a-transaction-on-ethereum-tokens-bridged-from-xdai-to-ethereum-is-this-estimate-accurate) to learn more.
+{% endhint %}
+
+
+
