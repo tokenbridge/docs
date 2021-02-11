@@ -1,7 +1,7 @@
 ---
 description: >-
-  Instructions how to submit the oracles' confirmation to the Ethereum side
-  manually
+  Instructions how to manually submit the oracles' confirmation to the Ethereum
+  side
 ---
 
 # Submit confirmations manually
