@@ -86,7 +86,8 @@
 ## BSC-xDai AMB
 
 * [About the BSC-xDai AMB](bsc-xdai-amb/about-the-bsc-xdai-amb.md)
-* [OmniBridge Extension](bsc-xdai-amb/omnibridge-extension.md)
+* [OmniBridge Extension](bsc-xdai-amb/omnibridge-extension/README.md)
+  * [Manual tokens transfer](bsc-xdai-amb/omnibridge-extension/manual-tokens-transfer.md)
 
 ## RINKEBY-XDAI AMB <a id="rinkeby-xdai-amb-bridge"></a>
 
