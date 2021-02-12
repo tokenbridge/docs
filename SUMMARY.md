@@ -83,6 +83,11 @@
     * [Transfer sUSD between the ETH Mainnet and the xDai Chain using the sUSD bridge extension](eth-xdai-amb-bridge/erc20-to-erc20-extension-linked-with-a-particular-token/susd-bridge-extension/transfer-susd-through-the-bridge-extension.md)
     * [Send sUSD between two wallets on xDai](eth-xdai-amb-bridge/erc20-to-erc20-extension-linked-with-a-particular-token/susd-bridge-extension/send-susd-between-two-wallets-on-xdai.md)
 
+## BSC-xDai AMB
+
+* [About the BSC-xDai AMB](bsc-xdai-amb/about-the-bsc-xdai-amb.md)
+* [OmniBridge Extension](bsc-xdai-amb/omnibridge-extension.md)
+
 ## RINKEBY-XDAI AMB <a id="rinkeby-xdai-amb-bridge"></a>
 
 * [About the Rinkeby-xDai AMB](rinkeby-xdai-amb-bridge/about-the-rinkeby-xdai-amb.md)
