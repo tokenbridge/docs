@@ -6,7 +6,7 @@ description: >-
 
 # Submit confirmations manually
 
-The Arbitrary Message Bridge between the Ethereum Mainnet and the xDai chain [now requires a claim scheme to transfer data from the xDai chain](https://forum.poa.network/t/request-and-claim-to-transfer-assets-from-xdai-chain/4495), and some users and applications may want to use a manual process to gather the oracles confirmations and send them to the AMB contracts on the Mainnet side.
+The Arbitrary Message Bridge between the Ethereum Mainnet and the xDai chain [now requires a request-and-claim scheme to transfer data from the xDai chain](https://forum.poa.network/t/request-and-claim-to-transfer-assets-from-xdai-chain/4495), and some users and applications may want to use a manual process to gather the oracles confirmations and send them to the AMB contracts on the Mainnet side.
 
 {% hint style="info" %}
 This approach is the equivalent of the set of actions performing by [the OmniBridge UI](https://www.xdaichain.com/for-users/omnibridge) after pressing the "Claim" button, or by the [AMB Live Monitoring app](https://alm-xdai.herokuapp.com/) after pressing the "Execute" button.

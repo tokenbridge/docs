@@ -85,7 +85,8 @@
 
 ## BSC-xDai AMB
 
-* [About the BSC-xDai AMB](bsc-xdai-amb/about-the-bsc-xdai-amb.md)
+* [About the BSC-xDai AMB](bsc-xdai-amb/about-the-bsc-xdai-amb/README.md)
+  * [Submit confirmations manually](bsc-xdai-amb/about-the-bsc-xdai-amb/submit-confirmations-manually.md)
 * [OmniBridge Extension](bsc-xdai-amb/omnibridge-extension/README.md)
   * [Manual tokens transfer](bsc-xdai-amb/omnibridge-extension/manual-tokens-transfer.md)
 

@@ -124,6 +124,10 @@ The token transfer process from the xDai chain to the Binance Smart Chain requir
 
 8. Switch the chain to the Binance Smart Chain in MetaMask and press the "Execute" button to finialize the tokens transfer. This action collects the Arbitrary Message Bridge oracles confirmations and deliver them to BSC. BNB native tokens are required to pay for gas fees to finalize the transfer.
 
+{% hint style="warning" %}
+MetaMask will show a high gas estimate for this transaction. In most cases the final gas consumption will be significantly lower. Please refer to [the OmniBridge UI FAQ](https://www.xdaichain.com/about-xdai/faqs/bridges-xdai-bridge-and-omnibridge#metamask-is-showing-very-high-fees-to-claim-a-transaction-on-ethereum-tokens-bridged-from-xdai-to-ethereum-is-this-estimate-accurate) to learn more. Although the FAQ is for the OmniBridge between Ethereum Mainnet and the xDai chain the reason why MetaMask provides higher gas usage estimate is the same.
+{% endhint %}
+
 ![](../../.gitbook/assets/image%20%28124%29.png)
 
 As soon as the submitted transaction is included in the block the "Executed by" section of ALM will contain the link on the transaction performed the tokens transfer.
