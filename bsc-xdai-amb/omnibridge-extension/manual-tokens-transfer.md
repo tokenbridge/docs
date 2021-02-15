@@ -138,7 +138,7 @@ Press the "Write" button and confirm the transaction in your wallet. Wait until 
 
 ![](../../.gitbook/assets/image%20%28112%29.png)
 
-8. Switch the chain to the Binance Smart Chain in MetaMask and press the "Execute" button to finalize the token transfer. This action collects the Arbitrary Message Bridge oracles confirmations and delivesr them to BSC. BNB native tokens are required to pay for gas fees to finalize this transfer.
+8. Switch the chain to the Binance Smart Chain in MetaMask and press the "Execute" button to finalize the token transfer. This action collects the Arbitrary Message Bridge oracles confirmations and delivers them to BSC. BNB native tokens are required to pay for gas fees to finalize this transfer.
 
 {% hint style="info" %}
 The transfer finalization can be performed without ALM by [collecting and delivering the oracles' confirmations manually](https://docs.tokenbridge.net/bsc-xdai-amb/about-the-bsc-xdai-amb/submit-confirmations-manually).
@@ -158,7 +158,7 @@ As soon as the submitted transaction is included in the block the "Executed by" 
 
 ![](../../.gitbook/assets/image%20%28103%29.png)
 
-10. Press the token name to get the address of the bridged token and add it to your BSC wallet if necessary. 
+10. Press the token name to get the [address of the bridged token](https://www.bscscan.com/token/0x24e5cf4a0577563d4e7761d14d53c8d0b504e337) and add it to your BSC wallet. 
 
 ![](../../.gitbook/assets/image%20%28106%29.png)
 
