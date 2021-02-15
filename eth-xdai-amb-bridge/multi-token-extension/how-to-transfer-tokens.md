@@ -4,7 +4,7 @@ description: >-
   Etherscan and BlockScout
 ---
 
-# How to transfer tokens
+# Transfer tokens manually
 
 The instructions below use the Etherscan UI and the Blockscout UI to demonstrate the token transfer process. 
 

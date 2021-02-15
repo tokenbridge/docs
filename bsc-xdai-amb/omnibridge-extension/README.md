@@ -6,12 +6,19 @@ description: Full duplex bridge for ERC20-based tokens between BSC and xDai
 
 The OmniBridge multi-token extension for the Arbitrary Message Bridge between the Binance Smart Chain and the xDai chain is the simplest way to transfer **ANY** ERC20/ERC677/ERC827 token to and from the xDai chain.
 
+{% hint style="info" %}
 * BSC-xDai OmniBridge UI \(in Beta\) [https://bsc-to-xdai-omnibridge.web.app/](https://bsc-to-xdai-omnibridge.web.app/) 
+* ALM
 * OmniBridge does not rely on a UI for functionality, and[ tokens can be transferred manually](manual-tokens-transfer.md). 
+* [Live Monitoring App](%20https://alm-bsc-xdai.herokuapp.com/)
+* Additional items may be referenced in the [ETH-xDai Omnibridge Extension ](../../eth-xdai-amb-bridge/multi-token-extension/)section.
+{% endhint %}
 
-By using this extension any user \(not only the token contract owner\) can transfer tokens in both directions: from BSC to xDai chain and from the xDai chain to BSC with fast, inexpensive transactions \(in this case the xDai chain\) without deploying any additional contracts. 
+By using this extension any user \(not only the token contract owner\) can transfer tokens in both directions: from BSC to xDai and from the xDai chain to BSC with fast, inexpensive transactions and without deploying any additional contracts. 
 
 The specified token amount is locked in the mediator contract, a new token contract is deployed automatically on the BSC/xDai chain, and the requested token amount is minted on the xDai/BSC chain. The reverse operation burns bridged tokens on the xDai/BSC chain and unlocks the tokens from the token contract on another side of the bridge.
+
+Note that tokens are appended with "on xDai" or "on BSC" when bridging. This can result in names such as "[STAKE on xDai on BSC](https://www.bscscan.com/token/0x24e5cf4a0577563d4e7761d14d53c8d0b504e337)" if tokens have been bridged from Ethereum to xDai and then to BSC for example.
 
 ## OmniBridge technical information and extension parameters
 
