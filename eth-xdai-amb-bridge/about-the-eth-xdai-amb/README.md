@@ -28,7 +28,9 @@ It is possible to get an AMB transaction status by using [the Live Monitoring ap
 
 ### Fees
 
-There are currently no fees for users when bridging between xDai and Ethereum. Fees are subsidized by the validators. In future iterations, small fees may be introduced to cover expenses incurred when sending transactions from xDai to Ethereum. These fees will be assessed with the transferring asset. Claims on Ethereum will also be processed by the user rather than validators.
+While there are no additional fees to bridge between xDai and Ethereum, there are gas costs for transactions, which can be quite substantial depending on Ethereum gas prices.  When moving from Ethereum to xDai, there is a gas cost to unlock the tokens for transfer.  When moving from xDai to Ethereum, there is a gas cost to claim the token on Ethereum.
+
+Additional fees may be introduced at a later time to cover expenses incurred by validators when bridging. These fees will be assessed with the transferring asset.
 
 ### Withdrawal Requests
 
