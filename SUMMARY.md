@@ -76,6 +76,7 @@
 * [ERC20-to-ERC20 extension linked with a particular token](eth-xdai-amb-bridge/erc20-to-erc20-extension-linked-with-a-particular-token/README.md)
   * [Deploy ERC20 to ERC677 AMB bridge extension](eth-xdai-amb-bridge/erc20-to-erc20-extension-linked-with-a-particular-token/deploy-erc20-erc677-erc827-to-erc677-amb-bridge-extension.md)
   * [UI to transfer tokens through AMB](eth-xdai-amb-bridge/erc20-to-erc20-extension-linked-with-a-particular-token/ui-to-transfer-tokens-through-amb.md)
+  * [xMOON-MOON bridge extension](eth-xdai-amb-bridge/erc20-to-erc20-extension-linked-with-a-particular-token/xmoon-moon-bridge-extension.md)
   * [GEN-xGEN bridge extension](eth-xdai-amb-bridge/erc20-to-erc20-extension-linked-with-a-particular-token/gen-xgen-bridge-extension/README.md)
     * [Transfer GEN between the ETH Mainnet and the xDai Chain](eth-xdai-amb-bridge/erc20-to-erc20-extension-linked-with-a-particular-token/gen-xgen-bridge-extension/transfer-gen-between-the-eth-mainnet-and-the-xdai-chain.md)
     * [Change the token contract on the xDai chain](eth-xdai-amb-bridge/erc20-to-erc20-extension-linked-with-a-particular-token/gen-xgen-bridge-extension/change-the-token-contract-on-the-xdai-chain.md)
