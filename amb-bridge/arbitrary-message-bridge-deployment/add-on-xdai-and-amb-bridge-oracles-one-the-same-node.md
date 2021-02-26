@@ -69,7 +69,7 @@ The oracle deployment procedure uses ansible playbooks, so two system are requir
    _**Note**: the private key specified here is for the xDai bridge not for the AMB bridge._  
 
 6. Prepare the Infura project ID used by the oracle as the main JSON RPC endpoint to get updates from the Ethereum Mainnet.
-7. Visit [http://etherscan.io/](http://etherscan.io/) and [https://blockscout.com/poa/xdai/](https://blockscout.com/poa/xdai/) to write down the latest blocks produced by the Ethereum Mainnet and the xDai chain.
+7. Visit [http://etherscan.io/](http://etherscan.io/) and [https://blockscout.com/xdai/mainnet](https://blockscout.com/xdai/mainnet) to write down the latest blocks produced by the Ethereum Mainnet and the xDai chain.
 8. Create the file `group_vars/xdai-bridge.yml` with the following content:
 
    ```text
@@ -172,7 +172,7 @@ The steps below should be executed on the system **where the xDai bridge oracle 
     $ cd /home/poadocker/bridge/oracle
    ```
 
-6. Visit [http://etherscan.io/](http://etherscan.io/) and [https://blockscout.com/poa/xdai/](https://blockscout.com/poa/xdai/) to write down the latest blocks produced by the Ethereum Mainnet and the xDai chain.
+6. Visit [http://etherscan.io/](http://etherscan.io/) and [https://blockscout.com/xdai/mainnet](https://blockscout.com/xdai/mainnet) to write down the latest blocks produced by the Ethereum Mainnet and the xDai chain.
 7. Modify the oracle configuration file to add parameters for AMB oracle workers. The following line must be added to the end of the file \(`sudo nano .env` or `sudo vim .env`\):
 
    ```text

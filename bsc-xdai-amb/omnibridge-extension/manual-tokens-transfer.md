@@ -114,7 +114,7 @@ The token transfer process from the xDai chain to the Binance Smart Chain requir
 
 1. Choose the xDai chain in MetaMask. If it is not configured in MetaMask follow [these instructions](https://www.xdaichain.com/for-users/wallets/metamask/metamask-setup) to set it up.
 
-2. Use [the BlockScout site](https://blockscout.com/poa/xdai) to find the token you want to bridge.
+2. Use the [BlockScout site](https://blockscout.com/xdai/mainnet) to find the token you want to bridge.
 
 ![](../../.gitbook/assets/image%20%28122%29.png)
 
@@ -122,13 +122,13 @@ The token transfer process from the xDai chain to the Binance Smart Chain requir
 
 ![](../../.gitbook/assets/image%20%28111%29.png)
 
-4. Scroll down to the "approve" method and fill data in the form where "spender" is the OmniBridge mediator contract [`0x59447362798334d3485c64D1e4870Fde2DDC0d75`](https://blockscout.com/poa/xdai/address/0x59447362798334d3485c64D1e4870Fde2DDC0d75) and "value" is the amount of tokens to transfer through the bridge. The value is specified in Wei and must be [within the limits on the bridge operations](https://docs.tokenbridge.net/bsc-xdai-amb/omnibridge-extension#transfer-limits).   
+4. Scroll down to the "approve" method and fill data in the form where "spender" is the OmniBridge mediator contract [`0x59447362798334d3485c64D1e4870Fde2DDC0d75`](https://blockscout.com/xdai/mainnet/address/0x59447362798334d3485c64D1e4870Fde2DDC0d75/transactions) and "value" is the amount of tokens to transfer through the bridge. The value is specified in Wei and must be [within the limits on the bridge operations](https://docs.tokenbridge.net/bsc-xdai-amb/omnibridge-extension#transfer-limits).   
   
 Press the "Write" button and confirm the transaction in your wallet. Wait until the transaction is included in a block.
 
 ![](../../.gitbook/assets/image%20%28105%29.png)
 
-5. Switch to the OmniBridge mediator in BlockScout and go to the  "Write as Proxy" tab: [https://blockscout.com/poa/xdai/address/0x59447362798334d3485c64D1e4870Fde2DDC0d75/write-proxy](https://blockscout.com/poa/xdai/address/0x59447362798334d3485c64D1e4870Fde2DDC0d75/write-proxy)
+5. Switch to the OmniBridge mediator in BlockScout and go to the  "Write as Proxy" tab: [https://blockscout.com/xdai/mainnet/address/0x59447362798334d3485c64D1e4870Fde2DDC0d75/write-proxy](https://blockscout.com/xdai/mainnet/address/0x59447362798334d3485c64D1e4870Fde2DDC0d75/write-proxy)
 
 6. Scroll to the `relayTokens` method and fill the token contract address and value  to be sent through the bridge \(it must be the same or lesser than the value specified in the `approve` method\). Press the "Write" button, confirm the transaction in your wallet. Wait for the transaction inclusion into the blockchain.
 

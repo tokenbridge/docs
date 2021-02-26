@@ -105,7 +105,7 @@ In this implementation we have:
 
 The pair of such management contract is being used to exchange [MOON ERC20 tokens between Rinkeby testnet and the xDai chain](https://docs.tokenbridge.net/rinkeby-xdai-amb-bridge/moon-bridge-extension).
 
-* MOON-xMOON mediator contract on the xDai chain: [storage](https://blockscout.com/poa/xdai/address/0x1E0507046130c31DEb20EC2f870ad070Ff266079/contracts), [implementation](https://blockscout.com/poa/xdai/address/0x3B09067f5FbC8087391f6997ccd83337195eaC05/contracts)
+* MOON-xMOON mediator contract on the xDai chain: [storage](https://blockscout.com/xdai/mainnet/address/0x1E0507046130c31DEb20EC2f870ad070Ff266079/contracts), [implementation](//blockscout.com/xdai/mainnet/address/0x3B09067f5FbC8087391f6997ccd83337195eaC05/contracts)
 * MOON-xMOON mediator contract on the Ethereum Mainnet chain: [storage](https://rinkeby.etherscan.io/address/0xFEaB457D95D9990b7eb6c943c839258245541754#code), [implementation](https://rinkeby.etherscan.io/address/0x575d3197255deb3b06221020df36635fd63c872b)
 
 ### Token transfer flow

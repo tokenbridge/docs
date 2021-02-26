@@ -101,10 +101,10 @@ COMMON_FOREIGN_RPC_URL=https://mainnet.infura.io/v3/PROJECT-ID
 ALM_HOME_NETWORK_NAME=xDai chain
 ALM_FOREIGN_NETWORK_NAME=Ethereum Mainnet
 
-ALM_HOME_EXPLORER_TX_TEMPLATE=https://blockscout.com/poa/xdai/tx/%s
+ALM_HOME_EXPLORER_TX_TEMPLATE=https://blockscout.com/xdai/mainnet/tx/%s
 ALM_FOREIGN_EXPLORER_TX_TEMPLATE=https://etherscan.io/tx/%s
 
-ALM_HOME_EXPLORER_API=https://blockscout.com/poa/xdai/api
+ALM_HOME_EXPLORER_API=https://blockscout.com/xdai/mainnet/api
 ALM_FOREIGN_EXPLORER_API=https://api.etherscan.io/api?apikey=ETHERSCAN-API-KEY
 ```
 
@@ -122,10 +122,10 @@ COMMON_FOREIGN_RPC_URL=https://rinkeby.infura.io/v3/PROJECT-ID
 ALM_HOME_NETWORK_NAME=xDai chain
 ALM_FOREIGN_NETWORK_NAME=Rinkeby Testnet
 
-ALM_HOME_EXPLORER_TX_TEMPLATE=https://blockscout.com/poa/xdai/tx/%s
+ALM_HOME_EXPLORER_TX_TEMPLATE=https://blockscout.com/xdai/mainnet/tx/%s
 ALM_FOREIGN_EXPLORER_TX_TEMPLATE=https://rinkeby.etherscan.io/tx/%s
 
-ALM_HOME_EXPLORER_API=https://blockscout.com/poa/xdai/api
+ALM_HOME_EXPLORER_API=https://blockscout.com/xdai/mainnet/api
 ALM_FOREIGN_EXPLORER_API=https://api-rinkeby.etherscan.io/api?apikey=ETHERSCAN-API-KEY
 ```
 
