@@ -4,9 +4,9 @@ description: Find the analogous token address for tokens bridged on Ethereum and
 
 # Corresponding token contract addresses \(ETH - XDAI\)
 
-There are several approaches to discover the token contract on the Ethereum Mainnet that corresponds to the token contract on the xDai chain. 
+There are several approaches to discover the token contract on the Ethereum Mainnet that corresponds to the token contract on the xDai chain.
 
-#### Approach \#1: BlockScout 
+## Approach \#1: BlockScout
 
 BlockScout allows you to see if a token was bridged using the multi-token extension.
 
@@ -20,11 +20,11 @@ This view contains information that this token was bridged and a link to the ori
 
 ![](../../.gitbook/assets/image%20%2858%29.png)
 
-BlockScout also distinguishes bridged tokens at the _Top of the tokens_ page by specifying the bridged  property. A worker which fetches this property checks new unprocessed tokens every 1 minute and updates bridged status and it is bridged, adds a link to the original token.
+BlockScout also distinguishes bridged tokens at the _Top of the tokens_ page by specifying the bridged property. A worker which fetches this property checks new unprocessed tokens every 1 minute and updates bridged status and it is bridged, adds a link to the original token.
 
 ![](../../.gitbook/assets/image-2-.png)
 
-#### Approach \#2: Mediator storage
+## Approach \#2: Mediator storage
 
 The multi-token mediator on the xDai chain \([`0xf6A78083ca3e2a662D6dd1703c939c8aCE2e268d`](https://blockscout.com/xdai/mainnet/address/0xf6A78083ca3e2a662D6dd1703c939c8aCE2e268d)\) provides methods for viewing correspondence of bridgeable tokens:
 

@@ -4,7 +4,7 @@ description: Instructions how to manually submit the oracles' confirmation to th
 
 # Submit confirmations manually
 
-The Arbitrary Message Bridge between the Binance Smart Chain and the xDai chain requires a request-and-claim scheme to transfer data from the xDai chain. This scheme requires at least two transaction to pass the message from the xDai chain: one transaction to initiate the message transfer and a second to forward collected oracles' confirmations about the message transfer request to the contracts on BSC.  
+The Arbitrary Message Bridge between the Binance Smart Chain and the xDai chain requires a request-and-claim scheme to transfer data from the xDai chain. This scheme requires at least two transaction to pass the message from the xDai chain: one transaction to initiate the message transfer and a second to forward collected oracles' confirmations about the message transfer request to the contracts on BSC.
 
 Some users and applications may want to use a manual process to gather the oracles confirmations and send them to the AMB contracts on the BSC side.
 
@@ -18,11 +18,11 @@ Below is the list of actions that can be executed in BlockScout and Etherscan, o
 
 ![](../../.gitbook/assets/image%20%28126%29.png)
 
-2. Go to [the AMB helper contract](https://blockscout.com/xdai/mainnet/address/0x68C69307a0975D2636fA9772c7633204648788A8/read-contract) and call `getSignatures` there with the encoded data from the `UserRequestForSignature` event. It will produce a blob with signatures.
+1. Go to [the AMB helper contract](https://blockscout.com/xdai/mainnet/address/0x68C69307a0975D2636fA9772c7633204648788A8/read-contract) and call `getSignatures` there with the encoded data from the `UserRequestForSignature` event. It will produce a blob with signatures.
 
 ![](../../.gitbook/assets/image%20%28127%29.png)
 
-3. Pass the encoded data and the signatures to the Arbitrary Message Bridge contract \([`0x05185872898b6f94AA600177EF41B9334B1FA48B`](https://bscscan.com/address/0x05185872898b6f94AA600177EF41B9334B1FA48B#writeProxyContract)\) on the Binance Smart Chain and press the "Write" button to send the transaction. 
+1. Pass the encoded data and the signatures to the Arbitrary Message Bridge contract \([`0x05185872898b6f94AA600177EF41B9334B1FA48B`](https://bscscan.com/address/0x05185872898b6f94AA600177EF41B9334B1FA48B#writeProxyContract)\) on the Binance Smart Chain and press the "Write" button to send the transaction. 
 
 ![](../../.gitbook/assets/image%20%28125%29.png)
 

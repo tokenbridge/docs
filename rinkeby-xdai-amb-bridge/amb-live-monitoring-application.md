@@ -16,7 +16,7 @@ The main aim of the application to track a status of the requests the users are 
 
 ## Getting status for Foreign -&gt; Home \(Rinkeby -&gt; xDai\) transactions
 
-Note that transactions must use the Arbitrary Message Bridge to be monitored \(transactions using a different bridge mode, such as the current xDai &lt;-&gt; Dai bridge are not monitored\). 
+Note that transactions must use the Arbitrary Message Bridge to be monitored \(transactions using a different bridge mode, such as the current xDai &lt;-&gt; Dai bridge are not monitored\).
 
 Foreign -&gt; Home transactions may require two transactions. The first approves the mediator to transfer tokens, and the second to confirm the transaction. In this case the 2nd transaction should be entered into the interface.
 
@@ -24,11 +24,11 @@ Foreign -&gt; Home transactions may require two transactions. The first approves
 
 [0xf2fbc1b9caf77f7f66ee8ad58ef6b5f49819f2972d68b89d6c9b28eb3cd00ac6](https://rinkeby.etherscan.io/tx/0xf2fbc1b9caf77f7f66ee8ad58ef6b5f49819f2972d68b89d6c9b28eb3cd00ac6)
 
-1\) After completing an AMB bridge transaction \([we transfer MOONs on Rinkeby to xMOONs on xDai using the moon-exchange UI](https://moon-exchange.herokuapp.com/)\), go to the MetaMask Activity tab and select the 2nd transaction \(Contract Interaction\). 
+1\) After completing an AMB bridge transaction \([we transfer MOONs on Rinkeby to xMOONs on xDai using the moon-exchange UI](https://moon-exchange.herokuapp.com/)\), go to the MetaMask Activity tab and select the 2nd transaction \(Contract Interaction\).
 
 ![](../.gitbook/assets/mm-1.png)
 
-2\) Select the transaction and copy the transaction hash. This can be done at any time during or after a transaction.  Paste this hash into the ALM monitor to view the transaction status.
+2\) Select the transaction and copy the transaction hash. This can be done at any time during or after a transaction. Paste this hash into the ALM monitor to view the transaction status.
 
 ![](../.gitbook/assets/mm-2.png)
 
@@ -56,7 +56,7 @@ Click on an age metric to view the transaction details in Etherscan.
 
 ![](../.gitbook/assets/mm-10.png)
 
-2\) Select the transaction and copy the tx hash. This can be done at any time during or after a transaction.  Paste this hash into the ALM monitor to view tx status.
+2\) Select the transaction and copy the tx hash. This can be done at any time during or after a transaction. Paste this hash into the ALM monitor to view tx status.
 
 ![](../.gitbook/assets/mm11.png)
 
@@ -73,6 +73,4 @@ The ALM will auto-update as the transaction progresses through different states.
 Click on an age metric to view the transaction details in BlockScout.
 
 ![](../.gitbook/assets/execution-success.png)
-
-
 

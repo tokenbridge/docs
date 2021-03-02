@@ -54,11 +54,11 @@ b. After transaction
 
 Now that you have bridged to xDai, you will need to add the token to MetaMask to view.
 
-1\) Switch your MetaMask to the xDai chain \(if you haven't setup yet, instructions here\). Click on Assets,  then scroll down and click Add Token.
+1\) Switch your MetaMask to the xDai chain \(if you haven't setup yet, instructions here\). Click on Assets, then scroll down and click Add Token.
 
 ![](../../../.gitbook/assets/mmx1%20%281%29.jpg)
 
-2\) Select **Custom Token** and paste in the address from your newly bridged token. You can find this in several ways. The remaining fields should autopopulate \(Symbol and Decimals of Precision\). Click Next.    
+2\) Select **Custom Token** and paste in the address from your newly bridged token. You can find this in several ways. The remaining fields should autopopulate \(Symbol and Decimals of Precision\). Click Next.  
 _Note: Do not use the search feature, as this will search for tokens on Ethereum Mainnet._
 
 ![](../../../.gitbook/assets/mmx2.jpg)

@@ -13,10 +13,9 @@ You will need a small amount of Ether for gas fees and an amount of sUSD to tran
 ## Deposit sUSD tokens to the xDai chain
 
 1. Activate and open a web3 wallet \(like MetaMask or Nifty Wallet\) and select the Ethereum Mainnet chain. Go to [MyEtherWallet \(MEW\)](https://www.myetherwallet.com/access-my-wallet) and select the option to login with a web3 wallet. Next:
-
-* 1\) Select the **Interact with Contract** item from the sidebar menu
-* 2\) Initialize the sUSD token contract interface by entering the Synth sUSD token contract address in the **Contract Address** field.`0x57ab1e02fee23774580c119740129eac7081e9d3` 
-* 3\) Add the following JSON in the **`ABI/JSON Interface`** field: 
+2. 1\) Select the **Interact with Contract** item from the sidebar menu
+3. 2\) Initialize the sUSD token contract interface by entering the Synth sUSD token contract address in the **Contract Address** field.`0x57ab1e02fee23774580c119740129eac7081e9d3` 
+4. 3\) Add the following JSON in the **`ABI/JSON Interface`** field: 
 
 ```javascript
 [{"constant":false,"inputs":[{"name":"spender","type":"address"},
@@ -29,15 +28,14 @@ You will need a small amount of Ether for gas fees and an amount of sUSD to tran
 
 ![](../../../.gitbook/assets/susd1.png)
 
-2. Approve the mediator contract to perform operations with tokens:
-
-* 1\) Select `approve` from the **Select an Item** dropdown
-* 2\) Enter the **Spender** address `0x71F12d03E1711cb96E11E1A5c12Da7466699Db8D` . This is the mediator contract serving the bridge extension on the Ethereum Mainnet
-* 3\) Enter the **Value** - the amount of tokens \(in Wei\) to transfer.
-* 4\) Press Write to initiate the approval.
+1. Approve the mediator contract to perform operations with tokens:
+2. 1\) Select `approve` from the **Select an Item** dropdown
+3. 2\) Enter the **Spender** address `0x71F12d03E1711cb96E11E1A5c12Da7466699Db8D` . This is the mediator contract serving the bridge extension on the Ethereum Mainnet
+4. 3\) Enter the **Value** - the amount of tokens \(in Wei\) to transfer.
+5. 4\) Press Write to initiate the approval.
 
 {% hint style="warning" %}
-Note that minimum and maximum transaction amounts are embedded into the bridge. 
+Note that minimum and maximum transaction amounts are embedded into the bridge.
 
 * **Min** per transaction: **$0.50 sUSD**
 * **Max** per transaction: **$1,000.00 sUSD**
@@ -46,14 +44,13 @@ Note that minimum and maximum transaction amounts are embedded into the bridge.
 
 ![](../../../.gitbook/assets/susd2.png)
 
-3. Check that the Gas price is not set too high, then **Submit** the transaction with a web3 wallet \(like MetaMask or Nifty wallet - here we use Nifty\). Wait to proceed until it is included in the chain.
+1. Check that the Gas price is not set too high, then **Submit** the transaction with a web3 wallet \(like MetaMask or Nifty wallet - here we use Nifty\). Wait to proceed until it is included in the chain.
 
 ![](../../../.gitbook/assets/susd3.png)
 
-4. Press the **Back** button. You will now initialize the mediator contract interface:
-
-* 1\) Enter the mediator contract address`0x71F12d03E1711cb96E11E1A5c12Da7466699Db8D` 
-* 2\) Enter the following JSON in the **`ABI/JSON Interface`** field:
+1. Press the **Back** button. You will now initialize the mediator contract interface:
+2. 1\) Enter the mediator contract address`0x71F12d03E1711cb96E11E1A5c12Da7466699Db8D`
+3. 2\) Enter the following JSON in the **`ABI/JSON Interface`** field:
 
 ```javascript
 [{"constant":false,"inputs":[{"name":"_receiver","type":"address"},
@@ -73,17 +70,15 @@ Note that minimum and maximum transaction amounts are embedded into the bridge.
 
 1. `relayTokens(address _receiver, uint256 _amount)`- Used to transfer sUSD tokens to a recipient in the xDai chain.
 2. `relayTokens(address _from, address _receiver, uint256 _amount)` - Used in scenarios when the sUSD tokens deposit is performed by another contract on behalf of a user account \(e.g. by a DEX\).
-
-* 1\) Select the **first** relayTokens method
-* 2\) `_receiver` - Enter the account that will receive the sUSD tokens on the xDai chain. We assume the same account that deposits the token also receives the token, so enter the address \(from your web3wallet & shown in MEW\) you are initiating the transfer from.
-* 3\)`_amount` -- the amount of tokens \(in Wei\) to transfer; it must be less or equal amount of tokens approved for the bridge operations.
-* 4\) Press **Write**.
+3. 1\) Select the **first** relayTokens method
+4. 2\) `_receiver` - Enter the account that will receive the sUSD tokens on the xDai chain. We assume the same account that deposits the token also receives the token, so enter the address \(from your web3wallet & shown in MEW\) you are initiating the transfer from.
+5. 3\)`_amount` -- the amount of tokens \(in Wei\) to transfer; it must be less or equal amount of tokens approved for the bridge operations.
+6. 4\) Press **Write**.
 
 ![](../../../.gitbook/assets/susd5.png)
 
-7. Check the gas price, then Submit the transaction your web3wallet and wait until it is included in the chain.
-
-8. It will require the AMB bridge a short amount time to relay the deposit request to the xDai chain. After some time the balance of the account specified as `_receiver` in the `relayTokens` method call will increase. The result of the relay operation can be monitored [in Blockscout](https://blockscout.com/xdai/mainnet/tokens/0x4c36d2919e407f0cc2ee3c993ccf8ac26d9ce64e/token_transfers).
+1. Check the gas price, then Submit the transaction your web3wallet and wait until it is included in the chain.
+2. It will require the AMB bridge a short amount time to relay the deposit request to the xDai chain. After some time the balance of the account specified as `_receiver` in the `relayTokens` method call will increase. The result of the relay operation can be monitored [in Blockscout](https://blockscout.com/xdai/mainnet/tokens/0x4c36d2919e407f0cc2ee3c993ccf8ac26d9ce64e/token_transfers).
 
 ## View Balances
 
@@ -105,11 +100,9 @@ You should now see your newly transferred sUSD balance on the xDAi chain.
 ## Withdraw sUSD tokens from the xDai chain
 
 1. Choose the xDai chain in the browser wallet extension and login to [MyEtherWallet \(MEW\)](https://www.myetherwallet.com/access-my-wallet). Select to the **Interact with Contract** item in the side navigation menu. \(_note: you must have sUSD tokens in your wallet on the xDai chain to proceed_\)
-
 2. Initialize the sUSD bridgeable token contract interface:
-
-* 1\) Add the token **Contract Address**`0x4C36d2919e407f0Cc2Ee3c993ccF8ac26d9CE64e` .
-* 2\) Add the following JSON in the **`ABI/JSON Interface`** field:
+3. 1\) Add the token **Contract Address**`0x4C36d2919e407f0Cc2Ee3c993ccF8ac26d9CE64e` .
+4. 2\) Add the following JSON in the **`ABI/JSON Interface`** field:
 
 ```javascript
 [{"type":"function","stateMutability":"nonpayable","payable":false,
@@ -122,15 +115,14 @@ You should now see your newly transferred sUSD balance on the xDAi chain.
 
 ![](../../../.gitbook/assets/send1.png)
 
-3. Transfer the sUSD bridgeable tokens to the mediator contract:
-
-* 1\) Select transfer from the the **Select an Item** dropdown
-* 2\) Enter in the `_to` address:`0xD9a3039cfC70aF84AC9E566A2526fD3b683B995B` . This is the  mediator contract serving the bridge extension in the xDai chain.
-* 3\) Enter the value to transfer in Wei in the `_value` field.
-* 4\) Click **Write.**
+1. Transfer the sUSD bridgeable tokens to the mediator contract:
+2. 1\) Select transfer from the the **Select an Item** dropdown
+3. 2\) Enter in the `_to` address:`0xD9a3039cfC70aF84AC9E566A2526fD3b683B995B` . This is the  mediator contract serving the bridge extension in the xDai chain.
+4. 3\) Enter the value to transfer in Wei in the `_value` field.
+5. 4\) Click **Write.**
 
 {% hint style="warning" %}
-Note that minimum and maximum transaction amounts are embedded into the bridge. 
+Note that minimum and maximum transaction amounts are embedded into the bridge.
 
 * **Min** per transaction: **$0.50 sUSD**
 * **Max** per transaction: **$1,000.00 sUSD**
@@ -143,7 +135,6 @@ Note that minimum and maximum transaction amounts are embedded into the bridge.
 The `transfer` method of the bridgeable token contract will automatically notify the mediator contract about the new amount of tokens transferred to the mediator contract account. For this reason, no other action is required from the user side to finish the withdrawal request.
 {% endhint %}
 
-4. Check the gas price, then **Submit** the transaction through the web3 wallet extension and wait until it is included in the chain.
-
-5. It will require the AMB bridge some time to transfer tokens to the Ethereum Mainnet. After several minutes, the balance of the account specified as `_to` in the `transfer` method call will increase. The result of the relay operation can be monitored [in Etherscan](https://etherscan.io/token/0x57ab1e02fee23774580c119740129eac7081e9d3?a=0x71f12d03e1711cb96e11e1a5c12da7466699db8d), and should be viewable in your web3 wallet connected to the Ethereum Mainnet.
+1. Check the gas price, then **Submit** the transaction through the web3 wallet extension and wait until it is included in the chain.
+2. It will require the AMB bridge some time to transfer tokens to the Ethereum Mainnet. After several minutes, the balance of the account specified as `_to` in the `transfer` method call will increase. The result of the relay operation can be monitored [in Etherscan](https://etherscan.io/token/0x57ab1e02fee23774580c119740129eac7081e9d3?a=0x71f12d03e1711cb96e11e1a5c12da7466699db8d), and should be viewable in your web3 wallet connected to the Ethereum Mainnet.
 

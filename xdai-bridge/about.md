@@ -8,7 +8,7 @@ There are currently two bridges on xDai that connect it to the Ethereum Mainnet.
 
 |  |  |
 | :--- | :--- |
-| Bridge Type | ERC20 to Native  |
+| Bridge Type | ERC20 to Native |
 | UI | [https://bridge.xdaichain.com/](https://bridge.xdaichain.com/) |
 | Ethereum Proxy Contract | [0x4aa42145Aa6Ebf72e164C9bBC74fbD3788045016](https://etherscan.io/address/0x4aa42145Aa6Ebf72e164C9bBC74fbD3788045016#readProxyContract) |
 | xDai Proxy Contract | [0x7301CFA0e1756B71869E93d4e4Dca5c7d0eb0AA6](https://blockscout.com/xdai/mainnet/address/0x7301CFA0e1756B71869E93d4e4Dca5c7d0eb0AA6/read-proxy) |

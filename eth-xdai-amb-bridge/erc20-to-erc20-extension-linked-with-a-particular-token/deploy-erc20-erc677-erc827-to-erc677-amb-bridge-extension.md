@@ -33,7 +33,7 @@ The following pre-requisites are required to deploy the AMB extension:
  docker pull poanetwork/tokenbridge-contracts:latest
 ```
 
-2. Prepare a configuration file \(e.g. `erc-to-erc.config`\) which specifies the deployment process parameters and the initial extension configuration:
+1. Prepare a configuration file \(e.g. `erc-to-erc.config`\) which specifies the deployment process parameters and the initial extension configuration:
 
 ```text
  # The type of bridge. Defines set of contracts to be deployed.
@@ -137,7 +137,7 @@ The following pre-requisites are required to deploy the AMB extension:
  FOREIGN_EXPLORER_API_KEY=...
 ```
 
-3. Run the deployment process by specifying the path to the configuration file:
+1. Run the deployment process by specifying the path to the configuration file:
 
 ```text
  docker run -ti --rm --env-file erc-to-erc.config \
@@ -164,9 +164,9 @@ Output will look similar to this:
  }
 ```
 
-4. Check on [Etherscan](https://etherscan.io/) and [BlockScout](https://blockscout.com/xdai/mainnet/) that the contracts with addresses listed above are verified. Mark the mediator contract on the Ethereum Mainnet side as a proxy contract in Etherscan so you can read the extension parameters here.
+1. Check on [Etherscan](https://etherscan.io/) and [BlockScout](https://blockscout.com/xdai/mainnet/) that the contracts with addresses listed above are verified. Mark the mediator contract on the Ethereum Mainnet side as a proxy contract in Etherscan so you can read the extension parameters here.
 
 ![](../../.gitbook/assets/image%20%2836%29.png)
 
-5. Verify that tokens can be transferred in both directions through the bridge. See the [the sUSD bridge AMB extension](susd-bridge-extension/) for an example process.
+1. Verify that tokens can be transferred in both directions through the bridge. See the [the sUSD bridge AMB extension](susd-bridge-extension/) for an example process.
 

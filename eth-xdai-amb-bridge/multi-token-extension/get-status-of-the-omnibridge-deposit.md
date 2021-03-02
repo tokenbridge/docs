@@ -41,8 +41,8 @@ Here is the event corresponding to the requests from the example: [https://block
 
 ![](../../.gitbook/assets/image%20%2894%29.png)
 
-The topic of the event is `0xe194ef610f9150a2db4110b3db5116fd623175dca3528d7ae7046a1042f84fe7`. And the message Id is represented as a separate topic in the event.   
-  
+The topic of the event is `0xe194ef610f9150a2db4110b3db5116fd623175dca3528d7ae7046a1042f84fe7`. And the message Id is represented as a separate topic in the event.
+
 That's why it is possible to use different ways to filter out the corresponding transaction if the message Id of the OmniBridge deposit is known \(it always can be received from the deposit transaction\).
 
 For example, you can use the BlockScout API for this: [https://blockscout.com/xdai/mainnet/api-docs](https://blockscout.com/xdai/mainnet/api-docs). Example of the request to the BlockScout:

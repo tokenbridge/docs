@@ -32,9 +32,9 @@ General FAQs are located here: [https://www.xdaichain.com/about-xdai/faqs/bridge
 * Mediator contract on Ethereum: [`0x88ad09518695c6c3712AC10a214bE5109a655671`](https://etherscan.io/address/0x88ad09518695c6c3712AC10a214bE5109a655671)
 * Mediator contract on the xDai chain: [`0xf6A78083ca3e2a662D6dd1703c939c8aCE2e268d`](https://blockscout.com/xdai/mainnet/address/0xf6A78083ca3e2a662D6dd1703c939c8aCE2e268d)
 
-### Transfer limits 
+### Transfer limits
 
-Transfer limits are configured per a particular pair of tokens. 
+Transfer limits are configured per a particular pair of tokens.
 
 **Default limits:**
 
@@ -44,7 +44,7 @@ Default limits to transfer assets **from Ethereum to the xDai chain**:
 * Maximum per transaction: 1'000'000'000 tokens
 * Minimum per transaction: 0.0001 token
 
-Default limits to transfer assets **from the xDai chain to Ethereum** 
+Default limits to transfer assets **from the xDai chain to Ethereum**
 
 * Daily limit: 1'000'000'000'000'000'000 tokens
 * Maximum per transaction: 1'000'000'000 tokens

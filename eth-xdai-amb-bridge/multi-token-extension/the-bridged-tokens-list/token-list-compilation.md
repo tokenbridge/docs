@@ -6,5 +6,3 @@ The Token list is queried [dynamically with BlockScout](https://blockscout.com/x
 2. Check all internal transactions for each transaction.
 3. If an internal transaction creates a contract from the AMB mediator address \(`0xf6A78083ca3e2a662D6dd1703c939c8aCE2e268d`\), and this contract exposes the`getTokenInterfacesVersion()` getter, it is safe to assume that this contract’s address is a bridged token address.
 
-
-
