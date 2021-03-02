@@ -15,7 +15,7 @@ The mediator contracts rely on the following information about the BSC-xDai Arbi
   * Gas limit to call method in the xDai chain: `2000000`
   * Finalization rate: `12` blocks
 * **xDai Chain**:
-  * AMB contract: [`0x162E898bD0aacB578C8D5F8d6ca588c13d2A383F`](https://blockscout.com/poa/xdai/address/0x162E898bD0aacB578C8D5F8d6ca588c13d2A383F)
+  * AMB contract: [`0x162E898bD0aacB578C8D5F8d6ca588c13d2A383F`](https://blockscout.com/xdai/mainnet/address/0x162E898bD0aacB578C8D5F8d6ca588c13d2A383F)
   * Gas limit to call method in the Ethereum Mainnet: `2000000`
   * Finalization rate: `12` blocks
 

@@ -83,7 +83,7 @@ Note that minimum and maximum transaction amounts are embedded into the bridge.
 
 7. Check the gas price, then Submit the transaction your web3wallet and wait until it is included in the chain.
 
-8. It will require the AMB bridge a short amount time to relay the deposit request to the xDai chain. After some time the balance of the account specified as `_receiver` in the `relayTokens` method call will increase. The result of the relay operation can be monitored [in Blockscout](https://blockscout.com/poa/xdai/tokens/0x4c36d2919e407f0cc2ee3c993ccf8ac26d9ce64e/token_transfers).
+8. It will require the AMB bridge a short amount time to relay the deposit request to the xDai chain. After some time the balance of the account specified as `_receiver` in the `relayTokens` method call will increase. The result of the relay operation can be monitored [in Blockscout](https://blockscout.com/xdai/mainnet/tokens/0x4c36d2919e407f0cc2ee3c993ccf8ac26d9ce64e/token_transfers).
 
 ## View Balances
 

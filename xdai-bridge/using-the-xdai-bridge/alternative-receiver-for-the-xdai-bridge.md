@@ -87,7 +87,7 @@ where
 
 4. Submit the transaction in the MetaMask and wait when it is included in the chain. Copy the transaction hash of the confirmation  
   
-5.  Visit the helper contract: [https://blockscout.com/poa/xdai/address/0x6A92e97A568f5F58590E8b1f56484e6268CdDC51/read-contract](https://blockscout.com/poa/xdai/address/0x6A92e97A568f5F58590E8b1f56484e6268CdDC51/read-contract)  
+5.  Visit the helper contract: [https://blockscout.com/xdai/mainnet/address/0x6A92e97A568f5F58590E8b1f56484e6268CdDC51/read-contract](https://blockscout.com/xdai/mainnet/address/0x6A92e97A568f5F58590E8b1f56484e6268CdDC51/read-contract)  
   
 6. In the `getMessageHash` method field add the following information from your originating transaction and press the Query button. The method will return a hashed message.
 

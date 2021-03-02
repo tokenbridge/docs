@@ -18,7 +18,7 @@ Below is the list of actions that can be executed in BlockScout and Etherscan, o
 
 ![In this example we use BlockScout on the xDai side.](../../.gitbook/assets/image%20%28102%29.png)
 
-2. Go to [the AMB helper contract](https://blockscout.com/poa/xdai/address/0x7d94ece17e81355326e3359115D4B02411825EdD/read-contract) and call `getSignatures` there with the encoded data from the `UserRequestForSignature` event. It will produce a blob with signatures.
+2. Go to [the AMB helper contract](https://blockscout.com/xdai/mainnet/address/0x7d94ece17e81355326e3359115D4B02411825EdD/read-contract) and call `getSignatures` there with the encoded data from the `UserRequestForSignature` event. It will produce a blob with signatures.
 
 ![](../../.gitbook/assets/image%20%28100%29.png)
 

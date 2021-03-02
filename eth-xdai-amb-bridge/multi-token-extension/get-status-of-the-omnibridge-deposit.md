@@ -37,7 +37,7 @@ event AffirmationCompleted(
 ```
 {% endcode %}
 
-Here is the event corresponding to the requests from the example: [https://blockscout.com/poa/xdai/tx/0x092f1c8a02f305e5bfb671b923710cdd150c5b0e41df048c75b790538a25025b/logs](https://blockscout.com/poa/xdai/tx/0x092f1c8a02f305e5bfb671b923710cdd150c5b0e41df048c75b790538a25025b/logs)
+Here is the event corresponding to the requests from the example: [https://blockscout.com/xdai/mainnet/tx/0x092f1c8a02f305e5bfb671b923710cdd150c5b0e41df048c75b790538a25025b/logs](https://blockscout.com/xdai/mainnet/tx/0x092f1c8a02f305e5bfb671b923710cdd150c5b0e41df048c75b790538a25025b/logs)
 
 ![](../../.gitbook/assets/image%20%2894%29.png)
 
@@ -45,10 +45,10 @@ The topic of the event is `0xe194ef610f9150a2db4110b3db5116fd623175dca3528d7ae70
   
 That's why it is possible to use different ways to filter out the corresponding transaction if the message Id of the OmniBridge deposit is known \(it always can be received from the deposit transaction\).
 
-For example, you can use the BlockScout API for this: [https://blockscout.com/poa/xdai/api-docs](https://blockscout.com/poa/xdai/api-docs). Example of the request to the BlockScout:
+For example, you can use the BlockScout API for this: [https://blockscout.com/xdai/mainnet/api-docs](https://blockscout.com/xdai/mainnet/api-docs). Example of the request to the BlockScout:
 
 ```text
-https://blockscout.com/poa/xdai/api?module=logs&action=getLogs&fromBlock=1&toBlock=latest&address=0x75Df5AF045d91108662D8080fD1FEFAd6aA0bb59&topic0=0xe194ef610f9150a2db4110b3db5116fd623175dca3528d7ae7046a1042f84fe7&topic3=0x000500004ac82b41bd819dd871590b510316f2385cb196fb0000000000000402&topic0_3_opr=and
+https://blockscout.com/xdai/mainnet/api?module=logs&action=getLogs&fromBlock=1&toBlock=latest&address=0x75Df5AF045d91108662D8080fD1FEFAd6aA0bb59&topic0=0xe194ef610f9150a2db4110b3db5116fd623175dca3528d7ae7046a1042f84fe7&topic3=0x000500004ac82b41bd819dd871590b510316f2385cb196fb0000000000000402&topic0_3_opr=and
 ```
 
 It will return the JSON with the transaction hash which causes the emit of the event `AffirmationCompleted` with the message Id:

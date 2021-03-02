@@ -79,7 +79,7 @@ Note that minimum and maximum transaction amounts for deposit are embedded into 
 
 7. Check the gas price, then Submit the transaction your web3 wallet and wait until it is included in the chain.
 
-8. It will require the AMB bridge a short \(20-40 seconds\) amount of time to relay the deposit request to the xDai chain. After some time the balance of the account specified as `_receiver` in the `relayTokens` method call will increase. The result of the relay operation can be monitored in [Blockscout](https://blockscout.com/poa/xdai/tokens/0xC5C35D01B20f8d5cb65C60f02113EF6cd8e79910/token_transfers).
+8. It will require the AMB bridge a short \(20-40 seconds\) amount of time to relay the deposit request to the xDai chain. After some time the balance of the account specified as `_receiver` in the `relayTokens` method call will increase. The result of the relay operation can be monitored in [Blockscout](https://blockscout.com/xdai/mainnet/tokens/0xC5C35D01B20f8d5cb65C60f02113EF6cd8e79910/token_transfers).
 
 ## Withdraw MOON tokens from the xDai chain
 
@@ -92,7 +92,7 @@ If you want to specify an alternative receiver of the tokens \(a different addre
 You will need to add the Moon contract addresses to your wallet to view, and be sure you are connected to the correct chain.  For instructions on adding custom tokens, [see the sUSD tutorial](../../eth-xdai-amb-bridge/erc20-to-erc20-extension-linked-with-a-particular-token/susd-bridge-extension/transfer-susd-through-the-bridge-extension.md#view-balances). Add 18 decimals of precision to view accurate balance.
 
 * Moon tokens on Rinkeby [`0xDF82c9014F127243CE1305DFE54151647d74B27A`](https://rinkeby.etherscan.io/address/0xdf82c9014f127243ce1305dfe54151647d74b27a)\`\`
-* xMoon tokens on xDai [`0x1e16aa4Df73d29C029d94CeDa3e3114EC191E25A`](https://blockscout.com/poa/xdai/tokens/0x1e16aa4Df73d29C029d94CeDa3e3114EC191E25A)
+* xMoon tokens on xDai [`0x1e16aa4Df73d29C029d94CeDa3e3114EC191E25A`](https://blockscout.com/xdai/mainnet/tokens/0x1e16aa4Df73d29C029d94CeDa3e3114EC191E25A)
 
 
 

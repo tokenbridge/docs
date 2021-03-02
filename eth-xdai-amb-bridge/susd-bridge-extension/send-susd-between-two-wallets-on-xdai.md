@@ -43,7 +43,7 @@ b\) Enter the sUSD xDAi **Token Contract Address** `0x4C36d2919e407f0Cc2Ee3c993c
 ![0.2 sUSD on the xDai Chain](../../.gitbook/assets/xdai_3.png)
 
 **BlockScout Transaction:**   
-[https://blockscout.com/poa/xdai/tx/0xba2f7da9bf6277149b073af5bd0f69e5bfae17b03626bbc545e8fdf8441bdf36/token\_transfers](https://blockscout.com/poa/xdai/tx/0xba2f7da9bf6277149b073af5bd0f69e5bfae17b03626bbc545e8fdf8441bdf36/token_transfers)
+[https://blockscout.com/xdai/mainnet/tx/0xba2f7da9bf6277149b073af5bd0f69e5bfae17b03626bbc545e8fdf8441bdf36/token\_transfers](https://blockscout.com/xdai/mainnet/tx/0xba2f7da9bf6277149b073af5bd0f69e5bfae17b03626bbc545e8fdf8441bdf36/token_transfers)
 
 ![](../../.gitbook/assets/tx2.png)
 

@@ -40,7 +40,7 @@ In this example, we transfer the Basic Attention Token \(BAT\) from Ethereum to 
 
 ![Successful after 2 validator approvals](../../../.gitbook/assets/omni6b.jpg)
 
-7\) After a successful transfer, you can check the token on BlockScout to see that it exists. Check Bridged tokens at [https://blockscout.com/poa/xdai/bridged-tokens](https://blockscout.com/poa/xdai/bridged-tokens).
+7\) After a successful transfer, you can check the token on BlockScout to see that it exists. Check Bridged tokens at [https://blockscout.com/xdai/mainnet/bridged-tokens](https://blockscout.com/xdai/mainnet/bridged-tokens).
 
 a. Prior to transaction
 
@@ -71,9 +71,9 @@ _Note: Do not use the search feature, as this will search for tokens on Ethereum
 
 There are several ways to find the Custom token address on xDai using BlockScout.
 
-1\) BlockScout Bridged Token List. If you successfully bridged a token with the OmniBridge, you can find it at [https://blockscout.com/poa/xdai/bridged-tokens](https://blockscout.com/poa/xdai/bridged-tokens).
+1\) BlockScout Bridged Token List. If you successfully bridged a token with the OmniBridge, you can find it at [https://blockscout.com/xdai/mainnet/bridged-tokens](https://blockscout.com/xdai/mainnet/bridged-tokens).
 
-2\) Via your address on BlockScout. Paste your address into the BlockScout Search bar at [https://blockscout.com/poa/xdai](https://blockscout.com/poa/xdai) and click the Tokens tab to see all the tokens associated with your address on xDai.
+2\) Via your address on BlockScout. Paste your address into the BlockScout Search bar at [https://blockscout.com/xdai/mainnet](https://blockscout.com/xdai/mainnet) and click the Tokens tab to see all the tokens associated with your address on xDai.
 
 ![](../../../.gitbook/assets/blockscout-search.jpg)
 
