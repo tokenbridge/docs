@@ -67,7 +67,7 @@ For demonstration purposes we use [MyEtherWallet \(MEW\)](https://www.myetherwal
 
 4. Check that the Gas price is not set too high, then **Submit** the transaction with a web3 wallet \(like MetaMask or Nifty wallet\). Wait to proceed until it is included in the chain.
 
-5. The AMB bridge requires a short amount time to relay the deposit request to the xDai chain. After some time the xGEN balance of the account that sent the tokens will increase. The result of the relay operation can be monitored [in Blockscout](https://blockscout.com/poa/xdai/tokens/0x3e12081dd66a3600fc0a2e6cc9e6b5b3b8f037f6/token_transfers) \(input the final token contract to monitor\). 
+5. The AMB bridge requires a short amount time to relay the deposit request to the xDai chain. After some time the xGEN balance of the account that sent the tokens will increase. The result of the relay operation can be monitored [in Blockscout](https://blockscout.com/xdai/mainnet/tokens/0x3e12081dd66a3600fc0a2e6cc9e6b5b3b8f037f6/token_transfers) \(input the final token contract to monitor\). 
 
 ## Withdraw GEN tokens from the xDai chain \(the interim token\)
 

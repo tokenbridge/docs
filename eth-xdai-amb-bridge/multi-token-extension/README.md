@@ -30,7 +30,7 @@ General FAQs are located here: [https://www.xdaichain.com/about-xdai/faqs/bridge
 ## OmniBridge technical information and extension parameters
 
 * Mediator contract on Ethereum: [`0x88ad09518695c6c3712AC10a214bE5109a655671`](https://etherscan.io/address/0x88ad09518695c6c3712AC10a214bE5109a655671)
-* Mediator contract on the xDai chain: [`0xf6A78083ca3e2a662D6dd1703c939c8aCE2e268d`](https://blockscout.com/poa/xdai/address/0xf6A78083ca3e2a662D6dd1703c939c8aCE2e268d)
+* Mediator contract on the xDai chain: [`0xf6A78083ca3e2a662D6dd1703c939c8aCE2e268d`](https://blockscout.com/xdai/mainnet/address/0xf6A78083ca3e2a662D6dd1703c939c8aCE2e268d)
 
 ### Transfer limits 
 

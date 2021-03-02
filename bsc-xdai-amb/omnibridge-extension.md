@@ -11,7 +11,7 @@ By using this extension any user \(not only the token contract owner\) can trans
 ## OmniBridge technical information and extension parameters
 
 * Mediator contract on BSC: [`0xF0b456250DC9990662a6F25808cC74A6d1131Ea9`](https://bscscan.com/address/0xF0b456250DC9990662a6F25808cC74A6d1131Ea9)
-* Mediator contract on the xDai chain: [`0x59447362798334d3485c64D1e4870Fde2DDC0d75`](https://blockscout.com/poa/xdai/address/0x59447362798334d3485c64D1e4870Fde2DDC0d75/transactions)\`\`
+* Mediator contract on the xDai chain: [`0x59447362798334d3485c64D1e4870Fde2DDC0d75`](https://blockscout.com/xdai/mainnet/address/0x59447362798334d3485c64D1e4870Fde2DDC0d75/transactions)\`\`
 
 ### Transfer limits 
 

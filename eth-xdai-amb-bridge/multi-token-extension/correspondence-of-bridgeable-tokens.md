@@ -26,7 +26,7 @@ BlockScout also distinguishes bridged tokens at the _Top of the tokens_ page by 
 
 #### Approach \#2: Mediator storage
 
-The multi-token mediator on the xDai chain \([`0xf6A78083ca3e2a662D6dd1703c939c8aCE2e268d`](https://blockscout.com/poa/xdai/address/0xf6A78083ca3e2a662D6dd1703c939c8aCE2e268d)\) provides methods for viewing correspondence of bridgeable tokens:
+The multi-token mediator on the xDai chain \([`0xf6A78083ca3e2a662D6dd1703c939c8aCE2e268d`](https://blockscout.com/xdai/mainnet/address/0xf6A78083ca3e2a662D6dd1703c939c8aCE2e268d)\) provides methods for viewing correspondence of bridgeable tokens:
 
 * `foreignTokenAddress` - returns the address of the token contract on the Ethereum Mainnet by specifying the address the token contract on the xDai chain.
 * `homeTokenAddress` - returns the address of the token contract on the xDai chain by specifying the address of the token contract on the Ethereum chain.

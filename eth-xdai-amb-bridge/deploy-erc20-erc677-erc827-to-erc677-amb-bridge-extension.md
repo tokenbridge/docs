@@ -129,7 +129,7 @@ The following pre-requisites are required to deploy the AMB extension:
  FOREIGN_MEDIATOR_REQUEST_GAS_LIMIT=500000
 
  # The api url of an explorer to verify all the deployed contracts in Home network.
- HOME_EXPLORER_URL=https://blockscout.com/poa/xdai/api
+ HOME_EXPLORER_URL=https://blockscout.com/xdai/mainnet/api
  # The api url of an explorer to verify all the deployed contracts in Foreign network.
  FOREIGN_EXPLORER_URL=https://api.etherscan.io/api
  # The api key of the explorer api, if required, used to verify all
@@ -164,7 +164,7 @@ Output will look similar to this:
  }
 ```
 
-4. Check on [Etherscan](https://etherscan.io/) and [BlockScout](https://blockscout.com/poa/xdai/) that the contracts with addresses listed above are verified. Mark the mediator contract on the Ethereum Mainnet side as a proxy contract in Etherscan so you can read the extension parameters here.
+4. Check on [Etherscan](https://etherscan.io/) and [BlockScout](https://blockscout.com/xdai/mainnet/) that the contracts with addresses listed above are verified. Mark the mediator contract on the Ethereum Mainnet side as a proxy contract in Etherscan so you can read the extension parameters here.
 
 ![](../.gitbook/assets/image%20%2836%29.png)
 

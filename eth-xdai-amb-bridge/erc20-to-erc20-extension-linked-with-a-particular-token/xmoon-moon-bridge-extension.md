@@ -4,8 +4,8 @@ The xMOON-MOON bridge extension of the ETH-xDai Arbitrary Message Bridge is a pa
 
 {% tabs %}
 {% tab title="xDai chain" %}
-* Mediator contract: [`0xF75C28fE07E0647B05160288F172ad27CccD8f30`](https://blockscout.com/poa/xdai/address/0xF75C28fE07E0647B05160288F172ad27CccD8f30)
-* Token contracts:  [`0x1e16aa4Df73d29C029d94CeDa3e3114EC191E25A`](https://blockscout.com/poa/xdai/address/0x1e16aa4Df73d29C029d94CeDa3e3114EC191E25A)
+* Mediator contract: [`0xF75C28fE07E0647B05160288F172ad27CccD8f30`](https://blockscout.com/xdai/mainnet/address/0xF75C28fE07E0647B05160288F172ad27CccD8f30)
+* Token contracts:  [`0x1e16aa4Df73d29C029d94CeDa3e3114EC191E25A`](https://blockscout.com/xdai/mainnet/address/0x1e16aa4Df73d29C029d94CeDa3e3114EC191E25A)
 {% endtab %}
 
 {% tab title="Ethereum Mainnet" %}
@@ -14,7 +14,7 @@ The xMOON-MOON bridge extension of the ETH-xDai Arbitrary Message Bridge is a pa
 {% endtab %}
 {% endtabs %}
 
-Anyone who owns [xMOON tokens](https://blockscout.com/poa/xdai/tokens/0x1e16aa4Df73d29C029d94CeDa3e3114EC191E25A/token-transfers) can use the bridge. xMOONs are locked in the bridge contract on the xDai chain and the same amount of [MOONs](https://etherscan.io/address/0xe1cA72ff3434B131765c62Cbcbc26060F7Aba03D) is minted on the Ethereum Mainnet. The reverse operation burns MOONs tokens on the Ethereum Mainnet chain and unlocks xMOONs on the xDai chain.
+Anyone who owns [xMOON tokens](https://blockscout.com/xdai/mainnet/tokens/0x1e16aa4Df73d29C029d94CeDa3e3114EC191E25A/token-transfers) can use the bridge. xMOONs are locked in the bridge contract on the xDai chain and the same amount of [MOONs](https://etherscan.io/address/0xe1cA72ff3434B131765c62Cbcbc26060F7Aba03D) is minted on the Ethereum Mainnet. The reverse operation burns MOONs tokens on the Ethereum Mainnet chain and unlocks xMOONs on the xDai chain.
 
 The main interface to transfer tokens is [the OmniBridge UI](https://omni.xdaichain.com/).
 

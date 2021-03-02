@@ -50,7 +50,7 @@ Click on an age metric to view the transaction details in Etherscan.
 
 ### Example transaction hash
 
-[0x03c11c1b7510e4e07290634783e73914ffe6b7db60e36e0cb36011863ff66fda](https://blockscout.com/poa/xdai/tx/0x03c11c1b7510e4e07290634783e73914ffe6b7db60e36e0cb36011863ff66fda/token_transfers)
+[0x03c11c1b7510e4e07290634783e73914ffe6b7db60e36e0cb36011863ff66fda](https://blockscout.com/xdai/mainnet/tx/0x03c11c1b7510e4e07290634783e73914ffe6b7db60e36e0cb36011863ff66fda/token_transfers)
 
 1\) After completing an AMB bridge transaction \([we transfer xMOONs on xDai to MOONs on Rinkeby using the moon-exchange UI](https://moon-exchange.herokuapp.com/)\), go to the MetaMask Activity tab and select the transaction \(Transfer & Call\).
 

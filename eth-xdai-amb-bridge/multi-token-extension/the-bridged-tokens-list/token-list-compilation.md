@@ -1,6 +1,6 @@
 # Token list compilation
 
-The Token list is queried [dynamically with BlockScout](https://blockscout.com/poa/xdai/bridged-tokens). The list is compiled accordingly:
+The Token list is queried [dynamically with BlockScout](https://blockscout.com/xdai/mainnet/bridged-tokens). The list is compiled accordingly:
 
 1. Find all transactions to the AMB Contract on xDai `0x75Df5AF045d91108662D8080fD1FEFAd6aA0bb59`
 2. Check all internal transactions for each transaction.

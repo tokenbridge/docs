@@ -18,7 +18,7 @@ DApp developers may also find this pair of chains useful for their cross-chain a
   * Fee: none
   * Finalization rate: `2` block
 * **xDai chain**:
-  * AMB contract: [`0xc38D4991c951fE8BCE1a12bEef2046eF36b0FA4A`](https://blockscout.com/poa/xdai/address/0xc38D4991c951fE8BCE1a12bEef2046eF36b0FA4A)\`\`
+  * AMB contract: [`0xc38D4991c951fE8BCE1a12bEef2046eF36b0FA4A`](https://blockscout.com/xdai/mainnet/address/0xc38D4991c951fE8BCE1a12bEef2046eF36b0FA4A)\`\`
   * Gas limit to call method in the xDai chain: `3000000`
   * Fee: none
   * Finalization rate: `2` block

@@ -9,9 +9,9 @@ The GEN-xGEN bridge extension of the ETH-xDai Arbitrary Message Bridge is a pair
 * Mediator contract at **Ethereum Mainnet**: [`0x6eA6C65E14661C0BcaB5bc862fE5E7D3B5630C2F`](https://etherscan.io/address/0x6eA6C65E14661C0BcaB5bc862fE5E7D3B5630C2F)
 * Mediator contract at **xDai Chain**:
 
-  [`0xe47097ceF3B0bcbb0095A21523714bF0022E2DB8`](https://blockscout.com/poa/xdai/address/0xe47097ceF3B0bcbb0095A21523714bF0022E2DB8/transactions)
+  [`0xe47097ceF3B0bcbb0095A21523714bF0022E2DB8`](https://blockscout.com/xdai/mainnet/address/0xe47097ceF3B0bcbb0095A21523714bF0022E2DB8/transactions)
 
 Anyone who owns [GEN](https://etherscan.io/token/0x543ff227f64aa17ea132bf9886cab5db55dcaddf) tokens can use the bridge. GENs are locked in the bridge contract and the same amount of xGEN are minted on the xDai chain. The reverse operation burns xGEN bridgeable tokens on the xDai chain and unlocks GEN tokens on the Ethereum Mainnet.
 
-During the testing phase of the extension an interim xGEN token is being used on the xDai chain. The token contract address is [`0x3e12081dd66a3600fc0a2e6cc9e6b5b3b8f037f6`](https://blockscout.com/poa/xdai/tokens/0x3e12081dd66a3600fc0a2e6cc9e6b5b3b8f037f6/token_transfers).
+During the testing phase of the extension an interim xGEN token is being used on the xDai chain. The token contract address is [`0x3e12081dd66a3600fc0a2e6cc9e6b5b3b8f037f6`](https://blockscout.com/xdai/mainnet/tokens/0x3e12081dd66a3600fc0a2e6cc9e6b5b3b8f037f6/token_transfers).
 
