@@ -16,7 +16,7 @@ The process to transfer a non-fungible token from the Kovan testnet to the Sokol
 2. Initiate a request to transfer the token through the bridge on the OmniBridge mediator contract located on Kovan.
 
 {% hint style="warning" %}
-Make sure that the token contract is verified in Etherscan. Token contracts deployed as part of the NFT OmniBridge mediator operations are not verified automatically, so if the token does not allow read and write in the block explorer, follow the steps to verify the contract before starting.
+Make sure that the token contract is verified in Etherscan. Token contracts deployed as part of the NFT OmniBridge mediator operations are not verified automatically, so if the token does not allow read and write in the block explorer, follow the [steps to verify the contract ](https://etherscan.io/verifyContract)before starting.
 {% endhint %}
 
 #### Step 1: Approve the mediator contract to transfer tokens
@@ -30,7 +30,7 @@ Go to the token contract page in Etherscan and click on the "Write Contract"/"Wr
 Go to the `approve` method and enter the following:
 
 * to \(address\) field:  the mediator contract address on the Kovan chain \(`0x63be59CF177cA9bb317DE8C4aa965Ddda93CB9d7`\) 
-* tokenId \(uint256\):  the id of the token to transfer
+* tokenId \(uint256\):  the id of the token to transfer _\(ids vary based on NFT implementation, may be a few digits or many\)_
 
 ![](../../.gitbook/assets/image%20%28138%29.png)
 
@@ -75,10 +75,10 @@ The procedure to transfer ERC721 tokens from Sokol to Kovan differs from the tra
 
 1. Approve the NFT OmniBridge mediator contract to operate with a non-fungible token.
 2. Initiate a request to transfer the token through the bridge on the OmniBridge mediator contract.
-3. Finalze the request by collecting the oracles' confirmations and transferring the Arbitreary Message Bridge contract on the Kovan side.
+3. Finalize the request by collecting the oracles' confirmations and transferring the Arbitrary Message Bridge contract on the Kovan side.
 
 {% hint style="warning" %}
-Make sure that the token contract is verified in BlockScout. Token contracts deployed as part of the NFT OmniBridge mediator operations are not verified automatically, so if the token does not allow read and write in the block explorer, follow the steps to verify the contract before starting.
+Make sure that the token contract is verified in BlockScout. Token contracts deployed as part of the NFT OmniBridge mediator operations are not verified automatically, so if the token does not allow read and write in the block explorer, follow the [steps to verify the contract](https://docs.blockscout.com/for-users/smart-contract-interaction/verifying-a-smart-contract) before starting.
 {% endhint %}
 
 #### Step 1: Approve the mediator contract to transfer tokens
@@ -125,7 +125,7 @@ Change the chain in MetaMask/NiftyWallet to the Kovan chain and press Execute to
 An alternative way to manually deliver confirmations to the AMB contracts on the Kovan side is to [use the AMB Helper contract](https://docs.tokenbridge.net/kovan-sokol-amb-bridge/about-the-kovan-sokol-amb/submit-confirmations-manually).
 {% endhint %}
 
-As soon as the transaction is verified and included in a block, the token will be transferred to the account that called the \`relayTokens\` method of the NFT OmniBridge mediator.
+As soon as the transaction is verified and included in a block, the token will be transferred to the account that called the `relayTokens` method of the NFT OmniBridge mediator.
 
 ![](../../.gitbook/assets/image%20%28140%29.png)
 
