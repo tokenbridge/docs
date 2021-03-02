@@ -1,6 +1,6 @@
 ---
 description: >-
-  Step by step instructions how to transfer tokens by using features provided by
+  Step by step instructions how to transfer tokens using features provided by
   Etherscan and BlockScout
 ---
 
