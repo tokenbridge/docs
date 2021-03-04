@@ -1,3 +1,7 @@
+---
+description: Use the NFT OmniBridge extension to transfer NFTs between xDai and Ethereum
+---
+
 # NFT Transfer Example
 
 The NFT extension is operational, and a UI to transfer NFTs \(ERC721s\) is currently in development. For now, users can access and write to contracts using BlockScout and Etherscan. In the following example, we will bridge an NFT from xDai to Ethereum and back using methods accessed through these block explorers.
