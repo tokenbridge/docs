@@ -84,7 +84,7 @@ Once the transaction is verified and included in a block, the token will be tran
 
 ## Ethereum to xDai
 
-_Coming soon_
+_Coming soon. The process is similar to the above using Etherscan rather than BlockScout to write transactions. You will not need to manually execute on the xDai side, this process is automated when bridging NFTs from Ethereum to xDai._
 
 
 
