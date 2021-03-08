@@ -58,7 +58,7 @@
   * [xDai Bridge Management API](xdai-bridge/xdai-bridge-contracts-management/xdai-bridge-management-api.md)
 * [xDai Bridge oracle maintenance](xdai-bridge/xdai-bridge-oracle-maintenance/README.md)
   * [Oracle migration to a new server](xdai-bridge/xdai-bridge-oracle-maintenance/oracle-migration-to-a-new-server.md)
-* [Trial the bridge](xdai-bridge/trial-the-bridge.md)
+* [Trial bridge](xdai-bridge/trial-the-bridge.md)
 
 ## ETH-XDAI AMB <a id="eth-xdai-amb-bridge"></a>
 

@@ -2,12 +2,12 @@
 description: Technical information about a test erc20-to-native bridge instance
 ---
 
-# Trial the bridge
+# Trial bridge
 
-The bridge is functioning between Kovan and Sokol chains. The main purpose of it is to test the xDai TokenBridge UI that's why it does not repeat the production version of the bridge in the full manner. Here is a list of differences:
+The bridge is functioning between Kovan and Sokol chains. The main purpose is for testing the xDai TokenBridge UI and differs from the production version of the bridge. Key differences:
 
 * A generic ERC20 token is used on the Kovan chain rather than a clone of the original DAI token.
-* The native tokens \(SPOA\) are minted on the Sokol side by the bridge directly without involvement of the BlockReward functionality.
+* Native tokens \(SPOA\) are minted on the Sokol side by the bridge directly without involving the `BlockReward` functionality.
 
 ### Contracts information
 
@@ -24,5 +24,5 @@ The bridge is functioning between Kovan and Sokol chains. The main purpose of it
 
 ### Getting tokens for testing
 
-In order to get ERC20 tokens for testing, it is necessary to send SPOA native tokens first to the bridge contract. The corresponding amount of ERC20 tokens will be released in few minutes on another side of the bridge.
+To get ERC20 tokens for testing, first send SPOA native tokens first to the bridge contract. The corresponding amount of ERC20 tokens will be released in a few minutes on the other side of the bridge.
 
