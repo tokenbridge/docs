@@ -12,7 +12,7 @@ The NFT Extension is in Beta and transfers are performed at your own risk. NFT t
 
 ## -&gt; xDai to Ethereum
 
-NFTs can be mintd on xDai very inexpensively. These NFTs can then be bridged to Ethereum using the NFT OmniBridge extension. The process consists of several steps.
+NFTs can be minted on xDai very inexpensively. These NFTs can then be bridged to Ethereum using the NFT OmniBridge extension. The process consists of several steps.
 
 1. Locate your NFT contract and tokenID.
 2. Approve the mediator contract on xDai to transfer your NFT.
