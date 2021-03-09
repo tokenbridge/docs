@@ -53,7 +53,7 @@ Press Write to send the transaction.
 
 ![](../../.gitbook/assets/image%20%28101%29.png)
 
-6. Use "View in ALM App" link on the page with transaction details to track status of the transfer and finalize the bridging operation.
+6. Use "View in ALM App" link on the page with transaction details to track status of the transfer and finalize the bridging operation if is required.
 
 ![](../../.gitbook/assets/image%20%28143%29.png)
 
