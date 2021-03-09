@@ -93,6 +93,7 @@
   * [Submit confirmations manually](bsc-xdai-amb/about-the-bsc-xdai-amb/submit-confirmations-manually.md)
 * [OmniBridge Extension](bsc-xdai-amb/omnibridge-extension/README.md)
   * [Manual tokens transfer](bsc-xdai-amb/omnibridge-extension/manual-tokens-transfer.md)
+  * [Transfer WBNB on xDai to BNB on BSC](bsc-xdai-amb/omnibridge-extension/transfer-wbnb-on-xdai-to-bnb-on-bsc.md)
 
 ## RINKEBY-XDAI AMB <a id="rinkeby-xdai-amb-bridge"></a>
 
