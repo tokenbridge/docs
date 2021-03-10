@@ -6,11 +6,11 @@ description: BSC-xDai Arbitrary Message Bridge information
 
 The main goal of the Arbitrary Message Bridge between the Binance Smart Chain and the xDai chain is to provide a platform for the OmniBridge connecting both chains.
 
-But similar to other AMBs already deployed between other chains everyone is able to develop and deploy a pair of contracts -- mediators to implement their own logic of interchain communication. Read more about the AMB mediators [here](https://docs.tokenbridge.net/amb-bridge/how-to-develop-xchain-apps-by-amb).
+Similar to other AMBs deployed between other chains, anyone is able to develop and deploy a pair of contracts -- mediators to implement their own logic of interchain communication. Read more about the AMB mediators [here](https://docs.tokenbridge.net/amb-bridge/how-to-develop-xchain-apps-by-amb).
 
 The mediator contracts rely on the following information about the BSC-xDai Arbitrary Message Bridge:
 
-* **Bincance Smart Chain**:
+* **Binance Smart Chain**:
   * AMB contract: [`0x05185872898b6f94AA600177EF41B9334B1FA48B`](https://bscscan.com/address/0x05185872898b6f94AA600177EF41B9334B1FA48B)
   * Gas limit to call method in the xDai chain: `2000000`
   * Finalization rate: `12` blocks

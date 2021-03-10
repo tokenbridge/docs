@@ -18,7 +18,7 @@ By using this extension any user \(not only the token contract owner\) can trans
 
 The specified token amount is locked in the mediator contract, a new token contract is deployed automatically on the BSC/xDai chain, and the requested token amount is minted on the xDai/BSC chain. The reverse operation burns bridged tokens on the xDai/BSC chain and unlocks the tokens from the token contract on another side of the bridge.
 
-Note that tokens are appended with "on xDai" or "on BSC" when bridging. This can result in names such as "[STAKE on xDai on BSC](https://www.bscscan.com/token/0x24e5cf4a0577563d4e7761d14d53c8d0b504e337)" if tokens have been bridged from Ethereum to xDai and then to BSC for example.
+Note that tokens are appended with the name of the originating chain "from Ethereum" or "from xDai" when bridging. This can result in names such as "[STAKE on xDai on BSC](https://www.bscscan.com/token/0x24e5cf4a0577563d4e7761d14d53c8d0b504e337)" if tokens have been bridged from Ethereum to xDai and then to BSC for example.
 
 ## OmniBridge technical information and extension parameters
 
