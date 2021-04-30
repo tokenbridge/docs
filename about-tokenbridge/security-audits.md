@@ -10,7 +10,7 @@ The TokenBridge has undergone multiple independent security audits and assessmen
 
 **Contracts:** [https://github.com/poanetwork/omnibridge](https://github.com/poanetwork/omnibridge)
 
-{% file src="../.gitbook/assets/report.pdf" caption="ChainSecurity Audit PDF" %}
+{% embed url="https://chainsecurity.com/security-audit/poa-network-omnibridge/" caption="Link to Audit Report on ChainSecurity" %}
 
 ## TokenBridge Audit by Quantstamp \(covers OmniBridge\)
 
