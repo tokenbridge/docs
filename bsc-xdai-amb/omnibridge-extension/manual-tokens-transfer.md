@@ -2,7 +2,7 @@
 description: How to transfer tokens manually through the BSC-xDai OmniBridge
 ---
 
-# Manual tokens transfer
+# Manual tokens transfer \(No UI\)
 
 The OmniBridge is a decentralized application. Tokens can be transferred through the extension without using a dedicated UI. 
 
