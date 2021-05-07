@@ -65,7 +65,6 @@
 * [About the ETH-xDai AMB](eth-xdai-amb-bridge/about-the-eth-xdai-amb/README.md)
   * [Submit confirmations manually](eth-xdai-amb-bridge/about-the-eth-xdai-amb/submit-confirmations-manually.md)
 * [🌉 OmniBridge Extension](eth-xdai-amb-bridge/multi-token-extension/README.md)
-  * [Untitled](eth-xdai-amb-bridge/multi-token-extension/untitled.md)
   * [OmniBridge UI](eth-xdai-amb-bridge/multi-token-extension/ui-to-transfer-tokens/README.md)
     * [Transfer any ERC20 from Ethereum to xDai](eth-xdai-amb-bridge/multi-token-extension/ui-to-transfer-tokens/transfer-erc20.md)
   * [Transfer tokens manually](eth-xdai-amb-bridge/multi-token-extension/how-to-transfer-tokens.md)
