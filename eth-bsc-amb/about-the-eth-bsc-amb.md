@@ -12,14 +12,21 @@ Due to high gas prices in both chains it is hard to maintain this bridge: upgrad
 
 The mediator contracts could use the following information about the ETH-BSC Arbitrary Message Bridge:
 
-* **Ethereum Mainnet**:
-  * AMB contract: [`0x07955be2967B655Cf52751fCE7ccC8c61EA594e2`](https://etherscan.io/address/0x07955be2967B655Cf52751fCE7ccC8c61EA594e2)
-  * Gas limit to call method in the Binance Smart Chain: `1000000`
-  * Finalization rate: `8` blocks
-* **Binance Smart Chain**:
-  * AMB contract: [`0x6943a218d58135793f1fe619414ed476c37ad65a`](https://bscscan.com/address/0x6943a218d58135793f1fe619414ed476c37ad65a)
-  * Gas limit to call method in the Ethereum Mainnet: `1000000`
-  * Finalization rate: `8` blocks
+{% tabs %}
+{% tab title="Ethereum Mainnet" %}
+* AMB contract: [`0x07955be2967B655Cf52751fCE7ccC8c61EA594e2`](https://etherscan.io/address/0x07955be2967B655Cf52751fCE7ccC8c61EA594e2)
+* Gas limit to call method in the Binance Smart Chain: `1000000`
+* Finalization rate: `12` blocks
+* Reentrant requests allowed
+{% endtab %}
+
+{% tab title="Binance Smart Chain" %}
+* AMB contract: [`0x6943a218d58135793f1fe619414ed476c37ad65a`](https://bscscan.com/address/0x6943a218d58135793f1fe619414ed476c37ad65a)
+* To execute messages without gas limit on the Ethereum Mainnet, use `safeExecuteSignaturesWithAutoGasLimit` for the message transfer finalization
+* Finalization rate: `12` blocks
+* Reentrant requests allowed
+{% endtab %}
+{% endtabs %}
 
 ### Transactions
 
