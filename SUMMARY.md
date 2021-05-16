@@ -113,6 +113,11 @@
 * [Native-to-ERC20 bridge extension](kovan-sokol-amb-bridge/native-to-erc20-bridge-extension/README.md)
   * [Transfer SPOA through native-to-ERC20 extension without UI](kovan-sokol-amb-bridge/native-to-erc20-bridge-extension/transfer-spoa-through-native-to-erc20-extension-without-ui.md)
 
+## ETH-BSC AMB
+
+* [About the ETH-BSC AMB](eth-bsc-amb/about-the-eth-bsc-amb.md)
+* [OmniBridge Extension](eth-bsc-amb/omnibridge-extension.md)
+
 ## ETH-POA AMB <a id="eth-poa-amb-bridge"></a>
 
 * [About the ETH-POA AMB](eth-poa-amb-bridge/about-the-eth-poa-amb.md)
@@ -143,9 +148,4 @@
 * [Contact Us](media/contact-us.md)
 * [Media Kit](media/media-kit.md)
 * [Social Media](media/social-media.md)
-
-## ETH-BSC AMB
-
-* [About the ETH-BSC AMB](eth-bsc-amb/about-the-eth-bsc-amb.md)
-* [OmniBridge Extension](eth-bsc-amb/omnibridge-extension.md)
 
