@@ -144,3 +144,8 @@
 * [Media Kit](media/media-kit.md)
 * [Social Media](media/social-media.md)
 
+## ETH-BSC AMB
+
+* [About the ETH-BSC AMB](eth-bsc-amb/about-the-eth-bsc-amb.md)
+* [OmniBridge Extension](eth-bsc-amb/omnibridge-extension.md)
+
