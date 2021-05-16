@@ -107,7 +107,7 @@
 
 * [About the Kovan-Sokol AMB](kovan-sokol-amb-bridge/about-the-kovan-sokol-amb/README.md)
   * [Submit confirmations manually](kovan-sokol-amb-bridge/about-the-kovan-sokol-amb/submit-confirmations-manually.md)
-* [Multi-token extension \(testing\)](kovan-sokol-amb-bridge/multi-token-extension-testing.md)
+* [OmniBridge extension \(testing\)](kovan-sokol-amb-bridge/multi-token-extension-testing.md)
 * [NFT extension \(testing\)](kovan-sokol-amb-bridge/nft-extension-testing/README.md)
   * [Transfer tokens by using block explorers](kovan-sokol-amb-bridge/nft-extension-testing/transfer-tokens-by-using-block-explorers.md)
 * [Native-to-ERC20 bridge extension](kovan-sokol-amb-bridge/native-to-erc20-bridge-extension/README.md)
