@@ -57,5 +57,5 @@ Fees are also configurable per a particular pair of tokens.
 **Default fees:**
 
 * There are no fees \(except gas fees for the originating transaction\) to transfer assets from the Ethereum to the xDai chain.
-* The fee to transfer assets \(besides gas fees for the originating transaction\) from the xDai chain to Ethereum is **0.05%**.
+* The fee to transfer assets \(besides gas fees for the originating transaction\) from the xDai chain to Ethereum is **0.1%**.
 
