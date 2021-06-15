@@ -102,6 +102,7 @@
 * [MOON bridge extension](rinkeby-xdai-amb-bridge/moon-bridge-extension/README.md)
   * [Transfer Moons between Rinkeby and xDai Chain using the MOON bridge extension](rinkeby-xdai-amb-bridge/moon-bridge-extension/transfer-moons-between-rinkeby-and-xdai-chain-using-the-moon-bridge-extension.md)
 * [BRICK bridge extension](rinkeby-xdai-amb-bridge/brick-bridge-extension.md)
+* [NFT OmniBridge extension](rinkeby-xdai-amb-bridge/nft-omnibridge-extension.md)
 
 ## Kovan-Sokol AMB <a id="kovan-sokol-amb-bridge"></a>
 
