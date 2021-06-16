@@ -6,15 +6,19 @@ description: >-
 
 # EIP1155-based NFT Transfer Example
 
-The NFT extension is operational, and a UI to transfer ERC721 NFTs is currently in development. For now, users can access and write to contracts using BlockScout and Etherscan. In the following example, we will bridge an NFT from xDai to Ethereum and back using methods accessed through these block explorers.
+The NFT extension is operational, and a UI to transfer NFTs is currently in development. For now, users can access and write to contracts using BlockScout and Etherscan. In the following example, we will bridge an EIP-1155 NFT and an NFT collection from xDai to Ethereum and back using methods accessed through these block explorers.
 
 {% hint style="warning" %}
 The NFT Extension is in Beta and transfers are performed at your own risk. NFT transfers can be very expensive and are not reversible once you initiate a transfer. Keep this in mind when deciding whether or not to bridge NFTs between xDai and Ethereum.
 {% endhint %}
 
-## -&gt; xDai to Ethereum
+{% hint style="info" %}
+If you want to bridge an [ERC721 NFT, instructions are available here](nft-transfer-example.md).
+{% endhint %}
 
-NFTs can be minted on xDai very inexpensively. These NFTs can then be bridged to Ethereum using the NFT OmniBridge extension. The EIP1155 standard support batching transfer, so several tokens can be transferred in one bridge operation if these tokens are in the same contract.
+## 🌉-&gt; xDai to Ethereum
+
+NFTs can be minted on xDai inexpensively. These NFTs can then be bridged to Ethereum using the NFT OmniBridge extension. The EIP1155 standard supports batched transfers, so several tokens can be transferred in one bridge operation if these tokens are in the same contract.
 
 The process consists of several steps.
 
@@ -28,25 +32,25 @@ Token contracts must be verified in BlockScout to access write operations. If yo
 
 ## 1\) Locate your NFT 
 
-You will need the contract and token ID\(s\) for your EIP1155 NFT\(s\) to start. If you have trouble locating, you can enter your wallet address in the [BlockScout search bar](https://blockscout.com/poa/xdai) and unroll the tokens list in the Balance tile. Here you will see your EIP1155s. Find one which you need to bridge, note its **TokenID**:
+You will need the contract and token ID\(s\) for your EIP1155 NFT\(s\) to start. If you have trouble locating, you can enter your wallet address in the [BlockScout search bar](https://blockscout.com/poa/xdai) and unroll the tokens list in the Balance section. Here you will see your EIP1155s. Find one which you want to bridge and note its **TokenID**:
 
 ![](../../.gitbook/assets/image%20%28162%29.png)
 
-Click on a NFT to get eventually to the EIP1155 token contract page:
+Click on the NFT link to go to the EIP1155 token page, and click the **View Contract** icon to go to the contract page.
 
 ![](../../.gitbook/assets/image%20%28156%29.png)
 
-On the token contract page go to the **Write Contract** / **Write Proxy** tab:
+On the token contract page go to the **Write Contract** or **Write Proxy** tab depending on the implementation:
 
 ![](../../.gitbook/assets/image%20%28150%29.png)
 
 ## 2\) Initiate the Transfer
 
-Depending on amount of tokens belonging to the same contract it is required to bridge two methods should be used:
+Different methods are used depending on the number of tokens you are bridging \(one token or a batch of tokens\).
 
 ### Transfer one token
 
-1. Press the **Connect to MetaMask** button to connect the address that holds the NFT
+1. Press the **Connect to MetaMask** button to connect the address that holds the NFT.
 2. In the `safeTransferFrom` method, add the following:
    1. from \(address\): the address that holds the NFT
    2. to \(address\): `0x2c0bF58cC87763783e35a625ff6a3e50d9E05337`
@@ -54,7 +58,7 @@ Depending on amount of tokens belonging to the same contract it is required to b
       _This is the xDai mediator contract._
 
    3. id \(uint256\): TokenID for your EIP1155
-   4. value \(uint256\): amount of this TokenID entities it is required to bridge, in most cases - `1`
+   4. value \(uint256\): Number of tokens with this TokenID you will bridge, in most cases - `1`
    5. data \(bytes\): `0x`
 3. Click the **Write** button and confirm in MetaMask.
 
@@ -70,7 +74,7 @@ Depending on amount of tokens belonging to the same contract it is required to b
       _This is the xDai mediator contract._
 
    3. ids \(uint256\[\]\): list of TokenIDs for your EIP1155 in square brackets delimited by commas
-   4. values \(uint256\[\]\): amount of this TokenID entities it is required to bridge, in most cases - `1`, in square brackets delimited by commas, number of values must correspond to number of TokenIDs
+   4. values \(uint256\[\]\): Number of tokens with this TokenID you will bridge, in most cases - `1`, in square brackets delimited by commas. The number of values must correspond to the number of TokenIDs
    5. data \(bytes\): `0x`
 3. Click the **Write** button and confirm in MetaMask.
 
@@ -105,18 +109,18 @@ Gas fee estimates to transfer may be prohibitively expensive. Note:
 
 Once the transaction is verified and included in a block, the token will be transferred to the same account on Ethereum that called the `safeTransferFrom`/`safeBatchTransferFrom`method.
 
-## -&gt; Ethereum to xDai
+## 🌉-&gt; Ethereum to xDai
 
 The following process is similar to the above using Etherscan rather than BlockScout to write transactions. You will not need to manually execute on the xDai side, it is automated when bridging NFTs from Ethereum to xDai.
 
 ## 1\) Locate your NFT 
 
-Etherscan does not provide simple way to discover EIP1155 tokens owned by a particular account. So, you either need to know an address of the token contract initially deployed on the Mainnet or, in case of bridged tokens, could use the NFT OmniBridge to discover the address of the bridged token contract.
+Etherscan does not provide a simple way to discover EIP1155 tokens owned by a particular account. So, you either need to know the address of the token contract initially deployed on the Mainnet or, in the case of bridged tokens, use the NFT OmniBridge to discover the address of the bridged token contract.
 
 1. Open the **Read as Proxy** tab of the NFT OmniBridge contract: [https://etherscan.io/address/0x6C8d0AFDDBD29a0954feEB73904923fC8f73C480\#readProxyContract](https://etherscan.io/address/0x6C8d0AFDDBD29a0954feEB73904923fC8f73C480#readProxyContract). 
-2. Having the address of the token contract on the xDai chain it is possible to call the method `bridgedTokenAddress` and enter the address of the token contract on the xDai chain there
-3. Press the **Query** button
-4. Press to the appeared address of the bridged token contract and go to the **Write Contract** / **Write as Proxy** tab in the **Contract** section.
+2. Using the address of the token contract on the xDai chain, it is possible to call the  `bridgedTokenAddress` method and enter the address of the token contract on the xDai chain here.
+3. Press the **Query** button.
+4. Press the address of the bridged token contract that appears in the response. Then go to the **Write Contract** / **Write as Proxy** tab in the **Contract** section.
 
 ![](../../.gitbook/assets/image%20%28151%29.png)
 
@@ -126,7 +130,7 @@ Etherscan does not provide simple way to discover EIP1155 tokens owned by a part
 
 ## 2\) Initiate the Transfer
 
-Depending on amount of tokens belonging to the same contract it is required to bridge two methods should be used:
+Different methods are used depending on the number of tokens you are bridging.
 
 ### Transfer one token
 

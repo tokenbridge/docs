@@ -12,6 +12,10 @@ The NFT extension is operational, and a UI to transfer ERC721 NFTs is currently 
 The NFT Extension is in Beta and transfers are performed at your own risk. NFT transfers can be very expensive and are not reversible once you initiate a transfer. Keep this in mind when deciding whether or not to bridge NFTs between xDai and Ethereum.
 {% endhint %}
 
+{% hint style="info" %}
+If you want to bridge an [ERC1155 NFT or NFT collection, instructions are here](eip1155-based-nft-transfer-example.md).
+{% endhint %}
+
 ## -&gt; xDai to Ethereum
 
 NFTs can be minted on xDai very inexpensively. These NFTs can then be bridged to Ethereum using the NFT OmniBridge extension. The process consists of several steps.
