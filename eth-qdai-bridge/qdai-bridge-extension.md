@@ -10,12 +10,12 @@ This extension allows users to transform DAI \(an ERC20 stable token\) on the ma
 
 * Mediator contract at Ethereum Mainnet:
   * [`0xf6edFA16926f30b0520099028A145F4E06FD54ed`](https://etherscan.io/address/0xf6edFA16926f30b0520099028A145F4E06FD54ed)
-* Mediator contract at qDai chain:
-  * [`0xFEaB457D95D9990b7eb6c943c839258245541754`](https://blockscout.com/poa/qdai/address/0xFEaB457D95D9990b7eb6c943c839258245541754/transactions)
+* Mediator contract at qDai chain _&lt;block explorer not currently available&gt;_
+  * `0xFEaB457D95D9990b7eb6c943c839258245541754`
 
 This extension was deployed to demonstrate an ability to transfer assets from a public chain to an enterprise chain. Anyone who owns [DAI tokens](https://etherscan.io/token/0x6b175474e89094c44da98b954eedeac495271d0f) can use the bridge - DAI is locked in the bridge contract and the same amount of qDai native tokens are minted on the qDai chain. The reverse operation burns qDai tokens on the qDai chain and unlocks DAI tokens on the Ethereum Mainnet.
 
 {% hint style="info" %}
-The code of the mediators implementing this extension can be found [here](https://github.com/poanetwork/tokenbridge-contracts/tree/master/contracts/upgradeable_contracts/amb_erc20_to_native).
+The code of the mediators implementing this extension can be found [here.](https://github.com/poanetwork/tokenbridge-contracts/tree/master/contracts/upgradeable_contracts/erc20_to_native)
 {% endhint %}
 

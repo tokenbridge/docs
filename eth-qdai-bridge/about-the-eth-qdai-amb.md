@@ -15,7 +15,7 @@ The mediator contracts rely on the following information about the ETH-qDai Arbi
   * Gas limit to call method in the xDai chain: `2000000`
   * Finalization rate: `8` blocks
 * **qDai Chain**:
-  * AMB contract: [`0xD4075FB57fCf038bFc702c915Ef9592534bED5c1`](https://blockscout.com/poa/qdai/address/0xD4075FB57fCf038bFc702c915Ef9592534bED5c1/transactions)
+  * AMB contract _&lt;block explorer not currently available&gt;_: `0xD4075FB57fCf038bFc702c915Ef9592534bED5c1`
   * Gas limit to call method in the Ethereum Mainnet: `2000000`
   * Finalization rate: `1` block
 

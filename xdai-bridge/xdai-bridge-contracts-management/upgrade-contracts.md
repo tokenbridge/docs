@@ -21,8 +21,8 @@ Any tool that can create transactions based on contract source code or the ABI m
 2. Depending on the contract and the chain use one of the links below to get the current `version` of the contract implementation:
    * The bridge contract _on \_the ETH Mainnet_: [Etherscan](https://etherscan.io/address/0x4aa42145aa6ebf72e164c9bbc74fbd3788045016#readContract), 
    * The validators contract _on \_the ETH Mainnet_: [Etherscan](https://etherscan.io/address/0xe1579dEbdD2DF16Ebdb9db8694391fa74EeA201E#readContract) 
-   * The bridge contract _on \_the xDai chain_: [Blockscout](https://blockscout.com/poa/dai/address/0x7301cfa0e1756b71869e93d4e4dca5c7d0eb0aa6/read_contract)
-   * The validators contract _on \_the xDai chain_: [Blockscout](https://blockscout.com/poa/dai/address/0xb289f0e6fbdff8eee340498a56e1787b303f1b6d/read_contract)
+   * The bridge contract _on \_the xDai chain_: [Blockscout](https://blockscout.com/poa/xdai/address/0x7301CFA0e1756B71869E93d4e4Dca5c7d0eb0AA6/read-contract)
+   * The validators contract _on \_the xDai chain_: [Blockscout](https://blockscout.com/poa/xdai/address/0xB289f0e6fBDFf8EEE340498a56e1787B303F1B6D/read-contract)
 3. Use the `upgradeTo` method from `EternalStorageProxy` ABI, the address of the new implementation, and the incremented version number to encode the data for the transaction. Example of the data: `3ad06d160000000000000000000000000000000000000000000000000000000000000004000000000000000000000000f097137c7ec5e582b5704065f72ac5903d0b526d`.
 4. Use [NiftyWallet](https://chrome.google.com/webstore/detail/nifty-wallet/jbdaocneiiinmjbjlgalhcelgbejmnid) to invoke `submitTransaction` of the multisig wallet contract \(`0xff1a8EDA5eAcdB6aAf729905492bdc6376DBe2dd` on the Mainnet ETH, `0x0d3726e5a9f37234d6b55216fc971d30f150a60f` on the xDai chain\). The data field must be filled with the bytes received from the previous step. The destination depends on the contract:
    * `0x4aa42145Aa6Ebf72e164C9bBC74fbD3788045016` if the security upgrade is made for _the bridge contract_ on _the ETH Mainnet_. 
@@ -40,8 +40,8 @@ Any tool that can create transactions based on contract source code or the ABI m
 4. Depending on the contract and the chain, use one of the links below to get the current `version` of the contract implementation:
    * The bridge contract _on \_the ETH Mainnet_: [Etherscan](https://etherscan.io/address/0x4aa42145aa6ebf72e164c9bbc74fbd3788045016#readContract), 
    * The validators contract _on \_the ETH Mainnet_: [Etherscan](https://etherscan.io/address/0xe1579dEbdD2DF16Ebdb9db8694391fa74EeA201E#readContract) 
-   * The bridge contract _on \_the xDai chain_: [Blockscout](https://blockscout.com/poa/dai/address/0x7301cfa0e1756b71869e93d4e4dca5c7d0eb0aa6/read_contract)
-   * The validators contract _on \_the xDai chain_: [Blockscout](https://blockscout.com/poa/dai/address/0xb289f0e6fbdff8eee340498a56e1787b303f1b6d/read_contract)
+   * The bridge contract _on \_the xDai chain_: [Blockscout](https://blockscout.com/poa/xdai/address/0x7301CFA0e1756B71869E93d4e4Dca5c7d0eb0AA6/read-contract)
+   * The validators contract _on \_the xDai chain_: [Blockscout](https://blockscout.com/poa/xdai/address/0xB289f0e6fBDFf8EEE340498a56e1787B303F1B6D/read-contract)
 5. Use the `upgradeToAndCall` method from the `EternalStorageProxy` ABI, the address of the new implementation, and the incremented version number to encode the data for the transaction. Example of the data: `0xa9c45fcb0000000000000000000000000000000000000000000000000000000000000004000000000000000000000000692a70d2e424a56d2c6c27aa97d1a86395877b3a0000000000000000000000000000000000000000000000000000000000000060000000000000000000000000000000000000000000000000000000000000000450d28adb00000000000000000000000000000000000000000000000000000000`.
 6. Use NiftyWallet to invoke `submitTransaction` of the multisig wallet contract \(`0xff1a8EDA5eAcdB6aAf729905492bdc6376DBe2dd` on the Mainnet ETH, `0x0d3726e5a9f37234d6b55216fc971d30f150a60f` on the xDai chain\). The data field must be filled with the bytes received on the previous step. The destination depends on the contract:
    * `0x4aa42145Aa6Ebf72e164C9bBC74fbD3788045016` if the security upgrade is made for _the bridge contract_ on _the ETH Mainnet_. 

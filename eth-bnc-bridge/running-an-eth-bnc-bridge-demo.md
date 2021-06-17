@@ -49,7 +49,7 @@ The public Binance Chain testnet will keep a BEP2 token.
      ./tbnbcli keys add test_account3
      ```
 
-   * \(1.5\) Register on the Binance site and fund the accounts from the [testnet faucet](https://www.binance.com/en/dex/testnet/address).
+   * \(1.5\) Register on the Binance site and fund the accounts from the [testnet faucet.](https://testnet.binance.org/faucet-smart)
    * \(1.6\) Re-arrange funds on the accounts as so the first account will have 550 BNB and others 10-20 BNBs to make transactions.
 
      ```text
