@@ -72,7 +72,7 @@ Note that minimum and maximum transaction amounts for deposit are embedded into 
 5. 3\)`_amount` -- the amount of tokens \(in Wei\) to transfer; it must be less or equal to the amount of tokens approved for the bridge operations in step 2.3.
 6. 4\) Press **Write**.
 7. Check the gas price, then Submit the transaction your web3 wallet and wait until it is included in the chain.
-8. It will require the AMB bridge a short \(20-40 seconds\) amount of time to relay the deposit request to the xDai chain. After some time the balance of the account specified as `_receiver` in the `relayTokens` method call will increase. The result of the relay operation can be monitored in [Blockscout](https://blockscout.com/xdai/mainnet/tokens/0xC5C35D01B20f8d5cb65C60f02113EF6cd8e79910/token_transfers).
+8. It will require the AMB bridge a short \(20-40 seconds\) amount of time to relay the deposit request to the xDai chain. After some time the balance of the account specified as `_receiver` in the `relayTokens` method call will increase. The result of the relay operation can be monitored in [Blockscout](https://blockscout.com/xdai/mainnet/tokens/0xC5C35D01B20f8d5cb65C60f02113EF6cd8e79910/token-transfers).
 
 ## Withdraw MOON tokens from the xDai chain
 

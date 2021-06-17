@@ -75,5 +75,5 @@ The `transfer` method of the bridgeable token contract will automatically notify
 
 4. Check the gas price, then **Submit** the transaction through the web3 wallet extension and wait until it is included in the chain.
 
-5. It will require the AMB bridge some time to transfer tokens to the Sokol Testnet. After few seconds, the balance of the account specified as `_to` in the `transfer` method call will increase. The result of the relay operation can be monitored in [Blockscout](https://blockscout.com/poa/sokol/address/0x867949C3F2f66D827Ed40847FaA7B3a369370e13/coin_balances), and should be viewable in your web3 wallet connected to the Sokol Testnet.
+5. It will require the AMB bridge some time to transfer tokens to the Sokol Testnet. After few seconds, the balance of the account specified as `_to` in the `transfer` method call will increase. The result of the relay operation can be monitored in [Blockscout](https://blockscout.com/poa/sokol/address/0x867949C3F2f66D827Ed40847FaA7B3a369370e13/coin-balances), and should be viewable in your web3 wallet connected to the Sokol Testnet.
 
