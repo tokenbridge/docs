@@ -10,7 +10,7 @@ description: >-
 sUSD can be sent between any two xDai enabled wallets. You will need some amount of sUSD on the xDai chain, as well as some xDai for gas \(less than $.01\), to send from one wallet to another. To transfer sUSD from the Ethereum Mainnet to the xDai Chain, see the [transfer using the bridge extension](transfer-susd-through-the-bridge-extension.md) post.
 {% endhint %}
 
-In this example we use [**Alpha Wallet**](https://alphawallet.com/), a mobile wallet with built-in xDai support, and **\*\*\[**Nifty wallet\*\*\]\([https://chrome.google.com/webstore/detail/nifty-wallet/jbdaocneiiinmjbjlgalhcelgbejmnid?hl=en](https://chrome.google.com/webstore/detail/nifty-wallet/jbdaocneiiinmjbjlgalhcelgbejmnid?hl=en)\), a web3 enabled wallet similar to MetaMask but better equipped to work with xDai.
+In this example we use [**Alpha Wallet**](https://alphawallet.com/), a mobile wallet with built-in xDai support, and [**Nifty wallet**](https://chrome.google.com/webstore/detail/nifty-wallet/jbdaocneiiinmjbjlgalhcelgbejmnid?hl=en), a web3 enabled wallet similar to MetaMask but better equipped to work with xDai.
 
 {% embed url="https://www.youtube.com/watch?v=AMoycEFWDIY&feature=youtu.be" caption="A video guide for Cross-chain sUSD transfer from the Ethereum Mainnet to the xDai" %}
 
@@ -43,7 +43,7 @@ b\) Enter the sUSD xDAi **Token Contract Address** `0x4C36d2919e407f0Cc2Ee3c993c
 ![0.2 sUSD on the xDai Chain](../../../.gitbook/assets/xdai_3.png)
 
 **BlockScout Transaction:**  
-[https://blockscout.com/xdai/mainnet/tx/0xba2f7da9bf6277149b073af5bd0f69e5bfae17b03626bbc545e8fdf8441bdf36/token\_transfers](https://blockscout.com/xdai/mainnet/tx/0xba2f7da9bf6277149b073af5bd0f69e5bfae17b03626bbc545e8fdf8441bdf36/token_transfers)
+[https://blockscout.com/xdai/mainnet/tx/0xba2f7da9bf6277149b073af5bd0f69e5bfae17b03626bbc545e8fdf8441bdf36/token-transfers](https://blockscout.com/xdai/mainnet/tx/0xba2f7da9bf6277149b073af5bd0f69e5bfae17b03626bbc545e8fdf8441bdf36/token-transfers)
 
 ![](../../../.gitbook/assets/tx2.png)
 

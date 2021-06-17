@@ -6,9 +6,7 @@ description: >-
 
 # OmniBridge Extension internals & diagrams
 
-Comprehensive description of the contracts call flows is available in [the documentation of the extension](https://github.com/poanetwork/tokenbridge-contracts/blob/master/contracts/upgradeable_contracts/multi_amb_erc20_to_erc677/callflows.md) on the GitHub TokenBridge contracts repo.
-
-Below are a few diagrams for those who would like to get the general idea how tokens transfers through the Multi-token extension work:
+These diagrams show the basics of the multi-token extension. This extension is no longer developed or supported by the team, but provide insights regarding the design that may be useful for extension developers.
 
 ![](../../.gitbook/assets/image%20%2857%29.png)
 

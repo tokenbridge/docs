@@ -13,5 +13,5 @@ The GEN-xGEN bridge extension of the ETH-xDai Arbitrary Message Bridge is a pair
 
 Anyone who owns [GEN](https://etherscan.io/token/0x543ff227f64aa17ea132bf9886cab5db55dcaddf) tokens can use the bridge. GENs are locked in the bridge contract and the same amount of xGEN are minted on the xDai chain. The reverse operation burns xGEN bridgeable tokens on the xDai chain and unlocks GEN tokens on the Ethereum Mainnet.
 
-During the testing phase of the extension an interim xGEN token is being used on the xDai chain. The token contract address is [`0x3e12081dd66a3600fc0a2e6cc9e6b5b3b8f037f6`](https://blockscout.com/xdai/mainnet/tokens/0x3e12081dd66a3600fc0a2e6cc9e6b5b3b8f037f6/token_transfers).
+During the testing phase of the extension an interim xGEN token is being used on the xDai chain. The token contract address is [`0x3e12081dd66a3600fc0a2e6cc9e6b5b3b8f037f6`](https://blockscout.com/xdai/mainnet/tokens/0x3e12081dd66a3600fc0a2e6cc9e6b5b3b8f037f6/token-transfers).
 
