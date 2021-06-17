@@ -25,11 +25,10 @@ AMB's universality means it can be used as a base layer for bridge and applicati
 
 We have developed several AMB extensions. A brief description and links to the Github repos are below.
 
-* [native-to-erc20](https://github.com/poanetwork/tokenbridge-contracts/tree/master/contracts/upgradeable_contracts/amb_native_to_erc20) - an extension that allows a user to transfer native tokens on one chain to ERC677 tokens on another chain. It works similarly to the POA20 bridge.
+* [Arbitrary Message](https://github.com/poanetwork/tokenbridge-contracts/tree/master/contracts/upgradeable_contracts/arbitrary_message): Invoke Home/Foreign Bridge to send a message that will be executed on the other Network as an arbitrary contract method invocation.
+* [Erc-to-Erc](https://github.com/poanetwork/tokenbridge-contracts/tree/master/contracts/upgradeable_contracts/amb_erc677_to_erc677) - an extension to transfer an ERC20 token linked with the extension to an ERC677 token on another chain. 
+* [Erc-to-Native](https://github.com/poanetwork/tokenbridge-contracts/tree/master/contracts/upgradeable_contracts/erc20_to_native) - an extension to transfer an ERC20 token on one chain to a native token on another chain. It works similarly to the xDai bridge.
 * [CryptoKitties NFTs](https://github.com/poanetwork/cryptokitties-xdai-demo) - an extension prepared for demonstration purposes. It allows users to transfer CryptoKitties ERC721 tokens from the Ethereum Mainnet to the xDai chain.
-* [erc20-to-erc20](https://github.com/poanetwork/tokenbridge-contracts/tree/master/contracts/upgradeable_contracts/amb_erc677_to_erc677) - an extension to transfer an ERC20 token linked with the extension to an ERC677 token on another chain. 
-* [erc20-to-native](https://github.com/poanetwork/tokenbridge-contracts/tree/master/contracts/upgradeable_contracts/amb_erc20_to_native) - an extension to transfer an ERC20 token on one chain to a native token on another chain. It works similarly to the xDai bridge.
-* [mutli-erc20-to-erc677](https://github.com/poanetwork/tokenbridge-contracts/tree/master/contracts/upgradeable_contracts/multi_amb_erc20_to_erc677) - an extension that allows users to transfer **any** ERC20 token to an ERC677 token on another chain. This is also known as as multi-token bridging.
 
 ## Video Explainers
 
