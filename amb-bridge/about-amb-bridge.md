@@ -21,7 +21,7 @@ AMB's universality means it can be used as a base layer for bridge and applicati
 * Learn about our new [multi-token extension,](../eth-xdai-amb-bridge/multi-token-extension/) where an ERC20 on Ethereum is bridged and automatically created on xDai!
 {% endhint %}
 
-## Existing AMB extensions
+## AMB extensions
 
 We have developed several AMB extensions. A brief description and links to the Github repos are below.
 
