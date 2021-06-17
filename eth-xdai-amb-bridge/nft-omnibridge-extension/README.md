@@ -6,13 +6,13 @@ description: >-
 
 # NFT OmniBridge extension
 
-This is an early beta version of the NFT OmniBridge AMB extension. The extension allows users to transfer any non-fungible tokens implemented through ERC721 compatible token contracts from one chain to another. 
+This is an early beta version of the NFT OmniBridge AMB extension. The extension allows users to transfer any non-fungible tokens implemented through ERC721 and EIP1155 compatible token contracts from one chain to another.
 
 ## Technical details
 
 The extension works with tokens originally deployed on either side of the bridge. It uses the mirroring concept:
 
-1. A non-fungible token is locked on one side of the bridge - the OmniBridge mediator contract becomes the owner of the token.
+1. A non-fungible token is locked on one side of the bridge - the OmniBridge mediator contract becomes the owner of the token. For EIP1155 tokens it is possible to send several tokens at once.
 2. The new token is minted on the other side of the bridge with the same Token ID and TokenURI. The owner of the new token is by default set to the same account that sent the token to the bridge in the originating transaction \(an alternative receiver feature can be used to specify another token owner\). **The only thing that can be changed in the bridged token is the owner. No other data like the Token URI can be updated on chain.** 
 3. If the token is bridged back, it is burned and the token with the corresponding Token ID is unlocked on that side of the bridge where the token originated. 
 
