@@ -33,7 +33,6 @@
   * [Add-on: xDai and AMB bridge oracles on the same node](amb-bridge/arbitrary-message-bridge-deployment/add-on-xdai-and-amb-bridge-oracles-one-the-same-node.md)
 * [How to develop a cross-blockchain application using the AMB](amb-bridge/how-to-develop-xchain-apps-by-amb.md)
 * [ERC677 to ERC677 AMB bridge extension](amb-bridge/erc677-to-erc677-bridge-on-top-of-amb.md)
-* [Gas Token Minting](amb-bridge/gas-token-minting.md)
 * [😸 CryptoKitties AMB bridge extension Demo](amb-bridge/how-to-use-cryptokitties-bridge/README.md)
   * [Deploy CryptoKitty Contracts](amb-bridge/how-to-use-cryptokitties-bridge/deploy-cryptokitty-contracts.md)
   * [Verify Contracts in BlockScout](amb-bridge/how-to-use-cryptokitties-bridge/verify-contracts-in-blockscout.md)
