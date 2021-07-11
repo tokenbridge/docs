@@ -67,6 +67,15 @@ Everything that can be returned by the following JSON RPC API calls can be reque
    * `status` is the status of the request execution
    * `result` is ABI-encoded response of the JSON RPC node on the information request.
 
+### Where to use?
+
+Currently the cross-chain information requests are available on the following bridges:
+
+* [Kovan-Sokol AMB](https://docs.tokenbridge.net/kovan-sokol-amb-bridge/about-the-kovan-sokol-amb), requests from Sokol to Kovan
+* [Rinkeby-xDai AMB](https://docs.tokenbridge.net/rinkeby-xdai-amb-bridge/about-the-rinkeby-xdai-amb), requests from xDai to Rinkeby
+* [BSC-xDai AMB](https://docs.tokenbridge.net/bsc-xdai-amb/about-the-bsc-xdai-amb), requests from xDai to Binance Smart Chain
+* [ETH-BSC AMB](https://docs.tokenbridge.net/eth-etc-amb-bridge/about-the-eth-etc-amb), requests from Binance Smart Chain to the Ethereum Mainnet
+
 ### Examples
 
 There are few contracts deployed on the Sokol chain and interacting with the Kovan-Sokol AMB to demonstrate how the information can be received from the Kovan testnet by originating transactions from the Sokol chain.
