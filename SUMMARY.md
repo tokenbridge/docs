@@ -76,6 +76,7 @@
   * [🌱 Bridged Tokens List](eth-xdai-amb-bridge/multi-token-extension/the-bridged-tokens-list/README.md)
     * [Token list compilation](eth-xdai-amb-bridge/multi-token-extension/the-bridged-tokens-list/token-list-compilation.md)
 * [NFT OmniBridge extension](eth-xdai-amb-bridge/nft-omnibridge-extension/README.md)
+  * [UI Beta](eth-xdai-amb-bridge/nft-omnibridge-extension/ui-beta.md)
   * [ERC721-based NFT Transfer Example](eth-xdai-amb-bridge/nft-omnibridge-extension/nft-transfer-example.md)
   * [EIP1155-based NFT Transfer Example](eth-xdai-amb-bridge/nft-omnibridge-extension/eip1155-based-nft-transfer-example.md)
 * [ERC20-to-ERC20 extension linked with a particular token](eth-xdai-amb-bridge/erc20-to-erc20-extension-linked-with-a-particular-token/README.md)
