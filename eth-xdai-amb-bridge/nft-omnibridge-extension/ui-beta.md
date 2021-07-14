@@ -33,9 +33,9 @@ The NFT Extension is in Beta and transfers are performed at your own risk. NFT t
 
 ![](../../.gitbook/assets/img4.png)
 
-5\) Switch networks in your MetaMask app to the receiving network \(in this case Rinkeby\) to claim your tokens.
+5\) Switch networks to the receiving network \(in this case Rinkeby\) to claim your tokens. You can click directly on the 🦊 RINKEBY TESTNET button to switch networks or switch manually in your MetaMask app.
 
-![](../../.gitbook/assets/img5.png)
+![](../../.gitbook/assets/rink1.png)
 
 6\) View the History tab \([https://xdai-omnibridge-nft-staging.web.app/history](https://xdai-omnibridge-nft-staging.web.app/history)\) to see the claim button and previously claimed transactions. For testing purposes, the xDai &lt;-&gt; Rinkeby bridge is currently set to auto-claim, so the NFT is automatically claimed to your address without needing to process a 2nd claim transaction.
 
