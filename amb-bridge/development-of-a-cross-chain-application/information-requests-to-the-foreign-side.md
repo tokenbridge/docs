@@ -16,10 +16,9 @@ Everything that can be returned by the following JSON RPC API calls can be reque
 * `eth_getBlockByNumber`
 * `eth_getBlockByHash`
 * `eth_getTransactionReceipt`
+* `eth_getTransactionByHash`
 
 ### What is the process to get information?
-
-
 
 1. A contract that requires to get the information invoke the following method of the AMB contract:
 
@@ -36,6 +35,7 @@ Everything that can be returned by the following JSON RPC API calls can be reque
    * `0x21bed3a725245055f5aa932a62078981ec55f2464167839ea001f45c839c8808` for `eth_getBlockByNumber`
    * `0x31deda753ce7d0fdf0af4d4d03a69913616c4b1377be882d407fbed7cd5a7a98` for `eth_getBlockByHash`
    * `0x0f47e1863d0e05e42b4a2aeee1322f349562a50b6166c14622210ade49a0b274` for `eth_getTransactionReceipt`
+   * `0x05c2b13240a3dff2b14abb3b793a0a5763a11c190af35bd2b5279c5bac8f2a94` for `eth_getTransactionByHash`
 
    and `_data` is ABI encoded set of arguments for the corresponding call:
 
@@ -45,6 +45,7 @@ Everything that can be returned by the following JSON RPC API calls can be reque
    * `eth_getBlockByNumber`: `(uint256 _number)`
    * `eth_getBlockByHash`: `(bytes32 _hash)`
    * `eth_getTransactionReceipt`: `(bytes32 _txhash)`
+   * `eth_getTransactionByHash`: `(bytes32 _txhash)`
 
    The method `requireToGetInformation` returns a message id assigned by the AMB contract for this information request.
 
@@ -149,7 +150,7 @@ struct Block {
 {% tab title="eth\_getTransactionReceipt" %}
 The contract [`0x90f2B33cBC8E8d29763997f780b7C2589D9e17d3`](https://blockscout.com/poa/sokol/address/0x90f2B33cBC8E8d29763997f780b7C2589D9e17d3) shows how to get a receipt of a transaction from the Kovan chain.
 
-The data structures that keep the transactions receipts can be described as follows:
+The data structures that keep the transactions receipts can be defined as follows:
 
 ```text
 struct Log {
@@ -176,6 +177,34 @@ struct TransactionReceipt {
 3. Wait for one minute \(depends of number of block the oracles wait for the chain finalization\)
 4. Use the message id to check the status \(it must be `2`\) of the response by calling `status`
 5. Use the transaction hash to get the deserialized receipt by calling `getReceipt`
+{% endtab %}
+
+{% tab title="eth\_getTransactionByHash" %}
+The contract [`0x2D95548B66f5528383B0FC95a26311f92C4AcdcE`](https://blockscout.com/poa/sokol/address/0x2D95548B66f5528383B0FC95a26311f92C4AcdcE) shows how to get a transaction from the Kovan chain.
+
+The data structure that keeps the transactions can be defined as follows:
+
+```text
+struct Transaction {
+    bytes32 txHash;
+    uint256 blockNumber;
+    bytes32 blockHash;
+    uint256 transactionIndex;
+    address from;
+    address to;
+    uint256 value;
+    uint256 nonce;
+    uint256 gas;
+    uint256 gasPrice;
+    bytes input;
+}
+```
+
+1. Use a transaction hash for the method `requestEthGetTransactionByHash`
+2. Discover the message id for the information request in the method `lastMessageId`
+3. Wait for one minute \(depends of number of block the oracles wait for the chain finalization\)
+4. Use the message id to check the status \(it must be `2`\) of the response by calling `status`
+5. Use the transaction hash to get the deserialized receipt by calling `transactions`
 {% endtab %}
 {% endtabs %}
 
