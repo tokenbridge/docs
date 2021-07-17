@@ -82,7 +82,7 @@ There are few contracts deployed on the Sokol chain and interacting with the Kov
 
 {% tabs %}
 {% tab title="eth\_call" %}
-The contract [`0x119A4D67a918669482783a9AC4e382C208bcD892`](https://blockscout.com/poa/sokol/address/0x119A4D67a918669482783a9AC4e382C208bcD892/contracts) shows how to get the total supply of a token contract located on the Kovan chain.
+The contract [`0x958671816193729054B7732c2741d93A2641138e`](https://blockscout.com/poa/sokol/address/0x958671816193729054B7732c2741d93A2641138e) shows how to get the total supply of a token contract located on the Kovan chain.
 
 1. Use the token contract address for the method `requestTotalSupply`
 2. Discover the message id for the information request in the method `lastMessageId`
@@ -92,7 +92,7 @@ The contract [`0x119A4D67a918669482783a9AC4e382C208bcD892`](https://blockscout.c
 {% endtab %}
 
 {% tab title="eth\_getBalance" %}
-The contract [`0x0543776EbD97D8f846d65c62AA052D41acF78ec6`](https://blockscout.com/poa/sokol/address/0x0543776EbD97D8f846d65c62AA052D41acF78ec6/contracts) shows how to get the balance of KETH for an account on the Kovan chain.
+The contract [`0x790C7BF6e3F74d64BE78278a26A701efE80109ee`](https://blockscout.com/poa/sokol/address/0x790C7BF6e3F74d64BE78278a26A701efE80109ee) shows how to get the balance of KETH for an account on the Kovan chain.
 
 1. Use an account address for the method `requestBalance`
 2. Discover the message id for the information request in the method `lastMessageId`
@@ -102,7 +102,7 @@ The contract [`0x0543776EbD97D8f846d65c62AA052D41acF78ec6`](https://blockscout.c
 {% endtab %}
 
 {% tab title="eth\_getStorageAt" %}
-The contract [`0xEB0A870038560019310d869f4f8467b8b65A2eE4`](https://blockscout.com/poa/sokol/address/0xEB0A870038560019310d869f4f8467b8b65A2eE4/contracts) shows how to get a storage slot value associated with a contract on the Kovan chain.
+The contract [`0x3b7e229686159a38956e7974F6603a2b23677097`](https://blockscout.com/poa/sokol/address/0x3b7e229686159a38956e7974F6603a2b23677097) shows how to get a storage slot value associated with a contract on the Kovan chain.
 
 1. Use a contract address and a slot index in the hexadecimal form for the method `requestEthGetStorageAt`
 2. Discover the message id for the information request in the method `lastMessageId`
@@ -112,7 +112,7 @@ The contract [`0xEB0A870038560019310d869f4f8467b8b65A2eE4`](https://blockscout.c
 {% endtab %}
 
 {% tab title="eth\_getTransactionReceipt" %}
-The contract [`0x418FDA4cB55fde2cd2ceD855d16C4fCe6045F2B3`](https://blockscout.com/poa/sokol/address/0x418FDA4cB55fde2cd2ceD855d16C4fCe6045F2B3/contracts) shows how to get a receipt of a transaction from the Kovan chain.
+The contract [`0x90f2B33cBC8E8d29763997f780b7C2589D9e17d3`](https://blockscout.com/poa/sokol/address/0x90f2B33cBC8E8d29763997f780b7C2589D9e17d3) shows how to get a receipt of a transaction from the Kovan chain.
 
 The data structures that keep the transactions receipts can be described as follows:
 
@@ -123,9 +123,14 @@ struct Log {
     bytes data;
 }
     
-struct Receipt {
+struct TransactionReceipt {
     bytes32 txHash;
     uint256 blockNumber;
+    bytes32 blockHash;
+    uint256 transactionIndex;
+    address from;
+    address to;
+    uint256 gasUsed;
     bool status;
     Log[] logs;
 }
