@@ -13,6 +13,8 @@ Everything that can be returned by the following JSON RPC API calls can be reque
 * `eth_call`
 * `eth_getStorageAt`
 * `eth_getBalance`
+* `eth_getBlockByNumber`
+* `eth_getBlockByHash`
 * `eth_getTransactionReceipt`
 
 ### What is the process to get information?
@@ -31,6 +33,8 @@ Everything that can be returned by the following JSON RPC API calls can be reque
    * `0x88b6c755140efe88bff94bfafa4a7fdffe226d27d92bd45385bb0cfa90986650` for `eth_call`
    * `0xed99ae50430a72b5fd8de83256893be815884aa6e59d3e25e754c5269620e964` for `eth_getBalance`
    * `0x771ca5f7250ac7deadb5ecd3a00e0d901edb92aff583f55c8db58ced9a140926` for `eth_getStorageAt`
+   * `0x21bed3a725245055f5aa932a62078981ec55f2464167839ea001f45c839c8808` for `eth_getBlockByNumber`
+   * `0x31deda753ce7d0fdf0af4d4d03a69913616c4b1377be882d407fbed7cd5a7a98` for `eth_getBlockByHash`
    * `0x0f47e1863d0e05e42b4a2aeee1322f349562a50b6166c14622210ade49a0b274` for `eth_getTransactionReceipt`
 
    and `_data` is ABI encoded set of arguments for the corresponding call:
@@ -38,6 +42,8 @@ Everything that can be returned by the following JSON RPC API calls can be reque
    * `eth_call`: `(address _to, bytes _calldata)`
    * `eth_getBalance`: `(address _account)`
    * `eth_getStorageAt`: `(address _contract, bytes32 _slot)`
+   * `eth_getBlockByNumber`: `(uint256 _number)`
+   * `eth_getBlockByHash`: `(bytes32 _hash)`
    * `eth_getTransactionReceipt`: `(bytes32 _txhash)`
 
    The method `requireToGetInformation` returns a message id assigned by the AMB contract for this information request.
@@ -109,6 +115,35 @@ The contract [`0x3b7e229686159a38956e7974F6603a2b23677097`](https://blockscout.c
 3. Wait for one minute \(depends of number of block the oracles wait for the chain finalization\)
 4. Use the message id to check the status \(it must be `2`\) of the response by calling `status`
 5. Use the message id to get the slot value by calling `response`
+{% endtab %}
+
+{% tab title="eth\_getBlockBy\*" %}
+The contract [`0xF606BA8bD4066d73a5F350adB8605F3CD02aFe55`](https://blockscout.com/poa/sokol/address/0xF606BA8bD4066d73a5F350adB8605F3CD02aFe55) shows how to get a block header from the Kovan chain.
+
+The data structure that keeps a block header can be defined as follows:
+
+```text
+struct Block {
+    uint256 blockNumber;
+    bytes32 blockHash;
+    address miner;
+    uint256 gasUsed;
+    uint256 gasLimit;
+    bytes32 parentHash;
+    bytes32 receiptRoot;
+    bytes32 stateRoot;
+    bytes32 transactionRoot;
+    uint256 timestamp;
+    uint256 difficulty;
+    uint256 totalDifficulty;
+}
+```
+
+1. Use a block number or hash for the method `requestEthGetBlockByNumber` or `requestEthGetBlockByHash`.
+2. Discover the message id for the information request in the method `lastMessageId`
+3. Wait for one minute \(depends of number of block the oracles wait for the chain finalization\)
+4. Use the message id to check the status \(it must be `2`\) of the response by calling `status`
+5. Use the block number or hash to get the deserialized block header by calling `getBlockByNumber` or `getBlockByHash`
 {% endtab %}
 
 {% tab title="eth\_getTransactionReceipt" %}
