@@ -89,3 +89,19 @@ There are several ways to find the Custom token address on xDai using BlockScout
 
 ![](../../../.gitbook/assets/alm3.jpg)
 
+## Switch Bridges & Networks in UI
+
+### Bridges
+
+The OmniBridge UI supports several bridges. To switch chains, click on the Bridge Selector to choose. Once selected, a popup will instruct you to change networks in MetaMask. Click the buttons directly in the popup to complete the process.
+
+![](../../../.gitbook/assets/switch-bridge-1.png)
+
+![](../../../.gitbook/assets/switch-bridge-2.png)
+
+### Networks
+
+When switching between networks within the same bridge, press the arrows icon then confirm the network switch in MetaMask.
+
+![](../../../.gitbook/assets/switch-networks.png)
+
