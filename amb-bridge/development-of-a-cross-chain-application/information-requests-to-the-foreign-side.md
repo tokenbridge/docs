@@ -1,12 +1,12 @@
 ---
-description: Getting information from the Foreign side by a contract call
+description: Getting information from the Foreign side with a contract call
 ---
 
 # Information requests to the Foreign side
 
-The recent version \(`6.0.0` and greater\) of the AMB contracts support a new functionality which allows to any contract deployed on the Home chain to request and receive information from the Foreign chain in asynchronous manner. For example, a contract on the Sokol chain can request some data from the Kovan chain through the Kovan-Sokol AMB bridge, or a contract from the xDai chain can request information from Rinkeby or BSC.
+Recent versions \(`6.0.0`+\) of the AMB contracts allow any contract deployed on the Home chain to request and receive information from the Foreign chain asynchronously. For example, a contract on the Sokol chain can request data from the Kovan chain through the Kovan-Sokol AMB bridge, or a contract from the xDai chain can request information from Rinkeby or BSC.
 
-### What information can be requested?
+### Information Types
 
 Everything that can be returned by the following JSON RPC API calls can be requested from the Foreign chain:
 
@@ -18,9 +18,9 @@ Everything that can be returned by the following JSON RPC API calls can be reque
 * `eth_getTransactionReceipt`
 * `eth_getTransactionByHash`
 
-### What is the process to get information?
+### Process
 
-1. A contract that requires to get the information invoke the following method of the AMB contract:
+1. T contract that receives the information should invoke the following method of the AMB contract:
 
    ```text
     function requireToGetInformation(bytes32 _requestSelector, 
@@ -37,7 +37,7 @@ Everything that can be returned by the following JSON RPC API calls can be reque
    * `0x0f47e1863d0e05e42b4a2aeee1322f349562a50b6166c14622210ade49a0b274` for `eth_getTransactionReceipt`
    * `0x05c2b13240a3dff2b14abb3b793a0a5763a11c190af35bd2b5279c5bac8f2a94` for `eth_getTransactionByHash`
 
-   and `_data` is ABI encoded set of arguments for the corresponding call:
+   and `_data` is an ABI encoded set of arguments for the corresponding call:
 
    * `eth_call`: `(address _to, bytes _calldata)`
    * `eth_getBalance`: `(address _account)`
@@ -50,9 +50,9 @@ Everything that can be returned by the following JSON RPC API calls can be reque
    The method `requireToGetInformation` returns a message id assigned by the AMB contract for this information request.
 
 2. The AMB contract generates a message for the bridge oracles.
-3. Based on the timestamp of the Home chain's block where the transaction with the information requests is included into, the oracles calculates a block number \(for `eth_call`, `eth_getBalance` and `eth_getStorageAt`\) to access the blockchain state.
+3. Based on the timestamp of the Home chain's block with the transaction for the information request, the oracles calculates a block number \(for `eth_call`, `eth_getBalance` and `eth_getStorageAt`\) to access the blockchain state.
 4. The oracles call the target RPC API and receive the result of the API method execution.
-5. The oracles sends a transaction to AMB contract with the `confirmInformation` invocation.
+5. The oracles sends a transaction to the AMB contract with the `confirmInformation` invocation.
 
    ```text
     function confirmInformation(bytes32 _messageId, 
@@ -60,7 +60,7 @@ Everything that can be returned by the following JSON RPC API calls can be reque
                                 bytes _result) external;
    ```
 
-6. The AMB contract invokes `onInformationReceived` of the contract which originates the information request on the step 1.
+6. The AMB contract invokes `onInformationReceived` of the contract which originates the information request from step 1.
 
    ```text
     function onInformationReceived(bytes32 messageId, 
@@ -74,11 +74,11 @@ Everything that can be returned by the following JSON RPC API calls can be reque
    * `status` is the status of the request execution
    * `result` is ABI-encoded response of the JSON RPC node on the information request.
 
-### Where to use?
+### Available Bridges
 
 Currently the cross-chain information requests are available on the following bridges:
 
-* xDai-ETH, requests from xDai to the Ethereum Mainnet \(will be available after the security audit\)
+* xDai-ETH, requests from xDai to the Ethereum Mainnet \(will be available after the current security audit\)
 * [Kovan-Sokol AMB](https://docs.tokenbridge.net/kovan-sokol-amb-bridge/about-the-kovan-sokol-amb), requests from Sokol to Kovan
 * [Rinkeby-xDai AMB](https://docs.tokenbridge.net/rinkeby-xdai-amb-bridge/about-the-rinkeby-xdai-amb), requests from xDai to Rinkeby
 * [BSC-xDai AMB](https://docs.tokenbridge.net/bsc-xdai-amb/about-the-bsc-xdai-amb), requests from xDai to Binance Smart Chain
@@ -86,7 +86,7 @@ Currently the cross-chain information requests are available on the following br
 
 ### Examples
 
-There are few contracts deployed on the Sokol chain and interacting with the Kovan-Sokol AMB to demonstrate how the information can be received from the Kovan testnet by originating transactions from the Sokol chain.
+The following examples use contracts deployed on the Sokol chain. The Kovan-Sokol AMB is used to demonstrate how information can be received from Kovan with transactions initiated on Sokol.
 
 {% tabs %}
 {% tab title="eth\_call" %}
