@@ -24,13 +24,13 @@ This case is applicable for the `native-to-erc20` mode and for the mode `erc20-t
 
 ![Actively controlled deposit for the erc677-to-erc677 bridge mode](../../.gitbook/assets/image%20%288%29.png)
 
-The first set of checks whether the value of the transaction is within the limits happens on the step 1 for the`native-to-erc20` mode or one the step 2 for the mode `erc20-to-erc20` after invocation of the`onTokenTransfer` method:
+The first set of checks whether the value of the transaction is within the limits happens on step 1 for the`native-to-erc20` mode or on step 2 for the mode `erc20-to-erc20` after invocation of the`onTokenTransfer` method:
 
 * the transferred value must be greater or equal than minimum allowable value per transaction
 * the transferred value must be less or equal than maximum allowable value per transaction
 * the accumulated value of all transfers sent in this day in this direction must be less or equal than maximum allowable accumulated values per day
 
-The second set of checks occurs on the step 3 for `native-to-erc20` and the step 4 for `erc20-to-erc20`:
+The second set of checks occurs on step 3 for `native-to-erc20` and on step 4 for `erc20-to-erc20`:
 
 * the value of the transfer confirmed by the validator must be less or equal than minimum allowable value per transaction
 * the accumulated value of all confirmed transfers sent in this day in this direction must be less or equal than maximum allowable accumulated values per day
@@ -47,7 +47,7 @@ The checks described here happen during tokens transfers in the `erc20-to-native
 
 Since the bridge contract on the Foreign side is not involved in the transfer operation no checks occur on this side. That's why in these bridge modes it is not possible to check minimal allowable value per transaction.
 
-The checks are only applied on the step 3:
+The checks are only applied on step 3:
 
 * the value of the transfer confirmed by the validator must be less or equal than minimum allowable value per transaction
 * the accumulated value of all confirmed transfers sent in this day in this direction must be less or equal than maximum allowable values per day
@@ -60,13 +60,13 @@ It is assumed that the tokens participating in withdrawals are controlled by the
 
 ![Withdrawal for the natvie-to-erc20 and erc20-to-erc20 bridge modes](../../.gitbook/assets/image%20%2827%29.png)
 
-The first set of checks for detection whether the withdrawal is within the limits happens on the step 1 for the `erc20-to-native` mode and on the step 2 for the modes `native-to-erc20` and `erc20-to-erc20`. It makes sure that:
+The first set of checks for detection whether the withdrawal is within the limits happens on step 1 for the `erc20-to-native` mode and on step 2 for the modes `native-to-erc20` and `erc20-to-erc20`. It makes sure that:
 
 * the transferred value is greater or equal than minimum allowable value per transaction
 * the transferred value is less or equal than maximum allowable value per transaction
 * the accumulated value of all transfers sent in this day in this direction is less or equal than maximum allowable accumulated values per day
 
-The checks are applied in the second time when one oracle sends all collected confirmations to the bridge contract on the Foreign side of the bridge \(the step 5 in the case of the `erc20-to-native` mode and the step 6 in other modes\):
+The checks are applied in the second time when one oracle sends all collected confirmations to the bridge contract on the Foreign side of the bridge \(on step 5 in the case of the `erc20-to-native` mode and on step 6 in other modes\):
 
 * the value of the transfer confirmed by the validator must be less or equal than minimum allowable value per transaction
 * the accumulated value of all confirmed transfers sent in this day in this direction must be less or equal than maximum allowable values per day
