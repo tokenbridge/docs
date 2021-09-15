@@ -18,5 +18,5 @@ Anyone who owns [xMOON tokens](https://blockscout.com/xdai/mainnet/tokens/0x1e16
 
 The main interface to transfer tokens is [the OmniBridge UI](https://omni.xdaichain.com/).
 
-![](../../.gitbook/assets/image%20%28128%29.png)
+![](../../.gitbook/assets/image%20%28129%29%20%281%29.png)
 

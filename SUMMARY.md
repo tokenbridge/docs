@@ -107,6 +107,13 @@
 * [BRICK bridge extension](rinkeby-xdai-amb-bridge/brick-bridge-extension.md)
 * [NFT OmniBridge extension](rinkeby-xdai-amb-bridge/nft-omnibridge-extension.md)
 
+## POA-XDAI AMB
+
+* [About the POA-xDai AMB](poa-xdai-amb/about-the-poa-xdai-amb/README.md)
+  * [Submit confirmations manually](poa-xdai-amb/about-the-poa-xdai-amb/submit-confirmations-manually.md)
+* [OmniBridge Extension](poa-xdai-amb/omnibridge-extension/README.md)
+  * [Transfer POA tokens](poa-xdai-amb/omnibridge-extension/transfer-poa-tokens.md)
+
 ## Kovan-Sokol AMB <a id="kovan-sokol-amb-bridge"></a>
 
 * [About the Kovan-Sokol AMB](kovan-sokol-amb-bridge/about-the-kovan-sokol-amb/README.md)

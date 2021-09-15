@@ -98,7 +98,7 @@ You can follow the status on the monitor. Once 4 validators are successful you c
 
 3\) Switch to **Ethereum Mainnet in MetaMask** and press the **Execute** button**.** Confirm the transaction in MetaMask**.**This will send the transaction to the Arbitrary Message Bridge contract with collected confirmations of the AMB oracles.
 
-![](../../.gitbook/assets/image%20%28154%29.png)
+![](../../.gitbook/assets/image%20%28157%29.png)
 
 {% hint style="info" %}
 Gas fee estimates to transfer may be prohibitively expensive. Note:

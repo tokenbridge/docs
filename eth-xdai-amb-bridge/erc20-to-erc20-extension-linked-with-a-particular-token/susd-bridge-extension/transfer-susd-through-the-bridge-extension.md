@@ -89,7 +89,7 @@ Note that minimum and maximum transaction amounts are embedded into the bridge.
 * 3\) Enter the sUSD xDai Token Address:  `0x4C36d2919e407f0Cc2Ee3c993ccF8ac26d9CE64e` 
 * 4\) Click **Add.**
 
-![](../../../.gitbook/assets/nifty1.png)
+![](../../../.gitbook/assets/nifty1%20%281%29.png)
 
 ![](../../../.gitbook/assets/nifty2.png)
 

@@ -12,7 +12,7 @@ The intention to introduce transfer limits was to achieve the following aims:
 * secure the bridge for the case when the bridge contract on one side was compromised by rejecting transactions with very high value
 * avoid malicious actions from the validators by rejecting their confirmations for requests with very high value
 
-#### Transfer limits for deposits
+## Transfer limits for deposits
 
 There are two cases how the limits are applied when tokens are deposited to another chain through the bridge.
 
@@ -52,7 +52,7 @@ The checks are only applied on step 3:
 * the value of the transfer confirmed by the validator must be less or equal than minimum allowable value per transaction
 * the accumulated value of all confirmed transfers sent in this day in this direction must be less or equal than maximum allowable values per day
 
-#### Transfer limits for withdrawals
+## Transfer limits for withdrawals
 
 It is assumed that the tokens participating in withdrawals are controlled by the bridge \(or bridge owners\) that is why the transfer limits behave similarly in all bridge modes.
 
