@@ -53,7 +53,7 @@ Press **Write** to send the transaction.
 
 ![](../../.gitbook/assets/image%20%28101%29.png)
 
-6. Use "**View in ALM App**" link on the page with transaction details to track status of the transfer and finalize the bridging operation if required \(it also can be done by using the block explorer\).
+6. Use "**View in ALM App**" link on the page with transaction details to track status of the transfer and finalize the bridging operation if required \([it also can be done by using the block explorer](https://docs.tokenbridge.net/poa-xdai-amb/about-the-poa-xdai-amb/submit-confirmations-manually)\).
 
 ![](../../.gitbook/assets/image%20%28154%29.png)
 

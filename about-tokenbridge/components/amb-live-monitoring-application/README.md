@@ -19,7 +19,9 @@ Transactions must use the Arbitrary Message Bridge contracts to be monitored. Tr
 Currently there are several ALM apps available dedicated for particular Arbitrary Message Bridges:
 
 * [https://alm-xdai.herokuapp.com/](https://alm-xdai.herokuapp.com/) - for the AMB between the Ethereum Mainnet and the xDai chain
+* [https://alm-bsc-xdai.herokuapp.com/](https://alm-bsc-xdai.herokuapp.com/) - for the AMB between Binance Smart Chain and the xDai chain
 * [https://alm-rinkeby.herokuapp.com/](https://alm-rinkeby.herokuapp.com/) - for the AMB between the Rinkeby testnet and the xDai chain
+* [https://alm-poa-xdai.herokuapp.com/](https://alm-poa-xdai.herokuapp.com/) - for the AMB between the POA Network and the xDai chain
 * [https://alm-etc.herokuapp.com/](https://alm-etc.herokuapp.com/) - for the AMB between the Ethereum Mainnet and the Ethereum Classic
 * [https://alm-test-amb.herokuapp.com/](https://alm-test-amb.herokuapp.com/) - for the AMB between the Kovan testnet and the Sokol testnet
 
