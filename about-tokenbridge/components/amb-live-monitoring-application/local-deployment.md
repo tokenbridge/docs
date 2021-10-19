@@ -73,11 +73,11 @@ docker-compose build
 docker-compose up -d
 ```
 
-Use a browser to get into [http://localhost:8080](http://localhost:8080/) \(if another value was configured for the parameter `PORT` use it instead of 8080\).
+Use a browser to get into [http://localhost:8080](http://localhost:8080) (if another value was configured for the parameter `PORT` use it instead of 8080).
 
 Application home window:
 
-![](../../../.gitbook/assets/image%20%2856%29.png)
+![](<../../../.gitbook/assets/image (51).png>)
 
 ## Examples of existing AMBs configs
 
@@ -150,7 +150,7 @@ ALM_HOME_EXPLORER_API=https://blockscout.com/etc/mainnet/api
 ALM_FOREIGN_EXPLORER_API=https://api.etherscan.io/api?apikey=ETHERSCAN-API-KEY
 ```
 
-### Kovan to Sokol \(test bridge\)
+### Kovan to Sokol (test bridge)
 
 ```bash
 PORT=8080
@@ -170,4 +170,3 @@ ALM_FOREIGN_EXPLORER_TX_TEMPLATE=https://kovan.etherscan.io/tx/%s
 ALM_HOME_EXPLORER_API=https://blockscout.com/poa/sokol/api
 ALM_FOREIGN_EXPLORER_API=https://api-kovan.etherscan.io/api?apikey=ETHERSCAN-API-KEY
 ```
-

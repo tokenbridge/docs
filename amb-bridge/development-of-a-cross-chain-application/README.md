@@ -14,4 +14,3 @@ Arbitrary Message Bridge provides a set of APIs that allows applications to perf
 If an application decides to send a message via the bridge it will produce a transaction on another side of the bridge. So, as part of this transaction another contract can be called.
 
 At the same time the information requests do not generate transaction on another side of the bridge. A read-only JSON RPC call is being sent instead, so the contract on the Home side can receive almost any data stored in the blockchain which is considered as the Foreign side with zero cost.
-

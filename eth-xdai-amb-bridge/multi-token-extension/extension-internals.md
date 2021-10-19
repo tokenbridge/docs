@@ -8,9 +8,8 @@ description: >-
 
 These diagrams show the basics of the multi-token extension. This extension is no longer developed or supported by the team, but provide insights regarding the design that may be useful for extension developers.
 
-![](../../.gitbook/assets/image%20%2857%29.png)
+![](<../../.gitbook/assets/image (52).png>)
 
-![](../../.gitbook/assets/image%20%2861%29.png)
+![](<../../.gitbook/assets/image (54).png>)
 
-![](../../.gitbook/assets/image%20%2871%29.png)
-
+![](<../../.gitbook/assets/image (55).png>)

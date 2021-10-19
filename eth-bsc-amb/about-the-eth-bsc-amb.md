@@ -30,11 +30,10 @@ The mediator contracts could use the following information about the ETH-BSC Arb
 
 ### Transactions
 
-It is possible to get the status of an AMB transaction using [the Live Monitoring app](https://docs.tokenbridge.net/about-tokenbridge/components/amb-live-monitoring-application): [http://alm-bsc.herokuapp.com/](http://alm-bsc.herokuapp.com/). Transactions require a multi-sig \(for bridge validators, not users\) for a successful transfer. Current validators can be viewed with the live monitoring application.
+It is possible to get the status of an AMB transaction using [the Live Monitoring app](https://docs.tokenbridge.net/about-tokenbridge/components/amb-live-monitoring-application): [http://alm-bsc.herokuapp.com/](http://alm-bsc.herokuapp.com). Transactions require a multi-sig (for bridge validators, not users) for a successful transfer. Current validators can be viewed with the live monitoring application.
 
 ### Bridge Oracles
 
 For transactions from BSC manual execution is required. This action delivers the validator confirmations gathered on BSC to the Mainnet and triggers the transferred message handling. Since the bridge oracles does not operate with the Ethereum Mainnet directly they do not need to have a positive balance on this chain.
 
 At the same time, the process of the confirmation delivery to BSC requires from the bridge oracles to have BNB for gas fees. If it is found that some bridge oracle does not send transactions, consider to top up its account on BSC. The list of oracles is available by using the method `validatorList` of the validator set contract: [`0xc7b4618d03a756f8345bd1bf1cccbe3681f823ef`](https://bscscan.com/address/0xc7b4618d03a756f8345bd1bf1cccbe3681f823ef#readProxyContract)
-

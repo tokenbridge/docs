@@ -25,7 +25,6 @@ By using the links below it is possible to get the status of the existing bridge
 
 ### Status dashboard
 
-Here you can find a status dashboard for deployed instances \(POA, xDai, AMB POA, AMB xDai\). The dashboard is taking data on balances difference from deployed monitors
+Here you can find a status dashboard for deployed instances (POA, xDai, AMB POA, AMB xDai). The dashboard is taking data on balances difference from deployed monitors
 
-[https://status.tokenbridge.net/](https://status.tokenbridge.net/)
-
+[https://status.tokenbridge.net/](https://status.tokenbridge.net)

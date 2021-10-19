@@ -14,4 +14,3 @@ The following topics cover AMB deployment:
 
 1. [AMB contract deployment](https://docs.tokenbridge.net/amb-bridge/arbitrary-message-bridge-deployment/1-amb-contracts-deployment)
 2. [TokenBridge oracle instances](https://docs.tokenbridge.net/amb-bridge/arbitrary-message-bridge-deployment/2-tokenbridge-oracle-instance)
-

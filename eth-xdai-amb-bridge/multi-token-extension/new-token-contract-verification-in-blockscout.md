@@ -4,25 +4,25 @@ description: Instructions to verify a token contract deployed by the multi-token
 
 # New token contract verification in BlockScout
 
-New tokens deployed by the multi-token mediator are not verified automatically in BlockScout. Sometimes it is necessary to read data from the token contract directly in the block explorer or even call a method of the token contract \(e.g. to transfer tokens back to the Ethereum Mainnet\). Follow the instructions below to verify the contract in BlockScout. Once verified, you can read and write to the contract using the BlockScout interface.
+New tokens deployed by the multi-token mediator are not verified automatically in BlockScout. Sometimes it is necessary to read data from the token contract directly in the block explorer or even call a method of the token contract (e.g. to transfer tokens back to the Ethereum Mainnet). Follow the instructions below to verify the contract in BlockScout. Once verified, you can read and write to the contract using the BlockScout interface.
 
 #### Step 1: Find the token contract by the token symbol
 
-![](../../.gitbook/assets/image%20%2889%29.png)
+![](<../../.gitbook/assets/image (78).png>)
 
 The bridgeable token name is extended by "on xDai":
 
-![](../../.gitbook/assets/image%20%2874%29.png)
+![](<../../.gitbook/assets/image (80).png>)
 
 #### Step 2: Verify the contract
 
-![](../../.gitbook/assets/image%20%2873%29.png)
+![](<../../.gitbook/assets/image (79).png>)
 
-![](../../.gitbook/assets/image%20%2877%29.png)
+![](<../../.gitbook/assets/image (81).png>)
 
-Click on the Code tab, click Verify and Publish, then fill the form following the recommendations below \(see solidity contract code below this image\).   Press the "Verify & publish" button at the bottom of the form to finish.
+Click on the Code tab, click Verify and Publish, then fill the form following the recommendations below (see solidity contract code below this image).   Press the "Verify & publish" button at the bottom of the form to finish.
 
-![](../../.gitbook/assets/image%20%2879%29.png)
+![](<../../.gitbook/assets/image (82).png>)
 
 #### Solidity Contract Code:
 
@@ -197,5 +197,4 @@ contract TokenProxy is Proxy {
 
 After verification is successful, the number tabs in the contract window will be extended to allow users to "Read Contract", "Write Contract", "Read Proxy" and "Write Proxy"
 
-![](../../.gitbook/assets/image%20%2860%29.png)
-
+![](<../../.gitbook/assets/image (83).png>)

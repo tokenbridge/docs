@@ -7,7 +7,7 @@ description: >-
 # WETC AMB extension
 
 {% hint style="info" %}
-The WETC extension was born after upgrading the previous vanilla TokenBridge contracts \(WETC bridge\) to the AMB mediators.
+The WETC extension was born after upgrading the previous vanilla TokenBridge contracts (WETC bridge) to the AMB mediators.
 {% endhint %}
 
 The WETC bridge extension of the ETH-ETC Arbitrary Message Bridge allows a user to transfer ETC native tokens from the Ethereum Classic to the Ethereum Mainnet in form of ERC20 tokens. The transfer may happen both direction.
@@ -18,9 +18,8 @@ The WETC bridge extension of the ETH-ETC Arbitrary Message Bridge allows a user 
 
 Anyone who owns ETCs on Ethereum Classic can use the bridge. ETCs are locked in the mediator contract and the same amount of [Wrapped ETC bridgeable tokens](https://etherscan.io/token/0x86aabcc646f290b9fc9bd05ce17c3858d1511da1) are minted on the Ethereum Mainnet side. The reverse operation burns WETC bridgeable tokens on the Ethereum Mainnet and unlocks ETC native tokens on the Ethereum Classic.
 
-For demonstration purposes, an application based on Burner Wallet 2 technology can be used as an UI to transfer tokens from one chain to another: [https://wetc-app.herokuapp.com/](https://wetc-app.herokuapp.com/).
+For demonstration purposes, an application based on Burner Wallet 2 technology can be used as an UI to transfer tokens from one chain to another: [https://wetc-app.herokuapp.com/](https://wetc-app.herokuapp.com).
 
-![The main window of the WETC exchange app](../.gitbook/assets/image%20%2853%29.png)
+![The main window of the WETC exchange app](<../.gitbook/assets/image (49).png>)
 
-![The exchange window of the WETC exchange app](../.gitbook/assets/image%20%2854%29.png)
-
+![The exchange window of the WETC exchange app](<../.gitbook/assets/image (50).png>)

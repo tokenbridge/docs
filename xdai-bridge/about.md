@@ -1,23 +1,22 @@
 ---
-description: 'The xDai bridge is used to transform Dai into xDai, and xDai back to Dai'
+description: The xDai bridge is used to transform Dai into xDai, and xDai back to Dai
 ---
 
 # About the xDai Bridge
 
-There are currently two bridges on xDai that connect it to the Ethereum Mainnet. The ERC-20 to Native Bridge, and the [xDai &lt;-&gt; ETH AMB](../eth-xdai-amb-bridge/about-the-eth-xdai-amb/). This sections covers the ERC20-Native Bridge.
+There are currently two bridges on xDai that connect it to the Ethereum Mainnet. The ERC-20 to Native Bridge, and the [xDai <-> ETH AMB](../eth-xdai-amb-bridge/about-the-eth-xdai-amb/). This sections covers the ERC20-Native Bridge.
 
-|  |  |
-| :--- | :--- |
-| Bridge Type | ERC20 to Native |
-| UI | [https://bridge.xdaichain.com/](https://bridge.xdaichain.com/) |
-| Ethereum Proxy Contract | [0x4aa42145Aa6Ebf72e164C9bBC74fbD3788045016](https://etherscan.io/address/0x4aa42145Aa6Ebf72e164C9bBC74fbD3788045016#readProxyContract) |
-| xDai Proxy Contract | [0x7301CFA0e1756B71869E93d4e4Dca5c7d0eb0AA6](https://blockscout.com/xdai/mainnet/address/0x7301CFA0e1756B71869E93d4e4Dca5c7d0eb0AA6/read-proxy) |
-| Bridge Governance | [https://www.xdaichain.com/about-xdai/faqs/bridges-xdai-bridge-and-omnibridge\#what-is-the-bridge-governance-board](https://www.xdaichain.com/about-xdai/faqs/bridges-xdai-bridge-and-omnibridge#what-is-the-bridge-governance-board) |
-| Validators | [https://www.xdaichain.com/for-validators/for-bridge-validators\#current-xdai-bridge-validators](https://www.xdaichain.com/for-validators/for-bridge-validators#current-xdai-bridge-validators) |
-| Max per day | Updated to 10,000,000 per day in either direction with [governance decision](https://forum.poa.network/t/increase-daily-limit-for-xdai-withdrawals-from-the-xdai-to-the-mainnet/3823). Day resets at 00:00 UTC. |
-| FAQs | [https://www.xdaichain.com/about-xdai/faqs/bridges-xdai-bridge-and-omnibridge](https://www.xdaichain.com/about-xdai/faqs/bridges-xdai-bridge-and-omnibridge) |
+|                         |                                                                                                                                                                                                                                      |
+| ----------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| Bridge Type             | ERC20 to Native                                                                                                                                                                                                                      |
+| UI                      | [https://bridge.xdaichain.com/](https://bridge.xdaichain.com)                                                                                                                                                                        |
+| Ethereum Proxy Contract | [0x4aa42145Aa6Ebf72e164C9bBC74fbD3788045016](https://etherscan.io/address/0x4aa42145Aa6Ebf72e164C9bBC74fbD3788045016#readProxyContract)                                                                                              |
+| xDai Proxy Contract     | [0x7301CFA0e1756B71869E93d4e4Dca5c7d0eb0AA6](https://blockscout.com/xdai/mainnet/address/0x7301CFA0e1756B71869E93d4e4Dca5c7d0eb0AA6/read-proxy)                                                                                      |
+| Bridge Governance       | [https://www.xdaichain.com/about-xdai/faqs/bridges-xdai-bridge-and-omnibridge#what-is-the-bridge-governance-board](https://www.xdaichain.com/about-xdai/faqs/bridges-xdai-bridge-and-omnibridge#what-is-the-bridge-governance-board) |
+| Validators              | [https://www.xdaichain.com/for-validators/for-bridge-validators#current-xdai-bridge-validators](https://www.xdaichain.com/for-validators/for-bridge-validators#current-xdai-bridge-validators)                                       |
+| Max per day             | Updated to 10,000,000 per day in either direction with [governance decision](https://forum.poa.network/t/increase-daily-limit-for-xdai-withdrawals-from-the-xdai-to-the-mainnet/3823). Day resets at 00:00 UTC.                      |
+| FAQs                    | [https://www.xdaichain.com/about-xdai/faqs/bridges-xdai-bridge-and-omnibridge](https://www.xdaichain.com/about-xdai/faqs/bridges-xdai-bridge-and-omnibridge)                                                                         |
 
-The xDai chain uses the ERC20 to Native TokenBridge functionality to provide fast, inexpensive and stable transactions. This bridge allows users to transform DAI \(an ERC20 stable token\) on the mainnet into xDAI on a compatible chain. xDAI tokens can then be sent quickly and with minimal cost on the xDAI network. The xDAI chain has been a breakout success in the Ethereum community, providing an easy way for vendors to accept a stable cryptocurrency.
+The xDai chain uses the ERC20 to Native TokenBridge functionality to provide fast, inexpensive and stable transactions. This bridge allows users to transform DAI (an ERC20 stable token) on the mainnet into xDAI on a compatible chain. xDAI tokens can then be sent quickly and with minimal cost on the xDAI network. The xDAI chain has been a breakout success in the Ethereum community, providing an easy way for vendors to accept a stable cryptocurrency.
 
-![](../.gitbook/assets/xdai-bridge.png)
-
+![](../.gitbook/assets/xDai-Bridge.png)

@@ -4,7 +4,7 @@ description: ETH-ETC Arbitrary Message Bridge information
 
 # About the ETH-ETC AMB
 
-An Arbitrary Message Bridge \(AMB\) between the Ethereum Mainnet and the Ethereum Classic extends the number of the applications that can leverage cross-chain communications. It was mainly deployed as an experiment to migrate the vanilla TokenBridge serving exchange ETC to [WETC](https://etherscan.io/token/0x86aabcc646f290b9fc9bd05ce17c3858d1511da1) to the AMB protocol. 
+An Arbitrary Message Bridge (AMB) between the Ethereum Mainnet and the Ethereum Classic extends the number of the applications that can leverage cross-chain communications. It was mainly deployed as an experiment to migrate the vanilla TokenBridge serving exchange ETC to [WETC](https://etherscan.io/token/0x86aabcc646f290b9fc9bd05ce17c3858d1511da1) to the AMB protocol.&#x20;
 
 Any application can [build its own AMB extension](https://docs.tokenbridge.net/amb-bridge/how-to-develop-xchain-apps-by-amb). This is represented by two mediator contracts so that either assets or arbitrary data can be transferred between chains. The deployed mediator contracts **do not** require a set of oracles to be setup, allowing an application to launch quickly and reducing the cost of application ownership.
 
@@ -19,9 +19,8 @@ The mediator contracts rely on the following information about the ETH-ETC Arbit
   * Gas limit to call method in the Ethereum Mainnet: `2000000`
   * Finalization rate: `8` block
 
-It is possible to get an AMB transaction status by using [the Live Monitoring app](https://docs.tokenbridge.net/about-tokenbridge/components/amb-live-monitoring-application): [https://alm-etc.herokuapp.com/](https://alm-etc.herokuapp.com/).
+It is possible to get an AMB transaction status by using [the Live Monitoring app](https://docs.tokenbridge.net/about-tokenbridge/components/amb-live-monitoring-application): [https://alm-etc.herokuapp.com/](https://alm-etc.herokuapp.com).
 
 {% hint style="success" %}
-A detailed description of the AMB and examples of AMB extensions are available here: [Arbitrary Message Bridge \(AMB\)](https://docs.tokenbridge.net/amb-bridge/about-amb-bridge).
+A detailed description of the AMB and examples of AMB extensions are available here: [Arbitrary Message Bridge (AMB)](https://docs.tokenbridge.net/amb-bridge/about-amb-bridge).
 {% endhint %}
-

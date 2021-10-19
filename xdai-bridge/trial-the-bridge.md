@@ -7,7 +7,7 @@ description: Technical information about a test erc20-to-native bridge instance
 The bridge is functioning between Kovan and Sokol chains. The main purpose is for testing the xDai TokenBridge UI and differs from the production version of the bridge. Key differences:
 
 * A generic ERC20 token is used on the Kovan chain rather than a clone of the original DAI token.
-* Native tokens \(SPOA\) are minted on the Sokol side by the bridge directly without involving the `BlockReward` functionality.
+* Native tokens (SPOA) are minted on the Sokol side by the bridge directly without involving the `BlockReward` functionality.
 
 ### Contracts information
 
@@ -25,4 +25,3 @@ The bridge is functioning between Kovan and Sokol chains. The main purpose is fo
 ### Getting tokens for testing
 
 To get ERC20 tokens for testing, first send SPOA native tokens first to the bridge contract. The corresponding amount of ERC20 tokens will be released in a few minutes on the other side of the bridge.
-

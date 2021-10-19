@@ -24,4 +24,3 @@ The contract addresses:
   * [`0x867949C3F2f66D827Ed40847FaA7B3a369370e13`](https://blockscout.com/poa/sokol/address/0x867949C3F2f66D827Ed40847FaA7B3a369370e13)
 
 Anyone who owns SPOA native tokens can use the bridge - SPOAs are locked in the bridge mediator contract and the same amount of KSPOA tokens are minted on the Kovan testnet. The reverse operation burns KSPOA bridgeable tokens on the Kovan testnet and unlock SPOA native tokens on the Sokol testnet.
-

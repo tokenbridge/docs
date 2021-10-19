@@ -8,10 +8,12 @@ The TokenBridge has undergone multiple independent security audits and assessmen
 
 **Conclusion**: 0 Critical Risk Issues, 1 High Risk Issue Mitigated, 1 Medium Issue Mitigated, 2 Corrected, 13 Low Risk Issues all Acknowledged and/or Corrected.
 
-**Contracts:** [https://github.com/poanetwork/omnibridge](https://github.com/poanetwork/omnibridge)  
+**Contracts:** [https://github.com/poanetwork/omnibridge](https://github.com/poanetwork/omnibridge)\
 **Audit Report:**
 
-{% file src="../.gitbook/assets/chainsecurity\_poa\_network\_omnibridge\_version\_6\_0\_audit.pdf" caption="OmniBridge v6.0 by ChainSecurity" %}
+{% file src="../.gitbook/assets/ChainSecurity_POA_Network_Omnibridge_Version_6_0_audit.pdf" %}
+OmniBridge v6.0 by ChainSecurity
+{% endfile %}
 
 ## OmniBridge Audit by ChainSecurity
 
@@ -21,9 +23,11 @@ The TokenBridge has undergone multiple independent security audits and assessmen
 
 **Contracts:** [https://github.com/poanetwork/omnibridge](https://github.com/poanetwork/omnibridge)
 
-{% embed url="https://chainsecurity.com/security-audit/poa-network-omnibridge/" caption="Link to Audit Report on ChainSecurity" %}
+{% embed url="https://chainsecurity.com/security-audit/poa-network-omnibridge/" %}
+Link to Audit Report on ChainSecurity
+{% endembed %}
 
-## TokenBridge Audit by Quantstamp \(covers OmniBridge\)
+## TokenBridge Audit by Quantstamp (covers OmniBridge)
 
 **Completed:** November 6, 2020
 
@@ -35,11 +39,11 @@ The TokenBridge has undergone multiple independent security audits and assessmen
 [Quantstamp Security Audit PDF](https://github.com/poanetwork/tokenbridge/blob/master/audit/quantstamp/POA-Network-TokenBridge-contracts-5.4.1-security-assessment-report.pdf)
 {% endhint %}
 
-## TokenBridge Audit by Quantstamp \(covers AMB bridge\)
+## TokenBridge Audit by Quantstamp (covers AMB bridge)
 
 **Completed:** January 8, 2020
 
-**Conclusion**: All high risk issues resolved and low risk issues addressed. [More information available in this post](%20https://forum.poa.network/t/quantstamp-security-audit-for-tokenbridge-contracts-completed/3233).
+**Conclusion**: All high risk issues resolved and low risk issues addressed. [More information available in this post](https://forum.poa.network/t/quantstamp-security-audit-for-tokenbridge-contracts-completed/3233).
 
 **Contracts:** Revised in version 3.3.0 to address audit. [https://github.com/poanetwork/tokenbridge-contracts/releases/tag/3.3.0](https://github.com/poanetwork/tokenbridge-contracts/releases/tag/3.3.0)
 
@@ -53,15 +57,15 @@ The TokenBridge has undergone multiple independent security audits and assessmen
 
 **Conclusion:**  All of the issues were addressed, some of them fixed in the latest version of the code.
 
-**Contracts:** Revised in version 2.3.3 to address audit. [https://github.com/poanetwork/tokenbridge-contracts/releases/tag/2.3.3](https://github.com/poanetwork/tokenbridge-contracts/releases/tag/2.3.3)
+**Contracts: **Revised in version 2.3.3 to address audit. [https://github.com/poanetwork/tokenbridge-contracts/releases/tag/2.3.3](https://github.com/poanetwork/tokenbridge-contracts/releases/tag/2.3.3)
 
 {% hint style="success" %}
 [SmartDec Security Audit PDF](https://github.com/poanetwork/tokenbridge/blob/73d500210546e2959536dc569f1aec5752077225/audit/smartdec/POA-Network-TokenBridge-Contracts-v2-3-2-Security-Assessment.pdf)
 {% endhint %}
 
-## **Initial Token Bridge Audit by** [**Peppersec**](https://peppersec.com/)**:** 
+## **Initial Token Bridge Audit by **[**Peppersec**](https://peppersec.com)**: **
 
-**Completed:** October 2018
+**Completed: **October 2018
 
 **Conclusion:** We can rate the overall security level of the system as “High”.
 
@@ -70,4 +74,3 @@ The TokenBridge has undergone multiple independent security audits and assessmen
 {% hint style="success" %}
 [Peppersec Security Audit PDF](https://github.com/poanetwork/tokenbridge/blob/73d500210546e2959536dc569f1aec5752077225/audit/peppersec/POA-Network-Token-bridge-security-assessment-report.pdf)
 {% endhint %}
-

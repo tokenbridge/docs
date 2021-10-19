@@ -1,4 +1,4 @@
-# 1\) AMB contracts deployment
+# 1) AMB contracts deployment
 
 ## Create accounts for deployment
 
@@ -23,13 +23,13 @@ You will need tokens for deployment on both sides of the bridge. This means the 
 
 ## Configure and Deploy Bridge Contracts
 
-### 1\) Create configuration file `amb.config`
+### 1) Create configuration file `amb.config`
 
 {% hint style="warning" %}
-Replace all variables templated with tags \(&lt;&gt;\) with actual values. [Learn more about variables here ](https://github.com/poanetwork/tokenbridge-contracts/blob/master/deploy/README.md#erc-to-native-bridge-mode-configuration-example)
+Replace all variables templated with tags (<>) with actual values. [Learn more about variables here ](https://github.com/poanetwork/tokenbridge-contracts/blob/master/deploy/README.md#erc-to-native-bridge-mode-configuration-example)
 {% endhint %}
 
-```text
+```
 BRIDGE_MODE=ARBITRARY_MESSAGE
 # The private key without 0x part.
 DEPLOYMENT_ACCOUNT_PRIVATE_KEY=<DEPLOYMENT_ACCOUNT_PRIVATE_KEY>
@@ -68,17 +68,17 @@ VALIDATORS=<address of validator>
 _Optional:_ If you plan to use Etherscan or BlockScout for exploring your chain, find information on the correct parameters to include in the .env file here: [https://docs.tokenbridge.net/about-tokenbridge/features/contracts-verification-in-explorers](https://docs.tokenbridge.net/about-tokenbridge/features/contracts-verification-in-explorers)
 {% endhint %}
 
-### 2\) Deploy Contracts
+### 2) Deploy Contracts
 
 Deployment of contracts with usage of the docker image is very straightforward:
 
-```text
+```
 docker run -it --env-file amb.config poanetwork/tokenbridge-contracts deploy.sh
 ```
 
 After successful deployment the following information about the bridge contracts is displayed:
 
-```text
+```
 {
     "homeBridge": {
         "address": "0xaA19D8ECfB824951AF06fEb5aDeC2423e2eFa608",
@@ -90,4 +90,3 @@ After successful deployment the following information about the bridge contracts
     }
 }
 ```
-

@@ -4,42 +4,42 @@ description: Instructions to deploy the monitor for existing bridges
 
 # Monitor deployment for existing bridges
 
-The TokenBridge monitor instance deployment uses [Ansible](https://docs.ansible.com/ansible/latest/index.html). Moreover the process below assumes there are two nodes: one node where Ansible playbooks orchestrate the deployment process \(orchestration node\) and another node where the monitor instance is deployed \(target node\). 
+The TokenBridge monitor instance deployment uses [Ansible](https://docs.ansible.com/ansible/latest/index.html). Moreover the process below assumes there are two nodes: one node where Ansible playbooks orchestrate the deployment process (orchestration node) and another node where the monitor instance is deployed (target node).&#x20;
 
-The **orchestration node** must satisfy the following dependencies:
+The **orchestration node **must satisfy the following dependencies:
 
-* Python 2 \(v2.6-v2.7\)/Python3 \(v3.5+\)
-* Ansible v2.3+ \(on Ubuntu based systems it could be installed by `apt-get install ansible` \)
+* Python 2 (v2.6-v2.7)/Python3 (v3.5+)
+* Ansible v2.3+ (on Ubuntu based systems it could be installed by `apt-get install ansible` )
 * Git
 
-The **target node** must ****have a functional Ubuntu 16.04 or 18.04 launched, and recommended 4Gb+  memory.
+The **target node **must** **have a functional Ubuntu 16.04 or 18.04 launched, and recommended 4Gb+  memory.
 
-For these instructions, You will use an [Infura account](https://infura.io/) with a project ID. You can create a free account and the id will be located there. Alternately, you can choose a different mainnet endpoint.
+For these instructions, You will use an [Infura account](https://infura.io) with a project ID. You can create a free account and the id will be located there. Alternately, you can choose a different mainnet endpoint.
 
 ## Tasks on Orchestration Node
 
-1. Login and generate a pair of SSH keys that will be used by the orchestration node to remotely login to the target node. The generated public key must be added to `.ssh/authorized_keys` on the target node in the home directory of the user \(usually `root` or `ubuntu`\) that will be configured to perform deployment actions.  
+1\. Login and generate a pair of SSH keys that will be used by the orchestration node to remotely login to the target node. The generated public key must be added to `.ssh/authorized_keys` on the target node in the home directory of the user (usually `root` or `ubuntu`) that will be configured to perform deployment actions. &#x20;
 
-```text
+```
 ssh-keygen -t rsa
 cat ~/.ssh/id_rsa.pub | ssh user@hostname 'cat >> .ssh/authorized_keys'
 ```
 
-Check that user has appropriate permissions and change if needed. Use `ls -l` to check permissions, if assigned to root and you are using ubuntu user, use the `chown` command to update permissions.
+Check that user has appropriate permissions and change if needed. Use `ls -l` to check permissions, if assigned to root and you are using ubuntu user, use the` chown` command to update permissions.
 
-```text
+```
 ls -l
 sudo chown -R ubuntu:ubuntu
 ```
 
-2. Clone the TokenBridge git repository and change the working directory:
+2\. Clone the TokenBridge git repository and change the working directory:
 
 ```bash
 git clone --recursive https://github.com/poanetwork/tokenbridge.git
 cd tokenbridge/deployment
 ```
 
-3. Prepare the following four files in the directory \`group\_vars\`. Every file will be used to send requests to one of the bridges:
+3\. Prepare the following four files in the directory \`group\_vars\`. Every file will be used to send requests to one of the bridges:
 
 * xDai bridge: **`group_vars/xdai.yml`**
 * POA bridge: **`group_vars/poa.yml`**
@@ -47,10 +47,10 @@ cd tokenbridge/deployment
 * ETH-xDai Arbitrary message bridge: **`group_vars/amb-xdai.yml`**
 * ETH-POA Arbitrary message bridge: **`group_vars/amb-poa.yml`**
 * Rinkeby-xDai Arbitrary message bridge: **`group_vars/amb-rinkeby.yml`**
-* Kovan-Sokol Arbitrary message bridge \(test bed\): **`group_vars/amb-test.yml`**
+* Kovan-Sokol Arbitrary message bridge (test bed): **`group_vars/amb-test.yml`**
 
 {% hint style="warning" %}
-Replace all places templated with tags \(&lt;&gt;\) with actual values. In order to achieve this it is necessary to define in advance **the port** where the monitor web-service will listen users' requests and **the JSON RPC url** to communicate with Ethereum Mainnet nodes.
+Replace all places templated with tags (<>) with actual values. In order to achieve this it is necessary to define in advance **the port** where the monitor web-service will listen users' requests and **the JSON RPC url** to communicate with Ethereum Mainnet nodes.
 
 The web service port must be specified **only in the first file**.
 {% endhint %}
@@ -254,10 +254,10 @@ MONITOR_VALIDATOR_FOREIGN_TX_LIMIT: 2000000
 MONITOR_TX_NUMBER_THRESHOLD: 50
 ```
 
-4. Return to the deployment directory \(`cd ..`\) and create the `hosts.yml` file
+4\. Return to the deployment directory (`cd ..`) and create the `hosts.yml` file
 
 {% hint style="warning" %}
-Replace all variables templated with tags \(&lt;&gt;\) with actual values.
+Replace all variables templated with tags (<>) with actual values.
 {% endhint %}
 
 ```yaml
@@ -272,17 +272,17 @@ xdai:
 
 Here `<user>` is the account that will ssh into the monitor node for deployment actions. This is typically `ubuntu` or `root`.
 
-5. Next, the Ansible playbook will deploy the monitor instance on the remote target node, then propagate the rest of configuration to the same system. You will run the playbook each time after re-configuring the hosts.yml file
+5\. Next, the Ansible playbook will deploy the monitor instance on the remote target node, then propagate the rest of configuration to the same system. You will run the playbook each time after re-configuring the hosts.yml file
 
 {% hint style="warning" %}
-If the target node contains `python3` instead of `python`, append `-e 'ansible_python_interpreter=/usr/bin/python3'` to the end of the ansible-playbook command \(before `-i hosts.yml`\). Try this if you get a node connection / ssh error.
+If the target node contains `python3` instead of `python`, append `-e 'ansible_python_interpreter=/usr/bin/python3' `to the end of the ansible-playbook command (before `-i hosts.yml`). Try this if you get a node connection / ssh error.
 
 Depending on your ssh setup, you may not need the `--private-key` flag
 
-⏳ Automated deployment and the remote node configuration can take a few minutes depending on target node resources. Be patient and maybe have a ☕ during  these operations!
+:hourglass\_flowing\_sand: Automated deployment and the remote node configuration can take a few minutes depending on target node resources. Be patient and maybe have a :coffee: during  these operations!
 {% endhint %}
 
-```text
+```
 ansible-playbook --private-key=~/.ssh/<privkey.file> -i hosts.yml site.yml
 sed -i 's/xdai/poa/' hosts.yml
 ansible-playbook --private-key=~/.ssh/<privkey.file> -i hosts.yml site.yml
@@ -300,18 +300,17 @@ sed -i 's/amb-qdai/amb-test/' hosts.yml
 ansible-playbook --private-key=~/.ssh/<privkey.file> -i hosts.yml site.yml
 ```
 
-6. Wait for 5-6 minutes and check availability of the monitor statistic in the web service: 
+6\. Wait for 5-6 minutes and check availability of the monitor statistic in the web service:&#x20;
 
 1\) By URL:
 
-* http://&lt;target node ip address:port&gt;/xdai
-* http://&lt;target node ip address:port&gt;/poa
-* http://&lt;target node ip address:port&gt;/wetc
-* http://&lt;target node ip address:port&gt;/amb-xdai
-* http://&lt;target node ip address:port&gt;/amb-poa
-* http://&lt;target node ip address:port&gt;/amb-rinkeby
-* http://&lt;target node ip address:port&gt;/amb-qdai
-* http://&lt;target node ip address:port&gt;/amb-test
+* http://\<target node ip address:port>/xdai
+* http://\<target node ip address:port>/poa
+* http://\<target node ip address:port>/wetc
+* http://\<target node ip address:port>/amb-xdai
+* http://\<target node ip address:port>/amb-poa
+* http://\<target node ip address:port>/amb-rinkeby
+* http://\<target node ip address:port>/amb-qdai
+* http://\<target node ip address:port>/amb-test
 
-2\) If URL method is unavailable you can **login to the target node** and: `curl http://<target node ip address:port>/xdai` from the command line to check operability.
-
+2\) If URL method is unavailable you can **login to the target node** and: `curl http://<target node ip address:port>/xdai `from the command line to check operability.

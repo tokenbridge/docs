@@ -8,7 +8,7 @@ description: >-
 
 The instructions below show how to configure the variables to enable the automatic contract verification in block explorers when using the [bridge contracts deployment script](https://github.com/poanetwork/tokenbridge-contracts/blob/master/deploy/README.md). This feature only supports Blockscout and Etherscan block explorers.
 
-In the example we are going to deploy a bridge between Sokol and Kovan testnets, and we are going to automatically verify the contracts on [Blockscout](https://blockscout.com/poa/sokol/) for the contracts deployed in Sokol and [Etherscan](https://kovan.etherscan.io/) for the contracts deployed in Kovan. 
+In the example we are going to deploy a bridge between Sokol and Kovan testnets, and we are going to automatically verify the contracts on [Blockscout](https://blockscout.com/poa/sokol/) for the contracts deployed in Sokol and [Etherscan](https://kovan.etherscan.io) for the contracts deployed in Kovan.&#x20;
 
 It is worth to mention that the home and foreign side of the bridge are not limited to a specific explorer and they can be used in any of the sides. For example, in this case, we could also use the [Kovan Blockscout](https://blockscout.com/eth/kovan) version to verify the contracts in Kovan.
 
@@ -17,25 +17,25 @@ While Blockscout does not require authentication, Etherscan requires to create a
 ### Create an etherscan API-KEY token
 
 1. First create an account on [https://etherscan.io/register](https://etherscan.io/register)
-2. Sign in into your account  
+2. Sign in into your account &#x20;
 
-![Sign in into your etherscan account](../../.gitbook/assets/scrnli_12_30_2019_3-26-19-pm.png)
+![Sign in into your etherscan account](<../../.gitbook/assets/scrnli\_12\_30\_2019\_3-26-19 PM.png>)
 
-    3. Select the `API-KEYs` option from the menu
+&#x20;   3\. Select the `API-KEYs` option from the menu
 
-![Select API-KEYs](../../.gitbook/assets/scrnli_12_30_2019_3-30-27-pm.png)
+![Select API-KEYs](<../../.gitbook/assets/scrnli\_12\_30\_2019\_3-30-27 PM.png>)
 
-    4. Click on the button `Create a new API-KEY token` 
+&#x20;   4\. Click on the button `Create a new API-KEY token`&#x20;
 
-![Button to create a new API-KEY token](../../.gitbook/assets/scrnli_12_30_2019_3-31-23-pm.png)
+![Button to create a new API-KEY token](<../../.gitbook/assets/scrnli\_12\_30\_2019\_3-31-23 PM.png>)
 
-    5. Add an optional name to the `API-KEY` and click on the button `Continue`
+&#x20;   5\. Add an optional name to the `API-KEY` and click on the button `Continue`
 
-![Add a name and click on continue](../../.gitbook/assets/scrnli_12_30_2019_3-32-40-pm.png)
+![Add a name and click on continue](<../../.gitbook/assets/scrnli\_12\_30\_2019\_3-32-40 PM.png>)
 
-    6. The created `API-KEY` will be displayed in the list.
+&#x20;   6\. The created `API-KEY` will be displayed in the list.
 
-![List of API-KEYs](../../.gitbook/assets/scrnli_12_30_2019_3-33-19-pm.png)
+![List of API-KEYs](<../../.gitbook/assets/scrnli\_12\_30\_2019\_3-33-19 PM.png>)
 
 ### Variable configuration for deployment script
 
@@ -48,7 +48,7 @@ At the moment of setting the variable for the configuration of the bridge deploy
 
 This is how the configuration should look like:
 
-```text
+```
 ...
 HOME_EXPLORER_URL=https://blockscout.com/poa/sokol/api
 
@@ -61,11 +61,10 @@ After running the deployment script, if we search for the bridge addresses on th
 
 Here is an example of how a verified contract looks in Blockscout
 
-![Verified contract in Blockscout](../../.gitbook/assets/scrnli_12_30_2019_4-27-01-pm.png)
+![Verified contract in Blockscout](<../../.gitbook/assets/scrnli\_12\_30\_2019\_4-27-01 PM.png>)
 
 
 
 Here is an example of how a verified contract looks in Etherscan
 
-![Verified contract in Etherscan](../../.gitbook/assets/scrnli_12_30_2019_4-27-23-pm.png)
-
+![Verified contract in Etherscan](<../../.gitbook/assets/scrnli\_12\_30\_2019\_4-27-23 PM.png>)

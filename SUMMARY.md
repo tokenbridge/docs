@@ -24,12 +24,12 @@
 * [Security Audits](about-tokenbridge/security-audits.md)
 * [Roadmap](about-tokenbridge/roadmap.md)
 
-## Arbitrary Message Bridge \(AMB\) <a id="amb-bridge"></a>
+## Arbitrary Message Bridge (AMB) <a href="amb-bridge" id="amb-bridge"></a>
 
 * [About the AMB](amb-bridge/about-amb-bridge.md)
 * [Arbitrary Message Bridge Deployment](amb-bridge/arbitrary-message-bridge-deployment/README.md)
-  * [1\) AMB contracts deployment](amb-bridge/arbitrary-message-bridge-deployment/1-amb-contracts-deployment.md)
-  * [2\) TokenBridge oracle instances](amb-bridge/arbitrary-message-bridge-deployment/2-tokenbridge-oracle-instance.md)
+  * [1) AMB contracts deployment](amb-bridge/arbitrary-message-bridge-deployment/1-amb-contracts-deployment.md)
+  * [2) TokenBridge oracle instances](amb-bridge/arbitrary-message-bridge-deployment/2-tokenbridge-oracle-instance.md)
   * [Add-on: xDai and AMB bridge oracles on the same node](amb-bridge/arbitrary-message-bridge-deployment/add-on-xdai-and-amb-bridge-oracles-one-the-same-node.md)
 * [Development of a cross-chain application](amb-bridge/development-of-a-cross-chain-application/README.md)
   * [Transacting via the bridge](amb-bridge/development-of-a-cross-chain-application/how-to-develop-xchain-apps-by-amb.md)
@@ -40,7 +40,7 @@
   * [Verify Contracts in BlockScout](amb-bridge/how-to-use-cryptokitties-bridge/verify-contracts-in-blockscout.md)
   * [View Cats in BlockScout](amb-bridge/how-to-use-cryptokitties-bridge/view-in-blockscout.md)
   * [NiftyWallet Transfer](amb-bridge/how-to-use-cryptokitties-bridge/niftywallet-transfer.md)
-  * [MyEtherWallet \(MEW\) Transfer](amb-bridge/how-to-use-cryptokitties-bridge/myetherwallet-mew-transfer.md)
+  * [MyEtherWallet (MEW) Transfer](amb-bridge/how-to-use-cryptokitties-bridge/myetherwallet-mew-transfer.md)
   * [Create/Transfer a Test Cat](amb-bridge/how-to-use-cryptokitties-bridge/create-a-test-kitty.md)
 * [Create a Burner Wallet plugin for your AMB bridge extension](amb-bridge/create-a-burner-wallet-plugin-for-your-amb-bridge-extension.md)
 
@@ -61,7 +61,7 @@
   * [Oracle migration to a new server](xdai-bridge/xdai-bridge-oracle-maintenance/oracle-migration-to-a-new-server.md)
 * [Trial bridge](xdai-bridge/trial-the-bridge.md)
 
-## ETH-XDAI AMB <a id="eth-xdai-amb-bridge"></a>
+## ETH-XDAI AMB <a href="eth-xdai-amb-bridge" id="eth-xdai-amb-bridge"></a>
 
 * [About the ETH-xDai AMB](eth-xdai-amb-bridge/about-the-eth-xdai-amb/README.md)
   * [Submit confirmations manually](eth-xdai-amb-bridge/about-the-eth-xdai-amb/submit-confirmations-manually.md)
@@ -69,8 +69,9 @@
   * [OmniBridge UI](eth-xdai-amb-bridge/multi-token-extension/ui-to-transfer-tokens/README.md)
     * [Transfer any ERC20 from Ethereum to xDai](eth-xdai-amb-bridge/multi-token-extension/ui-to-transfer-tokens/transfer-erc20.md)
   * [Transfer tokens manually](eth-xdai-amb-bridge/multi-token-extension/how-to-transfer-tokens.md)
+  * [Transfer WETH from xDai to ETH on Mainnet](eth-xdai-amb-bridge/multi-token-extension/transfer-weth-from-xdai-to-eth-on-mainnet.md)
   * [New token contract verification in BlockScout](eth-xdai-amb-bridge/multi-token-extension/new-token-contract-verification-in-blockscout.md)
-  * [Corresponding token contract addresses \(ETH - XDAI\)](eth-xdai-amb-bridge/multi-token-extension/correspondence-of-bridgeable-tokens.md)
+  * [Corresponding token contract addresses (ETH - XDAI)](eth-xdai-amb-bridge/multi-token-extension/correspondence-of-bridgeable-tokens.md)
   * [Get status of the OmniBridge deposit](eth-xdai-amb-bridge/multi-token-extension/get-status-of-the-omnibridge-deposit.md)
   * [OmniBridge Extension internals & diagrams](eth-xdai-amb-bridge/multi-token-extension/extension-internals.md)
   * [🌱 Bridged Tokens List](eth-xdai-amb-bridge/multi-token-extension/the-bridged-tokens-list/README.md)
@@ -95,10 +96,10 @@
 * [About the BSC-xDai AMB](bsc-xdai-amb/about-the-bsc-xdai-amb/README.md)
   * [Submit confirmations manually](bsc-xdai-amb/about-the-bsc-xdai-amb/submit-confirmations-manually.md)
 * [OmniBridge Extension](bsc-xdai-amb/omnibridge-extension/README.md)
-  * [Manual tokens transfer \(No UI\)](bsc-xdai-amb/omnibridge-extension/manual-tokens-transfer.md)
+  * [Manual tokens transfer (No UI)](bsc-xdai-amb/omnibridge-extension/manual-tokens-transfer.md)
   * [Transfer WBNB on xDai to BNB on BSC](bsc-xdai-amb/omnibridge-extension/transfer-wbnb-on-xdai-to-bnb-on-bsc.md)
 
-## RINKEBY-XDAI AMB <a id="rinkeby-xdai-amb-bridge"></a>
+## RINKEBY-XDAI AMB <a href="rinkeby-xdai-amb-bridge" id="rinkeby-xdai-amb-bridge"></a>
 
 * [About the Rinkeby-xDai AMB](rinkeby-xdai-amb-bridge/about-the-rinkeby-xdai-amb.md)
 * [AMB Live Monitoring application](rinkeby-xdai-amb-bridge/amb-live-monitoring-application.md)
@@ -114,12 +115,12 @@
 * [OmniBridge Extension](poa-xdai-amb/omnibridge-extension/README.md)
   * [Transfer POA tokens](poa-xdai-amb/omnibridge-extension/transfer-poa-tokens.md)
 
-## Kovan-Sokol AMB <a id="kovan-sokol-amb-bridge"></a>
+## Kovan-Sokol AMB <a href="kovan-sokol-amb-bridge" id="kovan-sokol-amb-bridge"></a>
 
 * [About the Kovan-Sokol AMB](kovan-sokol-amb-bridge/about-the-kovan-sokol-amb/README.md)
   * [Submit confirmations manually](kovan-sokol-amb-bridge/about-the-kovan-sokol-amb/submit-confirmations-manually.md)
-* [OmniBridge extension \(testing\)](kovan-sokol-amb-bridge/multi-token-extension-testing.md)
-* [NFT extension \(testing\)](kovan-sokol-amb-bridge/nft-extension-testing/README.md)
+* [OmniBridge extension (testing)](kovan-sokol-amb-bridge/multi-token-extension-testing.md)
+* [NFT extension (testing)](kovan-sokol-amb-bridge/nft-extension-testing/README.md)
   * [Transfer tokens by using block explorers](kovan-sokol-amb-bridge/nft-extension-testing/transfer-tokens-by-using-block-explorers.md)
 * [Native-to-ERC20 bridge extension](kovan-sokol-amb-bridge/native-to-erc20-bridge-extension/README.md)
   * [Transfer SPOA through native-to-ERC20 extension without UI](kovan-sokol-amb-bridge/native-to-erc20-bridge-extension/transfer-spoa-through-native-to-erc20-extension-without-ui.md)
@@ -129,16 +130,16 @@
 * [About the ETH-BSC AMB](eth-bsc-amb/about-the-eth-bsc-amb.md)
 * [OmniBridge Extension](eth-bsc-amb/omnibridge-extension.md)
 
-## ETH-POA AMB <a id="eth-poa-amb-bridge"></a>
+## ETH-POA AMB <a href="eth-poa-amb-bridge" id="eth-poa-amb-bridge"></a>
 
 * [About the ETH-POA AMB](eth-poa-amb-bridge/about-the-eth-poa-amb.md)
 
-## ETH-ETC AMB <a id="eth-etc-amb-bridge"></a>
+## ETH-ETC AMB <a href="eth-etc-amb-bridge" id="eth-etc-amb-bridge"></a>
 
 * [About the ETH-ETC AMB](eth-etc-amb-bridge/about-the-eth-etc-amb.md)
 * [WETC AMB extension](eth-etc-amb-bridge/wetc-amb-extension.md)
 
-## ETH-QDAI AMB <a id="eth-qdai-bridge"></a>
+## ETH-QDAI AMB <a href="eth-qdai-bridge" id="eth-qdai-bridge"></a>
 
 * [About the qDai chain](eth-qdai-bridge/about-the-qdai-chain.md)
 * [About the ETH-qDai AMB](eth-qdai-bridge/about-the-eth-qdai-amb.md)
@@ -159,4 +160,3 @@
 * [Contact Us](media/contact-us.md)
 * [Media Kit](media/media-kit.md)
 * [Social Media](media/social-media.md)
-

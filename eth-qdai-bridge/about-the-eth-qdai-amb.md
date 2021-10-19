@@ -4,7 +4,7 @@ description: ETH-qDai Arbitrary Message Bridge information
 
 # About the ETH-qDai AMB
 
-An Arbitrary Message Bridge \(AMB\) between the Ethereum Mainnet and the qDai chain demonstrates the ability to transfer data between a public network and an enterprise chain built using Quorum technology.
+An Arbitrary Message Bridge (AMB) between the Ethereum Mainnet and the qDai chain demonstrates the ability to transfer data between a public network and an enterprise chain built using Quorum technology.
 
 Any application can [build its own AMB extension](https://docs.tokenbridge.net/amb-bridge/how-to-develop-xchain-apps-by-amb). An extension is represented by two mediator contracts so that either assets or arbitrary data can be transferred between chains. The deployed mediator contracts **do not** require a set of oracles to be setup, allowing an application to launch quickly and reducing the cost of application ownership.
 
@@ -15,7 +15,6 @@ The mediator contracts rely on the following information about the ETH-qDai Arbi
   * Gas limit to call method in the xDai chain: `2000000`
   * Finalization rate: `8` blocks
 * **qDai Chain**:
-  * AMB contract _&lt;block explorer not currently available&gt;_: `0xD4075FB57fCf038bFc702c915Ef9592534bED5c1`
+  * AMB contract _\<block explorer not currently available>_: `0xD4075FB57fCf038bFc702c915Ef9592534bED5c1`
   * Gas limit to call method in the Ethereum Mainnet: `2000000`
   * Finalization rate: `1` block
-

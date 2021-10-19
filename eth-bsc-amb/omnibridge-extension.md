@@ -15,4 +15,3 @@ Mediator contract: [`0x69c707d975e8d883920003CC357E556a4732CD03`](https://ethers
 Mediator contract: [`0xD83893F31AA1B6B9D97C9c70D3492fe38D24d218`](https://bscscan.com/address/0xD83893F31AA1B6B9D97C9c70D3492fe38D24d218)
 {% endtab %}
 {% endtabs %}
-

@@ -40,14 +40,14 @@ Gateways can be thought of as “wrapped RPC providers”, as they transmit data
 The `@burner-wallet/core` module contains some standard gateways:
 
 * InfuraGateway
-* XDaiGateway 
-* InjectedGateway \(which transmits messages through an injected Web3 provider such as Metamask\).
+* XDaiGateway&#x20;
+* InjectedGateway (which transmits messages through an injected Web3 provider such as Metamask).
 
 ### **Exchange Plugin**
 
 The `@burner-wallet/exchange` package is an extendable plugin for implementing asset exchanges and bridges. The exchange module accepts an array of trading pairs.
 
-```text
+```
 const exchange = new Exchange({
   pairs: [new Pair1(), new Pair2()]
 })
@@ -62,8 +62,8 @@ const exchange = new Exchange({
 
 **Exchange pairs examples:**
 
-* [XDAIBridge](https://github.com/burner-wallet/burner-wallet-2/blob/develop/packages/exchange/src/pairs/XDaiBridge.ts): It allows the user to exchange the pair DAI &lt;&gt; xDAI. Since validators need to verify the transaction, and release the tokens on the other network, this pair detects the exchange finalization by listening to events on the bridge contracts.
-* [Uniswap](https://github.com/burner-wallet/burner-wallet-2/blob/develop/packages/exchange/src/pairs/Uniswap.ts): It allows the user to exchange the pair DAI &lt;&gt; ETH by using Uniswap. In this case, `exchangeAtoB` is extended for converting DAI to ETH, since it requires performing two transactions. First calling `approve` on the token contract and then calling the method from the Uniswap contract.     
+* [XDAIBridge](https://github.com/burner-wallet/burner-wallet-2/blob/develop/packages/exchange/src/pairs/XDaiBridge.ts): It allows the user to exchange the pair DAI <> xDAI. Since validators need to verify the transaction, and release the tokens on the other network, this pair detects the exchange finalization by listening to events on the bridge contracts.
+* [Uniswap](https://github.com/burner-wallet/burner-wallet-2/blob/develop/packages/exchange/src/pairs/Uniswap.ts): It allows the user to exchange the pair DAI <> ETH by using Uniswap. In this case, `exchangeAtoB` is extended for converting DAI to ETH, since it requires performing two transactions. First calling `approve` on the token contract and then calling the method from the Uniswap contract.    &#x20;
 
 ## **TokenBridge Plugin**
 
@@ -123,13 +123,13 @@ You can extend or replace these resources based on your use case.
 
 Inside the `wallet` folder, the file `wallet/src/index.tsx` integrates the plugin into the wallet by importing the resources in the following line:
 
-```text
+```
 import { Stake, xStake, StakeBridge } from 'my-plugin'
 ```
 
 To  use and to display the balances for `Stake` and `xStake` it is necessary to list them in the list of assets as follow:
 
-```text
+```
 const core = new BurnerCore({
     ...
   assets: [Stake, xStake]
@@ -142,7 +142,7 @@ const core = new BurnerCore({
 
 Then, in order to perform exchange operations between the assets, the defined pair is included in the Exchange plugin as follows:
 
-```text
+```
 const exchange = new Exchange({
   pairs: [new StakeBridge()]
 })
@@ -166,7 +166,7 @@ Run `yarn install`. This repo uses Lerna and Yarn Workspaces, so `yarn install` 
 
 To build the plugin package, from the root folder of project, you need to run the following command:
 
-```text
+```
 yarn build
 ```
 
@@ -176,7 +176,7 @@ The project includes a burner wallet instance where you can test the implementat
 
 First create an `.env` file in `test-wallet` folder from `.env.example` and set the required parameters for the ERC677 to ERC677 bridge extension:
 
-```text
+```
 REACT_APP_INFURA_KEY=<your key from infura.com>
 REACT_APP_HOME_NETWORK=
 REACT_APP_HOME_TOKEN_NAME=
@@ -191,7 +191,7 @@ REACT_APP_FOREIGN_MEDIATOR_ADDRESS=
 
 To start the burner wallet instance run:
 
-```text
+```
 yarn start-test-wallet
 ```
 
@@ -201,13 +201,13 @@ The project includes a burner wallet instance where you can use the implementati
 
 First create an `.env` file in `wallet` folder and set:
 
-```text
+```
 REACT_APP_INFURA_KEY=<your key from infura.com>
 ```
 
 To start the burner wallet instance run:
 
-```text
+```
 yarn start-wallet
 ```
 
@@ -215,11 +215,10 @@ yarn start-wallet
 
 In order to make the plugin accessible for other projects it needs to be published in the npm registry. For that, you can follow these steps:
 
-1. Create account in [https://www.npmjs.com/](https://www.npmjs.com/)
+1. Create account in [https://www.npmjs.com/](https://www.npmjs.com)
 2. Go to `my-plugin` folder
 3. Run `yarn build`. Make sure it generates the `dist` folder
 4. Update `version` in `my-plugin/package.json`
 5. Run `yarn publish` and fill login information if required. The prompt will ask for the new version, complete it with the version from `my-plugin/package.json`
 
 More information in [https://classic.yarnpkg.com/en/docs/publishing-a-package/](https://classic.yarnpkg.com/en/docs/publishing-a-package/)
-

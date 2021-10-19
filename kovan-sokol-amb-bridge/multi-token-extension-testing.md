@@ -4,9 +4,9 @@ description: >-
   purposes
 ---
 
-# OmniBridge extension \(testing\)
+# OmniBridge extension (testing)
 
-This is a test version of the OmniBridge \(former Multi-token\) AMB extension. It can be used if an application would like to better understand the principles of transferring the tokens to another chain.
+This is a test version of the OmniBridge (former Multi-token) AMB extension. It can be used if an application would like to better understand the principles of transferring the tokens to another chain.
 
 Almost everything that it is applicable for [the extension between the Ethereum Mainnet and xDai chain ](../eth-xdai-amb-bridge/multi-token-extension/)could be applied to this extension. Refer to the documentation section that provides lots of useful information on managing the extension: ["OmniBridge extension"](https://docs.tokenbridge.net/eth-xdai-amb-bridge/multi-token-extension).
 
@@ -17,5 +17,4 @@ Almost everything that it is applicable for [the extension between the Ethereum 
 
 ## OmniBridge Test UI app
 
-The version of OmniBridge UI used for the testing purposes is locked here: [https://sokol-omnibridge.web.app/](https://sokol-omnibridge.web.app/) 
-
+The version of OmniBridge UI used for the testing purposes is locked here: [https://sokol-omnibridge.web.app/](https://sokol-omnibridge.web.app)&#x20;

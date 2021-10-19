@@ -16,4 +16,3 @@ This section covers such aspects as:
 {% hint style="info" %}
 To convert to an ERC20 on xDai without deploying a customized extension or dedicated mediators, see the OmniBridge UI.
 {% endhint %}
-

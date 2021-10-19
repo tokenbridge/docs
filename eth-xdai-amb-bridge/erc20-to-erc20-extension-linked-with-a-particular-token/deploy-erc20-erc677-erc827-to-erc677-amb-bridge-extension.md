@@ -4,7 +4,7 @@ description: How to deploy an erc20-to-erc20 Arbitrary Message Bridge extension
 
 # Deploy ERC20 to ERC677 AMB bridge extension
 
-Instructions for deploying bridge mediator contracts on top of [the Arbitrary Message Bridge \(AMB\) between the Ethereum Mainnet and the xDai chain.](../about-the-eth-xdai-amb/)
+Instructions for deploying bridge mediator contracts on top of [the Arbitrary Message Bridge (AMB) between the Ethereum Mainnet and the xDai chain.](../about-the-eth-xdai-amb/)
 
 {% hint style="info" %}
 An AMB bridge extension is a pair of mediator contracts associated with a specific pair of Arbitrary Message Bridge contracts.
@@ -21,7 +21,7 @@ The following pre-requisites are required to deploy the AMB extension:
 1. The private key of an account used to deploy the contracts. The account must be funded before performing the deployment steps.
 2. An account address that will be given rights to update the extension parameters. Different accounts may be used for different chains.
 3. An account address that will be given rights to upgrade the extension contracts. Different accounts may be used for different chains.
-4. A JSON RPC url to send deployment transaction to the Ethereum Mainnet. URL provided by [INFURA](https://infura.io/) with the API key can be used here.
+4. A JSON RPC url to send deployment transaction to the Ethereum Mainnet. URL provided by [INFURA](https://infura.io) with the API key can be used here.
 5. The existing Ethereum ERC20/ERC677/ERC827 token contract address.
 6. [The Etherscan API key](https://etherscan.io/apis) which allows contracts to be verified automatically during the deployment process.
 
@@ -29,13 +29,13 @@ The following pre-requisites are required to deploy the AMB extension:
 
 1. Pull the docker image containing the compiled contracts and deployment script.
 
-```text
+```
  docker pull poanetwork/tokenbridge-contracts:latest
 ```
 
-1. Prepare a configuration file \(e.g. `erc-to-erc.config`\) which specifies the deployment process parameters and the initial extension configuration:
+1. Prepare a configuration file (e.g. `erc-to-erc.config`) which specifies the deployment process parameters and the initial extension configuration:
 
-```text
+```
  # The type of bridge. Defines set of contracts to be deployed.
  BRIDGE_MODE=AMB_ERC_TO_ERC
 
@@ -139,7 +139,7 @@ The following pre-requisites are required to deploy the AMB extension:
 
 1. Run the deployment process by specifying the path to the configuration file:
 
-```text
+```
  docker run -ti --rm --env-file erc-to-erc.config \
      poanetwork/tokenbridge-contracts:latest deploy.sh
 ```
@@ -164,9 +164,8 @@ Output will look similar to this:
  }
 ```
 
-1. Check on [Etherscan](https://etherscan.io/) and [BlockScout](https://blockscout.com/xdai/mainnet/) that the contracts with addresses listed above are verified. Mark the mediator contract on the Ethereum Mainnet side as a proxy contract in Etherscan so you can read the extension parameters here.
+1. Check on [Etherscan](https://etherscan.io) and [BlockScout](https://blockscout.com/xdai/mainnet/) that the contracts with addresses listed above are verified. Mark the mediator contract on the Ethereum Mainnet side as a proxy contract in Etherscan so you can read the extension parameters here.
 
-![](../../.gitbook/assets/image%20%2836%29.png)
+![](<../../.gitbook/assets/image (31).png>)
 
 1. Verify that tokens can be transferred in both directions through the bridge. See the [the sUSD bridge AMB extension](susd-bridge-extension/) for an example process.
-

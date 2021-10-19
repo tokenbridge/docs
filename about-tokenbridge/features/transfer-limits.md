@@ -18,11 +18,11 @@ There are two cases how the limits are applied when tokens are deposited to anot
 
 **Actively controlled deposit**
 
-This case is applicable for the `native-to-erc20` mode and for the mode `erc20-to-erc20` when tokens supporting ERC677 \(`transferAndCall`\) are used on both sides of the bridge.
+This case is applicable for the `native-to-erc20` mode and for the mode `erc20-to-erc20` when tokens supporting ERC677 (`transferAndCall`) are used on both sides of the bridge.
 
-![Actively controlled deposit for the native-to-erc20 bridge mode](../../.gitbook/assets/image%20%2817%29.png)
+![Actively controlled deposit for the native-to-erc20 bridge mode](<../../.gitbook/assets/image (1).png>)
 
-![Actively controlled deposit for the erc677-to-erc677 bridge mode](../../.gitbook/assets/image%20%288%29.png)
+![Actively controlled deposit for the erc677-to-erc677 bridge mode](<../../.gitbook/assets/image (2).png>)
 
 The first set of checks whether the value of the transaction is within the limits happens on step 1 for the`native-to-erc20` mode or on step 2 for the mode `erc20-to-erc20` after invocation of the`onTokenTransfer` method:
 
@@ -43,7 +43,7 @@ Although so far the limits are not synchronized automatically on both side of th
 
 The checks described here happen during tokens transfers in the `erc20-to-native` mode and in the mode `erc20-to-erc20` when generic ERC20 tokens are used on the Foreign side of the bridge.
 
-![Passive perception of deposit for the erc20-to-native bridge mode](../../.gitbook/assets/image%20%2832%29.png)
+![Passive perception of deposit for the erc20-to-native bridge mode](<../../.gitbook/assets/image (3).png>)
 
 Since the bridge contract on the Foreign side is not involved in the transfer operation no checks occur on this side. That's why in these bridge modes it is not possible to check minimal allowable value per transaction.
 
@@ -54,11 +54,11 @@ The checks are only applied on step 3:
 
 ## Transfer limits for withdrawals
 
-It is assumed that the tokens participating in withdrawals are controlled by the bridge \(or bridge owners\) that is why the transfer limits behave similarly in all bridge modes.
+It is assumed that the tokens participating in withdrawals are controlled by the bridge (or bridge owners) that is why the transfer limits behave similarly in all bridge modes.
 
-![Withdrawal for the erc20-to-native bridge mode](../../.gitbook/assets/image%20%2810%29.png)
+![Withdrawal for the erc20-to-native bridge mode](<../../.gitbook/assets/image (4).png>)
 
-![Withdrawal for the natvie-to-erc20 and erc20-to-erc20 bridge modes](../../.gitbook/assets/image%20%2827%29.png)
+![Withdrawal for the natvie-to-erc20 and erc20-to-erc20 bridge modes](<../../.gitbook/assets/image (5).png>)
 
 The first set of checks for detection whether the withdrawal is within the limits happens on step 1 for the `erc20-to-native` mode and on step 2 for the modes `native-to-erc20` and `erc20-to-erc20`. It makes sure that:
 
@@ -66,10 +66,9 @@ The first set of checks for detection whether the withdrawal is within the limit
 * the transferred value is less or equal than maximum allowable value per transaction
 * the accumulated value of all transfers sent in this day in this direction is less or equal than maximum allowable accumulated values per day
 
-The checks are applied in the second time when one oracle sends all collected confirmations to the bridge contract on the Foreign side of the bridge \(on step 5 in the case of the `erc20-to-native` mode and on step 6 in other modes\):
+The checks are applied in the second time when one oracle sends all collected confirmations to the bridge contract on the Foreign side of the bridge (on step 5 in the case of the `erc20-to-native` mode and on step 6 in other modes):
 
 * the value of the transfer confirmed by the validator must be less or equal than minimum allowable value per transaction
 * the accumulated value of all confirmed transfers sent in this day in this direction must be less or equal than maximum allowable values per day
 
 Again, the bridge owners are responsible for synchronization of the maximum allowable withdrawal per transaction value and the maximum allowable accumulated withdrawals per day value between two sides of the bridge.
-

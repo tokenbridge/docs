@@ -15,13 +15,12 @@ The mediator contracts rely on the following information about the BSC-xDai Arbi
   * Gas limit to call method in the xDai chain: `2000000`
   * Finalization rate: `12` blocks
 * **xDai Chain**:
-  * AMB contract: [`0x162E898bD0aacB578C8D5F8d6ca588c13d2A383F`](https://blockscout.com/xdai/mainnet/address/0x162E898bD0aacB578C8D5F8d6ca588c13d2A383F)\`\`
+  * AMB contract: [`0x162E898bD0aacB578C8D5F8d6ca588c13d2A383F`](https://blockscout.com/xdai/mainnet/address/0x162E898bD0aacB578C8D5F8d6ca588c13d2A383F)``
   * Gas limit to call method in BSC: `2000000`
   * Finalization rate: `12` blocks
 
 ### Transactions
 
-It is possible to get the status of an AMB transaction using [the Live Monitoring app](https://docs.tokenbridge.net/about-tokenbridge/components/amb-live-monitoring-application): [https://alm-bsc-xdai.herokuapp.com/](https://alm-bsc-xdai.herokuapp.com/%20). Transactions require a multi-sig \(for bridge validators, not users\) for a successful transfer. Current validators can be viewed with the live monitoring application. 
+It is possible to get the status of an AMB transaction using [the Live Monitoring app](https://docs.tokenbridge.net/about-tokenbridge/components/amb-live-monitoring-application): [https://alm-bsc-xdai.herokuapp.com/](https://alm-bsc-xdai.herokuapp.com). Transactions require a multi-sig (for bridge validators, not users) for a successful transfer. Current validators can be viewed with the live monitoring application.&#x20;
 
 For transactions from the xDai chain [manual execution](submit-confirmations-manually.md) is required. This action delivers the validator confirmations gathered on the xDai chain to the Binance Smart Chain and triggers the transferred message handling.
-
