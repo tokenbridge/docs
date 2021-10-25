@@ -14,11 +14,11 @@ DApp developers may also find this pair of chains useful for their cross-chain a
   * AMB contract: [`0xD4075FB57fCf038bFc702c915Ef9592534bED5c1`](https://rinkeby.etherscan.io/address/0xD4075FB57fCf038bFc702c915Ef9592534bED5c1)\`\`
   * Gas limit to call method in the Rinkeby Testnet: `3000000`&#x20;
   * Fee: none
-  * Finalization rate: `2` block
+  * Finalization rate: `12` block
 * **xDai chain**:
   * AMB contract: [`0xc38D4991c951fE8BCE1a12bEef2046eF36b0FA4A`](https://blockscout.com/xdai/mainnet/address/0xc38D4991c951fE8BCE1a12bEef2046eF36b0FA4A)\`\`
   * Gas limit to call method in the xDai chain: `3000000`
   * Fee: none
-  * Finalization rate: `2` block
+  * Finalization rate: `20` block
 
 It is possible to get an AMB transaction status by using [the Live Monitoring app](https://docs.tokenbridge.net/about-tokenbridge/components/amb-live-monitoring-application): [https://alm-rinkeby.herokuapp.com/](https://alm-rinkeby.herokuapp.com).
