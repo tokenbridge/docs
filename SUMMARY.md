@@ -24,7 +24,7 @@
 * [Security Audits](about-tokenbridge/security-audits.md)
 * [Roadmap](about-tokenbridge/roadmap.md)
 
-## Arbitrary Message Bridge (AMB) <a href="amb-bridge" id="amb-bridge"></a>
+## Arbitrary Message Bridge (AMB) <a href="#amb-bridge" id="amb-bridge"></a>
 
 * [About the AMB](amb-bridge/about-amb-bridge.md)
 * [Arbitrary Message Bridge Deployment](amb-bridge/arbitrary-message-bridge-deployment/README.md)
@@ -44,7 +44,7 @@
   * [Create/Transfer a Test Cat](amb-bridge/how-to-use-cryptokitties-bridge/create-a-test-kitty.md)
 * [Create a Burner Wallet plugin for your AMB bridge extension](amb-bridge/create-a-burner-wallet-plugin-for-your-amb-bridge-extension.md)
 
-## xDai Bridge
+## xDai Bridge (Gnosis Chain) <a href="#xdai-bridge" id="xdai-bridge"></a>
 
 * [About the xDai Bridge](xdai-bridge/about.md)
 * [Using the xDai Bridge](xdai-bridge/using-the-xdai-bridge/README.md)
@@ -61,7 +61,7 @@
   * [Oracle migration to a new server](xdai-bridge/xdai-bridge-oracle-maintenance/oracle-migration-to-a-new-server.md)
 * [Trial bridge](xdai-bridge/trial-the-bridge.md)
 
-## ETH-XDAI AMB <a href="eth-xdai-amb-bridge" id="eth-xdai-amb-bridge"></a>
+## ETH-XDAI AMB <a href="#eth-xdai-amb-bridge" id="eth-xdai-amb-bridge"></a>
 
 * [About the ETH-xDai AMB](eth-xdai-amb-bridge/about-the-eth-xdai-amb/README.md)
   * [Submit confirmations manually](eth-xdai-amb-bridge/about-the-eth-xdai-amb/submit-confirmations-manually.md)
@@ -90,6 +90,7 @@
   * [sUSD bridge extension](eth-xdai-amb-bridge/erc20-to-erc20-extension-linked-with-a-particular-token/susd-bridge-extension/README.md)
     * [Transfer sUSD between the ETH Mainnet and the xDai Chain using the sUSD bridge extension](eth-xdai-amb-bridge/erc20-to-erc20-extension-linked-with-a-particular-token/susd-bridge-extension/transfer-susd-through-the-bridge-extension.md)
     * [Send sUSD between two wallets on xDai](eth-xdai-amb-bridge/erc20-to-erc20-extension-linked-with-a-particular-token/susd-bridge-extension/send-susd-between-two-wallets-on-xdai.md)
+* [Transfers with covered gas fees](eth-xdai-amb-bridge/transfers-with-covered-gas-fees.md)
 
 ## BSC-xDai AMB
 
@@ -99,7 +100,7 @@
   * [Manual tokens transfer (No UI)](bsc-xdai-amb/omnibridge-extension/manual-tokens-transfer.md)
   * [Transfer WBNB on xDai to BNB on BSC](bsc-xdai-amb/omnibridge-extension/transfer-wbnb-on-xdai-to-bnb-on-bsc.md)
 
-## RINKEBY-XDAI AMB <a href="rinkeby-xdai-amb-bridge" id="rinkeby-xdai-amb-bridge"></a>
+## RINKEBY-XDAI AMB <a href="#rinkeby-xdai-amb-bridge" id="rinkeby-xdai-amb-bridge"></a>
 
 * [About the Rinkeby-xDai AMB](rinkeby-xdai-amb-bridge/about-the-rinkeby-xdai-amb.md)
 * [AMB Live Monitoring application](rinkeby-xdai-amb-bridge/amb-live-monitoring-application.md)
@@ -115,7 +116,7 @@
 * [OmniBridge Extension](poa-xdai-amb/omnibridge-extension/README.md)
   * [Transfer POA tokens](poa-xdai-amb/omnibridge-extension/transfer-poa-tokens.md)
 
-## Kovan-Sokol AMB <a href="kovan-sokol-amb-bridge" id="kovan-sokol-amb-bridge"></a>
+## Kovan-Sokol AMB <a href="#kovan-sokol-amb-bridge" id="kovan-sokol-amb-bridge"></a>
 
 * [About the Kovan-Sokol AMB](kovan-sokol-amb-bridge/about-the-kovan-sokol-amb/README.md)
   * [Submit confirmations manually](kovan-sokol-amb-bridge/about-the-kovan-sokol-amb/submit-confirmations-manually.md)
@@ -130,16 +131,16 @@
 * [About the ETH-BSC AMB](eth-bsc-amb/about-the-eth-bsc-amb.md)
 * [OmniBridge Extension](eth-bsc-amb/omnibridge-extension.md)
 
-## ETH-POA AMB <a href="eth-poa-amb-bridge" id="eth-poa-amb-bridge"></a>
+## ETH-POA AMB <a href="#eth-poa-amb-bridge" id="eth-poa-amb-bridge"></a>
 
 * [About the ETH-POA AMB](eth-poa-amb-bridge/about-the-eth-poa-amb.md)
 
-## ETH-ETC AMB <a href="eth-etc-amb-bridge" id="eth-etc-amb-bridge"></a>
+## ETH-ETC AMB <a href="#eth-etc-amb-bridge" id="eth-etc-amb-bridge"></a>
 
 * [About the ETH-ETC AMB](eth-etc-amb-bridge/about-the-eth-etc-amb.md)
 * [WETC AMB extension](eth-etc-amb-bridge/wetc-amb-extension.md)
 
-## ETH-QDAI AMB <a href="eth-qdai-bridge" id="eth-qdai-bridge"></a>
+## ETH-QDAI AMB <a href="#eth-qdai-bridge" id="eth-qdai-bridge"></a>
 
 * [About the qDai chain](eth-qdai-bridge/about-the-qdai-chain.md)
 * [About the ETH-qDai AMB](eth-qdai-bridge/about-the-eth-qdai-amb.md)

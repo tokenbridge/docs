@@ -12,11 +12,11 @@ By using the links below it is possible to get the status of the existing bridge
   * General health status: [https://bridge-monitoring.poa.net/xdai](https://bridge-monitoring.poa.net/xdai)
 * **WETC Bridge**
   * General health status: [https://bridge-monitoring.poa.net/wetc](https://bridge-monitoring.poa.net/wetc)
-* **ETH-xDAI Arbitrary Message bridge**
+* **ETH-Gnosis Chain Arbitrary Message bridge**
   * General health status: [https://bridge-monitoring.poa.net/amb-xdai](https://bridge-monitoring.poa.net/amb-xdai)
 * **ETH-POA Arbitrary Message bridge**
   * General health status: [https://bridge-monitoring.poa.net/amb-poa](https://bridge-monitoring.poa.net/amb-poa)
-* **Rinkeby-xDAI Arbitrary Message bridge**
+* **Rinkeby-GC Arbitrary Message bridge**
   * General health status: [https://bridge-monitoring.poa.net/amb-rinkeby](https://bridge-monitoring.poa.net/amb-rinkeby)
 * **ETH-qDAI Arbitrary Message bridge**
   * General health status: [https://bridge-monitoring.poa.net/amb-qdai](https://bridge-monitoring.poa.net/amb-qdai)
@@ -25,6 +25,6 @@ By using the links below it is possible to get the status of the existing bridge
 
 ### Status dashboard
 
-Here you can find a status dashboard for deployed instances (POA, xDai, AMB POA, AMB xDai). The dashboard is taking data on balances difference from deployed monitors
+Here you can find a status dashboard for deployed instances (POA, xDai, AMB POA, AMB Gnosis Chain). The dashboard is taking data on balances difference from deployed monitors
 
-[https://status.tokenbridge.net/](https://status.tokenbridge.net)
+[https://status.tokenbridge.net/](https://status.tokenbridge.net/)

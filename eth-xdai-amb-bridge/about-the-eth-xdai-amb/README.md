@@ -12,23 +12,23 @@ The mediator contracts rely on the following information about the ETH-xDai Arbi
 
 * **Ethereum Mainnet**:
   * AMB contract: [`0x4C36d2919e407f0Cc2Ee3c993ccF8ac26d9CE64e`](https://etherscan.io/address/0x4C36d2919e407f0Cc2Ee3c993ccF8ac26d9CE64e)
-  * Gas limit to call method in the xDai chain: `2000000`
+  * Gas limit to call method in the Gnosis chain: `2000000`
   * Finalization rate: `20` blocks
-* **xDai Chain**:
+* **Gnosis Chain**:
   * AMB contract: [`0x75Df5AF045d91108662D8080fD1FEFAd6aA0bb59`](https://blockscout.com/xdai/mainnet/address/0x75df5af045d91108662d8080fd1fefad6aa0bb59/transactions)
   * Gas limit to call method in the Ethereum Mainnet: `2000000`
   * Finalization rate: `20` blocks
 
 ## Transactions
 
-It is possible to get an AMB transaction status by using [the Live Monitoring app](https://docs.tokenbridge.net/about-tokenbridge/components/amb-live-monitoring-application): [http://alm-xdai.herokuapp.com/](http://alm-xdai.herokuapp.com). Transactions require a multi-sig (for bridge validators, not users) for a successful transfer. Current validators can be viewed with the live monitoring application.
+It is possible to get an AMB transaction status by using [the Live Monitoring app](https://docs.tokenbridge.net/about-tokenbridge/components/amb-live-monitoring-application): [http://alm-xdai.herokuapp.com/](http://alm-xdai.herokuapp.com/). Transactions require a multi-sig (for bridge validators, not users) for a successful transfer. Current validators can be viewed with the live monitoring application.
 
 * Example transaction:  [http://alm-xdai.herokuapp.com/1/0x28c8e26e3bac936d8780ba177266f94d36f8c4cb88d49e161fffc3adf3d076aa](http://alm-xdai.herokuapp.com/1/0x28c8e26e3bac936d8780ba177266f94d36f8c4cb88d49e161fffc3adf3d076aa)
-* [More on xDai AMB Bridge Validators](https://www.xdaichain.com/for-validators/for-bridge-validators#current-amb-bridge-validators)
+* [More on Gnosis Chain AMB Bridge Validators](https://www.xdaichain.com/for-validators/for-bridge-validators#current-amb-bridge-validators)
 
 ## Fees
 
-While there are no additional fees to bridge between xDai and Ethereum, there are gas costs for transactions, which can be quite substantial depending on Ethereum gas prices. When moving from Ethereum to xDai, there is a gas cost to unlock the tokens for transfer. When moving from xDai to Ethereum, there is a gas cost to claim the token on Ethereum.
+While there are no additional fees to bridge between GC and Ethereum, there are gas costs for transactions, which can be quite substantial depending on Ethereum gas prices. When moving from Ethereum to GC, there is a gas cost to unlock the tokens for transfer. When moving from GC to Ethereum, there is a gas cost to claim the token on Ethereum.
 
 Additional fees may be introduced at a later time to cover expenses incurred by validators when bridging. These fees will be assessed with the transferring asset.
 

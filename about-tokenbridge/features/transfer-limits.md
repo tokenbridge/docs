@@ -6,7 +6,7 @@ description: Token transfer limits are the way to secure the bridge operations
 
 The transfer limits are applicable for those bridge modes where ERC20 or native tokens are involved in operations: `native-to-erc20`, `erc20-to-native` and `erc20-to-erc20`.
 
-The intention to introduce transfer limits was to achieve the following aims:
+Transfer limits were introduced for the following reasons:&#x20;
 
 * avoid drying out the validators accounts by relaying requests with low value
 * secure the bridge for the case when the bridge contract on one side was compromised by rejecting transactions with very high value
