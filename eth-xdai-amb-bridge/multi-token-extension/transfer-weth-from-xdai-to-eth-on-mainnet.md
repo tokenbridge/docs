@@ -16,7 +16,7 @@ Although the bridged token can be transferred back to ETH,  it is still be in fo
 
 This set of instructions demonstrates how the Wrapped ETH can be bridged from the xDai chain directly to ETH tokens using a new `relay-and-call` feature implemented recently in the OmniBridge contracts. In the last section of the manual there is also an instruction on how to transfer ETH to WETH on the xDai chain using a single operation. This may not be used often but some users may find it handy.
 
-This instruction assumes that you have access to [BlockScout](https://blockscout.com/xdai/mainnet) and [Etherscan](https://etherscan.io). You also must have a bit of xDai to pay for gas fees for a bridge transaction on the xDai chain.&#x20;
+This instruction assumes that you have access to [BlockScout](https://blockscout.com/xdai/mainnet) and [Etherscan](https://etherscan.io/). You also must have a bit of xDai to pay for gas fees for a bridge transaction on the xDai chain.&#x20;
 
 ## Bridge WETH on xDai to ETH
 
@@ -36,10 +36,10 @@ WETH token in the xDai chain: [`0x6A023CCd1ff6F2045C3309768eAd9E68F978f6e1`](htt
 
 ![](<../../.gitbook/assets/image (141).png>)
 
-Enter the following information to the fields:
+Enter the following information in the fields:
 
 * `_to` (address) the address of the OmniBridge contract on the xDai chain: `0xf6A78083ca3e2a662D6dd1703c939c8aCE2e268d`
-* `_value` (uint256) with amount of WBNB to be bridged (bridge fees will be subtracted from this value)
+* `_value` (uint256) with amount of WETH to be bridged (bridge fees will be subtracted from this value)
 *   `_data` (bytes) with two pieces concatenated:
 
     * the address of the WETH OmniBridge helper contract on the Ethereum Mainnet (`0xa6439Ca0FCbA1d0F80df0bE6A17220feD9c9038a`)
@@ -51,19 +51,19 @@ Press **Write** to send the transaction.&#x20;
 
 5\. As soon as the transaction is included in the block, click on the transaction link to get the transaction details:
 
-![](<../../.gitbook/assets/image (177).png>)
+<img src="../../.gitbook/assets/image (177).png" alt="" data-size="original">
 
-6\. Use "**View in ALM App**" link on the page with transaction details to track status of the transfer and finalize the bridging operation if required.
+6\. Use "**View in ALM App**" link on the page with transaction details to track status of the transfer and finalize bridge operations if required.
 
 ![](<../../.gitbook/assets/image (179).png>)
 
-7\. Eventually, when an executing transaction on the Mainnet will be processed, the WETH will be unlocked and unwrapped to ETH native tokens:
+7\. Eventually, when an executing transaction on the Mainnet is processed, the WETH will be unlocked and unwrapped to ETH native tokens:
 
 ![](<../../.gitbook/assets/image (185).png>)
 
 ## Bridge ETH to the xDai chain
 
-1\. Visit the WETH OmniBridge helper contract on [Etherscan](https://etherscan.io): [`0xa6439Ca0FCbA1d0F80df0bE6A17220feD9c9038a`](https://etherscan.io/address/0xa6439ca0fcba1d0f80df0be6a17220fed9c9038a)``
+1\. Visit the WETH OmniBridge helper contract on [Etherscan](https://etherscan.io/): [`0xa6439Ca0FCbA1d0F80df0bE6A17220feD9c9038a`](https://etherscan.io/address/0xa6439ca0fcba1d0f80df0be6a17220fed9c9038a)``
 
 2\. Go to the [Write Contract](https://etherscan.io/address/0xa6439ca0fcba1d0f80df0be6a17220fed9c9038a#writeContract) tab:
 
@@ -77,6 +77,6 @@ and connect your wallet.
 
 Press **Write** to send the transaction.
 
-4\. As soon as the transaction is included in the block, press the "View you transaction" button to get the transaction hash which can be used in [the AMB Live Monitoring app](https://alm-xdai.herokuapp.com) to track the status of the transaction.
+4\. As soon as the transaction is included in the block, press the "View you transaction" button to get the transaction hash which can be used in [the AMB Live Monitoring app](https://alm-xdai.herokuapp.com/) to track the status of the transaction.
 
 ![](<../../.gitbook/assets/image (178).png>)
